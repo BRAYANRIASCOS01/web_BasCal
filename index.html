@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Prototipo - Empresa BIM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="background-container"></div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#">
+          <img src="img/Log_BasCal.PNG" alt="EmpresaBIM Logo">
+        </a>
+        <nav id="primary-nav" class="primary-nav">
+          <ul>
+             <li><a href="#portfolio">Inicio</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Servicios <i data-feather="chevron-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="#professional">Professional Services</a></li>
+              </ul>
+            </li>
+            <li><a href="#portfolio">Portafolio</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle">Empresa <i data-feather="chevron-down"></i></a>
+              <ul class="dropdown-menu">
+                <li><a href="#faq">FAQ</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="header-actions">
+          <a href="#portfolio" class="header-link">Traducir</a>
+          <a href="#professional" class="btn-header">Contactar</a>
+        </div>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+          <span class="sr-only">Abrir menú</span>
+          <i data-feather="menu"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-shapes">
+         <div class="hero-shape hero-shape-1"> <img src="img/arquitectura.png" alt="Icono plano" class="hero-icon"> </div>
+         
+          <div class="hero-shape hero-shape-2">
+           <img src="img/bloque-de-oficinas.png" alt="Icono edificio" class="hero-icon">
+          </div>
+          
+          <div class="hero-shape hero-shape-3"></div>
+          <div class="hero-shape hero-shape-4"></div>
+          <div class="hero-shape hero-shape-5"></div>
+          <div class="hero-shape hero-shape-6"></div>
+        </div>
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <h1>Soluciones integrales en arquitectura,<br> ingeniería MEP y BIM/VDC</h1>
+            <h3>Experiencia internacional en proyectos institucionales, residenciales y hospitalarios</h3>
+            <p class="lede"></p>
+            <div class="hero-cta">
+              <a class="btn btn-primary" href="#professional">Explora nuestros servicios</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+
+      <section class="intro-section">
+        <div class="container intro-inner">
+          <div class="intro-content">
+            <div class="intro-content-a">
+              <h2 class="intro-title">¿Por qué elegir a <span class="intro-title-accent">BasCal?</span></h2>
+              <div class="intro-text">
+              <p>Somos una firma especializada en diseño arquitectónico, ingeniería MEP y servicios BIM/VDC avanzados. Desarrollamos modelos de alta precisión para proyectos complejos, integrando arquitectura y redes técnicas en un solo ecosistema digital.</p>
+              <p>Gracias a nuestra trayectoria nacional e internacional, acompañamos a nuestros clientes desde la fase preconstructiva hasta la ocupación. Nuestra metodología entrega soluciones eficientes que reducen costos, riesgos y reprocesos en cada etapa del proyecto.</p>
+              </div>
+            </div>
+
+            <div class="intro-content-b">
+               <img src="img/civil-engineering-background-6a11778f1cuauc7l.jpg" alt="Icono plano" class="intro-img">
+
+            </div>
+           
+          </div>
+        </div>
+      </section>
+      
+      <section class="stats-section stats-services">
+        <div class="container stats-inner">
+          <div class="stats-heading">
+            <h2 class="stats-title">Servicios BIM</h2>
+            <p class="stats-sub">Implementamos BIM para coordinar disciplinas arquitectonicas, estructurales y MEP mediante modelado, coordinacion interdisciplinaria y gestion tecnica de la informacion.</p>
+          </div>
+          <div class="stats-carousel">
+            <div class="stats-grid" id="stats-services-track">
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i data-feather="cpu"></i>
+                </div>
+                <h3 class="stat-title">Modelado BIM MEP &amp; Fabricación Digital</h3>
+                <p class="stat-desc">Modelado BIM MEP para sistemas mecánicos, eléctricos, hidrosanitarios y contra incendios. Desarrollamos modelos LOD 300-400, orientados a coordinación, prefabricación y ejecución en obra.</p>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i data-feather="layers"></i>
+                </div>
+                <h3 class="stat-title">Modelado BIM Arquitectónico y Estructural</h3>
+                <p class="stat-desc">Modelado BIM arquitectónico y estructural en entornos colaborativos. Modelos precisos y consistentes para soporte a coordinación, documentación y constructibilidad.</p>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i data-feather="git-merge"></i>
+                </div>
+                <h3 class="stat-title">Coordinación BIM</h3>
+                <p class="stat-desc">Coordinación interdisciplinaria mediante detección de interferencias y revisión de constructibilidad. Gestión de modelos, reportes de clashes y soporte técnico durante diseño y construcción.</p>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i data-feather="camera"></i>
+                </div>
+                <h3 class="stat-title">Escaneo Láser | Scan to BIM | As-built</h3>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i data-feather="bar-chart-2"></i>
+                </div>
+                <h3 class="stat-title">Secuenciación 4D &amp; Planificación de Costos 5D</h3>
+              </div>
+              <div class="stat-card">
+                <div class="stat-icon">
+                  <i data-feather="activity"></i>
+                </div>
+                <h3 class="stat-title">BIM 6D/7D para Facilities Management | Digital Twin</h3>
+              </div>
+            </div>
+            <button class="stats-arrow" type="button" aria-label="Ver más servicios" aria-controls="stats-services-track">
+              <i data-feather="arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="professional" class="section services">
+        <div class="container">
+          <h2 class="section-title">Professional Services</h2>
+          <p class="section-sub">Servicios profesionales orientados a arquitectura, ingeniería y construcción.</p>
+          <div class="services-list">
+            <article class="service-row">
+              <div class="service-media">
+                <img src="img/bim1.png" alt="Modelo BIM para sistemas MEP">
+              </div>
+              <div class="service-body">
+                <h3>Architectural Design | Interior Design</h3>
+                <ul class="service-points">
+                  <li>Diseno conceptual, basico y de detalle</li>
+                  <li>Planos IFC y planos constructivos</li>
+                  <li>Documentacion tecnica para licenciamiento y construccion</li>
+                  <li>Diseno interior para oficinas, residencial y espacios comerciales</li>
+                  <li>Analisis de seguridad humana para edificaciones</li>
+                </ul>
+              </div>
+              <button class="service-cta" type="button" aria-label="Ver más sobre Consultoría BIM">
+                <i data-feather="arrow-right"></i>
+              </button>
+            </article>
+            <article class="service-row">
+              <div class="service-media">
+                <img src="img/bim2.png" alt="Modelado BIM arquitectónico y estructural">
+              </div>
+              <div class="service-body">
+                <h3>Mecánica</h3>
+                <ul class="service-points">
+                  <li>Cálculo de cargas térmicas</li>
+                  <li>Distribución, cálculo y dimensionamiento de ductos y tuberías</li>
+                  <li>Selección y especificación de equipos HVAC</li>
+                  <li>Ventilación y extracción mecánica</li>
+                </ul>
+              </div>
+              <button class="service-cta" type="button" aria-label="Ver más sobre Modelado 3D">
+                <i data-feather="arrow-right"></i>
+              </button>
+            </article>
+            <article class="service-row">
+              <div class="service-media">
+                <img src="img/bim3.png" alt="Gestión y coordinación de proyectos BIM">
+              </div>
+              <div class="service-body">
+                <h3>Plumbing and Gas Natural Design</h3>
+                <ul class="service-points">
+                  <li>Cálculo hidráulico de redes de abasto (agua fría y caliente)</li>
+                  <li>Diseño de sistemas sanitarios y pluviales</li>
+                  <li>Selección de equipos de bombeo y accesorios</li>
+                  <li>Diseño de redes de gas natural</li>
+                  <li>Selección de equipos, medidores y reguladores</li>
+                </ul>
+              </div>
+              <button class="service-cta" type="button" aria-label="Ver más sobre Gestión de proyecto">
+                <i data-feather="arrow-right"></i>
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+  
+
+      <section id="portfolio" class="section portfolio">
+        <div class="container">
+          <h2 class="section-title">Ubicacion de Proyectos</h2>
+          <p class="section-sub">Cobertura regional y presencia activa en proyectos BIM.</p>
+          <div class="portfolio-map">
+            <div class="map-visual" aria-hidden="true">
+              <img class="map-image" src="img/continents2High.svg" alt="">
+              <div class="map-dots" aria-hidden="true">
+                <span class="map-dot" style="--x: 12.5%; --y: 28%; --delay: 0s;"></span>
+                <span class="map-dot" style="--x: 11.5%; --y: 38%; --delay: 0.15s;"></span>
+                <span class="map-dot" style="--x: 14.5%; --y: 43%; --delay: 0.3s;"></span>
+                <span class="map-dot" style="--x: 15.5%; --y: 46%; --delay: 0.45s;"></span>
+                <span class="map-dot" style="--x: 18.5%; --y: 51%; --delay: 0.6s;"></span>
+              </div>
+            </div>
+            <div class="map-details">
+              <h3>Nuestros clientes en America</h3>
+              <ul class="map-list">
+                <li>Colombia </li>
+                <li>Ecuador</li>
+                <li>Venezuela</li>
+                <li>Mexico</li>
+                <li>Estados Unidos</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="section faq">
+        <div class="container">
+          <h2 class="section-title">FAQ</h2>
+          <div class="accordion">
+            <div class="acc-item">
+              <button class="acc-toggle">¿Qué es BIM?</button>
+              <div class="acc-panel">BIM (Building Information Modeling) es un proceso colaborativo para crear y gestionar información digital de un proyecto de construcción.</div>
+            </div>
+            <div class="acc-item">
+              <button class="acc-toggle">¿Ofrecen formación?</button>
+              <div class="acc-panel">Sí, formaciones a medida para equipos en herramientas y procesos BIM.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-col footer-brand">
+          <h3 class="footer-title">BasCal </h3>
+          <p class="footer-text">Firma especializada en diseño arquitectónico, ingeniería MEP y servicios BIM/VDC avanzados. </p>
+          <div class="footer-social">
+            <a class="footer-social-link" href="#" aria-label="LinkedIn">
+              <i data-feather="linkedin"></i>
+            </a>
+            <a class="footer-social-link" href="#" aria-label="Instagram">
+              <i data-feather="instagram"></i>
+            </a>
+            <a class="footer-social-link" href="#" aria-label="Facebook">
+              <i data-feather="facebook"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">Contacto</h4>
+          <ul class="footer-list">
+            <li>
+              <i data-feather="map-pin"></i>
+              <span>Bogota, Colombia</span>
+            </li>
+            <li>
+              <i data-feather="phone"></i>
+              <a href="tel:+573000000000">+57 300 000 0000</a>
+            </li>
+            <li>
+              <i data-feather="mail"></i>
+              <a href="mailto:contacto@bim.com">contacto@bim.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-title">Servicios</h4>
+          <ul class="footer-links">
+            <li><a href="#professional">Diseño Arquitectonico</a></li>
+            <li><a href="#professional">Modelado MEP</a></li>
+            <li><a href="#professional">Coordinacion BIM</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <small>&copy; <span id="year"></span> BasCal</small>
+        <nav class="footer-nav">
+          <a href="#">Política de privacidad</a>
+          <a href="#">Términos</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      feather.replace()
+    </script>
+    <script src="js/script.js" defer></script>
+  </body>
+</html>
