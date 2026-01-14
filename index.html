@@ -144,9 +144,11 @@
                 <h3 class="stat-title">BIM 6D/7D para Facilities Management | Digital Twin</h3>
               </div>
             </div>
-            <button class="stats-arrow" type="button" aria-label="Ver más servicios" aria-controls="stats-services-track">
-              <i data-feather="arrow-right"></i>
-            </button>
+            <a href="pages/servicios-bim.html">
+              <button class="stats-arrow" type="button" aria-label="Ver más servicios" aria-controls="stats-services-track">
+                <i data-feather="arrow-right"></i>
+              </button>
+            </a>
           </div>
         </div>
       </section>
@@ -259,6 +261,24 @@
           </div>
         </div>
       </section>
+      <button class="btn-top">↑</button>
+      <script>
+          const btnTop = document.querySelector(".btn-top");
+         window.addEventListener("scroll", () => {
+          const scrollTop = document.documentElement.scrollTop;
+
+          if (scrollTop > 1000) {
+            btnTop.style.display = "block";
+          } else {
+            btnTop.style.display = "none";
+          }
+          });
+
+      </script>
+      <a href="https://wa.me/573000000000" target="_blank" class="btn-whatsapp">
+      <img src="img/whatsapp.png" alt="WhatsApp" />
+      </a>
+
 
     </main>
 
@@ -319,5 +339,9 @@
       feather.replace()
     </script>
     <script src="js/script.js" defer></script>
+
+    
+
+
   </body>
 </html>
