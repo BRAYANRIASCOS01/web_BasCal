@@ -116,13 +116,12 @@ html, body {
 
 /* CARD */
 .service-card {
-  background: rgba(255,255,255,0.85);
-  padding: 28px;
+  background: #ffffff;
+  padding: 30px;
   border-radius: 20px;
-  border: 2px solid transparent;
-  box-shadow: 0 15px 40px rgba(0,0,0,.06);
-  backdrop-filter: blur(6px);
-  transition: .35s ease;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
   position: relative;
   overflow: hidden;
   transform: translateY(10px);
@@ -130,37 +129,68 @@ html, body {
   animation: fadeInUp .8s forwards;
 }
 
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(180px 120px at 15% 0%, rgba(31, 58, 95, 0.12), transparent 70%);
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.service-card > * {
+  position: relative;
+  z-index: 1;
+}
+
 /* COLORS ON HOVER */
 .service-card:hover {
   transform: translateY(-8px) scale(1.01);
   border-color: #1f3a5f;
-  box-shadow: 0 20px 50px rgba(0,0,0,.09);
+  box-shadow: 0 24px 55px rgba(15, 23, 42, 0.12);
 }
 
 /* ICON */
 .icon {
-  width: 50px;
-  height: 50px;
+  width: 56px;
+  height: 56px;
   border-radius: 14px;
   display: grid;
   place-items: center;
-  font-size: 22px;
-  margin-bottom: 10px;
+  font-size: 24px;
+  margin-bottom: 12px;
   color: white;
   background: #1f3a5f;
+  box-shadow: 0 10px 18px rgba(15, 23, 42, 0.18);
+  transition: transform .35s ease, box-shadow .35s ease;
 }
 
-/* ICON COLOR VARIANTS */
-.icon-blue { background:#1F3A5F; }
-.icon-green { background:#3a7a57; }
-.icon-orange { background:#c46b2d; }
+.icon i {
+  line-height: 1;
+}
+
+.service-card:hover .icon {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 14px 22px rgba(15, 23, 42, 0.22);
+}
+
+/* ICON COLOR VARIANTS - same palette, different depth */
+.icon-blue { background: #000B66; }
+.icon-green { background: #142B6E; }
+.icon-orange { background: #1F3A5F; }
+.icon-teal { background: #2A4E7A; }
+.icon-purple { background: #233B67; }
+.icon-slate { background: #334155; }
+.icon-gold { background: #0F2A57; }
 
 .service-card h3 {
   margin-bottom: 6px;
+  font-size: 1.12rem;
+  line-height: 1.35;
 }
 
 .service-card p {
-  color: #555;
+  color: #5b6470;
 }
 
 /* RESPONSIVE */
@@ -828,6 +858,15 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
+}
+
+.hero-centered .hero-inner {
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+}
+
+.hero-centered .hero-copy {
+  transform: translateY(-58px);
 }
 
 .hero-copy {
