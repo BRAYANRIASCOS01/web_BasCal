@@ -88,7 +88,7 @@
     <div class="services-grid">
 
       <!-- CARD 1 -->
-      <div class="service-card">
+      <div class="service-card service-card--expandable">
         <div class="icon icon-blue">
           <i class="fa-solid fa-cubes"></i>
         </div>
@@ -96,6 +96,38 @@
         <p>
           Modelado BIM de sistemas mecánicos, eléctricos, hidrosanitarios y contra incendios con LOD 300–400 orientados a coordinación y prefabricación.
         </p>
+        <div class="service-card-details" id="mep-details" aria-hidden="true">
+          <div class="service-card-details-header">
+            <span class="service-card-details-label">Detalle BIM MEP</span>
+          </div>
+          <div class="service-card-details-body">
+            <div class="service-card-details-media">
+              <img src="../img/BIM-MED.jpeg" alt="Equipo BIM MEP coordinando instalaciones en obra">
+            </div>
+            <div class="service-card-details-text">
+              <div class="detail-item">
+                <span class="detail-icon" aria-hidden="true">
+                  <i class="fa-solid fa-screwdriver-wrench"></i>
+                </span>
+                <p>
+                  Nuestros servicios BIM MEP están orientados a la construcción real en campo. Modelamos sistemas mecánicos, HVAC, plomería, eléctricos y redes contra incendio con un enfoque práctico, basado en experiencia de obra y criterios reales de instalación. Desarrollamos modelos LOD 300–400, completamente constructibles, considerando rutas reales, claros de mantenimiento, secuencias de montaje y coordinación entre disciplinas. Los modelos pueden incluir soportería, hanger layouts, spooling y tuberías prefabricadas, listos para fabricación e instalación.
+                </p>
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon" aria-hidden="true">
+                  <i class="fa-solid fa-people-arrows"></i>
+                </span>
+                <p>
+                  Además, actuamos como extensión del equipo del contratista, participando activamente en la coordinación BIM para identificar interferencias, optimizar soluciones y reducir reprocesos. Entregamos modelos precisos, coordinados y listos para obra, que mejoran la eficiencia en campo, reducen tiempos y permiten un mayor control de costos.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="service-card-toggle" type="button" aria-expanded="false" aria-controls="mep-details">
+          <span class="service-card-toggle-text">Ver más</span>
+          <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+        </button>
       </div>
 
       <!-- CARD 2 -->
@@ -193,6 +225,26 @@
           </div>
         </div>
       </section>
+      <button class="btn-top">↑</button>
+      <script>
+        const btnTop = document.querySelector(".btn-top");
+        window.addEventListener("scroll", () => {
+          const scrollTop = document.documentElement.scrollTop;
+
+          if (scrollTop > 1000) {
+            btnTop.style.display = "block";
+          } else {
+            btnTop.style.display = "none";
+          }
+        });
+
+        btnTop.addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      </script>
+      <a href="https://wa.me/573000000000" target="_blank" class="btn-whatsapp">
+        <img src="../img/whatsapp.png" alt="WhatsApp">
+      </a>
 
     </main>
 
@@ -218,15 +270,15 @@
           <ul class="footer-list">
             <li>
               <i data-feather="map-pin"></i>
-              <span>Bogota, Colombia</span>
+              <span>Medellin, Colombia</span>
             </li>
             <li>
               <i data-feather="phone"></i>
-              <a href="tel:+573000000000">+57 300 000 0000</a>
+              <a href="tel:+573000000000">+57 000 000 0000</a>
             </li>
             <li>
               <i data-feather="mail"></i>
-              <a href="mailto:contacto@bim.com">contacto@bim.com</a>
+              <a href="mailto:contacto@bim.com">contacto@BasCal.com</a>
             </li>
           </ul>
         </div>
@@ -253,5 +305,46 @@
       feather.replace()
     </script>
     <script src="js/script.js" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const expandableCards = document.querySelectorAll(".service-card--expandable");
+
+        expandableCards.forEach((card) => {
+          const toggle = card.querySelector(".service-card-toggle");
+          const details = card.querySelector(".service-card-details");
+
+          if (!toggle || !details) {
+            return;
+          }
+
+          const label = toggle.querySelector(".service-card-toggle-text");
+
+          const setOpen = (isOpen) => {
+            card.classList.toggle("is-open", isOpen);
+            toggle.setAttribute("aria-expanded", String(isOpen));
+            details.setAttribute("aria-hidden", String(!isOpen));
+            if (label) {
+              label.textContent = isOpen ? "Ver menos" : "Ver más";
+            }
+          };
+
+          setOpen(false);
+
+          const handleToggle = () => setOpen(!card.classList.contains("is-open"));
+
+          card.addEventListener("click", (event) => {
+            if (event.target.closest(".service-card-toggle")) {
+              return;
+            }
+            handleToggle();
+          });
+
+          toggle.addEventListener("click", (event) => {
+            event.stopPropagation();
+            handleToggle();
+          });
+        });
+      });
+    </script>
   </body>
 </html>
