@@ -5,7 +5,7 @@ const Hero = () => {
   const { t } = useTranslation();
 
   return (
-    <header className="hero hero--brand section">
+    <header className="hero section">
       <div className="hero__bg" aria-hidden="true">
         <span className="hero__photo hero__photo--arch" />
         <span className="hero__photo hero__photo--offices" />
