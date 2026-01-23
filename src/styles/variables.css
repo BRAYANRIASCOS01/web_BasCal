@@ -1,13 +1,13 @@
 :root {
   color-scheme: light;
-  --color-primary: #000b66;
-  --color-primary-dark: #0f172a;
-  --color-secondary: #9aabb8;
-  --color-muted: #475569;
-  --color-surface: #ffffff;
-  --color-surface-alt: #f8fafc;
-  --color-border: #e5e7eb;
-  --color-accent: #1f2a7c;
+  --color-primary: #000b66; /* Azul institucional */
+  --color-primary-dark: #0f172a; /* Azul oscuro para textos */
+  --color-secondary: #9aabb8; /* Gris medio */
+  --color-muted: #4b5563; /* Texto secundario */
+  --color-surface: #ffffff; /* Fondo principal */
+  --color-surface-alt: #f8fafc; /* Fondo suave */
+  --color-border: #e5e7eb; /* Separadores/fondos suaves */
+ 
 
   --font-base: "Montserrat", system-ui, -apple-system, sans-serif;
   --font-heading: "Montserrat", system-ui, -apple-system, sans-serif;

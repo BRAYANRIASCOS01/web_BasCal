@@ -5,7 +5,7 @@ const WhyBascal = () => {
   const paragraphs = t("home.whyBascal.paragraphs", { returnObjects: true });
 
   return (
-    <section className="section why-bascal">
+    <section className="section why-bascal" id="why-bascal">
       <div className="container">
         <p className="section-kicker">{t("home.whyBascal.kicker")}</p>
         <h2 className="section-title">{t("home.whyBascal.title")}</h2>

@@ -5,7 +5,7 @@ const Services = () => {
   const services = t("home.services.items", { returnObjects: true });
 
   return (
-    <section className="section section--alt">
+    <section className="section section--alt" id="services">
       <div className="container">
         <p className="section-kicker">{t("home.servicesKicker")}</p>
         <h2 className="section-title">{t("home.servicesTitle")}</h2>

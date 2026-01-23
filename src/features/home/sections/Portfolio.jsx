@@ -13,6 +13,13 @@ const Portfolio = () => {
         <div className="portfolio-grid">
           <div>
             <h3 className="portfolio__heading">{t("home.portfolio.mapTitle")}</h3>
+            <img
+              className="portfolio__map"
+              src="/continents2High.svg"
+              alt={t("home.portfolio.mapTitle")}
+              loading="lazy"
+              decoding="async"
+            />
             <ul className="portfolio__list">
               {countries.map((country) => (
                 <li key={country}>{country}</li>
