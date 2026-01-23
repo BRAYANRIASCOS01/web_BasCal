@@ -9,8 +9,8 @@
   --color-border: #e5e7eb; /* Separadores/fondos suaves */
  
 
-  --font-base: "Montserrat", system-ui, -apple-system, sans-serif;
-  --font-heading: "Montserrat", system-ui, -apple-system, sans-serif;
+  --font-base:  'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-heading:  'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;

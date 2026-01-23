@@ -35,12 +35,27 @@ const WhyBascal = () => {
   return (
     <section className="section why-bascal" id="why-bascal" ref={sectionRef}>
       <div className="container">
-        <p className="section-kicker" data-animate>
-          {t("home.whyBascal.kicker")}
-        </p>
-        <h2 className="section-title" data-animate style={{ animationDelay: "0.05s" }}>
-          {t("home.whyBascal.title")}
-        </h2>
+        <div className="why-bascal__heading" data-animate>
+          <p className="section-kicker">{t("home.whyBascal.kicker")}</p>
+          <h2 className="section-title">
+            {t("home.whyBascal.title").includes("BasCal") ? (
+              (() => {
+                const [before, after = ""] = t("home.whyBascal.title").split("BasCal");
+                return (
+                  <>
+                    {before.trimEnd()}
+                    <br className="why-bascal__break" />
+                    <span className="why-bascal__brand">BasCal</span>
+                    {after}
+                  </>
+                );
+              })()
+            ) : (
+              t("home.whyBascal.title")
+            )}
+          </h2>
+          <span className="why-bascal__heading-underline" aria-hidden="true" />
+        </div>
         <div className="why-bascal__grid">
           <div className="why-bascal__content" data-animate style={{ animationDelay: "0.1s" }}>
             {paragraphs.map((text, index) => (
