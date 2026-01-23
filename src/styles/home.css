@@ -1,5 +1,6 @@
 @import "./sections/hero.css";
 @import "./sections/why-bascal.css";
+@import "./sections/services.css";
 
 .app {
   background: var(--color-surface);
@@ -48,23 +49,6 @@
 .professional-services .services-stack {
   display: grid;
   gap: 1.75rem;
-}
-
-.service-card {
-  background: var(--color-surface-alt);
-  border: 1px solid var(--color-border);
-  border-radius: 1.25rem;
-  padding: 1.5rem;
-}
-
-.service-card__title {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-}
-
-.service-card__list {
-  padding-left: 1.25rem;
-  color: var(--color-muted);
 }
 
 .portfolio-grid {

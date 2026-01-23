@@ -9,21 +9,22 @@
     "heroSubtitle": "We design engineering and construction projects with clear standards, transparent communication, and measurable results.",
     "primaryCta": "Request consultation",
     "secondaryCta": "Explore services",
-    "servicesKicker": "Key services",
-    "servicesTitle": "Areas where we create value",
+    "servicesKicker": "BIM Services",
+    "servicesTitle": "BIM Services",
+    "servicesSubtitle": "We implement BIM to coordinate architectural, structural, and MEP disciplines through modeling, cross-team coordination, and technical information management.",
     "services": {
       "items": [
         {
-          "title": "Design and planning",
-          "text": "Strategic planning focused on efficiency and cost control."
+          "title": "BIM MEP Modeling & Digital Fabrication",
+          "text": "BIM MEP modeling for mechanical, electrical, plumbing, and fire protection systems. We develop LOD 300-400 models focused on coordination, prefabrication, and field execution."
         },
         {
-          "title": "Technical execution",
-          "text": "End-to-end supervision with quality and safety standards."
+          "title": "Architectural & Structural BIM Modeling",
+          "text": "Architectural and structural BIM modeling in collaborative environments. Precise, consistent models that support coordination, documentation, and constructability."
         },
         {
-          "title": "Ongoing support",
-          "text": "Clear reporting, follow-up, and post-delivery support."
+          "title": "BIM Coordination",
+          "text": "Interdisciplinary coordination via clash detection and constructability reviews. Model management, clash reports, and technical support throughout design and construction."
         }
       ]
     },

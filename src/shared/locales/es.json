@@ -9,21 +9,22 @@
     "heroSubtitle": "Diseñamos proyectos de ingeniería y construcción con estándares claros, comunicación transparente y resultados medibles.",
     "primaryCta": "Solicitar asesoría",
     "secondaryCta": "Conocer servicios",
-    "servicesKicker": "Servicios clave",
-    "servicesTitle": "Áreas donde generamos valor",
+    "servicesKicker": "Servicios BIM",
+    "servicesTitle": "Servicios BIM",
+    "servicesSubtitle": "Implementamos BIM para coordinar disciplinas arquitectónicas, estructurales y MEP mediante modelado, coordinación interdisciplinaria y gestión técnica de la información.",
     "services": {
       "items": [
         {
-          "title": "Diseño y planeación",
-          "text": "Planificación estratégica con enfoque en eficiencia y control de costos."
+          "title": "Modelado BIM MEP & Fabricación Digital",
+          "text": "Modelado BIM MEP para sistemas mecánicos, eléctricos, hidrosanitarios y contra incendios. Desarrollamos modelos LOD 300-400 orientados a coordinación, prefabricación y ejecución en obra."
         },
         {
-          "title": "Ejecución técnica",
-          "text": "Supervisión integral con estándares de calidad y seguridad."
+          "title": "Modelado BIM Arquitectónico y Estructural",
+          "text": "Modelado BIM arquitectónico y estructural en entornos colaborativos. Modelos precisos y consistentes para soporte a coordinación, documentación y constructibilidad."
         },
         {
-          "title": "Acompañamiento continuo",
-          "text": "Reportes claros, seguimiento y soporte post-entrega."
+          "title": "Coordinación BIM",
+          "text": "Coordinación interdisciplinaria mediante detección de interferencias y revisión de constructibilidad. Gestión de modelos, reportes de clashes y soporte técnico durante diseño y construcción."
         }
       ]
     },
