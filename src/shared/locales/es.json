@@ -1,0 +1,107 @@
+{
+  "home": {
+    "seo": {
+      "title": "BasCal | Ingeniería y construcción con precisión",
+      "description": "Diseñamos y ejecutamos proyectos de ingeniería con comunicación transparente y resultados medibles."
+    },
+    "eyebrow": "BasCal Ingeniería & Construcción",
+    "heroTitle": "Soluciones técnicas con precisión, confianza y profesionalismo.",
+    "heroSubtitle": "Diseñamos proyectos de ingeniería y construcción con estándares claros, comunicación transparente y resultados medibles.",
+    "primaryCta": "Solicitar asesoría",
+    "secondaryCta": "Conocer servicios",
+    "servicesKicker": "Servicios clave",
+    "servicesTitle": "Áreas donde generamos valor",
+    "services": {
+      "items": [
+        {
+          "title": "Diseño y planeación",
+          "text": "Planificación estratégica con enfoque en eficiencia y control de costos."
+        },
+        {
+          "title": "Ejecución técnica",
+          "text": "Supervisión integral con estándares de calidad y seguridad."
+        },
+        {
+          "title": "Acompañamiento continuo",
+          "text": "Reportes claros, seguimiento y soporte post-entrega."
+        }
+      ]
+    },
+    "whyBascal": {
+      "kicker": "Nuestra firma",
+      "title": "¿Por qué elegir a BasCal?",
+      "paragraphs": [
+        "Somos una firma especializada en diseño arquitectónico, ingeniería MEP y servicios BIM/VDC avanzados. Desarrollamos modelos de alta precisión para proyectos complejos, integrando arquitectura y redes técnicas en un solo ecosistema digital.",
+        "Gracias a nuestra trayectoria nacional e internacional, acompañamos a nuestros clientes desde la fase preconstructiva hasta la ocupación. Nuestra metodología entrega soluciones eficientes que reducen costos, riesgos y reprocesos en cada etapa del proyecto."
+      ]
+    },
+    "professionalServices": {
+      "kicker": "Servicios profesionales",
+      "title": "Professional Services",
+      "subtitle": "Servicios profesionales orientados a arquitectura, ingeniería y construcción.",
+      "items": [
+        {
+          "title": "Architectural Design | Interior Design",
+          "points": [
+            "Diseño conceptual, básico y de detalle.",
+            "Planos IFC y planos constructivos.",
+            "Documentación técnica para licenciamiento y construcción.",
+            "Diseño interior para oficinas, residencial y espacios comerciales.",
+            "Análisis de seguridad humana para edificaciones."
+          ]
+        },
+        {
+          "title": "Mecánica",
+          "points": [
+            "Cálculo de cargas térmicas.",
+            "Distribución, cálculo y dimensionamiento de ductos y tuberías.",
+            "Selección y especificación de equipos HVAC.",
+            "Ventilación y extracción mecánica."
+          ]
+        },
+        {
+          "title": "Plumbing and Gas Natural Design",
+          "points": [
+            "Cálculo hidráulico de redes de abasto (agua fría y caliente).",
+            "Diseño de sistemas sanitarios y pluviales.",
+            "Selección de equipos de bombeo y accesorios.",
+            "Diseño de redes de gas natural.",
+            "Selección de equipos, medidores y reguladores."
+          ]
+        }
+      ]
+    },
+    "portfolio": {
+      "kicker": "Cobertura",
+      "title": "Ubicación de proyectos",
+      "subtitle": "Cobertura regional y presencia activa en proyectos BIM.",
+      "mapTitle": "Nuestros clientes en América",
+      "cardText": "Participamos en proyectos institucionales, residenciales y hospitalarios con coordinación técnica y estándares internacionales.",
+      "countries": ["Colombia", "Ecuador", "Venezuela", "México", "Estados Unidos"]
+    },
+    "footer": {
+      "brand": {
+        "title": "BasCal",
+        "text": "Firma especializada en diseño arquitectónico, ingeniería MEP y servicios BIM/VDC avanzados."
+      },
+      "contact": {
+        "title": "Contacto",
+        "items": [
+          { "label": "Ubicación", "value": "Medellín, Colombia" },
+          { "label": "Teléfono", "value": "+57 000 000 0000" },
+          { "label": "Correo", "value": "contacto@bascal.com" }
+        ]
+      },
+      "services": {
+        "title": "Servicios",
+        "items": ["Diseño arquitectónico", "Modelado MEP", "Coordinación BIM"]
+      },
+      "bottom": "© BasCal. Todos los derechos reservados."
+    }
+  },
+  "language": {
+    "label": "Idioma",
+    "spanish": "ES",
+    "english": "EN"
+  }
+}

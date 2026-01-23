@@ -1,0 +1,107 @@
+{
+  "home": {
+    "seo": {
+      "title": "BasCal | Engineering and construction with precision",
+      "description": "We design and execute engineering projects with transparent communication and measurable results."
+    },
+    "eyebrow": "BasCal Engineering & Construction",
+    "heroTitle": "Technical solutions with precision, trust, and professionalism.",
+    "heroSubtitle": "We design engineering and construction projects with clear standards, transparent communication, and measurable results.",
+    "primaryCta": "Request consultation",
+    "secondaryCta": "Explore services",
+    "servicesKicker": "Key services",
+    "servicesTitle": "Areas where we create value",
+    "services": {
+      "items": [
+        {
+          "title": "Design and planning",
+          "text": "Strategic planning focused on efficiency and cost control."
+        },
+        {
+          "title": "Technical execution",
+          "text": "End-to-end supervision with quality and safety standards."
+        },
+        {
+          "title": "Ongoing support",
+          "text": "Clear reporting, follow-up, and post-delivery support."
+        }
+      ]
+    },
+    "whyBascal": {
+      "kicker": "Our firm",
+      "title": "Why choose BasCal?",
+      "paragraphs": [
+        "We are a specialized firm in architectural design, MEP engineering, and advanced BIM/VDC services. We develop high-precision models for complex projects, integrating architecture and technical networks into a single digital ecosystem.",
+        "With national and international experience, we support clients from preconstruction through occupancy. Our methodology delivers efficient solutions that reduce costs, risks, and rework at every project stage."
+      ]
+    },
+    "professionalServices": {
+      "kicker": "Professional services",
+      "title": "Professional Services",
+      "subtitle": "Professional services focused on architecture, engineering, and construction.",
+      "items": [
+        {
+          "title": "Architectural Design | Interior Design",
+          "points": [
+            "Conceptual, basic, and detailed design.",
+            "IFC drawings and construction documents.",
+            "Technical documentation for licensing and construction.",
+            "Interior design for office, residential, and commercial spaces.",
+            "Life safety analysis for buildings."
+          ]
+        },
+        {
+          "title": "Mechanical",
+          "points": [
+            "Thermal load calculations.",
+            "Duct and piping distribution, sizing, and calculations.",
+            "HVAC equipment selection and specification.",
+            "Mechanical ventilation and exhaust systems."
+          ]
+        },
+        {
+          "title": "Plumbing and Natural Gas Design",
+          "points": [
+            "Hydraulic calculation of supply networks (hot and cold water).",
+            "Design of sanitary and storm systems.",
+            "Selection of pumping equipment and accessories.",
+            "Natural gas network design.",
+            "Selection of equipment, meters, and regulators."
+          ]
+        }
+      ]
+    },
+    "portfolio": {
+      "kicker": "Coverage",
+      "title": "Project locations",
+      "subtitle": "Regional coverage and active presence in BIM projects.",
+      "mapTitle": "Our clients across the Americas",
+      "cardText": "We contribute to institutional, residential, and healthcare projects with technical coordination and international standards.",
+      "countries": ["Colombia", "Ecuador", "Venezuela", "Mexico", "United States"]
+    },
+    "footer": {
+      "brand": {
+        "title": "BasCal",
+        "text": "Specialized firm in architectural design, MEP engineering, and advanced BIM/VDC services."
+      },
+      "contact": {
+        "title": "Contact",
+        "items": [
+          { "label": "Location", "value": "Medellín, Colombia" },
+          { "label": "Phone", "value": "+57 000 000 0000" },
+          { "label": "Email", "value": "contact@bascal.com" }
+        ]
+      },
+      "services": {
+        "title": "Services",
+        "items": ["Architectural design", "MEP modeling", "BIM coordination"]
+      },
+      "bottom": "© BasCal. All rights reserved."
+    }
+  },
+  "language": {
+    "label": "Language",
+    "spanish": "ES",
+    "english": "EN"
+  }
+}
