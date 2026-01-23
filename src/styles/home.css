@@ -1,3 +1,5 @@
+@import "./sections/why-bascal.css";
+
 .app {
   background: var(--color-surface);
 }
@@ -223,12 +225,6 @@
   color: var(--color-primary-dark);
 }
 
-.why-bascal__content {
-  display: grid;
-  gap: 1.5rem;
-  max-width: 860px;
-}
-
 .professional-services .services-stack {
   display: grid;
   gap: 1.75rem;
@@ -401,4 +397,6 @@
   .hero__photo {
     opacity: 0.1;
   }
+}
+.why-bascal-placeholder-import {
 }
