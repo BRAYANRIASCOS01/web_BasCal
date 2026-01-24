@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import Hero from "../sections/Hero.jsx";
 import WhyBascal from "../sections/WhyBascal.jsx";
 import Services from "../sections/Services.jsx";
+import ServicesPro from "../sections/Services_Pro.jsx";
 import Portfolio from "../sections/Portfolio.jsx";
 
 const HomePage = () => {
@@ -64,6 +65,7 @@ const HomePage = () => {
       <Hero />
       <WhyBascal />
       <Services />
+      <ServicesPro />
       <Portfolio />
     </main>
   );
