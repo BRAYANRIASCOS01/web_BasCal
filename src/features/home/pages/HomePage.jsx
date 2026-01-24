@@ -4,7 +4,7 @@ import Hero from "../sections/Hero.jsx";
 import WhyBascal from "../sections/WhyBascal.jsx";
 import Services from "../sections/Services.jsx";
 import ServicesPro from "../sections/Services_Pro.jsx";
-import Portfolio from "../sections/Portfolio.jsx";
+import Projects from "../sections/Projects.jsx";
 
 const HomePage = () => {
   const { t, i18n } = useTranslation();
@@ -66,7 +66,7 @@ const HomePage = () => {
       <WhyBascal />
       <Services />
       <ServicesPro />
-      <Portfolio />
+      <Projects />
     </main>
   );
 };

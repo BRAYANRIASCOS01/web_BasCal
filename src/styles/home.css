@@ -2,6 +2,7 @@
 @import "./sections/why-bascal.css";
 @import "./sections/services.css";
 @import "./sections/services-pro.css";
+@import "./sections/projects.css";
 
 .app {
   background: var(--color-surface);
