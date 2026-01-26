@@ -1,0 +1,32 @@
+{
+  "navbar": {
+    "logo": "BasCal",
+    "home": "Home",
+    "services": "Services",
+    "bim": "BIM",
+    "prof": "Professional",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "contactBtn": "Contact us"
+  },
+   "footer": {
+    "aboutTitle": "BasCal Engineering & Construction",
+    "aboutText": "We deliver end-to-end engineering, construction, and project management solutions, prioritizing quality, safety, and on-time delivery.",
+    "linksTitle": "Links",
+    "servicesTitle": "Services",
+    "contactTitle": "Contact",
+    "home": "Home",
+    "servicesBim": "BIM Services",
+    "servicesProf": "Professional Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "addressLabel": "Address",
+    "addressValue": "Medellín, Colombia",
+    "phoneLabel": "Phone",
+    "phoneValue": "+51 999 999 999",
+    "emailLabel": "Email",
+    "emailValue": "contact@bascal.com",
+    "copyright":
+      "© {year} BasCal Engineering & Construction. All rights reserved."
+  }
+}

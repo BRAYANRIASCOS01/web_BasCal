@@ -1,0 +1,15 @@
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+}
+
+.section {
+  padding: 56px 0;
+}
+
+.surface {
+  background: var(--color-bg-soft);
+  border: 1px solid var(--color-separator);
+  border-radius: var(--radius-lg);
+}

@@ -1,0 +1,33 @@
+{
+  "navbar": {
+    "logo": "BasCal",
+    "home": "Inicio",
+    "services": "Servicios",
+    "bim": "BIM",
+    "prof": "Profesionales",
+    "portfolio": "Portafolio",
+    "contact": "Contacto",
+    "contactBtn": "Contáctanos"
+  },
+
+  "footer": {
+    "aboutTitle": "BasCal Ingeniería y Construcción",
+    "aboutText": "Desarrollamos soluciones integrales en ingeniería, construcción y gestión de proyectos, priorizando la calidad, seguridad y cumplimiento de plazos.",
+    "linksTitle": "Enlaces",
+    "servicesTitle": "Servicios",
+    "contactTitle": "Contacto",
+    "home": "Inicio",
+    "servicesBim": "Servicios BIM",
+    "servicesProf": "Servicios Profesionales",
+    "portfolio": "Portafolio",
+    "contact": "Contacto",
+    "addressLabel": "Dirección",
+    "addressValue": "Medellín, Colombia",
+    "phoneLabel": "Teléfono",
+    "phoneValue": "+51 999 999 999",
+    "emailLabel": "Correo",
+    "emailValue": "contacto@bascal.com",
+    "copyright":
+      "© {year} BasCal Ingeniería y Construcción. Todos los derechos reservados."
+  }
+}
