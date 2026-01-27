@@ -43,6 +43,12 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition:
+    color 160ms ease,
+    background 160ms ease,
+    box-shadow 160ms ease;
 }
 
 /* Flechita */
@@ -60,6 +66,13 @@
 .navbar__dropdown:focus-within .navbar__caret {
   transform: translateY(1px);
   opacity: 0.95;
+}
+
+.navbar__dropdown:hover > .navbar__dropdownBtn,
+.navbar__dropdown:focus-within > .navbar__dropdownBtn {
+  background: color-mix(in srgb, var(--color-primary) 12%, var(--color-surface) 88%);
+  color: var(--color-primary-dark);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
 }
 
 /* Menú desplegable */
