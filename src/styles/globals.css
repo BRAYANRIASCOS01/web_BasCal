@@ -5,7 +5,6 @@
 .app {
   min-height: 100vh;
   background: var(--color-surface);
- 
 }
 
 .container {
@@ -21,9 +20,25 @@
   background: var(--color-surface-alt);
 }
 
+.section-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--color-secondary);
+}
+
 .section-title {
-  font-size: clamp(1.75rem, 3vw, var(--text-3xl));
-  margin-bottom: var(--spacing-md);
+  font-size: clamp(2rem, 3vw, var(--text-3xl));
+  margin-bottom: 2.5rem;
+  color: var(--color-primary-dark);
+}
+
+.section-subtitle {
+  max-width: 720px;
+  margin-bottom: 2rem;
+  color: var(--color-muted);
 }
 
 .text-muted {
@@ -40,11 +55,98 @@
 
 .grid {
   display: grid;
-  gap: var(--spacing-lg);
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
+.card {
+  padding: 1.75rem;
+  border-radius: 1.25rem;
+  background: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+}
+
+.card__title {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-primary-dark);
+}
+
+.portfolio-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.portfolio__heading {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.portfolio__map {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  border-radius: 0.75rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.portfolio__list {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  gap: 0.5rem;
+  color: var(--color-muted);
+}
+
+.portfolio__card {
+  border-radius: 1.25rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  padding: 1.5rem;
+}
+
+.footer {
+  background: var(--color-primary-dark);
+  color: var(--color-surface);
+}
+
+.footer .text-muted {
+  color: var(--color-secondary);
+}
+
+.footer__grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.footer__title {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer__subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.footer__list {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.footer__label {
+  font-weight: 600;
+}
+
+.footer__bottom {
+  margin-top: 2rem;
+  border-top: 1px solid rgba(226, 232, 240, 0.2);
+  padding-top: 1.5rem;
 }
