@@ -80,11 +80,13 @@ const Navbar = ({ logoSrc = "/Log_BasCal.PNG", logoAlt }) => {
         </nav>
 
         {/* Acciones */}
+        
         <div className="navbar__actions">
+          <LanguageSwitcher />
           <NavLink to={to("/contacto")} className="navbar__contact">
             {t("navbar.contact")}
           </NavLink>
-          <LanguageSwitcher />
+          
         </div>
       </div>
     </header>
