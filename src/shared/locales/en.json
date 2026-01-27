@@ -1,4 +1,22 @@
-{
+{   "navbar": {
+    "logoAlt": "BasCal logo",
+    "home": "Home",
+    "services": "Services",
+    "servicesItems": {
+      "bim": "BIM",
+      "professionals": "Professionals",
+      "construction": "Construction",
+      "staffAugmentation": "Staff Augmentation"
+    },
+    "portfolio": "Portfolio",
+    "company": "Company",
+    "companyItems": {
+      "faq": "FAQ",
+      "about": "About us",
+      "blog": "Blog"
+    },
+    "contact": "Contact"
+  },
   "home": {
     "seo": {
       "title": "BasCal | Engineering and construction with precision",

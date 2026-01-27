@@ -1,4 +1,5 @@
 :root {
+  --navbar-height: 80px;
   color-scheme: light;
   --color-primary: #000b66; /* Azul institucional */
   --color-primary-dark: #0f172a; /* Azul oscuro para textos */

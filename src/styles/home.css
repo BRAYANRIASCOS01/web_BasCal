@@ -3,6 +3,7 @@
 @import "./sections/services.css";
 @import "./sections/services-pro.css";
 @import "./sections/projects.css";
+@import "./components/navbar.css";
 
 .app {
   background: var(--color-surface);

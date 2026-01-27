@@ -3,6 +3,9 @@ import { useTranslation } from "react-i18next";
 import { HelmetProvider } from "react-helmet-async";
 import HomePage from "../features/home/pages/HomePage.jsx";
 
+import AppRoutes from "./routes.jsx";
+import Navbar from "../shared/components/Navbar.jsx";
+
 const App = () => {
   const { i18n } = useTranslation();
 
@@ -12,7 +15,7 @@ const App = () => {
 
   return (
     <HelmetProvider>
-      <HomePage />
+        <AppRoutes />
     </HelmetProvider>
   );
 };
