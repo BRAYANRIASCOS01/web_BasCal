@@ -82,9 +82,7 @@ const Hero = () => {
             {t("home.secondaryCta")}
           </a>
         </div>
-        <div data-animate style={{ transitionDelay: "0.25s" }}>
-          <LanguageSwitcher />
-        </div>
+        
       </div>
     </header>
   );
