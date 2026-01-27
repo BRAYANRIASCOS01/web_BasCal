@@ -30,6 +30,7 @@
     "servicesKicker": "BIM Services",
     "servicesTitle": "BIM Services",
     "servicesSubtitle": "We implement BIM to coordinate architectural, structural, and MEP disciplines through modeling, cross-team coordination, and technical information management.",
+    "servicesCta": "See more",
     "services": {
       "items": [
         {

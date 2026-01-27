@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { NavLink, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 
@@ -9,6 +10,7 @@ import plumbingImage from "../../../assets/bim3.png";
 const ServicesPro = () => {
   const { t } = useTranslation();
   const sectionRef = useRef(null);
+  const { lang = "es" } = useParams();
 
   const services = t("home.professionalServices.items", { returnObjects: true }) || [];
   const professionalServices = Array.isArray(services) ? services : [];
@@ -19,9 +21,11 @@ const ServicesPro = () => {
 
   useEffect(() => {
     const sectionEl = sectionRef.current;
-    if (!sectionEl) return;
+    if (!sectionEl) return undefined;
 
     const animatedNodes = sectionEl.querySelectorAll("[data-animate]");
+    if (!animatedNodes.length) return undefined;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -32,8 +36,12 @@ const ServicesPro = () => {
     );
 
     animatedNodes.forEach((node) => observer.observe(node));
-    return () => observer.disconnect();
-  }, []);
+
+    return () => {
+      animatedNodes.forEach((node) => observer.unobserve(node));
+      observer.disconnect();
+    };
+  }, [professionalServices]);
 
   const professionalServicesSchema = {
     "@context": "https://schema.org",
@@ -106,9 +114,9 @@ const ServicesPro = () => {
                       ))}
                     </ul>
                   </div>
-                  <a
+                  <NavLink
                     className="pro-service__action"
-                    href={`mailto:${contactEmail}`}
+                    to={`/${lang}/servicios/profesionales`}
                     aria-label={`${t("home.primaryCta")} - ${service.title}`}
                   >
                     <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false">
@@ -121,12 +129,28 @@ const ServicesPro = () => {
                         strokeWidth="1.75"
                       />
                     </svg>
-                  </a>
+                  </NavLink>
                 </article>
               </li>
             );
           })}
         </ol>
+        <div className="professional-services__actions" data-animate>
+          <NavLink to={`/${lang}/servicios/profesionales`} className="pro-btn pro-btn--ghost">
+            {t("home.servicesCta")}
+            <span aria-hidden="true" className="pro-btn__icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M5 12h14m-6-6 6 6-6 6"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
+          </NavLink>
+        </div>
       </div>
     </section>
   );

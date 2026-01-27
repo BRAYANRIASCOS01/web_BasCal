@@ -1,8 +1,10 @@
 import { useEffect, useRef } from "react";
+import { NavLink, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const Services = () => {
   const { t } = useTranslation();
+  const { lang = "es" } = useParams();
   const services = t("home.services.items", { returnObjects: true });
   const sectionRef = useRef(null);
   const serviceIcons = [
@@ -34,9 +36,11 @@ const Services = () => {
 
   useEffect(() => {
     const sectionEl = sectionRef.current;
-    if (!sectionEl) return;
+    if (!sectionEl) return undefined;
 
     const animatedNodes = sectionEl.querySelectorAll("[data-animate]");
+    if (!animatedNodes.length) return undefined;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -47,8 +51,12 @@ const Services = () => {
     );
 
     animatedNodes.forEach((node) => observer.observe(node));
-    return () => observer.disconnect();
-  }, []);
+
+    return () => {
+      animatedNodes.forEach((node) => observer.unobserve(node));
+      observer.disconnect();
+    };
+  }, [services]);
 
   return (
     <section className="section services" id="services" ref={sectionRef}>
@@ -73,6 +81,22 @@ const Services = () => {
               <p className="service-card__text text-muted">{item.text}</p>
             </article>
           ))}
+        </div>
+        <div className="services__actions" data-animate>
+          <NavLink to={`/${lang}/servicios/bim`} className="btn btn--ghost">
+            {t("home.servicesCta")}
+            <span aria-hidden="true" className="btn__icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M5 12h14m-6-6 6 6-6 6"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
+          </NavLink>
         </div>
       </div>
     </section>

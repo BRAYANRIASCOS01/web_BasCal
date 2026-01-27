@@ -47,8 +47,19 @@
 
 /* Flechita */
 .navbar__caret {
-  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 12px;
   opacity: 0.7;
+  transition: transform 160ms ease, opacity 160ms ease;
+}
+
+.navbar__dropdown:hover .navbar__caret,
+.navbar__dropdown:focus-within .navbar__caret {
+  transform: translateY(1px);
+  opacity: 0.95;
 }
 
 /* Menú desplegable */
