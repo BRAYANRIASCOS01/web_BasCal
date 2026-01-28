@@ -127,5 +127,87 @@
     "label": "Idioma",
     "spanish": "ES",
     "english": "EN"
+  },
+  "bimPage": {
+    "seo": {
+      "title": "Servicios BIM/VDC | BasCal coordinación y modelado",
+      "description": "Coordinamos BIM MEP, arquitectura y estructura con modelos LOD 300-400, detección de interferencias, 4D/5D y documentación ejecutiva."
+    },
+    "hero": {
+      "eyebrow": "Servicios BIM & VDC",
+      "title": "BIM para obras precisas y decisiones en datos.",
+      "accent": "BIM/VDC",
+      "subtitle": "Modelamos, coordinamos y gestionamos información constructiva para que tus proyectos se ejecuten sin reprocesos ni sorpresas.",
+      "cta": "Agendar cita"
+    },
+    "pillars": {
+      "kicker": "Entrega BIM",
+      "title": "Qué incluye nuestro servicio BIM",
+      "items": [
+        {
+          "title": "Modelado integral LOD 300-400",
+          "text": "Arquitectura, estructura y MEP listos para coordinación, prefabricación y documentación."
+        },
+        {
+          "title": "Coordinación y clash detection",
+          "text": "Model checking, gestión de incidencias y reportes priorizados con rutas de solución."
+        },
+        {
+          "title": "Planeación 4D + 5D",
+          "text": "Vinculamos programa y cantidades para visualizar riesgos y optimizar costos."
+        },
+        {
+          "title": "Documentación ejecutiva",
+          "text": "Planos IFC, hojas de datos, planos de taller y sets para obra."
+        },
+        {
+          "title": "Implementación BIM para equipos",
+          "text": "Estandarización BEP, plantillas, librerías y capacitación práctica."
+        }
+      ]
+    },
+    "ctaBanner": {
+      "title": "¿Listo para un kickoff BIM claro?",
+      "text": "Coordinamos a tu equipo, definimos entregables y métricas, y comenzamos con un piloto en menos de dos semanas.",
+      "primary": "Hablar con un BIM Lead",
+      "secondary": "Ver portafolio"
+    },
+    "intro": {
+      "title": "Servicios BIM",
+      "text": "Implementamos BIM para coordinar disciplinas arquitectónicas, estructurales y MEP, entregando modelos listos para construcción, reduciendo interferencias y optimizando tiempos y costos del proyecto."
+    },
+    "services": {
+      "cta": "Ver más",
+      "cards": [
+        {
+          "title": "BIM MEP Modeling & Digital Fabrication",
+          "text": "Modelado BIM de sistemas mecánicos, eléctricos, hidrosanitarios y contra incendios con LOD 300–400 orientados a coordinación y prefabricación."
+        },
+        {
+          "title": "Architectural & Structural BIM Modeling",
+          "text": "Modelado arquitectónico y estructural preciso para coordinación, documentación y constructibilidad en obra."
+        },
+        {
+          "title": "BIM Coordination",
+          "text": "Coordinación interdisciplinaria, gestión de clashes y soporte técnico mediante estándares BIM y BEP."
+        },
+        {
+          "title": "Laser Scanning | Scan to BIM | As-Built",
+          "text": "Escaneo láser 3D, nubes de puntos y generación de modelos BIM confiables para rehabilitación y control de obra."
+        },
+        {
+          "title": "4D Construction Sequencing & 5D Cost Planning",
+          "text": "Integración del modelo BIM con planificación de obra y costos. Soporte para simulación constructiva, control de cronograma y análisis de costos."
+        },
+        {
+          "title": "6D/7D BIM for Facilities Management | Digital Twinning",
+          "text": "Modelos BIM orientados a operación y mantenimiento. Información técnica estructurada para gestión de activos y toma de decisiones post-construcción."
+        },
+        {
+          "title": "Digital Twin",
+          "text": "Gemelos digitales basados en modelos BIM para monitoreo y análisis del activo. Soporte a operación, mantenimiento y optimización del ciclo de vida del proyecto."
+        }
+      ]
+    }
   }
 }

@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
-import Hero from "../sections/Hero.jsx";
+import Hero from "../../../shared/components/Hero.jsx";
 import WhyBascal from "../sections/WhyBascal.jsx";
 import Services from "../sections/Services.jsx";
 import ServicesPro from "../sections/Services_Pro.jsx";

@@ -1,35 +1,54 @@
 import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import LanguageSwitcher from "../../translation/LanguageSwitcher.jsx";
 
-const Hero = () => {
+const Hero = ({
+  eyebrow,
+  title,
+  accent = "BIM/VDC",
+  subtitle,
+  ctaLabel,
+  ctaHref = "#services",
+  ctaAriaLabel,
+  id = "hero",
+  className = "",
+}) => {
   const { t } = useTranslation();
   const sectionRef = useRef(null);
 
+  const resolvedEyebrow = eyebrow ?? t("home.eyebrow");
+  const resolvedTitle = title ?? t("home.heroTitle");
+  const resolvedSubtitle = subtitle ?? t("home.heroSubtitle");
+  const resolvedCtaLabel = ctaLabel ?? t("home.secondaryCta");
+  const resolvedCtaAria = ctaAriaLabel ?? resolvedCtaLabel;
+
   useEffect(() => {
     const sectionEl = sectionRef.current;
-    if (!sectionEl) return;
+    if (!sectionEl) return undefined;
 
     const animatedNodes = sectionEl.querySelectorAll("[data-animate]");
+    if (!animatedNodes.length) return undefined;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-          } else {
-            entry.target.classList.remove("is-visible");
-          }
+          entry.target.classList.toggle("is-visible", entry.isIntersecting);
         });
       },
       { threshold: 0.25 }
     );
 
     animatedNodes.forEach((node) => observer.observe(node));
-    return () => observer.disconnect();
-  }, []);
+
+    return () => {
+      animatedNodes.forEach((node) => observer.unobserve(node));
+      observer.disconnect();
+    };
+  }, [resolvedTitle, resolvedSubtitle, resolvedEyebrow]);
+
+  const wrapperClass = ["hero section", className].filter(Boolean).join(" ");
 
   return (
-    <header className="hero section" ref={sectionRef}>
+    <header className={wrapperClass} ref={sectionRef} id={id}>
       <div className="hero__bg" aria-hidden="true">
         <span className="hero__photo hero__photo--arch" />
         <span className="hero__photo hero__photo--offices" />
@@ -68,21 +87,20 @@ const Hero = () => {
 
       <div className="container hero__content" data-animate>
         <p className="eyebrow" data-animate style={{ transitionDelay: "0.05s" }}>
-          {t("home.eyebrow")}
+          {resolvedEyebrow}
         </p>
         <h1 className="hero__title" data-animate style={{ transitionDelay: "0.1s" }}>
-          {t("home.heroTitle")}
-          <span className="hero__accent">BIM/VDC</span>
+          {resolvedTitle}
+          {accent && <span className="hero__accent">{accent}</span>}
         </h1>
         <p className="hero__subtitle text-muted" data-animate style={{ transitionDelay: "0.15s" }}>
-          {t("home.heroSubtitle")}
+          {resolvedSubtitle}
         </p>
         <div className="actions hero__actions" data-animate style={{ transitionDelay: "0.2s" }}>
-          <a className="btn btn--primary" href="#services" aria-label={t("home.secondaryCta")}>
-            {t("home.secondaryCta")}
+          <a className="btn btn--primary" href={ctaHref} aria-label={resolvedCtaAria}>
+            {resolvedCtaLabel}
           </a>
         </div>
-        
       </div>
     </header>
   );

@@ -1,0 +1,45 @@
+.bim-intro {
+  --brand: var(--color-primary);
+  padding: clamp(1.5rem, 4vw, 2.75rem) 0 clamp(1.5rem, 4vw, 3rem);
+  background: #f7f9fc;
+}
+
+.bim-intro__inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  gap: 0.75rem;
+  justify-items: center;
+  text-align: center;
+}
+
+.bim-intro .section-title {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: #243467;
+  letter-spacing: 0.01em;
+  position: relative;
+}
+
+.bim-intro .section-title::after {
+  content: "";
+  display: block;
+  width: 180px;
+  height: 8px;
+  margin: 0.5rem auto 0;
+  background:
+    linear-gradient(var(--brand), var(--brand)) left center / 56px 6px no-repeat,
+    linear-gradient(var(--brand), var(--brand)) right center / 56px 6px no-repeat,
+    linear-gradient(var(--brand), var(--brand)) center center / 68px 2px no-repeat;
+  border-radius: 999px;
+}
+
+.bim-intro .section-subtitle {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4a5568;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e1e7f1;
+  max-width: 980px;
+}
