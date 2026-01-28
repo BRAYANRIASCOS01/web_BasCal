@@ -18,6 +18,58 @@
     },
     "contact": "Contacto"
   },
+  "aboutPage": {
+    "seo": {
+      "title": "Sobre nosotros | BasCal Ingeniería & Construcción",
+      "description": "Firma especializada en diseño arquitectónico, ingeniería MEP y servicios BIM/VDC avanzados, con modelos precisos para proyectos complejos."
+    },
+    "hero": {
+      "eyebrow": "Nuestra empresa",
+      "title": "Diseñamos, coordinamos y entregamos con precisión BIM.",
+      "subtitle": "Integrando arquitectura, redes técnicas e información digital para construcción eficiente, reducimos costos, riesgos y reprocesos de preconstrucción a operación.",
+      "cta": "Agendar cita"
+    },
+    "blocks": [
+      {
+        "title": "Quiénes somos",
+        "text": "BasCal Ingeniería y Construcción es una firma especializada en diseño arquitectónico, ingeniería MEP y servicios BIM/VDC avanzados. Desarrollamos y coordinamos modelos de alta precisión para proyectos complejos, integrando arquitectura, redes técnicas e información digital para la construcción. Con experiencia nacional e internacional, acompañamos desde la fase preconstructiva hasta la ocupación, entregando soluciones eficientes que reducen costos, riesgos y reprocesos."
+      },
+      {
+        "title": "Misión",
+        "text": "Entregar soluciones de diseño e ingeniería detalladas, precisas y eficientes, desarrolladas con las últimas herramientas y tecnologías BIM. Producimos modelos y documentación de alta calidad que optimizan la coordinación, reducen riesgos y facilitan procesos constructivos confiables."
+      },
+      {
+        "title": "Visión",
+        "text": "Para 2030 ser una empresa líder en diseño, ingeniería y construcción a nivel regional e internacional, reconocida por la excelencia en metodologías BIM y el cumplimiento de estándares globales. Aspiramos a integrar prácticas sostenibles y soluciones constructivas con certificaciones ambientales y eficiencia energética."
+      }
+    ]
+  },
+  "aboutPage": {
+    "seo": {
+      "title": "Sobre nosotros | BasCal Ingeniería & Construcción",
+      "description": "Firma especializada en diseño arquitectónico, ingeniería MEP y servicios BIM/VDC avanzados, con modelos precisos para proyectos complejos."
+    },
+    "hero": {
+      "eyebrow": "Nuestra empresa",
+      "title": "Diseñamos, coordinamos y entregamos con precisión BIM.",
+      "subtitle": "Integrando arquitectura, redes técnicas e información digital para construcción eficiente, reducimos costos, riesgos y reprocesos de preconstrucción a operación.",
+      "cta": "Agendar cita"
+    },
+    "blocks": [
+      {
+        "title": "Quiénes somos",
+        "text": "BasCal Ingeniería y Construcción es una firma especializada en diseño arquitectónico, ingeniería MEP y servicios BIM/VDC avanzados. Desarrollamos y coordinamos modelos de alta precisión para proyectos complejos, integrando arquitectura, redes técnicas e información digital para la construcción. Con experiencia nacional e internacional, acompañamos desde la fase preconstructiva hasta la ocupación, entregando soluciones eficientes que reducen costos, riesgos y reprocesos."
+      },
+      {
+        "title": "Misión",
+        "text": "Entregar soluciones de diseño e ingeniería detalladas, precisas y eficientes, desarrolladas con las últimas herramientas y tecnologías BIM. Producimos modelos y documentación de alta calidad que optimizan la coordinación, reducen riesgos y facilitan procesos constructivos confiables."
+      },
+      {
+        "title": "Visión",
+        "text": "Para 2030 ser una empresa líder en diseño, ingeniería y construcción a nivel regional e internacional, reconocida por la excelencia en metodologías BIM y cumplimiento de estándares globales. Aspiramos a integrar prácticas sostenibles y soluciones constructivas con certificaciones ambientales y eficiencia energética."
+      }
+    ]
+  },
   "home": {
     "seo": {
       "title": "BasCal | Ingeniería y construcción con precisión",
@@ -139,6 +191,92 @@
         ]
       },
       "bottom": "© BasCal. Todos los derechos reservados."
+    }
+  },
+  "professionalPage": {
+    "seo": {
+      "title": "Professional Services | Ingeniería y diseño arquitectónico",
+      "description": "Diseñamos y calculamos sistemas arquitectónicos e ingenieriles seguros, eficientes y listos para construcción, cumpliendo normativas y buenas prácticas técnicas."
+    },
+    "hero": {
+      "eyebrow": "Professional Services",
+      "title": "Engineering & Architectural Design Services",
+      "subtitle": "Diseñamos soluciones técnicas seguras, eficientes y normativamente viables para proyectos en todas sus etapas, desde el concepto hasta la documentación de construcción. Nos enfocamos en el diseño, cálculo y especificación técnica, asegurando que cada sistema funcione correctamente y cumpla con los estándares locales e internacionales.",
+      "cta": "Agendar cita"
+    },
+    "services": {
+      "title": "Alcance de servicios de diseño",
+      "subtitle": "Lista de disciplinas y entregables que cubrimos en diseño arquitectónico e ingeniería.",
+      "items": [
+        {
+          "title": "Architectural Design | Interior Design",
+          "points": [
+            "Diseño conceptual, básico y de detalle",
+            "Planos IFC y planos constructivos",
+            "Documentación técnica para licenciamiento y construcción",
+            "Diseño interior para oficinas, residencial y espacios comerciales",
+            "Análisis de seguridad humana para edificaciones"
+          ]
+        },
+        {
+          "title": "Mecánica",
+          "points": [
+            "Cálculo de cargas térmicas",
+            "Distribución, cálculo y dimensionamiento de ductos y tuberías",
+            "Selección y especificación de equipos HVAC",
+            "Ventilación y extracción mecánica"
+          ]
+        },
+        {
+          "title": "Plumbing and Gas Natural Design",
+          "points": [
+            "Cálculo hidráulico de redes de abasto (agua fría y caliente)",
+            "Diseño de sistemas sanitarios y pluviales",
+            "Selección de equipos de bombeo y accesorios",
+            "Diseño de redes de gas natural",
+            "Selección de equipos, medidores y reguladores"
+          ]
+        },
+        {
+          "title": "Electrical Design",
+          "points": [
+            "Cálculo de cargas eléctricas",
+            "Diagramas unifilares y trifilares",
+            "Diseño y selección de tableros eléctricos",
+            "Sistemas de puesta a tierra y protección eléctrica"
+          ]
+        },
+        {
+          "title": "Fire Alarm and Fire Protection Design",
+          "points": [
+            "Diseño de sistemas de rociadores automáticos (sistemas húmedos y secos)",
+            "Sistemas de conexiones de manguera (gabinetes)",
+            "Selección de equipos de bombeo y accesorios",
+            "Diseño de sistemas de detección y alarma contra incendio",
+            "Distribución y selección de extintores portátiles"
+          ]
+        },
+        {
+          "title": "TI Design",
+          "points": [
+            "Diseño de sistemas de datos y telecomunicaciones",
+            "Canalizaciones y rutas técnicas",
+            "Sistemas de CCTV y control de accesos",
+            "Infraestructura para edificios inteligentes",
+            "Integración con otros sistemas técnicos"
+          ]
+        },
+        {
+          "title": "Certificación EDGE",
+          "points": [
+            "Asesoría técnica para certificación EDGE y LEED",
+            "Estrategias de eficiencia energética",
+            "Optimización de consumo de agua",
+            "Análisis de materiales y costos",
+            "Acompañamiento durante diseño y certificación"
+          ]
+        }
+      ]
     }
   },
   "language": {

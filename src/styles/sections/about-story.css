@@ -1,0 +1,81 @@
+.about-story {
+  background: var(--color-surface-alt);
+}
+
+.about-story__inner {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.about-story__card {
+  border: 1px solid color-mix(in srgb, var(--color-primary) 10%, var(--color-border) 90%);
+  border-radius: 1.25rem;
+  padding: clamp(1.35rem, 3vw, 2rem);
+  background: linear-gradient(180deg, var(--color-surface), color-mix(in srgb, var(--color-primary) 4%, var(--color-surface) 96%));
+  box-shadow:
+    0 14px 30px rgba(15, 23, 42, 0.08),
+    0 1px 0 rgba(255, 255, 255, 0.92) inset;
+  display: grid;
+  gap: 0.75rem;
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.28s ease, transform 0.28s ease, box-shadow 0.18s ease;
+}
+
+.about-story__card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-story__title {
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--color-primary-dark);
+  line-height: 1.35;
+}
+
+.about-story__text {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.about-story__list {
+  margin: 0.2rem 0 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.25rem;
+  line-height: 1.6;
+}
+
+.about-story__list li::marker {
+  color: var(--color-primary);
+}
+
+.about-story__card-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.about-story__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 10px;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--color-primary) 12%, var(--color-surface) 88%);
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  box-shadow:
+    0 8px 18px rgba(0, 11, 102, 0.12),
+    0 0 0 1px color-mix(in srgb, var(--color-primary) 18%, var(--color-border) 82%);
+}
+
+@media (min-width: 900px) {
+  .about-story__inner {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

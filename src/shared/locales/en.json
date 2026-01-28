@@ -141,6 +141,118 @@
       "bottom": "© BasCal. All rights reserved."
     }
   },
+  "professionalPage": {
+    "seo": {
+      "title": "Professional Services | Engineering & Architectural Design",
+      "description": "We design and calculate safe, efficient, code-compliant architectural and engineering systems from concept through construction documents."
+    },
+    "hero": {
+      "eyebrow": "Professional Services",
+      "title": "Engineering & Architectural Design Services",
+      "subtitle": "We design safe, efficient, code-compliant solutions across every phase, from concept to construction documents. We focus on design, calculation, and technical specs so each system performs and meets local and international standards.",
+      "cta": "Book a meeting"
+    },
+    "services": {
+      "title": "Design Services Scope",
+      "subtitle": "Disciplines and deliverables we cover for architectural and engineering design.",
+      "items": [
+        {
+          "title": "Architectural Design | Interior Design",
+          "points": [
+            "Concept, schematic, and detailed design",
+            "IFC and construction drawings",
+            "Technical documentation for permitting and construction",
+            "Interior design for office, residential, and commercial spaces",
+            "Life safety analysis for buildings"
+          ]
+        },
+        {
+          "title": "Mechanical",
+          "points": [
+            "Thermal load calculations",
+            "Duct and pipe distribution, sizing, and calculations",
+            "HVAC equipment selection and specification",
+            "Mechanical ventilation and exhaust"
+          ]
+        },
+        {
+          "title": "Plumbing and Natural Gas Design",
+          "points": [
+            "Hydraulic calculation of supply networks (hot and cold water)",
+            "Design of sanitary and storm systems",
+            "Selection of pumping equipment and accessories",
+            "Natural gas network design",
+            "Selection of equipment, meters, and regulators"
+          ]
+        },
+        {
+          "title": "Electrical Design",
+          "points": [
+            "Electrical load calculations",
+            "Single-line and three-line diagrams",
+            "Design and selection of switchboards",
+            "Grounding and electrical protection systems"
+          ]
+        },
+        {
+          "title": "Fire Alarm and Fire Protection Design",
+          "points": [
+            "Design of automatic sprinkler systems (wet and dry)",
+            "Hose connection systems (cabinets)",
+            "Selection of pumping equipment and accessories",
+            "Design of fire detection and alarm systems",
+            "Distribution and selection of portable extinguishers"
+          ]
+        },
+        {
+          "title": "TI Design",
+          "points": [
+            "Design of data and telecom systems",
+            "Conduits and technical pathways",
+            "CCTV and access control systems",
+            "Smart building infrastructure",
+            "Integration with other technical systems"
+          ]
+        },
+        {
+          "title": "EDGE Certification",
+          "points": [
+            "Technical advisory for EDGE and LEED certification",
+            "Energy efficiency strategies",
+            "Water consumption optimization",
+            "Materials and cost analysis",
+            "Support during design and certification"
+          ]
+        }
+      ]
+    }
+  },
+  "aboutPage": {
+    "seo": {
+      "title": "About us | BasCal Engineering & Construction",
+      "description": "Specialized firm in architectural design, MEP engineering, and advanced BIM/VDC services delivering precise models for complex projects."
+    },
+    "hero": {
+      "eyebrow": "Our company",
+      "title": "We design, coordinate, and deliver with BIM precision.",
+      "subtitle": "Integrating architecture, technical networks, and digital information for efficient construction, we reduce cost, risk, and rework from preconstruction through operations.",
+      "cta": "Book a meeting"
+    },
+    "blocks": [
+      {
+        "title": "Who we are",
+        "text": "BasCal Engineering & Construction specializes in architectural design, MEP engineering, and advanced BIM/VDC services. We develop and coordinate high-precision models for complex projects, integrating architecture, technical networks, and construction-ready data. With national and international experience, we support projects from preconstruction to occupancy, delivering efficient solutions that reduce cost, risk, and rework."
+      },
+      {
+        "title": "Mission",
+        "text": "Deliver detailed, precise, and efficient design and engineering solutions using the latest BIM tools. We produce high-quality models and documentation that optimize coordination, reduce risk, and make construction processes more reliable."
+      },
+      {
+        "title": "Vision",
+        "text": "By 2030, be a regional and international leader in design, engineering, and construction, recognized for excellence in BIM methodologies and compliance with global standards. We aim to integrate sustainable practices and deliver construction solutions that include environmental certifications and energy efficiency."
+      }
+    ]
+  },
   "language": {
     "label": "Language",
     "spanish": "ES",
