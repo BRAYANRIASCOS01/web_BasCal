@@ -142,27 +142,14 @@
       "contact": {
         "title": "Contacto",
         "items": [
-          {
-            "label": "Ubicación",
-            "value": "Medellín, Colombia"
-          },
-          {
-            "label": "Teléfono",
-            "value": "+57 000 000 0000"
-          },
-          {
-            "label": "Correo",
-            "value": "contacto@bascal.com"
-          }
+          { "label": "Ubicación", "value": "Medellín, Colombia" },
+          { "label": "Teléfono", "value": "+57 000 000 0000" },
+          { "label": "Correo", "value": "contacto@bascal.com" }
         ]
       },
       "services": {
         "title": "Servicios",
-        "items": [
-          "Diseño arquitectónico",
-          "Modelado MEP",
-          "Coordinación BIM"
-        ]
+        "items": ["Diseño arquitectónico", "Modelado MEP", "Coordinación BIM"]
       },
       "bottom": "© BasCal. Todos los derechos reservados."
     }
@@ -338,11 +325,7 @@
             "title": "Coordinación BIM integral en campo",
             "body": "Uno de los objetivos más complejos es coordinar sistemas entre disciplinas en obra. Lideramos la coordinación BIM integrando arquitectura, estructura y MEP para eliminar interferencias, reducir reprocesos y asegurar ejecución eficiente.",
             "body2": "Definimos y aplicamos los estándares BIM vía BEP, coordinando a todos los actores para entregar modelos coordinados y listos para construcción, con foco en constructibilidad, tiempos y control de costos.",
-            "softwares": [
-              "Autodesk Revit",
-              "Autodesk Navisworks o Revizto",
-              "Autodesk Construction Cloud (ACC)"
-            ]
+            "softwares": ["Autodesk Revit", "Autodesk Navisworks o Revizto", "Autodesk Construction Cloud (ACC)"]
           }
         },
         {
@@ -388,6 +371,51 @@
         }
       ],
       "detailClose": "Cerrar"
+    }
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Resolvemos dudas comunes sobre nuestros servicios, procesos y entregables.",
+    "items": [
+      {
+        "q": "¿Qué es BIM y cómo ayuda a mi proyecto?",
+        "a": "BIM es una metodología de trabajo colaborativa basada en modelos digitales. Ayuda a coordinar disciplinas, detectar interferencias y reducir reprocesos y costos."
+      },
+      {
+        "q": "¿Qué entregables recibo con un servicio BIM?",
+        "a": "Dependiendo del alcance: modelos LOD 300–400, reportes de interferencias (clashes), planos, cuantificaciones y documentación técnica."
+      },
+      {
+        "q": "¿En qué etapas del proyecto pueden acompañarnos?",
+        "a": "Desde preconstrucción y diseño, hasta coordinación durante obra y soporte técnico en la etapa de entrega/ocupación."
+      },
+      {
+        "q": "¿Trabajan con equipos internos del cliente?",
+        "a": "Sí. Nos integramos con tu equipo y tus estándares. Podemos operar como soporte especializado (Staff Augmentation) o como equipo externo completo."
+      }
+    ],
+    "cta": {
+      "text": "¿Tienes otra pregunta?",
+      "button": "Contáctanos"
+    }
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "Cuéntanos sobre tu proyecto y te responderemos pronto.",
+    "name": "Nombre",
+    "email": "Correo",
+    "phone": "Teléfono (opcional)",
+    "service": "Servicio",
+    "message": "Mensaje",
+    "submit": "Enviar",
+    "sending": "Enviando...",
+    "success": "¡Gracias! Te responderemos pronto.",
+    "error": "No pudimos enviar el formulario. Intenta de nuevo.",
+    "services": {
+      "bim": "BIM",
+      "pro": "Profesionales",
+      "construction": "Construcción",
+      "staff": "Staff Augmentation"
     }
   }
 }

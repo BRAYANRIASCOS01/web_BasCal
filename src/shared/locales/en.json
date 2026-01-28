@@ -18,6 +18,32 @@
     },
     "contact": "Contact"
   },
+  "aboutPage": {
+    "seo": {
+      "title": "About us | BasCal Engineering & Construction",
+      "description": "Specialized firm in architectural design, MEP engineering, and advanced BIM/VDC services delivering precise models for complex projects."
+    },
+    "hero": {
+      "eyebrow": "Our company",
+      "title": "We design, coordinate, and deliver with BIM precision.",
+      "subtitle": "Integrating architecture, technical networks, and digital information for efficient construction, we reduce cost, risk, and rework from preconstruction through operations.",
+      "cta": "Book a meeting"
+    },
+    "blocks": [
+      {
+        "title": "Who we are",
+        "text": "BasCal Engineering & Construction specializes in architectural design, MEP engineering, and advanced BIM/VDC services. We develop and coordinate high-precision models for complex projects, integrating architecture, technical networks, and construction-ready data. With national and international experience, we support projects from preconstruction to occupancy, delivering efficient solutions that reduce cost, risk, and rework."
+      },
+      {
+        "title": "Mission",
+        "text": "Deliver detailed, precise, and efficient design and engineering solutions using the latest BIM tools. We produce high-quality models and documentation that optimize coordination, reduce risk, and make construction processes more reliable."
+      },
+      {
+        "title": "Vision",
+        "text": "By 2030, be a regional and international leader in design, engineering, and construction, recognized for excellence in BIM methodologies and compliance with global standards. We aim to integrate sustainable practices and deliver construction solutions that include environmental certifications and energy efficiency."
+      }
+    ]
+  },
   "home": {
     "seo": {
       "title": "BasCal | Engineering and construction with precision",
@@ -35,7 +61,7 @@
     "services": {
       "items": [
         {
-          "title": "MEP BIM modeling & Digital Fabrication",
+          "title": "BIM MEP Modeling & Digital Fabrication",
           "text": "BIM MEP modeling for mechanical, electrical, plumbing, and fire protection systems. We develop LOD 300-400 models focused on coordination, prefabrication, and field execution."
         },
         {
@@ -113,30 +139,17 @@
         "title": "BasCal",
         "text": "Specialized firm in architectural design, MEP engineering, and advanced BIM/VDC services."
       },
-      "contact": {
+    "contact": {
         "title": "Contact",
         "items": [
-          {
-            "label": "Location",
-            "value": "Medellín, Colombia"
-          },
-          {
-            "label": "Phone",
-            "value": "+57 000 000 0000"
-          },
-          {
-            "label": "Email",
-            "value": "contact@bascal.com"
-          }
+          { "label": "Location", "value": "Medellín, Colombia" },
+          { "label": "Phone", "value": "+57 000 000 0000" },
+          { "label": "Email", "value": "contact@bascal.com" }
         ]
       },
       "services": {
         "title": "Services",
-        "items": [
-          "Architectural design",
-          "MEP modeling",
-          "BIM coordination"
-        ]
+        "items": ["Architectural design", "MEP modeling", "BIM coordination"]
       },
       "bottom": "© BasCal. All rights reserved."
     }
@@ -227,32 +240,6 @@
       ]
     }
   },
-  "aboutPage": {
-    "seo": {
-      "title": "About us | BasCal Engineering & Construction",
-      "description": "Specialized firm in architectural design, MEP engineering, and advanced BIM/VDC services delivering precise models for complex projects."
-    },
-    "hero": {
-      "eyebrow": "Our company",
-      "title": "We design, coordinate, and deliver with BIM precision.",
-      "subtitle": "Integrating architecture, technical networks, and digital information for efficient construction, we reduce cost, risk, and rework from preconstruction through operations.",
-      "cta": "Book a meeting"
-    },
-    "blocks": [
-      {
-        "title": "Who we are",
-        "text": "BasCal Engineering & Construction specializes in architectural design, MEP engineering, and advanced BIM/VDC services. We develop and coordinate high-precision models for complex projects, integrating architecture, technical networks, and construction-ready data. With national and international experience, we support projects from preconstruction to occupancy, delivering efficient solutions that reduce cost, risk, and rework."
-      },
-      {
-        "title": "Mission",
-        "text": "Deliver detailed, precise, and efficient design and engineering solutions using the latest BIM tools. We produce high-quality models and documentation that optimize coordination, reduce risk, and make construction processes more reliable."
-      },
-      {
-        "title": "Vision",
-        "text": "By 2030, be a regional and international leader in design, engineering, and construction, recognized for excellence in BIM methodologies and compliance with global standards. We aim to integrate sustainable practices and deliver construction solutions that include environmental certifications and energy efficiency."
-      }
-    ]
-  },
   "language": {
     "label": "Language",
     "spanish": "ES",
@@ -338,11 +325,7 @@
             "title": "Integrated BIM coordination on site",
             "body": "One of the toughest goals is coordinating systems across disciplines on site. We lead BIM coordination, integrating architectural, structural, and MEP models to eliminate clashes, cut rework, and ensure efficient execution.",
             "body2": "We define and enforce BIM standards through the BEP, aligning all project stakeholders to deliver coordinated, construction-ready models with a focus on constructability, schedule, and cost control.",
-            "softwares": [
-              "Autodesk Revit",
-              "Autodesk Navisworks or Revizto",
-              "Autodesk Construction Cloud (ACC)"
-            ]
+            "softwares": ["Autodesk Revit", "Autodesk Navisworks or Revizto", "Autodesk Construction Cloud (ACC)"]
           }
         },
         {
@@ -388,6 +371,51 @@
         }
       ],
       "detailClose": "Close"
+    }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "Common questions about our services, process, and deliverables.",
+    "items": [
+      {
+        "q": "What is BIM and how does it help my project?",
+        "a": "BIM is a collaborative methodology based on digital models. It helps coordinate disciplines, detect clashes, and reduce rework and costs."
+      },
+      {
+        "q": "What deliverables do I receive with a BIM service?",
+        "a": "Depending on scope: LOD 300–400 models, clash reports, drawings, quantities, and technical documentation."
+      },
+      {
+        "q": "Which project stages can you support?",
+        "a": "From preconstruction and design to coordination during construction and handover support."
+      },
+      {
+        "q": "Do you work with the client’s internal teams?",
+        "a": "Yes. We integrate with your team and standards. We can operate as specialized support (Staff Augmentation) or as a full external team."
+      }
+    ],
+    "cta": {
+      "text": "Have another question?",
+      "button": "Contact us"
+    }
+  },
+  "contact": {
+    "title": "Let’s talk",
+    "subtitle": "Tell us about your project and we’ll get back to you shortly.",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone (optional)",
+    "service": "Service",
+    "message": "Message",
+    "submit": "Send",
+    "sending": "Sending...",
+    "success": "Thank you! We’ll get back to you shortly.",
+    "error": "We couldn’t send your message. Please try again.",
+    "services": {
+      "bim": "BIM",
+      "pro": "Professional Services",
+      "construction": "Construction",
+      "staff": "Staff Augmentation"
     }
   }
 }

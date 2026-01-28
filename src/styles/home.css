@@ -4,3 +4,6 @@
 @import "./sections/services-pro.css";
 @import "./sections/projects.css";
 @import "./components/navbar.css";
+@import "./components/footer.css";
+@import "./components/faq-accordion.css";
+@import "./components/form.css";
