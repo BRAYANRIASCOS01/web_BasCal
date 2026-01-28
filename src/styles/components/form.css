@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  --brand: var(--color-primary);
 }
 
 .formCard {
@@ -25,6 +26,19 @@
 .formTitle {
   font-size: clamp(1.4rem, 2.2rem, 2rem);
   margin: 1rem;
+}
+
+.formTitle::after {
+  content: "";
+  display: block;
+  width: 180px;
+  height: 8px;
+  margin: 0.5rem auto 0;
+  background:
+    linear-gradient(var(--brand), var(--brand)) left center / 56px 6px no-repeat,
+    linear-gradient(var(--brand), var(--brand)) right center / 56px 6px no-repeat,
+    linear-gradient(var(--brand), var(--brand)) center center / 68px 2px no-repeat;
+  border-radius: 999px;
 }
 
 .formSubtitle {
