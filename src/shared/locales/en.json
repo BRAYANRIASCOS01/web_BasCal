@@ -1,4 +1,5 @@
-{   "navbar": {
+{
+  "navbar": {
     "logoAlt": "BasCal logo",
     "home": "Home",
     "services": "Services",
@@ -34,7 +35,7 @@
     "services": {
       "items": [
         {
-          "title": "BIM MEP Modeling & Digital Fabrication",
+          "title": "MEP BIM modeling & Digital Fabrication",
           "text": "BIM MEP modeling for mechanical, electrical, plumbing, and fire protection systems. We develop LOD 300-400 models focused on coordination, prefabrication, and field execution."
         },
         {
@@ -60,7 +61,7 @@
     "professionalServices": {
       "kicker": "Professional services",
       "title": "Professional Services",
-      "subtitle": "Professional services focused on architecture, engineering, and construction.",
+      "subtitle": "We design safe, efficient, code-compliant technical solutions across every phase, from concept through construction documents. We focus on design, calculation, and technical specifications so each system works correctly and meets local and international standards. Softwares: Autodesk Revit, AutoCAD, ArchiCAD.",
       "items": [
         {
           "title": "Architectural Design | Interior Design",
@@ -95,11 +96,17 @@
     },
     "portfolio": {
       "kicker": "Coverage",
-      "title": "Project locations",
+      "title": "Projects we participated in",
       "subtitle": "Regional coverage and active presence in BIM projects.",
       "mapTitle": "Our clients across the Americas",
       "cardText": "We contribute to institutional, residential, and healthcare projects with technical coordination and international standards.",
-      "countries": ["Colombia", "Ecuador", "Venezuela", "Mexico", "United States"]
+      "countries": [
+        "Colombia",
+        "Ecuador",
+        "Venezuela",
+        "Mexico",
+        "United States"
+      ]
     },
     "footer": {
       "brand": {
@@ -109,14 +116,27 @@
       "contact": {
         "title": "Contact",
         "items": [
-          { "label": "Location", "value": "Medellín, Colombia" },
-          { "label": "Phone", "value": "+57 000 000 0000" },
-          { "label": "Email", "value": "contact@bascal.com" }
+          {
+            "label": "Location",
+            "value": "Medellín, Colombia"
+          },
+          {
+            "label": "Phone",
+            "value": "+57 000 000 0000"
+          },
+          {
+            "label": "Email",
+            "value": "contact@bascal.com"
+          }
         ]
       },
       "services": {
         "title": "Services",
-        "items": ["Architectural design", "MEP modeling", "BIM coordination"]
+        "items": [
+          "Architectural design",
+          "MEP modeling",
+          "BIM coordination"
+        ]
       },
       "bottom": "© BasCal. All rights reserved."
     }
@@ -178,34 +198,84 @@
       "cta": "See more",
       "cards": [
         {
+          "id": "mep",
           "title": "BIM MEP Modeling & Digital Fabrication",
-          "text": "BIM modeling for mechanical, electrical, plumbing, and fire protection systems with LOD 300–400 focused on coordination and prefabrication."
+          "text": "BIM modeling for mechanical, electrical, plumbing, and fire protection systems with LOD 300–400 focused on coordination and prefabrication.",
+          "detail": {
+            "eyebrow": "BIM MEP DETAIL",
+            "title": "BIM MEP team coordinating field installations",
+            "body": "Our BIM MEP services are aimed at real field construction. We model mechanical, HVAC, plumbing, electrical, and fire protection systems with practical, field-proven criteria. We deliver LOD 300–400 constructible models that account for real routes, maintenance clearances, install sequencing, and cross-discipline coordination. Models can include supports, hanger layouts, spooling, and prefabricated piping ready for fabrication and installation.",
+            "body2": "We also act as an extension of the contractor’s team, actively participating in BIM coordination to identify clashes, optimize solutions, and reduce rework. We deliver precise, coordinated, field-ready models that improve site efficiency, cut timelines, and provide tighter cost control."
+          }
         },
         {
           "title": "Architectural & Structural BIM Modeling",
-          "text": "Precise architectural and structural modeling for coordination, documentation, and constructability in the field."
+          "text": "Precise architectural and structural modeling for coordination, documentation, and constructability in the field.",
+          "detail": {
+            "eyebrow": "ARCH + STRUCTURE DETAIL",
+            "title": "Architecture & structure modeling ready for coordination",
+            "body": "In BIM-driven projects, architectural or structural models often aren’t available or lack the development needed for proper spatial coordination. This limits MEP teams and impacts clash detection and constructability.",
+            "body2": "We model architecture and structures focused on coordination, planning, and field execution. We deliver constructible, detailed models (concrete up to LOD 400, steel, CMU walls, formwork, geopiles, and vibropiles) to align disciplines early, cut rework, and improve collaboration."
+          }
         },
         {
           "title": "BIM Coordination",
-          "text": "Interdisciplinary coordination, clash management, and technical support following BIM and BEP standards."
+          "text": "Interdisciplinary coordination, clash management, and technical support following BIM and BEP standards.",
+          "detail": {
+            "eyebrow": "BIM COORDINATION DETAIL",
+            "title": "Integrated BIM coordination on site",
+            "body": "One of the toughest goals is coordinating systems across disciplines on site. We lead BIM coordination, integrating architectural, structural, and MEP models to eliminate clashes, cut rework, and ensure efficient execution.",
+            "body2": "We define and enforce BIM standards through the BEP, aligning all project stakeholders to deliver coordinated, construction-ready models with a focus on constructability, schedule, and cost control.",
+            "softwares": [
+              "Autodesk Revit",
+              "Autodesk Navisworks or Revizto",
+              "Autodesk Construction Cloud (ACC)"
+            ]
+          }
         },
         {
           "title": "Laser Scanning | Scan to BIM | As-Built",
-          "text": "3D laser scanning, point clouds, and reliable BIM models for rehabilitation and site control."
+          "text": "3D laser scanning, point clouds, and reliable BIM models for rehabilitation and site control.",
+          "detail": {
+            "eyebrow": "SCAN TO BIM DETAIL",
+            "title": "Capture, model, deliver As-Built",
+            "blocks": [
+              {
+                "title": "3D Laser Scanning",
+                "text": "We perform high-precision 3D laser scanning to capture existing facilities, generating reliable point clouds for modeling and analysis. We combine scanning tech with engineering judgment and field experience to deliver clear, project-aligned data."
+              },
+              {
+                "title": "Scan to BIM | As-Built Modeling",
+                "text": "We turn point clouds into BIM models in Revit per scope, LOD, and project objectives. Faithful as-built models that support architectural/engineering redesign, new-discipline coordination, as-built documentation, and asset operations—using optimized workflows and QA/QC for accuracy and consistency."
+              },
+              {
+                "title": "As-Built Documentation & Digital Twin",
+                "text": "We produce as-built models and drawings from laser scans, redlines, and site records, consolidating the project’s real conditions. When needed, we prep models for asset management/FM, integrating technical data for future operations and maintenance."
+              }
+            ]
+          }
         },
         {
           "title": "4D Construction Sequencing & 5D Cost Planning",
-          "text": "Model-driven schedule and cost planning with support for simulation, schedule control, and cost analysis."
+          "text": "Model-driven schedule and cost planning. Support for simulation, schedule control, and cost analysis.",
+          "detail": {
+            "eyebrow": "4D/5D DETAIL",
+            "title": "4D scheduling and 5D cost planning",
+            "body": "Model-driven schedule and cost planning. Support for simulation, schedule control, and cost analysis."
+          }
         },
         {
           "title": "6D/7D BIM for Facilities Management | Digital Twinning",
-          "text": "BIM models focused on operations and maintenance, with structured data for asset management and post-construction decisions."
-        },
-        {
-          "title": "Digital Twin",
-          "text": "Digital twins based on BIM models to monitor and analyze assets, supporting operations, maintenance, and lifecycle optimization."
+          "text": "BIM models focused on operations and maintenance. Structured data for asset management and post-construction decisions.",
+          "detail": {
+            "eyebrow": "6D/7D DETAIL",
+            "title": "Digital Twin & FM ready to operate",
+            "body": "BIM models oriented to operations and maintenance, with structured data for asset management and post-construction decision-making.",
+            "body2": "Digital twins based on BIM models to monitor and analyze assets, supporting operations, maintenance, and lifecycle optimization."
+          }
         }
-      ]
+      ],
+      "detailClose": "Close"
     }
   }
 }

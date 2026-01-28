@@ -1,6 +1,5 @@
 {
-
-   "navbar": {
+  "navbar": {
     "logoAlt": "Logo de BasCal",
     "home": "Inicio",
     "services": "Servicios",
@@ -62,7 +61,7 @@
     "professionalServices": {
       "kicker": "Servicios profesionales",
       "title": "Professional Services",
-      "subtitle": "Servicios profesionales orientados a arquitectura, ingeniería y construcción.",
+      "subtitle": "Diseñamos soluciones técnicas seguras, eficientes y normativamente viables para proyectos en todas sus etapas, desde el concepto hasta la documentación de construcción. Nos enfocamos en diseño, cálculo y especificación técnica para que cada sistema funcione correctamente y cumpla estándares locales e internacionales. Softwares: Autodesk Revit, AutoCAD, ArchiCAD.",
       "items": [
         {
           "title": "Architectural Design | Interior Design",
@@ -97,11 +96,17 @@
     },
     "portfolio": {
       "kicker": "Cobertura",
-      "title": "Ubicación de proyectos",
+      "title": "Proyectos en los que participamos",
       "subtitle": "Cobertura regional y presencia activa en proyectos BIM.",
       "mapTitle": "Nuestros clientes en América",
       "cardText": "Participamos en proyectos institucionales, residenciales y hospitalarios con coordinación técnica y estándares internacionales.",
-      "countries": ["Colombia", "Ecuador", "Venezuela", "México", "Estados Unidos"]
+      "countries": [
+        "Colombia",
+        "Ecuador",
+        "Venezuela",
+        "México",
+        "Estados Unidos"
+      ]
     },
     "footer": {
       "brand": {
@@ -111,14 +116,27 @@
       "contact": {
         "title": "Contacto",
         "items": [
-          { "label": "Ubicación", "value": "Medellín, Colombia" },
-          { "label": "Teléfono", "value": "+57 000 000 0000" },
-          { "label": "Correo", "value": "contacto@bascal.com" }
+          {
+            "label": "Ubicación",
+            "value": "Medellín, Colombia"
+          },
+          {
+            "label": "Teléfono",
+            "value": "+57 000 000 0000"
+          },
+          {
+            "label": "Correo",
+            "value": "contacto@bascal.com"
+          }
         ]
       },
       "services": {
         "title": "Servicios",
-        "items": ["Diseño arquitectónico", "Modelado MEP", "Coordinación BIM"]
+        "items": [
+          "Diseño arquitectónico",
+          "Modelado MEP",
+          "Coordinación BIM"
+        ]
       },
       "bottom": "© BasCal. Todos los derechos reservados."
     }
@@ -180,34 +198,84 @@
       "cta": "Ver más",
       "cards": [
         {
-          "title": "BIM MEP Modeling & Digital Fabrication",
-          "text": "Modelado BIM de sistemas mecánicos, eléctricos, hidrosanitarios y contra incendios con LOD 300–400 orientados a coordinación y prefabricación."
+          "id": "mep",
+          "title": "MEP BIM modeling & Digital Fabrication",
+          "text": "Modelado BIM de sistemas mecánicos, eléctricos, hidrosanitarios y contra incendios con LOD 300–400 orientados a coordinación y prefabricación.",
+          "detail": {
+            "eyebrow": "DETALLE BIM MEP",
+            "title": "Equipo BIM MEP coordinando instalaciones en obra",
+            "body": "Nuestros servicios BIM MEP están orientados a la construcción real en campo. Modelamos sistemas mecánicos, HVAC, plomería, eléctricos y redes contra incendio con un enfoque práctico, basado en experiencia de obra y criterios reales de instalación. Desarrollamos modelos LOD 300–400, completamente constructibles, considerando rutas reales, claros de mantenimiento, secuencias de montaje y coordinación entre disciplinas. Los modelos pueden incluir soportería, hanger layouts, spooling y tuberías prefabricadas, listos para fabricación e instalación.",
+            "body2": "Además, actuamos como extensión del equipo del contratista, participando activamente en la coordinación BIM para identificar interferencias, optimizar soluciones y reducir reprocesos. Entregamos modelos precisos, coordinados y listos para obra, que mejoran la eficiencia en campo, reducen tiempos y permiten un mayor control de costos."
+          }
         },
         {
           "title": "Architectural & Structural BIM Modeling",
-          "text": "Modelado arquitectónico y estructural preciso para coordinación, documentación y constructibilidad en obra."
+          "text": "Modelado arquitectónico y estructural preciso para coordinación, documentación y constructibilidad en obra.",
+          "detail": {
+            "eyebrow": "DETALLE ARQ + ESTRUCTURA",
+            "title": "Modelado arquitectónico y estructural listo para coordinación",
+            "body": "En proyectos BIM es común que los modelos arquitectónicos o estructurales no estén disponibles o no tengan el desarrollo necesario para una correcta coordinación espacial. Esto limita al equipo MEP y afecta la detección de interferencias y la constructibilidad.",
+            "body2": "Modelamos arquitectura y estructuras con foco en coordinación, planificación y ejecución en obra. Entregamos modelos constructibles y detallados (concreto hasta LOD 400, estructura metálica, muros CMU, encofrados, geopilotes y vibropilotes) para alinear disciplinas, reducir reprocesos y facilitar la colaboración desde etapas tempranas."
+          }
         },
         {
           "title": "BIM Coordination",
-          "text": "Coordinación interdisciplinaria, gestión de clashes y soporte técnico mediante estándares BIM y BEP."
+          "text": "Coordinación interdisciplinaria, gestión de clashes y soporte técnico mediante estándares BIM y BEP.",
+          "detail": {
+            "eyebrow": "DETALLE COORDINACIÓN BIM",
+            "title": "Coordinación BIM integral en campo",
+            "body": "Uno de los objetivos más complejos es coordinar sistemas entre disciplinas en obra. Lideramos la coordinación BIM integrando arquitectura, estructura y MEP para eliminar interferencias, reducir reprocesos y asegurar ejecución eficiente.",
+            "body2": "Definimos y aplicamos los estándares BIM vía BEP, coordinando a todos los actores para entregar modelos coordinados y listos para construcción, con foco en constructibilidad, tiempos y control de costos.",
+            "softwares": [
+              "Autodesk Revit",
+              "Autodesk Navisworks o Revizto",
+              "Autodesk Construction Cloud (ACC)"
+            ]
+          }
         },
         {
           "title": "Laser Scanning | Scan to BIM | As-Built",
-          "text": "Escaneo láser 3D, nubes de puntos y generación de modelos BIM confiables para rehabilitación y control de obra."
+          "text": "Escaneo láser 3D, nubes de puntos y generación de modelos BIM confiables para rehabilitación y control de obra.",
+          "detail": {
+            "eyebrow": "DETALLE SCAN TO BIM",
+            "title": "Captura, modelado y entrega As-Built",
+            "blocks": [
+              {
+                "title": "3D Laser Scanning",
+                "text": "Realizamos escaneo láser 3D de alta precisión para capturar edificaciones e instalaciones existentes, generando nubes de puntos confiables como base para modelado y análisis. Nuestro enfoque combina tecnología de escaneo con criterio ingenieril y experiencia en campo, entregando información clara y alineada con las necesidades reales del proyecto."
+              },
+              {
+                "title": "Scan to BIM | As-Built Modeling",
+                "text": "Convertimos nubes de puntos en modelos BIM en Revit según alcance, LOD y objetivos del proyecto. Modelos fieles a lo construido para: rediseño arquitectónico o ingenieril, coordinación con nuevas disciplinas, documentación as-built y gestión/operación de activos. Flujos optimizados y QA/QC para precisión y consistencia."
+              },
+              {
+                "title": "As-Built Documentation & Digital Twin",
+                "text": "Generamos modelos y planos as-built a partir de escaneo láser, planos redline y registros de obra, consolidando la información real del proyecto. Cuando se requiere, preparamos los modelos para gestión de activos y Facility Management, integrando datos técnicos para operación y mantenimiento futuro."
+              }
+            ]
+          }
         },
         {
           "title": "4D Construction Sequencing & 5D Cost Planning",
-          "text": "Integración del modelo BIM con planificación de obra y costos. Soporte para simulación constructiva, control de cronograma y análisis de costos."
+          "text": "Integración del modelo BIM con planificación de obra y costos. Soporte para simulación constructiva, control de cronograma y análisis de costos.",
+          "detail": {
+            "eyebrow": "DETALLE 4D/5D",
+            "title": "Planificación 4D y estimación 5D",
+            "body": "Integración del modelo BIM con planificación de obra y costos. Soporte para simulación constructiva, control de cronograma y análisis de costos."
+          }
         },
         {
           "title": "6D/7D BIM for Facilities Management | Digital Twinning",
-          "text": "Modelos BIM orientados a operación y mantenimiento. Información técnica estructurada para gestión de activos y toma de decisiones post-construcción."
-        },
-        {
-          "title": "Digital Twin",
-          "text": "Gemelos digitales basados en modelos BIM para monitoreo y análisis del activo. Soporte a operación, mantenimiento y optimización del ciclo de vida del proyecto."
+          "text": "Modelos BIM orientados a operación y mantenimiento. Información técnica estructurada para gestión de activos y toma de decisiones post-construcción.",
+          "detail": {
+            "eyebrow": "DETALLE 6D/7D",
+            "title": "Digital Twin y FM listos para operar",
+            "body": "Modelos BIM orientados a operación y mantenimiento. Información técnica estructurada para gestión de activos y toma de decisiones post-construcción.",
+            "body2": "Gemelos digitales basados en modelos BIM para monitoreo y análisis del activo. Soporte a operación, mantenimiento y optimización del ciclo de vida del proyecto."
+          }
         }
-      ]
+      ],
+      "detailClose": "Cerrar"
     }
   }
 }

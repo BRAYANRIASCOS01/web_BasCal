@@ -18,21 +18,22 @@
   justify-items: center;
 }
 
-.projects__divider {
-  width: clamp(120px, 18vw, 200px);
-  height: 6px;
-  border-radius: 999px;
-  background: linear-gradient(
-    90deg,
-    var(--color-primary) 0%,
-    color-mix(in srgb, var(--color-primary) 70%, var(--color-primary-dark) 30%) 60%,
-    color-mix(in srgb, var(--color-primary) 18%, transparent) 100%
-  );
-  box-shadow: 0 12px 28px rgba(0, 11, 102, 0.18);
-}
-
 .projects__header .section-title {
   margin-bottom: 0.25rem;
+  position: relative;
+}
+
+.projects__header .section-title::after {
+  content: "";
+  display: block;
+  width: 180px;
+  height: 8px;
+  margin: 0.5rem auto 0;
+  background:
+    linear-gradient(var(--color-primary), var(--color-primary)) left center / 56px 6px no-repeat,
+    linear-gradient(var(--color-primary), var(--color-primary)) right center / 56px 6px no-repeat,
+    linear-gradient(var(--color-primary), var(--color-primary)) center center / 68px 2px no-repeat;
+  border-radius: 999px;
 }
 
 .projects__card {

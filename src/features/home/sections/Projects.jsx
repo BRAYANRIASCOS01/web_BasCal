@@ -76,7 +76,6 @@ const Projects = () => {
         <header className="projects__header" data-animate>
           <p className="section-kicker">{t("home.portfolio.kicker")}</p>
           <h2 className="section-title">{t("home.portfolio.title")}</h2>
-          <div className="projects__divider" aria-hidden="true" />
           <p className="section-subtitle text-muted">{t("home.portfolio.subtitle")}</p>
         </header>
 

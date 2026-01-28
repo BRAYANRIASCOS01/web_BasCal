@@ -139,7 +139,7 @@
   line-height: 1.7;
   font-size: 1.15rem;
   font-family: var(--font-base);
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .why-bascal__paragraph::before {
@@ -165,12 +165,12 @@
 
 .why-bascal__paragraph:first-child {
   color: var(--color-primary-dark);
-  font-weight: 600;
-  font-size: 1.26rem;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 
 .why-bascal__paragraph:nth-child(2) {
-  font-size: 1.18rem;
+  font-size: 1.1rem;
   color: color-mix(in srgb, var(--color-muted) 78%, var(--color-surface) 22%);
 }
 

@@ -1,8 +1,12 @@
 import { useTranslation } from "react-i18next";
+import { useMemo, useRef, useState } from "react";
 
 const ServicesBim = () => {
   const { t } = useTranslation();
-  const cards = t("bimPage.services.cards", { returnObjects: true });
+  const cards = useMemo(() => t("bimPage.services.cards", { returnObjects: true }), [t]);
+  const [expandedId, setExpandedId] = useState(null);
+  const hasExpanded = Boolean(expandedId);
+  const cardRefs = useRef({});
 
   const icons = [
     (
@@ -66,21 +70,46 @@ const ServicesBim = () => {
   return (
     <section className="section bim-services" id="servicios-bim-cards">
       <div className="container">
-        <div className="bim-services__grid">
+        <div className={`bim-services__grid ${hasExpanded ? "is-expanded" : ""}`}>
           {cards.map((card, index) => (
             <article
               key={card.title}
-              className="bim-card"
-              data-animate
-              style={{ transitionDelay: `${0.06 + index * 0.06}s` }}
+              className={`bim-card ${expandedId === (card.id || card.title) ? "is-expanded" : ""}`}
+              ref={(el) => {
+                const id = card.id || card.title;
+                if (el) cardRefs.current[id] = el;
+              }}
+              style={{
+                transitionDelay: `${0.06 + index * 0.06}s`,
+                animationDelay: `${index * 70}ms`,
+              }}
             >
               <span className="bim-card__icon" aria-hidden="true">
                 {icons[index % icons.length]}
               </span>
               <h3 className="bim-card__title">{card.title}</h3>
               <p className="bim-card__text text-muted">{card.text}</p>
-              <div className="bim-card__cta">
-                <span>{t("bimPage.services.cta")}</span>
+              <button
+                type="button"
+                className="bim-card__cta"
+                onClick={() => {
+                  if (!card.detail) return;
+                  const id = card.id || card.title;
+                  setExpandedId((prev) => {
+                    const next = prev === id ? null : id;
+                    if (next === id && cardRefs.current[id]) {
+                      requestAnimationFrame(() => {
+                        cardRefs.current[id]?.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+                      });
+                    }
+                    return next;
+                  });
+                }}
+                disabled={!card.detail}
+                aria-expanded={expandedId === (card.id || card.title)}
+                aria-label={`${t("bimPage.services.cta")} - ${card.title}`}
+              >
+                <span>{expandedId === (card.id || card.title) ? t("bimPage.services.detailClose") : t("bimPage.services.cta")}</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                   <path
                     d="M5 12h14m-6-6 6 6-6 6"
@@ -90,7 +119,108 @@ const ServicesBim = () => {
                     strokeLinejoin="round"
                   />
                 </svg>
-              </div>
+              </button>
+
+              {card.detail && expandedId === (card.id || card.title) && (
+                <div className="bim-card__detail">
+                  <p className="bim-card__detail-eyebrow">{card.detail.eyebrow}</p>
+                  <h4 className="bim-card__detail-title">{card.detail.title}</h4>
+                  <div className="bim-card__detail-body">
+                    <div className="bim-card__detail-copy">
+                      {card.detail.blocks
+                        ? card.detail.blocks.map((block) => (
+                            <div className="bim-card__detail-block" key={block.title}>
+                              <div className="bim-card__detail-row">
+                                <span className="bim-card__detail-bullet" aria-hidden="true">
+                                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path
+                                      d="M9 12.5 11.2 15l4.8-6"
+                                      stroke="currentColor"
+                                      strokeWidth="1.8"
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                    />
+                                  </svg>
+                                </span>
+                                <div>
+                                  <p className="bim-card__detail-block-title">{block.title}</p>
+                                  <p className="text-muted">{block.text}</p>
+                                </div>
+                              </div>
+                            </div>
+                          ))
+                        : (
+                            <>
+                              <div className="bim-card__detail-row">
+                                <span className="bim-card__detail-bullet" aria-hidden="true">
+                                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path
+                                      d="M9 12.5 11.2 15l4.8-6"
+                                      stroke="currentColor"
+                                      strokeWidth="1.8"
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                    />
+                                  </svg>
+                                </span>
+                                <p className="text-muted">{card.detail.body}</p>
+                              </div>
+                              {card.detail.body2 && (
+                                <div className="bim-card__detail-row">
+                                  <span className="bim-card__detail-bullet" aria-hidden="true">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                      <path
+                                        d="M9 12.5 11.2 15l4.8-6"
+                                        stroke="currentColor"
+                                        strokeWidth="1.8"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                      />
+                                    </svg>
+                                  </span>
+                                  <p className="text-muted">{card.detail.body2}</p>
+                                </div>
+                              )}
+                              {card.detail.body3 && (
+                                <div className="bim-card__detail-row">
+                                  <span className="bim-card__detail-bullet" aria-hidden="true">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                      <path
+                                        d="M9 12.5 11.2 15l4.8-6"
+                                        stroke="currentColor"
+                                        strokeWidth="1.8"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                      />
+                                    </svg>
+                                  </span>
+                                  <p className="text-muted">{card.detail.body3}</p>
+                                </div>
+                              )}
+                              {card.detail.points && card.detail.points.length > 0 && (
+                                <ul className="bim-card__detail-points">
+                                  {card.detail.points.map((pt) => (
+                                    <li key={pt}>{pt}</li>
+                                  ))}
+                                </ul>
+                              )}
+                            </>
+                          )}
+                    </div>
+                    <div className="bim-card__detail-media" aria-hidden="true" />
+                  </div>
+                  {card.detail.softwares && (
+                    <div className="bim-card__detail-soft">
+                      <p className="bim-card__detail-eyebrow">{t("bimPage.services.softwaresLabel", "Softwares")}</p>
+                      <ul>
+                        {card.detail.softwares.map((tool) => (
+                          <li key={tool}>{tool}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              )}
             </article>
           ))}
         </div>

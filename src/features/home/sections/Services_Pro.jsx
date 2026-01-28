@@ -70,9 +70,6 @@ const ServicesPro = () => {
           <p className="section-kicker">{t("home.professionalServices.kicker")}</p>
           <div className="professional-services__title-row">
             <h2 className="section-title">{t("home.professionalServices.title")}</h2>
-            <span className="professional-services__badge" aria-hidden="true">
-              BIM/VDC
-            </span>
           </div>
           <p className="section-subtitle text-muted professional-services__subtitle">
             {t("home.professionalServices.subtitle")}
