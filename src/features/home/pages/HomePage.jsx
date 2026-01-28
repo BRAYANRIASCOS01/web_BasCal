@@ -5,6 +5,8 @@ import WhyBascal from "../sections/WhyBascal.jsx";
 import Services from "../sections/Services.jsx";
 import ServicesPro from "../sections/Services_Pro.jsx";
 import Projects from "../sections/Projects.jsx";
+import FaqAccordion from "../../../shared/components/FaqAccordion.jsx";
+import Form from "../../../shared/components/Form.jsx";
 
 const HomePage = () => {
   const { t, i18n } = useTranslation();
@@ -67,6 +69,8 @@ const HomePage = () => {
       <Services />
       <ServicesPro />
       <Projects />
+      <FaqAccordion />
+      <Form />
     </main>
   );
 };

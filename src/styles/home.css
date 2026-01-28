@@ -4,6 +4,9 @@
 @import "./sections/services-pro.css";
 @import "./sections/projects.css";
 @import "./components/navbar.css";
+@import "./components/footer.css";
+@import "./components/faq-accordion.css";
+@import "./components/form.css";
 
 .app {
   background: var(--color-surface);
@@ -86,60 +89,21 @@
   padding: 1.5rem;
 }
 
-.footer {
-  background: var(--color-primary-dark);
-  color: var(--color-surface);
-}
-
-.footer .text-muted {
-  color: var(--color-secondary);
-}
-
-.footer__grid {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-
-.footer__title {
-  font-size: 1.5rem;
-  margin-bottom: 0.75rem;
-}
-
-.footer__subtitle {
-  font-size: 1.1rem;
-  margin-bottom: 0.75rem;
-}
-
-.footer__list {
-  list-style: none;
-  padding-left: 0;
-  display: grid;
-  gap: 0.5rem;
-}
-
-.footer__label {
-  font-weight: 600;
-}
-
-.footer__bottom {
-  margin-top: 2rem;
-  border-top: 1px solid rgba(226, 232, 240, 0.2);
-  padding-top: 1.5rem;
-}
 
 .language-switcher {
   display: inline-flex;
-  border-radius: 999px;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-primary-dark);  
   overflow: hidden;
+  border-radius: 15px;
+
 }
 
 .language-switcher__button {
   padding: 0.4rem 1rem;
   font-weight: 600;
-  color: var(--color-primary-dark);
   background: transparent;
+  border: var(--color-primary-dark);
+ 
 }
 
 .language-switcher__button--active {

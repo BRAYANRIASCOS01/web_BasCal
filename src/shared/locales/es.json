@@ -126,5 +126,56 @@
     "label": "Idioma",
     "spanish": "ES",
     "english": "EN"
+  },
+     
+  
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Resolvemos dudas comunes sobre nuestros servicios, procesos y entregables.",
+    "items": [
+      {
+        "q": "¿Qué es BIM y cómo ayuda a mi proyecto?",
+        "a": "BIM es una metodología de trabajo colaborativa basada en modelos digitales. Ayuda a coordinar disciplinas, detectar interferencias y reducir reprocesos y costos."
+      },
+      {
+        "q": "¿Qué entregables recibo con un servicio BIM?",
+        "a": "Dependiendo del alcance: modelos LOD 300–400, reportes de interferencias (clashes), planos, cuantificaciones y documentación técnica."
+      },
+      {
+        "q": "¿En qué etapas del proyecto pueden acompañarnos?",
+        "a": "Desde preconstrucción y diseño, hasta coordinación durante obra y soporte técnico en la etapa de entrega/ocupación."
+      },
+      {
+        "q": "¿Trabajan con equipos internos del cliente?",
+        "a": "Sí. Nos integramos con tu equipo y tus estándares. Podemos operar como soporte especializado (Staff Augmentation) o como equipo externo completo."
+      }
+    ],
+    "cta": {
+      "text": "¿Tienes otra pregunta?",
+      "button": "Contáctanos"
+    }
+  },
+
+  "contact": {
+  "title": "Contáctanos",
+  "subtitle": "Cuéntanos sobre tu proyecto y te responderemos pronto.",
+  "name": "Nombre",
+  "email": "Correo",
+  "phone": "Teléfono (opcional)",
+  "service": "Servicio",
+  "message": "Mensaje",
+  "submit": "Enviar",
+  "sending": "Enviando...",
+  "success": "¡Gracias! Te responderemos pronto.",
+  "error": "No pudimos enviar el formulario. Intenta de nuevo.",
+  "services": {
+    "bim": "BIM",
+    "pro": "Profesionales",
+    "construction": "Construcción",
+    "staff": "Staff Augmentation"
   }
+}
+
+
+    
 }

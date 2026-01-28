@@ -124,5 +124,55 @@
     "label": "Language",
     "spanish": "ES",
     "english": "EN"
+  },
+
+   "faq": {
+    "title": "Frequently asked questions",
+    "subtitle": "Common questions about our services, process, and deliverables.",
+    "items": [
+      {
+        "q": "What is BIM and how does it help my project?",
+        "a": "BIM is a collaborative methodology based on digital models. It helps coordinate disciplines, detect clashes, and reduce rework and costs."
+      },
+      {
+        "q": "What deliverables do I receive with a BIM service?",
+        "a": "Depending on scope: LOD 300–400 models, clash reports, drawings, quantities, and technical documentation."
+      },
+      {
+        "q": "Which project stages can you support?",
+        "a": "From preconstruction and design to coordination during construction and handover support."
+      },
+      {
+        "q": "Do you work with the client’s internal teams?",
+        "a": "Yes. We integrate with your team and standards. We can operate as specialized support (Staff Augmentation) or as a full external team."
+      }
+    ],
+    "cta": {
+      "text": "Have another question?",
+      "button": "Contact us"
+    }
+  },
+
+  "contact": {
+  "title": "Let’s talk",
+  "subtitle": "Tell us about your project and we’ll get back to you shortly.",
+  "name": "Name",
+  "email": "Email",
+  "phone": "Phone (optional)",
+  "service": "Service",
+  "message": "Message",
+  "submit": "Send",
+  "sending": "Sending...",
+  "success": "Thank you! We’ll get back to you shortly.",
+  "error": "We couldn’t send your message. Please try again.",
+  "services": {
+    "bim": "BIM",
+    "pro": "Professional Services",
+    "construction": "Construction",
+    "staff": "Staff Augmentation"
   }
+}
+
+
+
 }
