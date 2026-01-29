@@ -54,7 +54,7 @@ export default function ContactForm({ formName = "contacto-general" }) {
       <div className="formCard">
         <header className="formHeader">
           <h2 className="formTitle">{t("contact.title", "Hablemos")}</h2>
-          <div class="projects__divider" aria-hidden="true"></div>
+          <div className="projects__divider" aria-hidden="true"></div>
           <p className="formSubtitle">
             {t("contact.subtitle", "Cuéntanos sobre tu proyecto y te responderemos pronto.")}
           </p>
