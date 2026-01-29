@@ -16,8 +16,19 @@ const ScrollTop = ({ threshold = 200, label = "Subir" }) => {
   };
 
   return (
-    <button type="button" className="scroll-top" onClick={handleClick}>
-      {label}
+    <button type="button" className="scroll-top" onClick={handleClick} aria-label={label}>
+      <span className="scroll-top__icon" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12 19V6m0 0 6 6m-6-6-6 6"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </span>
+      <span className="scroll-top__label">{label}</span>
     </button>
   );
 };
