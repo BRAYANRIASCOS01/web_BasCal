@@ -252,6 +252,7 @@
         "eyebrow": "BasCal Ingeniería & Construcción",
         "title": "Hablemos de tu proyecto",
         "subtitle": " Cuéntanos qué necesitas y te responderemos en el menor tiempo posible.",
+       
         "cta": "Ver servicios"
       }
   },
@@ -429,5 +430,20 @@
       "construction": "Construcción",
       "staff": "Staff Augmentation"
     }
-  }
+  },
+  "contactInfo": {
+  "pageTitle": "Contacto",
+  "pageSubtitle": "Cuéntanos sobre tu proyecto y te responderemos en el menor tiempo posible.",
+  "sectionTitle": "Hablemos",
+  "sectionSubtitle": "Completa el formulario y te contactaremos en 24–48 horas hábiles.",
+  "infoTitle": "Información de contacto",
+  "infoSubtitle": "También puedes escribirnos directamente.",
+  "emailLabel": "Correo",
+  "locationLabel": "Ubicación",
+  "responseLabel": "Tiempo de respuesta",
+  "responseValue": "24–48 horas hábiles",
+  "coverageTitle": "Cobertura de proyectos",
+   "btnwhats": "¿Prefieres escribirnos directamente?"
+}
+
 }

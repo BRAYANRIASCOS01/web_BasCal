@@ -245,6 +245,18 @@
     "spanish": "ES",
     "english": "EN"
   },
+
+
+  "contacthero": {
+  "hero": {
+    "eyebrow": "BasCal Engineering & Construction",
+    "title": "Let’s talk about your project",
+    "subtitle": "Tell us what you need and we’ll get back to you as soon as possible.",
+   
+    "cta": "View services"
+  }
+},
+
   "bimPage": {
     "seo": {
       "title": "BIM/VDC Services | BasCal coordination and modeling",
@@ -417,5 +429,20 @@
       "construction": "Construction",
       "staff": "Staff Augmentation"
     }
-  }
+  },
+  "contactInfo": {
+  "pageTitle": "Contact",
+  "pageSubtitle": "Tell us about your project and we’ll get back to you as soon as possible.",
+  "sectionTitle": "Let’s talk",
+  "sectionSubtitle": "Fill out the form and we’ll contact you within 24–48 business hours.",
+  "infoTitle": "Contact information",
+  "infoSubtitle": "You can also reach us directly.",
+  "emailLabel": "Email",
+  "locationLabel": "Location",
+  "responseLabel": "Response time",
+  "responseValue": "24–48 business hours",
+  "coverageTitle": "Project coverage",
+   "btnwhats": "Would you prefer to contact us directly?"
+}
+
 }

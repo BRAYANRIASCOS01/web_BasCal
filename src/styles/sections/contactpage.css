@@ -40,29 +40,36 @@
 
 /* Layout 2 columnas (card + card) */
 .contact-layout {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+ display: grid;
   gap: var(--spacing-xl);
+  align-items: start;
 }
 
 @media (min-width: 1024px) {
   .contact-layout {
     grid-template-columns: 1.4fr 1fr;
-    align-items: start;
+   
+  }
+  .contact-info-card {
+    margin: 5rem 0;
   }
 }
 
 /* Cards con look como tu ejemplo */
-.contact-card,
+.contact-card{
+ padding: var(--spacing-3xl);
+
+}
+
 .contact-info-card {
-  background: #ffffff;
-  border-radius: 24px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
-  padding:3rem;
-  height: 100%;
+  padding: var(--spacing-3xl);
+}
+@media (max-width: 1023px) {
+  .contact-info-card {
+    margin: 0;
+  }
 }
 
 /* Card info */
@@ -119,4 +126,45 @@
   color: var(--color-muted);
   font-size: 14px;
   line-height: 1.7;
+}
+@media (max-width: 640px) {
+  .section-header__divider {
+    width: 160px;
+    height: 5px;
+  }
+
+  .contact-card,
+  .contact-info-card {
+    padding: var(--spacing-xl);
+    border-radius: 18px;
+  }
+}
+.contact-whatsapp {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.contact-whatsapp__text {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--color-muted);
+}
+
+.contact-whatsapp__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #25d366;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 10px 22px rgba(37, 211, 102, 0.28);
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+
+.contact-whatsapp__button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(37, 211, 102, 0.36);
 }

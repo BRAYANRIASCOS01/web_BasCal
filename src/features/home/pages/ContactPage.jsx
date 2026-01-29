@@ -15,10 +15,10 @@ const ContactPage = () => {
              <Hero
                 title={t("contacthero.hero.title")}
                 accent={null}
-                subtitle={t("bimPage.hero.subtitle")}
-                ctaLabel={t("bimPage.hero.cta")}
+                subtitle={t("contacthero.hero.subtitle")}
+                ctaLabel={t("contacthero.hero.cta")}
                 ctaHref="#servicios-bim"
-                ctaAriaLabel={t("bimPage.hero.cta")}
+                ctaAriaLabel={t("contacthero.hero.cta")}
                 id="hero-bim"
       />
 
@@ -27,11 +27,11 @@ const ContactPage = () => {
         <div className="container">
           <header className="section-header">
             <h2 className="section-header__title">
-              {t("contact.sectionTitle", "Hablemos")}
+              {t("contactInfo.sectionTitle", "Hablemos")}
             </h2>
             <p className="section-header__subtitle">
               {t(
-                "contact.sectionSubtitle",
+                "contactInfo.sectionSubtitle",
                 "Completa el formulario y te contactaremos en 24–48 horas hábiles."
               )}
             </p>
@@ -42,49 +42,67 @@ const ContactPage = () => {
             {/* Card del formulario */}
             <div className="contact-card">
               <Form/>
+              <div className="contact-whatsapp">
+                  <p className="contact-whatsapp__text">
+                    {t("contactInfo.btnwhats", "¿Prefieres escribirnos directamente?")}
+                  </p>
+
+                  <a
+                    href="https://wa.me/573000000000?text=Hola%20BasCal,%20quiero%20más%20información%20sobre%20sus%20servicios."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="contact-whatsapp__button"
+                    aria-label="Contactar por WhatsApp"
+                  >
+                    WhatsApp
+                  </a>
+                </div>
+
             </div>
 
             {/* Card informativa (mismo patrón visual) */}
             <aside className="contact-info-card" aria-label="Información de contacto">
               <div className="contact-info-card__head">
                 <h3 className="contact-info-card__title">
-                  {t("contact.infoTitle", "Información de contacto")}
+                  {t("contactInfo.infoTitle", "Información de contacto")}
                 </h3>
                 <p className="contact-info-card__muted">
-                  {t("contact.infoSubtitle", "También puedes escribirnos directamente.")}
+                  {t("contactInfo.infoSubtitle", "También puedes escribirnos directamente.")}
                 </p>
               </div>
 
               <div className="contact-info-card__item">
-                <p className="contact-info-card__label">{t("contact.emailLabel", "Correo")}</p>
+                <p className="contact-info-card__label">{t("contactInfo.emailLabel", "Correo")}</p>
                 <a className="contact-info-card__value" href="mailto:contacto@bascal.com">
                   contacto@bascal.com
                 </a>
               </div>
 
               <div className="contact-info-card__item">
-                <p className="contact-info-card__label">{t("contact.locationLabel", "Ubicación")}</p>
+                <p className="contact-info-card__label">{t("contactInfo.locationLabel", "Ubicación")}</p>
                 <p className="contact-info-card__value">Medellín, Colombia</p>
               </div>
 
               <div className="contact-info-card__item">
-                <p className="contact-info-card__label">{t("contact.responseLabel", "Tiempo de respuesta")}</p>
+                <p className="contact-info-card__label">{t("contactInfo.responseLabel", "Tiempo de respuesta")}</p>
                 <p className="contact-info-card__value">
-                  {t("contact.responseValue", "24–48 horas hábiles")}
+                  {t("contactInfo.responseValue", "24–48 horas hábiles")}
                 </p>
               </div>
 
               <div className="contact-info-card__trust">
-                <p>• {t("contact.trust1", "No compartimos tu información.")}</p>
-                <p>• {t("contact.trust2", "Atendemos proyectos en LATAM y EE.UU.")}</p>
-                <p>• {t("contact.trust3", "Podemos coordinar una llamada si lo necesitas.")}</p>
+              <p className="contact-info-card__trustTitle">
+                {t("contactInfo.coverageTitle", "Cobertura de proyectos")}
+              </p>
+              <p className="contact-info-card__trustCountries">
+                Colombia · Ecuador · Venezuela · México · Estados Unidos
+              </p>
               </div>
             </aside>
           </div>
         </div>
       </section>
-            <h1>Contacto</h1>
-            <p>¡Ponte en contacto con nosotros!</p>
+           
         </>
     );
 };
