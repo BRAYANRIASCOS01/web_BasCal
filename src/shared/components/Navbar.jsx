@@ -47,7 +47,7 @@ const Navbar = ({ logoSrc = "/Log_BasCal.PNG", logoAlt }) => {
 
         {/* Menú */}
         <nav className="navbar__center" aria-label="Navegación principal">
-          <NavLink to={to("/")} className={({ isActive }) => `navbar__link ${isActive ? "active" : ""}`}>
+          <NavLink to={to("/")} end className={({ isActive }) => `navbar__link ${isActive ? "active" : ""}`}>
             {t("navbar.home")}
           </NavLink>
 
@@ -131,12 +131,6 @@ const Navbar = ({ logoSrc = "/Log_BasCal.PNG", logoAlt }) => {
             </div>
           </div>
 
-          <NavLink
-            to={to("/contacto")}
-            className={({ isActive }) => `navbar__link ${isActive ? "active" : ""}`}
-          >
-            {t("navbar.contact")}
-          </NavLink>
         </nav>
 
         {/* Acciones */}

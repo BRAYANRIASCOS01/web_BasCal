@@ -58,22 +58,22 @@ const WhatsAppButton = ({
         <span className="whatsapp-button__icon" aria-hidden="true">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
-              d="M19 12.6c0 3.08-2.84 5.6-6.34 5.6-.93 0-1.81-.18-2.59-.5l-3.73.96.99-3.42C6.67 14.3 6 13.01 6 11.6 6 8.52 8.84 6 12.34 6 15.84 6 19 8.52 19 11.6Z"
+              d="M6.5 7h11a2.5 2.5 0 0 1 2.5 2.5v5a2.5 2.5 0 0 1-2.5 2.5h-4.4l-3.4 2.8c-.8.65-1.95.07-1.95-.94V17H6.5A2.5 2.5 0 0 1 4 14.5v-5A2.5 2.5 0 0 1 6.5 7Z"
               stroke="currentColor"
-              strokeWidth="1.6"
+              strokeWidth="1.7"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
             <path
-              d="M9.5 10.75h5m-5 2.1h3.2"
+              d="M9.5 11h5m-5 2.5h3"
               stroke="currentColor"
-              strokeWidth="1.6"
+              strokeWidth="1.7"
               strokeLinecap="round"
               strokeLinejoin="round"
             />
           </svg>
         </span>
-        <span className="whatsapp-button__label">{label}</span>
+        <span className="whatsapp-button__label">{label || "Chat"}</span>
         <span className="whatsapp-button__caret" aria-hidden="true">⌄</span>
       </button>
 
@@ -88,7 +88,54 @@ const WhatsAppButton = ({
             role="menuitem"
             onClick={() => setOpen(false)}
           >
-            {opt.label}
+            <span className="chat-menu__item-icon" aria-hidden="true">
+              {opt.label.toLowerCase().includes("whatsapp") ? (
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 3.5c-4.69 0-8.5 3.61-8.5 8.07 0 1.27.33 2.45.91 3.49l-0.84 3.06 3.14-0.82c0.99.54 2.13.85 3.3.85 4.69 0 8.5-3.61 8.5-8.07C18.5 7.11 14.69 3.5 12 3.5Z"
+                    stroke="currentColor"
+                    strokeWidth="1.2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    opacity="0.9"
+                  />
+                  <path
+                    d="M10.25 9.75c0 .4.08.79.24 1.15.14.31.07.68-.17.93l-.34.35c.53 1.02 1.35 1.84 2.37 2.37l.35-.34c.25-.24.62-.31.93-.17.36.16.75.24 1.15.24.28 0 .5.22.5.5v1"
+                    stroke="currentColor"
+                    strokeWidth="1.2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              ) : opt.type === "email" ? (
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v11A2.5 2.5 0 0 1 17.5 20h-11A2.5 2.5 0 0 1 4 17.5v-11Z"
+                    stroke="currentColor"
+                    strokeWidth="1.2"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M6 7l6 5 6-5"
+                    stroke="currentColor"
+                    strokeWidth="1.2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              ) : (
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.4 4c-.22 0-.45.02-.67.07a1.5 1.5 0 0 0-1.1 1.87 13.5 13.5 0 0 0 11.43 8.76 1.5 1.5 0 0 0 1.6-1.16l.42-1.88a1 1 0 0 0-.64-1.17l-2.22-.78a1 1 0 0 0-1.01.25l-.93.97a9.7 9.7 0 0 1-3.74-3.63l1.02-.95a1 1 0 0 0 .27-.98l-.7-2.3A1 1 0 0 0 10.46 3l-2.06-.02Z"
+                    stroke="currentColor"
+                    strokeWidth="1.2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              )}
+            </span>
+            <span className="chat-menu__item-text">{opt.label}</span>
           </a>
         ))}
       </div>

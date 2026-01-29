@@ -77,7 +77,7 @@ const HomePage = () => {
       <WhatsAppButton
         phone="573001112233"
         message={t("home.whatsappMessage", "Hola, quiero más información sobre servicios BIM.")}
-        label={t("home.whatsappLabel", "WhatsApp")}
+        label={t("home.chatLabel", "Chat")}
       />
     </main>
   );

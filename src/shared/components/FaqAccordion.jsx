@@ -31,7 +31,7 @@ const Faq = () => {
   };
 
   return (
-    <section ref={sectionRef} className="faq__section">
+    <section ref={sectionRef} className="faq__section" data-bg="dark">
       <div className="container__faq">
         <header className="faq__header">
           <span className="faq__pill">FAQ</span>
