@@ -23,12 +23,6 @@ const ServicesProfessionalList = () => {
   return (
     <section className="section pro-services-grid" ref={sectionRef}>
       <div className="container">
-        <header className="pro-services-grid__header" data-animate>
-          <p className="section-kicker">{t("home.professionalServices.kicker")}</p>
-          <h2 className="section-title">{t("professionalPage.services.title")}</h2>
-          <p className="section-subtitle text-muted">{t("professionalPage.services.subtitle")}</p>
-        </header>
-
         <div className="pro-services-grid__list">
           {services.map((svc, idx) => (
             <article

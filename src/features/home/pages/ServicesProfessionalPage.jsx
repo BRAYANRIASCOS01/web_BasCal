@@ -4,9 +4,11 @@ import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Hero from "../../../shared/components/Hero.jsx";
 import ServicesProfessionalList from "../sections/ServicesProfessionalList.jsx";
+import ProfessionalIntro from "../sections/ProfessionalIntro.jsx";
 import FaqAccordion from "../../../shared/components/FaqAccordion.jsx";
 import ContactForm from "../../../shared/components/Form.jsx";
 import "../../../styles/sections/services-pro-list.css";
+import "../../../styles/sections/pro-intro.css";
 
 const ServicesProfessionalPage = () => {
   const { t, i18n } = useTranslation();
@@ -73,6 +75,8 @@ const ServicesProfessionalPage = () => {
         ctaAriaLabel={t("professionalPage.hero.cta")}
         id="hero-professional"
       />
+
+      <ProfessionalIntro />
 
       <ServicesProfessionalList />
 
