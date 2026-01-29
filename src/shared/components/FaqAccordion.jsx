@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const Faq = () => {
@@ -6,13 +6,32 @@ const Faq = () => {
   const items = t("faq.items", { returnObjects: true }) || [];
 
   const [openIndex, setOpenIndex] = useState(null);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el || typeof IntersectionObserver === "undefined") return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.classList.add("faq--visible");
+          observer.unobserve(el);
+        }
+      },
+      { threshold: 0.25 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   const toggle = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <section className="faq__section">
+    <section ref={sectionRef} className="faq__section">
       <div className="container__faq">
         <header className="faq__header">
           <span className="faq__pill">FAQ</span>

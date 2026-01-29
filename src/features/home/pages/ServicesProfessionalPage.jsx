@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Hero from "../../../shared/components/Hero.jsx";
 import ServicesProfessionalList from "../sections/ServicesProfessionalList.jsx";
+import FaqAccordion from "../../../shared/components/FaqAccordion.jsx";
+import ContactForm from "../../../shared/components/Form.jsx";
 import "../../../styles/sections/services-pro-list.css";
 
 const ServicesProfessionalPage = () => {
@@ -73,6 +75,10 @@ const ServicesProfessionalPage = () => {
       />
 
       <ServicesProfessionalList />
+
+      <FaqAccordion />
+
+      <ContactForm formName="contacto-profesionales" />
     </main>
   );
 };

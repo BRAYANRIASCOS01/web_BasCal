@@ -6,7 +6,48 @@
   align-items: center;
   --brand: var(--color-primary);
   padding: clamp(2rem, 4vw, 3rem) 0;
-  background: var(--color-surface);
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 20% 20%, color-mix(in srgb, var(--color-primary) 24%, transparent) 0%, transparent 42%),
+    radial-gradient(circle at 80% 30%, color-mix(in srgb, var(--color-primary-dark) 26%, transparent) 0%, transparent 48%),
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--color-primary) 78%, var(--color-primary-dark) 22%),
+      color-mix(in srgb, var(--color-primary-dark) 88%, var(--color-surface) 12%)
+    );
+  color: var(--color-surface);
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 420ms ease, transform 420ms ease;
+}
+
+.faq__section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1.5px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1.5px);
+  background-size: 80px 80px, 80px 80px;
+  opacity: 0.12;
+  mix-blend-mode: screen;
+  z-index: -1;
+}
+
+.faq__section.faq--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq__section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 .container__faq {
@@ -47,7 +88,7 @@
 .section-title-faq {
   font-size: 2rem;
   margin-bottom: 0.75rem;
-  color: var(--color-primary-dark);
+  color: #f7f9ff;
 }
 
 .section-title-faq::after {
@@ -64,7 +105,7 @@
 }
 
 .text-muted-faq {
-  color: var(--color-muted);
+  color: color-mix(in srgb, #e5ebff 82%, #c5cee5 18%);
   font-size: 1rem;
   text-align: center;
   max-width: 640px;

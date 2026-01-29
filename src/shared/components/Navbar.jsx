@@ -1,4 +1,4 @@
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink, useLocation, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "../../features/translation/LanguageSwitcher.jsx";
 
@@ -26,8 +26,14 @@ const CaretIcon = () => (
 const Navbar = ({ logoSrc = "/Log_BasCal.PNG", logoAlt }) => {
   const { t } = useTranslation();
   const { lang = "es" } = useParams();
+  const location = useLocation();
+  const disabledLabel = t("navbar.inProgress", "En desarrollo");
 
   const to = (path) => `/${lang}${path === "/" ? "" : path}`;
+  const isPathActive = (path) => location.pathname.startsWith(to(path).replace(/\/$/, ""));
+  const isServicesSection = ["/servicios/bim", "/servicios/profesionales", "/servicios/construccion", "/servicios/staff-augmentation"].some(
+    (p) => isPathActive(p)
+  );
 
   return (
     <header className="navbar">
@@ -47,31 +53,55 @@ const Navbar = ({ logoSrc = "/Log_BasCal.PNG", logoAlt }) => {
 
           {/* Servicios dropdown */}
           <div className="navbar__dropdown">
-            <button className="navbar__link navbar__dropdownBtn" type="button" aria-haspopup="menu">
+            <button
+              className={`navbar__link navbar__dropdownBtn ${isServicesSection ? "active" : ""}`}
+              type="button"
+              aria-haspopup="menu"
+            >
               {t("navbar.services")} <CaretIcon />
             </button>
             <div className="navbar__menu" role="menu">
-              <NavLink to={to("/servicios/bim")} className="navbar__menuItem" role="menuitem">
+              <NavLink
+                to={to("/servicios/bim")}
+                className={({ isActive }) => `navbar__menuItem ${isActive ? "active" : ""}`}
+                role="menuitem"
+              >
                 {t("navbar.servicesItems.bim")}
               </NavLink>
-              <NavLink to={to("/servicios/profesionales")} className="navbar__menuItem" role="menuitem">
+              <NavLink
+                to={to("/servicios/profesionales")}
+                className={({ isActive }) => `navbar__menuItem ${isActive ? "active" : ""}`}
+                role="menuitem"
+              >
                 {t("navbar.servicesItems.professionals")}
               </NavLink>
-              <NavLink to={to("/servicios/construccion")} className="navbar__menuItem" role="menuitem">
+              <span
+                className="navbar__menuItem navbar__menuItem--disabled"
+                role="menuitem"
+                aria-disabled="true"
+                data-label={disabledLabel}
+              >
                 {t("navbar.servicesItems.construction")}
-              </NavLink>
-              <NavLink to={to("/servicios/staff-augmentation")} className="navbar__menuItem" role="menuitem">
+              </span>
+              <span
+                className="navbar__menuItem navbar__menuItem--disabled"
+                role="menuitem"
+                aria-disabled="true"
+                data-label={disabledLabel}
+              >
                 {t("navbar.servicesItems.staffAugmentation")}
-              </NavLink>
+              </span>
             </div>
           </div>
 
-          <NavLink
-            to={to("/portafolio")}
-            className={({ isActive }) => `navbar__link ${isActive ? "active" : ""}`}
+          <span
+            className="navbar__link navbar__link--disabled"
+            role="link"
+            aria-disabled="true"
+            data-label={disabledLabel}
           >
             {t("navbar.portfolio")}
-          </NavLink>
+          </span>
 
           {/* Empresa dropdown */}
           <div className="navbar__dropdown">
@@ -79,15 +109,25 @@ const Navbar = ({ logoSrc = "/Log_BasCal.PNG", logoAlt }) => {
               {t("navbar.company")} <CaretIcon />
             </button>
             <div className="navbar__menu" role="menu">
-              <NavLink to={to("/empresa/faq")} className="navbar__menuItem" role="menuitem">
+              <span
+                className="navbar__menuItem navbar__menuItem--disabled"
+                role="menuitem"
+                aria-disabled="true"
+                data-label={disabledLabel}
+              >
                 {t("navbar.companyItems.faq")}
-              </NavLink>
+              </span>
               <NavLink to={to("/empresa/sobre-nosotros")} className="navbar__menuItem" role="menuitem">
                 {t("navbar.companyItems.about")}
               </NavLink>
-              <NavLink to={to("/empresa/blog")} className="navbar__menuItem" role="menuitem">
+              <span
+                className="navbar__menuItem navbar__menuItem--disabled"
+                role="menuitem"
+                aria-disabled="true"
+                data-label={disabledLabel}
+              >
                 {t("navbar.companyItems.blog")}
-              </NavLink>
+              </span>
             </div>
           </div>
 
