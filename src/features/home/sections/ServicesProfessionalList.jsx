@@ -1,10 +1,12 @@
 import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import bimMedImage from "../../../assets/BIM-MED.jpeg";
 
 const ServicesProfessionalList = () => {
   const { t } = useTranslation();
   const sectionRef = useRef(null);
   const services = t("professionalPage.services.items", { returnObjects: true }) || [];
+  const serviceItems = Array.isArray(services) ? services : [];
 
   useEffect(() => {
     const sectionEl = sectionRef.current;
@@ -18,38 +20,52 @@ const ServicesProfessionalList = () => {
     );
     animated.forEach((n) => observer.observe(n));
     return () => observer.disconnect();
-  }, [services]);
+  }, [serviceItems]);
 
   return (
     <section className="section pro-services-grid" ref={sectionRef}>
       <div className="container">
-        <div className="pro-services-grid__list">
-          {services.map((svc, idx) => (
-            <article
-              key={svc.title}
-              className="pro-services-grid__card"
-              data-animate
-              style={{ transitionDelay: `${0.06 + idx * 0.05}s` }}
-            >
-              <div className="pro-services-grid__card-head">
-                <span className="pro-services-grid__badge" aria-hidden="true">
-                  {String(idx + 1).padStart(2, "0")}
-                </span>
-                <h3 className="pro-services-grid__title">{svc.title}</h3>
-              </div>
-              <ul className="pro-services-grid__points text-muted">
-                {svc.points?.map((pt) => (
-                  <li key={pt}>{pt}</li>
-                ))}
-              </ul>
-              {svc.link && (
-                <a className="pro-services-grid__link" href={svc.link} target="_blank" rel="noreferrer">
-                  {svc.linkLabel || svc.link}
-                </a>
-              )}
-            </article>
+        <ol className="pro-services-grid__list" aria-label={t("professionalPage.services.title")}>
+          {serviceItems.map((svc, idx) => (
+            <li className="pro-services-grid__item" key={svc.title}>
+              <article
+                className="pro-service__card pro-services-grid__card"
+                data-animate
+                style={{ transitionDelay: `${0.06 + idx * 0.05}s` }}
+              >
+                <div className="pro-service__media">
+                  <img
+                    src={bimMedImage}
+                    alt={`${svc.title} | BasCal`}
+                    className="pro-service__image"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span className="pro-services-grid__badge pro-services-grid__badge--overlay" aria-hidden="true">
+                    {String(idx + 1).padStart(2, "0")}
+                  </span>
+                </div>
+                <div className="pro-service__content">
+                <div className="pro-services-grid__card-head">
+                  <h3 className="pro-service__title">{svc.title}</h3>
+                </div>
+                  <ul className="pro-service__list text-muted">
+                    {svc.points?.map((pt) => (
+                      <li key={pt} className="pro-service__point">
+                        {pt}
+                      </li>
+                    ))}
+                  </ul>
+                  {svc.link && (
+                    <a className="pro-services-grid__link" href={svc.link} target="_blank" rel="noreferrer">
+                      {svc.linkLabel || svc.link}
+                    </a>
+                  )}
+                </div>
+              </article>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );

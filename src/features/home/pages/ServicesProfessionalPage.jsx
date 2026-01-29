@@ -9,6 +9,7 @@ import FaqAccordion from "../../../shared/components/FaqAccordion.jsx";
 import ContactForm from "../../../shared/components/Form.jsx";
 import ScrollTop from "../../../shared/components/ScrollTop.jsx";
 import WhatsAppButton from "../../../shared/components/WhatsAppButton.jsx";
+import "../../../styles/sections/services-pro.css";
 import "../../../styles/sections/services-pro-list.css";
 import "../../../styles/sections/pro-intro.css";
 

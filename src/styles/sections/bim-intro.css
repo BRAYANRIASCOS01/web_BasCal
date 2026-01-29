@@ -1,10 +1,7 @@
 .bim-intro {
   --brand: var(--color-primary);
   padding: clamp(2rem, 5vw, 3.5rem) 0 clamp(2.5rem, 5vw, 4rem);
-  background:
-    radial-gradient(circle at 18% 12%, color-mix(in srgb, var(--color-primary) 12%, transparent) 0%, transparent 46%),
-    radial-gradient(circle at 82% 8%, color-mix(in srgb, var(--color-primary-dark) 12%, transparent) 0%, transparent 42%),
-    #f7f9fc;
+  background: var(--color-surface-alt);
   position: relative;
   overflow: hidden;
 }
