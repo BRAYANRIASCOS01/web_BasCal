@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useMemo, useRef, useState } from "react";
+import bimAccentImage from "../../../assets/bim2.png";
 
 const ServicesBim = () => {
   const { t } = useTranslation();
@@ -7,62 +8,68 @@ const ServicesBim = () => {
   const [expandedId, setExpandedId] = useState(null);
   const hasExpanded = Boolean(expandedId);
   const cardRefs = useRef({});
+  const lastScrollRef = useRef(null);
 
   const icons = [
+    // Building / arquitectura
     (
       <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
-        <path
-          d="M7 3h10a1 1 0 0 1 1 1v3h-2V5H8v2H6V4a1 1 0 0 1 1-1Zm9 16v-2H8v2h8Zm2-4a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v5h8V9h2v6Zm-5-2h-2V9h2v4Z"
-          fill="currentColor"
-        />
+        <path d="M6 5.5h4v13H4v-11a2.5 2.5 0 0 1 2-2Z" stroke="currentColor" strokeWidth="1.3" fill="none" />
+        <path d="M12 3.5h6v15h-6z" stroke="currentColor" strokeWidth="1.3" fill="none" />
+        <path d="M6.7 9.5H8M6.7 12H8M6.7 14.5H8M13.5 7.5h3M13.5 10h3M13.5 12.5h3M13.5 15h3" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" />
+        <path d="M4 18.5h14" stroke="currentColor" strokeWidth="1.3" />
       </svg>
     ),
+    // Información / people
     (
       <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
-        <path
-          d="M4 6.5 12 3l8 3.5-8 3.5L4 6.5Zm0 6L12 9l8 3.5-8 3.5-8-3.5Zm0 6L12 15l8 3.5-8 3.5-8-3.5Z"
-          fill="currentColor"
-        />
+        <circle cx="12" cy="8" r="3" stroke="currentColor" strokeWidth="1.4" fill="none" />
+        <path d="M7 18.5c0-2.76 2.24-5 5-5s5 2.24 5 5" stroke="currentColor" strokeWidth="1.4" fill="none" strokeLinecap="round" />
+        <path d="M12 3.5v1.6M12 18.5v2" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
       </svg>
     ),
+    // Modelado / monitor con cubo
     (
       <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
-        <path
-          d="M7.5 4A2.5 2.5 0 1 1 5 6.5 2.5 2.5 0 0 1 7.5 4Zm9 0A2.5 2.5 0 1 1 14 6.5 2.5 2.5 0 0 1 16.5 4Zm0 13A2.5 2.5 0 1 1 14 19.5 2.5 2.5 0 0 1 16.5 17ZM8 6.5h3.5a2.5 2.5 0 0 0 2.5 2.5v6.5H11a2.5 2.5 0 1 0 0 1h4.5A2.5 2.5 0 1 0 13 13.5V7A2.5 2.5 0 0 0 10.5 4H7.5a2.5 2.5 0 1 0 .007 2.5H8Z"
-          fill="currentColor"
-        />
+        <rect x="4" y="5" width="16" height="11" rx="1.5" stroke="currentColor" strokeWidth="1.3" fill="none" />
+        <path d="M10 17v2.5m4-2.5v2.5M8 19.5h8" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+        <path d="M9 8.8 12 7l3 1.8V12l-3 1.8-3-1.8V8.8Z" stroke="currentColor" strokeWidth="1.2" fill="none" />
+        <path d="M12 8v3.6" stroke="currentColor" strokeWidth="1.1" />
       </svg>
     ),
+    // Software / engrane
     (
       <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
-        <path
-          d="M6 3h12v3H6V3Zm0 5h12v3H6V8Zm0 5h12v3H6v-3Zm0 5h12v3H6v-3Z"
-          fill="currentColor"
-        />
+        <circle cx="12" cy="12" r="2.4" fill="none" stroke="currentColor" strokeWidth="1.3" />
+        <path d="M12 5.5V4m0 16v-1.5m4.95-9.45 1.25-.72M5.8 17.67l1.25-.72m11.2-2.78H20M4 12.44h1.75m10.5 3.86 1.25.72M5.8 6.33l1.25.72" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
       </svg>
     ),
+    // Diseño / lápiz sobre plano
     (
       <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
-        <path
-          d="M12 3 2 8.5 12 14l10-5.5L12 3Zm0 13.5L2 21l10 5 10-5-10-4.5Z"
-          fill="currentColor"
-        />
+        <rect x="5" y="6" width="14" height="12" rx="1.5" stroke="currentColor" strokeWidth="1.3" fill="none" />
+        <path d="M9 11.5h6M9 14h3.2" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+        <path d="m9.5 9 4.6-2.3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+        <path d="m14.8 6.5 1.7 1.7-5 5-2.2.5.5-2.2 5-5Z" stroke="currentColor" strokeWidth="1.1" />
       </svg>
     ),
+    // Plan / plano con marcas
     (
       <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
-        <path
-          d="M7 4h10v2H7V4Zm0 4h10v2H7V8Zm0 4h6v2H7v-2Zm-3 5h16v2H4v-2Z"
-          fill="currentColor"
-        />
+        <path d="M6 6.5h9.5v11H6A1.5 1.5 0 0 1 4.5 16V8A1.5 1.5 0 0 1 6 6.5Z" stroke="currentColor" strokeWidth="1.3" fill="none" />
+        <path d="M15.5 6.5 19 8v8l-3.5 1.5v-11Z" stroke="currentColor" strokeWidth="1.3" fill="none" />
+        <path d="M8 10.5h4.5M8 13h2.8M8 15.5h3.8" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+        <circle cx="10" cy="9" r="0.7" fill="currentColor" />
       </svg>
     ),
+    // Computador / hardware
     (
       <svg viewBox="0 0 24 24" role="img" aria-hidden="true" focusable="false">
-        <path
-          d="M12 2a8 8 0 0 0-8 8v5H2v2h20v-2h-2v-5a8 8 0 0 0-8-8Zm0 2a6 6 0 0 1 6 6v5H6v-5a6 6 0 0 1 6-6Zm-2 16a2 2 0 1 0 4 0h-4Z"
-          fill="currentColor"
-        />
+        <rect x="5" y="6" width="12" height="9" rx="1.5" stroke="currentColor" strokeWidth="1.3" fill="none" />
+        <path d="M7 8.5h8m-8 2.5h5" stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" />
+        <path d="M9 17h4l.7 2H8.3L9 17Z" stroke="currentColor" strokeWidth="1.1" fill="none" />
+        <rect x="17" y="7" width="2" height="7" rx="0.6" stroke="currentColor" strokeWidth="1" fill="none" />
+        <circle cx="18" cy="9" r="0.5" fill="currentColor" />
       </svg>
     ),
   ];
@@ -71,12 +78,14 @@ const ServicesBim = () => {
     <section className="section bim-services" id="servicios-bim-cards">
       <div className="container">
         <div className={`bim-services__grid ${hasExpanded ? "is-expanded" : ""}`}>
-          {cards.map((card, index) => (
+          {cards.map((card, index) => {
+            const id = card.id || card.title;
+            const isExpanded = expandedId === id;
+            return (
             <article
               key={card.title}
-              className={`bim-card ${expandedId === (card.id || card.title) ? "is-expanded" : ""}`}
+              className={`bim-card ${isExpanded ? "is-expanded" : ""}`}
               ref={(el) => {
-                const id = card.id || card.title;
                 if (el) cardRefs.current[id] = el;
               }}
               style={{
@@ -84,19 +93,36 @@ const ServicesBim = () => {
                 animationDelay: `${index * 70}ms`,
               }}
             >
-              <span className="bim-card__icon" aria-hidden="true">
-                {icons[index % icons.length]}
-              </span>
-              <h3 className="bim-card__title">{card.title}</h3>
+              {!isExpanded && (
+                <div className="bim-card__media" aria-hidden="true">
+                  <img src={bimAccentImage} alt="" className="bim-card__hero" loading="lazy" decoding="async" />
+                  <span className="bim-card__icon bim-card__icon--overlay">{icons[index % icons.length]}</span>
+                </div>
+              )}
+              <div className="bim-card__head">
+                {isExpanded && <span className="bim-card__icon bim-card__icon--inline">{icons[index % icons.length]}</span>}
+                <h3 className="bim-card__title">{card.title}</h3>
+              </div>
               <p className="bim-card__text text-muted">{card.text}</p>
               <button
                 type="button"
                 className="bim-card__cta"
                 onClick={() => {
                   if (!card.detail) return;
-                  const id = card.id || card.title;
                   setExpandedId((prev) => {
                     const next = prev === id ? null : id;
+                    if (next === null) {
+                      const restoreTo = lastScrollRef.current;
+                      if (typeof window !== "undefined" && typeof restoreTo === "number") {
+                        requestAnimationFrame(() => {
+                          window.scrollTo({ top: restoreTo, behavior: "smooth" });
+                        });
+                      }
+                      return null;
+                    }
+                    if (typeof window !== "undefined") {
+                      lastScrollRef.current = window.scrollY;
+                    }
                     if (next === id && cardRefs.current[id]) {
                       requestAnimationFrame(() => {
                         cardRefs.current[id]?.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
@@ -106,10 +132,10 @@ const ServicesBim = () => {
                   });
                 }}
                 disabled={!card.detail}
-                aria-expanded={expandedId === (card.id || card.title)}
+                aria-expanded={isExpanded}
                 aria-label={`${t("bimPage.services.cta")} - ${card.title}`}
               >
-                <span>{expandedId === (card.id || card.title) ? t("bimPage.services.detailClose") : t("bimPage.services.cta")}</span>
+                <span>{isExpanded ? t("bimPage.services.detailClose") : t("bimPage.services.cta")}</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                   <path
                     d="M5 12h14m-6-6 6 6-6 6"
@@ -121,7 +147,7 @@ const ServicesBim = () => {
                 </svg>
               </button>
 
-              {card.detail && expandedId === (card.id || card.title) && (
+              {card.detail && isExpanded && (
                 <div className="bim-card__detail">
                   <p className="bim-card__detail-eyebrow">{card.detail.eyebrow}</p>
                   <h4 className="bim-card__detail-title">{card.detail.title}</h4>
@@ -207,7 +233,9 @@ const ServicesBim = () => {
                             </>
                           )}
                     </div>
-                    <div className="bim-card__detail-media" aria-hidden="true" />
+                    <div className="bim-card__detail-media" aria-hidden="true">
+                      <img src={bimAccentImage} alt="" className="bim-card__detail-image" loading="lazy" decoding="async" />
+                    </div>
                   </div>
                   {card.detail.softwares && (
                     <div className="bim-card__detail-soft">
@@ -222,7 +250,8 @@ const ServicesBim = () => {
                 </div>
               )}
             </article>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

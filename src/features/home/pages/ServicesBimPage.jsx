@@ -5,6 +5,10 @@ import { useParams } from "react-router-dom";
 import Hero from "../../../shared/components/Hero.jsx";
 import BimIntro from "../sections/BimIntro.jsx";
 import ServicesBim from "../sections/Services_Bim.jsx";
+import FaqAccordion from "../../../shared/components/FaqAccordion.jsx";
+import ContactForm from "../../../shared/components/Form.jsx";
+import ScrollTop from "../../../shared/components/ScrollTop.jsx";
+import WhatsAppButton from "../../../shared/components/WhatsAppButton.jsx";
 import "../../../styles/sections/bim-intro.css";
 import "../../../styles/sections/services-bim.css";
 
@@ -140,6 +144,16 @@ const ServicesBimPage = () => {
       <BimIntro />
 
       <ServicesBim />
+
+      <FaqAccordion />
+
+      <ContactForm formName="contacto-bim" />
+      <ScrollTop threshold={260} label={t("home.scrollTop", "Subir")} />
+      <WhatsAppButton
+        phone="573001112233"
+        message={t("home.whatsappMessage", "Hola, quiero más información sobre servicios BIM.")}
+        label={t("home.chatLabel", "Chat")}
+      />
     </main>
   );
 };

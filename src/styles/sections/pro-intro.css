@@ -1,43 +1,26 @@
-.bim-intro {
+.pro-intro {
   --brand: var(--color-primary);
-  padding: clamp(2rem, 5vw, 3.5rem) 0 clamp(2.5rem, 5vw, 4rem);
-  background: var(--color-surface-alt);
   position: relative;
-  overflow: hidden;
+  padding: clamp(2.25rem, 5vw, 3.75rem) 0 clamp(2.5rem, 5vw, 4rem);
+  background: var(--color-surface-alt);
 }
 
-.bim-intro::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -1px;
-  height: 120px;
-  background: linear-gradient(180deg, rgba(247, 249, 252, 0) 0%, var(--color-surface) 100%);
-  pointer-events: none;
-  z-index: 0;
-}
-
-.bim-intro__inner {
-  max-width: 1180px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-  gap: clamp(1.75rem, 5vw, 3.75rem);
-  align-items: center;
-  justify-items: start;
-  text-align: left;
+.pro-intro__inner {
   position: relative;
   z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+  gap: clamp(1.6rem, 4vw, 3.4rem);
+  align-items: center;
 }
 
-.bim-intro__content {
+.pro-intro__content {
   display: grid;
-  gap: 1.1rem;
+  gap: 1.05rem;
   max-width: 640px;
 }
 
-.bim-intro__eyebrow {
+.pro-intro__eyebrow {
   margin: 0;
   font-size: 0.85rem;
   font-weight: 700;
@@ -46,20 +29,19 @@
   color: color-mix(in srgb, var(--brand) 70%, #2c4ca3 30%);
 }
 
-.bim-intro .section-title {
+.pro-intro .section-title {
   margin: 0;
   font-size: clamp(1.8rem, 3.4vw, 2.6rem);
   color: #243467;
-  letter-spacing: 0.01em;
   position: relative;
 }
 
-.bim-intro .section-title::after {
+.pro-intro .section-title::after {
   content: "";
   display: block;
   width: 160px;
   height: 6px;
-  margin: 0.65rem auto 0;
+  margin: 0.65rem 0 0;
   background:
     linear-gradient(var(--brand), var(--brand)) left center / 46px 5px no-repeat,
     linear-gradient(var(--brand), var(--brand)) right center / 46px 5px no-repeat,
@@ -67,7 +49,7 @@
   border-radius: 999px;
 }
 
-.bim-intro .section-subtitle {
+.pro-intro .section-subtitle {
   margin: 0;
   font-size: 1.05rem;
   line-height: 1.8;
@@ -77,35 +59,34 @@
   max-width: 560px;
 }
 
-.bim-intro__meta {
+.pro-intro__meta {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
   margin-top: 0.75rem;
 }
 
-.bim-intro__meta-value {
+.pro-intro__meta-value {
   display: block;
-  font-weight: 700;
-  font-size: 1.05rem;
+  font-weight: 800;
+  font-size: 1.08rem;
   color: #1f2f5c;
 }
 
-.bim-intro__meta-label {
+.pro-intro__meta-label {
   display: block;
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   color: var(--color-muted);
 }
 
-.bim-intro__media {
+.pro-intro__media {
   position: relative;
   display: grid;
   place-items: center;
   justify-items: center;
-  width: 100%;
 }
 
-.bim-intro__media-glow {
+.pro-intro__media-glow {
   position: absolute;
   width: clamp(340px, 28vw, 420px);
   height: clamp(340px, 28vw, 420px);
@@ -114,63 +95,52 @@
   filter: blur(4px);
 }
 
-.bim-intro__media-frame {
+.pro-intro__media-frame {
   position: relative;
-  width: min(640px, 98%);
+  width: min(540px, 96%);
   aspect-ratio: 16 / 9;
   border-radius: 24px;
+  overflow: hidden;
   background: #0f172a;
   box-shadow:
     0 28px 60px rgba(15, 23, 42, 0.16),
     0 0 0 1px rgba(59, 130, 246, 0.18);
-  overflow: hidden;
-  display: grid;
-  align-items: center;
-  justify-items: center;
 }
 
-.bim-intro__media-frame iframe {
+.pro-intro__media-frame iframe {
   width: 100%;
   height: 100%;
   border: none;
   display: block;
 }
 
-.bim-intro__media-frame::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.08), rgba(15, 23, 42, 0));
-  pointer-events: none;
-}
-
 @media (max-width: 900px) {
-  .bim-intro__inner {
+  .pro-intro__inner {
     grid-template-columns: 1fr;
-    justify-items: center;
     text-align: center;
+    justify-items: center;
   }
 
-  .bim-intro__meta {
+  .pro-intro__meta {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .bim-intro__media-frame {
-    width: min(540px, 100%);
+  .pro-intro .section-title::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pro-intro__media-frame {
+    width: min(480px, 100%);
   }
 }
 
 @media (max-width: 600px) {
-  .bim-intro__meta {
+  .pro-intro__meta {
     grid-template-columns: 1fr;
   }
 
-  .bim-intro__media-frame {
-    width: min(400px, 100%);
-    aspect-ratio: 16 / 9;
-  }
-
-  .bim-intro__media {
-    margin-top: 1.25rem;
+  .pro-intro__media-frame {
+    width: min(380px, 100%);
   }
 }

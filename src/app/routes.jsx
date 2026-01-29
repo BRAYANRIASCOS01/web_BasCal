@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { Navigate, Outlet, Route, Routes, useParams } from "react-router-dom";
+import { Navigate, Outlet, Route, Routes, useLocation, useParams } from "react-router-dom";
 
 import Navbar from "../shared/components/Navbar.jsx"; // crea este archivo en el paso 2
 import Footer from "../shared/components/Footer.jsx"; // opcional
@@ -20,6 +20,7 @@ const DEFAULT_LANG = "es";
 
 const LanguageLayout = () => {
   const { lang } = useParams();
+  const location = useLocation();
   const { i18n } = useTranslation();
 
   useEffect(() => {
@@ -28,6 +29,22 @@ const LanguageLayout = () => {
       localStorage.setItem("lang", lang);
     }
   }, [i18n, lang]);
+
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    // Evita sobrescribir navegación por ancla en la misma página
+    if (location.hash) return undefined;
+
+    const id = window.setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: prefersReducedMotion ? "auto" : "smooth",
+      });
+    }, 40);
+
+    return () => window.clearTimeout(id);
+  }, [location.pathname, location.search, location.hash]);
 
   if (!lang || !SUPPORTED_LANGUAGES.includes(lang)) {
     return <Navigate to={`/${DEFAULT_LANG}`} replace />;

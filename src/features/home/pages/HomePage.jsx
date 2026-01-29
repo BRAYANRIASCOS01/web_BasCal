@@ -7,6 +7,8 @@ import ServicesPro from "../sections/Services_Pro.jsx";
 import Projects from "../sections/Projects.jsx";
 import FaqAccordion from "../../../shared/components/FaqAccordion.jsx";
 import Form from "../../../shared/components/Form.jsx";
+import ScrollTop from "../../../shared/components/ScrollTop.jsx";
+import WhatsAppButton from "../../../shared/components/WhatsAppButton.jsx";
 
 const HomePage = () => {
   const { t, i18n } = useTranslation();
@@ -71,6 +73,12 @@ const HomePage = () => {
       <Projects />
       <FaqAccordion />
       <Form />
+      <ScrollTop threshold={260} label={t("home.scrollTop", "Subir")} />
+      <WhatsAppButton
+        phone="573001112233"
+        message={t("home.whatsappMessage", "Hola, quiero más información sobre servicios BIM.")}
+        label={t("home.chatLabel", "Chat")}
+      />
     </main>
   );
 };
