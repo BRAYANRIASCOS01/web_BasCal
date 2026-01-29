@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Hero from "../../../shared/components/Hero.jsx";
 import AboutStory from "../sections/AboutStory.jsx";
+import ScrollTop from "../../../shared/components/ScrollTop.jsx";
+import WhatsAppButton from "../../../shared/components/WhatsAppButton.jsx";
 import "../../../styles/sections/about-story.css";
 
 const EmpresaSobreNosotros = () => {
@@ -67,6 +69,13 @@ const EmpresaSobreNosotros = () => {
       <div id="about-blocks">
         <AboutStory />
       </div>
+
+      <ScrollTop threshold={260} label={t("home.scrollTop", "Subir")} />
+      <WhatsAppButton
+        phone="573001112233"
+        message={t("home.whatsappMessage", "Hola, quiero más información sobre servicios BIM.")}
+        label={t("home.chatLabel", "Chat")}
+      />
     </main>
   );
 };

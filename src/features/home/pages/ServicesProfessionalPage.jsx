@@ -7,6 +7,8 @@ import ServicesProfessionalList from "../sections/ServicesProfessionalList.jsx";
 import ProfessionalIntro from "../sections/ProfessionalIntro.jsx";
 import FaqAccordion from "../../../shared/components/FaqAccordion.jsx";
 import ContactForm from "../../../shared/components/Form.jsx";
+import ScrollTop from "../../../shared/components/ScrollTop.jsx";
+import WhatsAppButton from "../../../shared/components/WhatsAppButton.jsx";
 import "../../../styles/sections/services-pro-list.css";
 import "../../../styles/sections/pro-intro.css";
 
@@ -83,6 +85,12 @@ const ServicesProfessionalPage = () => {
       <FaqAccordion />
 
       <ContactForm formName="contacto-profesionales" />
+      <ScrollTop threshold={260} label={t("home.scrollTop", "Subir")} />
+      <WhatsAppButton
+        phone="573001112233"
+        message={t("home.whatsappMessage", "Hola, quiero más información sobre servicios BIM.")}
+        label={t("home.chatLabel", "Chat")}
+      />
     </main>
   );
 };

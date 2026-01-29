@@ -1,36 +1,6 @@
 .pro-services-grid {
   position: relative;
-  background: var(--color-surface-alt);
-  overflow: hidden;
-}
-
-.pro-services-grid::before,
-.pro-services-grid::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-  filter: blur(4px);
-  z-index: 0;
-}
-
-.pro-services-grid::before {
-  width: 320px;
-  height: 320px;
-  top: -140px;
-  right: -120px;
-  background: radial-gradient(circle, color-mix(in srgb, var(--color-primary) 14%, transparent) 0, transparent 70%);
-}
-
-.pro-services-grid::after {
-  width: 300px;
-  height: 300px;
-  bottom: -160px;
-  left: -120px;
-  background:
-    radial-gradient(circle, color-mix(in srgb, var(--color-primary-dark) 12%, transparent) 0, transparent 72%),
-    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0 2px, transparent 2px 6px);
-  opacity: 0.55;
+  background: var(--color-surface);
 }
 
 .pro-services-grid__header {

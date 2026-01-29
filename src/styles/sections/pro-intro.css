@@ -2,36 +2,10 @@
   --brand: var(--color-primary);
   position: relative;
   padding: clamp(2.25rem, 5vw, 3.75rem) 0 clamp(2.5rem, 5vw, 4rem);
-  background: color-mix(in srgb, var(--color-surface) 90%, var(--color-surface-alt) 10%);
-  overflow: hidden;
-}
-
-.pro-intro::before,
-.pro-intro::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(4px);
-  pointer-events: none;
-}
-
-.pro-intro::before {
-  width: 380px;
-  height: 380px;
-  top: -140px;
-  right: -120px;
-  background: radial-gradient(circle, color-mix(in srgb, var(--brand) 16%, transparent) 0, transparent 68%);
-}
-
-.pro-intro::after {
-  width: 320px;
-  height: 320px;
-  bottom: -160px;
-  left: -120px;
   background:
-    radial-gradient(circle, color-mix(in srgb, var(--color-primary-dark) 12%, transparent) 0, transparent 70%),
-    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.24) 0 2px, transparent 2px 6px);
-  opacity: 0.5;
+    radial-gradient(circle at 18% 12%, color-mix(in srgb, var(--color-primary) 12%, transparent) 0%, transparent 46%),
+    radial-gradient(circle at 82% 8%, color-mix(in srgb, var(--color-primary-dark) 12%, transparent) 0%, transparent 42%),
+    #f7f9fc;
 }
 
 .pro-intro__inner {

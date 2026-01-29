@@ -9,6 +9,18 @@
   overflow: hidden;
 }
 
+.bim-intro::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 120px;
+  background: linear-gradient(180deg, rgba(247, 249, 252, 0) 0%, var(--color-surface) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
 .bim-intro__inner {
   max-width: 1180px;
   margin: 0 auto;
