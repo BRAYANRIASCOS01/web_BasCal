@@ -370,12 +370,15 @@
     visibility 180ms ease,
     transform 180ms ease;
   z-index: 80;
+  pointer-events: none;
+  border: 1px solid rgba(0,0,0,0.12);
 }
 
 .language-switcher__menu.is-open {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+  pointer-events: auto;
 }
 
 .language-switcher__item {
@@ -442,6 +445,7 @@
 @media (max-width: 768px) {
   .language-switcher__trigger {
     padding: 0.4rem 0.6rem;
+    
   }
 
   .language-switcher__triggerLabel {
@@ -450,6 +454,7 @@
 
   .language-switcher__menu {
     min-width: 170px;
+      z-index: 999;
   }
 }
 /* ====== RESPONSIVE NAVBAR ====== */
@@ -658,6 +663,30 @@
 
 /* ===== Breakpoint: activar mobile nav ===== */
 @media (max-width: 920px) {
+ 
+  .language-switcher {
+    width: 220px;
+  }
+   .language-switcher__trigger {
+    width: 100px;
+    justify-content: space-between;
+  }  .language-switcher__menu {
+    position: static;          /* 🔥 deja de flotar */
+    width: 100%;
+    min-width: 0;
+    margin-top: 10px;
+    transform: none;           /* sin translate */
+    box-shadow: none;          /* se siente parte del panel */
+    border-radius: 14px;
+    opacity: 1;                /* visible/controlado por display */
+    visibility: visible;
+    pointer-events: auto;
+    display: none;             /* control por open */
+  }
+
+  .language-switcher__menu.is-open {
+    display: block;
+  }
   /* Ocultar nav desktop */
   .navbar__center--desktop,
   .navbar__actions--desktop {
@@ -683,5 +712,19 @@
   .navbar__inner {
     width: 100%;
     gap: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .language-switcher__menu {
+    right: auto;
+    left: 50%;
+    transform: translate(-50%, -6px); /* mantiene tu animación */
+    width: min(92vw, 280px);         /* nunca se sale */
+    max-width: 92vw;
+      z-index: 999;
+  }
+
+  .language-switcher__menu.is-open {
+    transform: translate(0%, 0);
   }
 }
