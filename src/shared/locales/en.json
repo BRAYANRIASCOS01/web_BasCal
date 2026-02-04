@@ -90,6 +90,7 @@
       "subtitle": "We design safe, efficient, code-compliant technical solutions across every phase, from concept through construction documents. We focus on design, calculation, and technical specifications so each system works correctly and meets local and international standards. Softwares: Autodesk Revit, AutoCAD, ArchiCAD.",
       "items": [
         {
+          "id": "arch-design",
           "title": "Architectural Design | Interior Design",
           "points": [
             "Conceptual, basic, and detailed design.",
@@ -100,6 +101,7 @@
           ]
         },
         {
+          "id": "mechanical",
           "title": "Mechanical",
           "points": [
             "Thermal load calculations.",
@@ -109,6 +111,7 @@
           ]
         },
         {
+          "id": "plumbing-gas",
           "title": "Plumbing and Natural Gas Design",
           "points": [
             "Hydraulic calculation of supply networks (hot and cold water).",
@@ -170,6 +173,7 @@
       "subtitle": "Disciplines and deliverables we cover for architectural and engineering design.",
       "items": [
         {
+          "id": "arch-design",
           "title": "Architectural Design | Interior Design",
           "points": [
             "Concept, schematic, and detailed design",
@@ -180,6 +184,7 @@
           ]
         },
         {
+          "id": "mechanical",
           "title": "Mechanical",
           "points": [
             "Thermal load calculations",
@@ -189,6 +194,7 @@
           ]
         },
         {
+          "id": "plumbing-gas",
           "title": "Plumbing and Natural Gas Design",
           "points": [
             "Hydraulic calculation of supply networks (hot and cold water)",
@@ -208,6 +214,7 @@
           ]
         },
         {
+          "id": "fire-protection",
           "title": "Fire Alarm and Fire Protection Design",
           "points": [
             "Design of automatic sprinkler systems (wet and dry)",
@@ -329,6 +336,7 @@
           }
         },
         {
+          "id": "scan-to-bim",
           "title": "Laser Scanning | Scan to BIM | As-Built",
           "text": "3D laser scanning, point clouds, and reliable BIM models for rehabilitation and site control.",
           "detail": {

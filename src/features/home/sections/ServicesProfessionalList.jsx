@@ -1,12 +1,22 @@
 import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import bimMedImage from "../../../assets/BIM-MED.jpeg";
+import gasPlantaImage from "../../../assets/GAS_planta.png";
+import rciImage from "../../../assets/RCI, Edf 6.1.png";
+import mechanicalShopImage from "../../../assets/RCI_CUARTO BOMBAS_2.png";
+import archRenderImage from "../../../assets/SDA_PLAN.png";
 
 const ServicesProfessionalList = () => {
   const { t } = useTranslation();
   const sectionRef = useRef(null);
   const services = t("professionalPage.services.items", { returnObjects: true }) || [];
   const serviceItems = Array.isArray(services) ? services : [];
+  const serviceImages = {
+    "fire-protection": gasPlantaImage,
+    "plumbing-gas": rciImage,
+    mechanical: mechanicalShopImage,
+    "arch-design": archRenderImage,
+  };
 
   useEffect(() => {
     const sectionEl = sectionRef.current;
@@ -35,7 +45,7 @@ const ServicesProfessionalList = () => {
               >
                 <div className="pro-service__media">
                   <img
-                    src={bimMedImage}
+                    src={serviceImages[svc.id] || bimMedImage}
                     alt={`${svc.title} | BasCal`}
                     className="pro-service__image"
                     loading="lazy"

@@ -90,6 +90,7 @@
       "subtitle": "Diseñamos soluciones técnicas seguras, eficientes y normativamente viables para proyectos en todas sus etapas, desde el concepto hasta la documentación de construcción. Nos enfocamos en diseño, cálculo y especificación técnica para que cada sistema funcione correctamente y cumpla estándares locales e internacionales. Softwares: Autodesk Revit, AutoCAD, ArchiCAD.",
       "items": [
         {
+          "id": "arch-design",
           "title": "Architectural Design | Interior Design",
           "points": [
             "Diseño conceptual, básico y de detalle.",
@@ -100,6 +101,7 @@
           ]
         },
         {
+          "id": "mechanical",
           "title": "Mecánica",
           "points": [
             "Cálculo de cargas térmicas.",
@@ -109,6 +111,7 @@
           ]
         },
         {
+          "id": "plumbing-gas",
           "title": "Plumbing and Gas Natural Design",
           "points": [
             "Cálculo hidráulico de redes de abasto (agua fría y caliente).",
@@ -170,6 +173,7 @@
       "subtitle": "Lista de disciplinas y entregables que cubrimos en diseño arquitectónico e ingeniería.",
       "items": [
         {
+          "id": "arch-design",
           "title": "Architectural Design | Interior Design",
           "points": [
             "Diseño conceptual, básico y de detalle",
@@ -180,6 +184,7 @@
           ]
         },
         {
+          "id": "mechanical",
           "title": "Mecánica",
           "points": [
             "Cálculo de cargas térmicas",
@@ -189,6 +194,7 @@
           ]
         },
         {
+          "id": "plumbing-gas",
           "title": "Plumbing and Gas Natural Design",
           "points": [
             "Cálculo hidráulico de redes de abasto (agua fría y caliente)",
@@ -208,6 +214,7 @@
           ]
         },
         {
+          "id": "fire-protection",
           "title": "Fire Alarm and Fire Protection Design",
           "points": [
             "Diseño de sistemas de rociadores automáticos (sistemas húmedos y secos)",
@@ -329,6 +336,7 @@
           }
         },
         {
+          "id": "scan-to-bim",
           "title": "Laser Scanning | Scan to BIM | As-Built",
           "text": "Escaneo láser 3D, nubes de puntos y generación de modelos BIM confiables para rehabilitación y control de obra.",
           "detail": {

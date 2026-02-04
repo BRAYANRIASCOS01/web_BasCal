@@ -1,6 +1,8 @@
 import { useTranslation } from "react-i18next";
 import { useMemo, useRef, useState } from "react";
 import bimAccentImage from "../../../assets/bim2.png";
+import scanToBimImage from "../../../assets/Laser_Scanning.png";
+import mepProjectImage from "../../../assets/VISTA REDES_page-0001.jpg";
 
 const ServicesBim = () => {
   const { t } = useTranslation();
@@ -9,6 +11,10 @@ const ServicesBim = () => {
   const hasExpanded = Boolean(expandedId);
   const cardRefs = useRef({});
   const lastScrollRef = useRef(null);
+  const cardImages = {
+    mep: mepProjectImage,
+    "scan-to-bim": scanToBimImage,
+  };
 
   const icons = [
     // Building / arquitectura
@@ -81,6 +87,7 @@ const ServicesBim = () => {
           {cards.map((card, index) => {
             const id = card.id || card.title;
             const isExpanded = expandedId === id;
+            const image = cardImages[id] || bimAccentImage;
             return (
             <article
               key={card.title}
@@ -95,7 +102,7 @@ const ServicesBim = () => {
             >
               {!isExpanded && (
                 <div className="bim-card__media" aria-hidden="true">
-                  <img src={bimAccentImage} alt="" className="bim-card__hero" loading="lazy" decoding="async" />
+                  <img src={image} alt="" className="bim-card__hero" loading="lazy" decoding="async" />
                   <span className="bim-card__icon bim-card__icon--overlay">{icons[index % icons.length]}</span>
                 </div>
               )}
@@ -234,7 +241,7 @@ const ServicesBim = () => {
                           )}
                     </div>
                     <div className="bim-card__detail-media" aria-hidden="true">
-                      <img src={bimAccentImage} alt="" className="bim-card__detail-image" loading="lazy" decoding="async" />
+                      <img src={image} alt="" className="bim-card__detail-image" loading="lazy" decoding="async" />
                     </div>
                   </div>
                   {card.detail.softwares && (
