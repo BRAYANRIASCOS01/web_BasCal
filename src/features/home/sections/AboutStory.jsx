@@ -2,20 +2,21 @@ import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 
 const AboutStory = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const sectionRef = useRef(null);
 
   useEffect(() => {
     const el = sectionRef.current;
     if (!el) return undefined;
     const animated = el.querySelectorAll("[data-animate]");
+    if (!animated.length) return undefined;
     const observer = new IntersectionObserver(
       (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("is-visible")),
       { threshold: 0.2 }
     );
     animated.forEach((n) => observer.observe(n));
     return () => observer.disconnect();
-  }, []);
+  }, [i18n.language]);
 
   const blocks = t("aboutPage.blocks", { returnObjects: true }) || [];
 
