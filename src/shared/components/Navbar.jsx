@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { NavLink, useLocation, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "../../features/translation/LanguageSwitcher.jsx";
@@ -28,35 +29,96 @@ const Navbar = ({ logoSrc = "/Log_BasCal.PNG", logoAlt }) => {
   const { lang = "es" } = useParams();
   const location = useLocation();
   const disabledLabel = t("navbar.inProgress", "En desarrollo");
+  const navRef = useRef(null);
+  const [openMenu, setOpenMenu] = useState(null);
 
   const to = (path) => `/${lang}${path === "/" ? "" : path}`;
+  const scrollToTop = () => {
+    if (typeof window === "undefined") return;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  const handleHomeClick = (event) => {
+    if (location.pathname === to("/")) {
+      event.preventDefault();
+      closeMenus();
+      scrollToTop();
+    }
+  };
   const isPathActive = (path) => location.pathname.startsWith(to(path).replace(/\/$/, ""));
   const isServicesSection = ["/servicios/bim", "/servicios/profesionales", "/servicios/construccion", "/servicios/staff-augmentation"].some(
     (p) => isPathActive(p)
   );
+  const closeMenus = () => {
+    setOpenMenu(null);
+    if (typeof document === "undefined") return;
+    const active = document.activeElement;
+    if (active && active instanceof HTMLElement) {
+      requestAnimationFrame(() => active.blur());
+    }
+  };
+  const toggleMenu = (menuId) => {
+    setOpenMenu((prev) => (prev === menuId ? null : menuId));
+  };
+
+  useEffect(() => {
+    closeMenus();
+  }, [location.pathname]);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (!navRef.current) return;
+      if (!navRef.current.contains(event.target)) {
+        closeMenus();
+      }
+    };
+    const handleEsc = (event) => {
+      if (event.key === "Escape") {
+        closeMenus();
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("keydown", handleEsc);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("keydown", handleEsc);
+    };
+  }, []);
 
   return (
-    <header className="navbar">
+    <header className="navbar" ref={navRef}>
       <div className="navbar__inner">
         {/* Logo */}
         <div className="navbar__logo">
-          <NavLink to={to("/")} className="navbar__brand" aria-label={t("navbar.home")}>
+          <NavLink
+            to={to("/")}
+            className="navbar__brand"
+            aria-label={t("navbar.home")}
+            onClick={handleHomeClick}
+          >
             <img src={logoSrc} alt={logoAlt || t("navbar.logoAlt")} />
           </NavLink>
         </div>
 
         {/* Menú */}
         <nav className="navbar__center" aria-label="Navegación principal">
-          <NavLink to={to("/")} end className={({ isActive }) => `navbar__link ${isActive ? "active" : ""}`}>
+          <NavLink
+            to={to("/")}
+            end
+            className={({ isActive }) => `navbar__link ${isActive ? "active" : ""}`}
+            onClick={closeMenus}
+            onClickCapture={handleHomeClick}
+          >
             {t("navbar.home")}
           </NavLink>
 
           {/* Servicios dropdown */}
-          <div className="navbar__dropdown">
+          <div className={`navbar__dropdown ${openMenu === "services" ? "is-open" : ""}`}>
             <button
               className={`navbar__link navbar__dropdownBtn ${isServicesSection ? "active" : ""}`}
               type="button"
               aria-haspopup="menu"
+              aria-expanded={openMenu === "services"}
+              onClick={() => toggleMenu("services")}
             >
               {t("navbar.services")} <CaretIcon />
             </button>
@@ -65,6 +127,7 @@ const Navbar = ({ logoSrc = "/Log_BasCal.PNG", logoAlt }) => {
                 to={to("/servicios/bim")}
                 className={({ isActive }) => `navbar__menuItem ${isActive ? "active" : ""}`}
                 role="menuitem"
+                onClick={closeMenus}
               >
                 {t("navbar.servicesItems.bim")}
               </NavLink>
@@ -72,6 +135,7 @@ const Navbar = ({ logoSrc = "/Log_BasCal.PNG", logoAlt }) => {
                 to={to("/servicios/profesionales")}
                 className={({ isActive }) => `navbar__menuItem ${isActive ? "active" : ""}`}
                 role="menuitem"
+                onClick={closeMenus}
               >
                 {t("navbar.servicesItems.professionals")}
               </NavLink>
@@ -80,6 +144,7 @@ const Navbar = ({ logoSrc = "/Log_BasCal.PNG", logoAlt }) => {
                 role="menuitem"
                 aria-disabled="true"
                 data-label={disabledLabel}
+                onClick={closeMenus}
               >
                 {t("navbar.servicesItems.construction")}
               </span>
@@ -88,6 +153,7 @@ const Navbar = ({ logoSrc = "/Log_BasCal.PNG", logoAlt }) => {
                 role="menuitem"
                 aria-disabled="true"
                 data-label={disabledLabel}
+                onClick={closeMenus}
               >
                 {t("navbar.servicesItems.staffAugmentation")}
               </span>
@@ -97,13 +163,20 @@ const Navbar = ({ logoSrc = "/Log_BasCal.PNG", logoAlt }) => {
           <NavLink
             to={to("/portafolio")}
             className={({ isActive }) => `navbar__link ${isActive ? "active" : ""}`}
+            onClick={closeMenus}
           >
             {t("navbar.portfolio")}
           </NavLink>
 
           {/* Empresa dropdown */}
-          <div className="navbar__dropdown">
-            <button className="navbar__link navbar__dropdownBtn" type="button" aria-haspopup="menu">
+          <div className={`navbar__dropdown ${openMenu === "company" ? "is-open" : ""}`}>
+            <button
+              className="navbar__link navbar__dropdownBtn"
+              type="button"
+              aria-haspopup="menu"
+              aria-expanded={openMenu === "company"}
+              onClick={() => toggleMenu("company")}
+            >
               {t("navbar.company")} <CaretIcon />
             </button>
             <div className="navbar__menu" role="menu">
@@ -112,10 +185,11 @@ const Navbar = ({ logoSrc = "/Log_BasCal.PNG", logoAlt }) => {
                 role="menuitem"
                 aria-disabled="true"
                 data-label={disabledLabel}
+                onClick={closeMenus}
               >
                 {t("navbar.companyItems.faq")}
               </span>
-              <NavLink to={to("/empresa/sobre-nosotros")} className="navbar__menuItem" role="menuitem">
+              <NavLink to={to("/empresa/sobre-nosotros")} className="navbar__menuItem" role="menuitem" onClick={closeMenus}>
                 {t("navbar.companyItems.about")}
               </NavLink>
               <span
@@ -123,6 +197,7 @@ const Navbar = ({ logoSrc = "/Log_BasCal.PNG", logoAlt }) => {
                 role="menuitem"
                 aria-disabled="true"
                 data-label={disabledLabel}
+                onClick={closeMenus}
               >
                 {t("navbar.companyItems.blog")}
               </span>
@@ -135,7 +210,7 @@ const Navbar = ({ logoSrc = "/Log_BasCal.PNG", logoAlt }) => {
 
         <div className="navbar__actions">
           <LanguageSwitcher />
-          <NavLink to={to("/contacto")} className="navbar__contact">
+          <NavLink to={to("/contacto")} className="navbar__contact" onClick={closeMenus}>
             {t("navbar.contact")}
           </NavLink>
         </div>

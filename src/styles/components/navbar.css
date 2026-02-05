@@ -71,14 +71,12 @@
   transition: transform 160ms ease, opacity 160ms ease;
 }
 
-.navbar__dropdown:hover .navbar__caret,
-.navbar__dropdown:focus-within .navbar__caret {
+.navbar__dropdown.is-open .navbar__caret {
   transform: translateY(1px);
   opacity: 0.95;
 }
 
-.navbar__dropdown:hover > .navbar__dropdownBtn,
-.navbar__dropdown:focus-within > .navbar__dropdownBtn {
+.navbar__dropdown.is-open > .navbar__dropdownBtn {
   background: color-mix(in srgb, var(--color-primary) 12%, var(--color-surface) 88%);
   color: var(--color-primary-dark);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
@@ -110,8 +108,7 @@
   visibility 280ms ease;
 }
 /* Abrir al hover/focus */
-.navbar__dropdown:hover .navbar__menu,
-.navbar__dropdown:focus-within .navbar__menu {
+.navbar__dropdown.is-open .navbar__menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
