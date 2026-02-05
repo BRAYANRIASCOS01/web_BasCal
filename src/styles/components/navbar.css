@@ -16,7 +16,16 @@
  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 .navbar__brand{
-    width: 150px;
+    width: 200px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.navbar__brand img{
+    width: 100%;
+    height: auto;
+    max-height: 64px;
+    object-fit: contain;
 }
 
 .navbar__center{
@@ -333,11 +342,17 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: color-mix(in srgb, var(--color-primary) 18%, var(--color-surface) 82%);
   color: var(--color-primary-dark);
+}
+
+.language-switcher__triggerIcon svg {
+  width: 26px;
+  height: 26px;
+  display: block;
 }
 
 .language-switcher__triggerLabel {
@@ -442,6 +457,16 @@
 @media (max-width: 768px) {
   .language-switcher__trigger {
     padding: 0.4rem 0.6rem;
+  }
+
+  .language-switcher__triggerIcon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .language-switcher__triggerIcon svg {
+    width: 24px;
+    height: 24px;
   }
 
   .language-switcher__triggerLabel {

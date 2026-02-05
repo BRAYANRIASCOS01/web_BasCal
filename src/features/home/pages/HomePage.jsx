@@ -66,7 +66,7 @@ const HomePage = () => {
         <meta name="twitter:description" content={t("home.seo.description")} />
         <script type="application/ld+json">{JSON.stringify(servicesSchema)}</script>
       </Helmet>
-      <Hero />
+      <Hero accent={null} />
       <WhyBascal />
       <Services />
       <ServicesPro />

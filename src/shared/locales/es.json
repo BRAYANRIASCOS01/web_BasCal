@@ -49,11 +49,11 @@
       "title": "BasCal | Ingeniería y construcción con precisión",
       "description": "Diseñamos y ejecutamos proyectos de ingeniería con comunicación transparente y resultados medibles."
     },
-    "eyebrow": "BasCal Ingeniería & Construcción",
-    "heroTitle": "Soluciones técnicas con precisión, confianza y profesionalismo.",
-    "heroSubtitle": "Diseñamos proyectos de ingeniería y construcción con estándares claros, comunicación transparente y resultados medibles.",
+    "eyebrow": "¿Necesitas más ayuda?",
+    "heroTitle": "No dudes en contactarnos para más información.",
+    "heroSubtitle": "¡Estamos aquí para ayudarte! Si tienes una pregunta o necesitas apoyo, contáctanos con confianza. Nuestro equipo está listo para asistirte con cualquier consulta o necesidad de tu proyecto.",
     "primaryCta": "Solicitar asesoría",
-    "secondaryCta": "Conocer servicios",
+    "secondaryCta": "Conocer más",
     "servicesKicker": "Servicios BIM",
     "servicesTitle": "Servicios BIM",
     "servicesSubtitle": "Implementamos BIM para coordinar disciplinas arquitectónicas, estructurales y MEP mediante modelado, coordinación interdisciplinaria y gestión técnica de la información.",
@@ -127,14 +127,14 @@
       "kicker": "Cobertura",
       "title": "Proyectos en los que participamos",
       "subtitle": "Cobertura regional y presencia activa en proyectos BIM.",
-      "mapTitle": "Nuestros clientes en América",
+      "mapTitle": "Nuestros clientes",
       "cardText": "Participamos en proyectos institucionales, residenciales y hospitalarios con coordinación técnica y estándares internacionales.",
       "countries": [
+        "Estados Unidos",
         "Colombia",
-        "Ecuador",
-        "Venezuela",
-        "México",
-        "Estados Unidos"
+        "Chile",
+        "Argentina",
+        "España"
       ]
     },
     "footer": {
@@ -277,13 +277,16 @@
       "services": "Alcance de los servicios",
       "software": "Software implementados"
     },
+    "tooltips": {
+      "spci": "Diseño del Sistema de Protección Contra Incendios (SPCI)"
+    },
     "projects": [
       {
         "id": "cdi-barrio-nuevo",
         "category": "Educación",
         "title": "CDI Barrio Nuevo, Bello",
         "type": "Proyecto institucional / Centro de Desarrollo Infantil",
-        "location": "Bello, Colombia",
+        "location": "Colombia",
         "description": "Proyecto educativo orientado a la primera infancia, que integra zonas de gateo y gimnasio para bebés, espacios de lactancia, áreas de alimentación y aulas de aprendizaje para niños entre 24 y 60 meses, así como zonas de cocina y áreas administrativas que incluyen auditorios y oficinas para docentes y directivos.",
         "scale": "Área construida total: Más de 2.500 m²",
         "services": [

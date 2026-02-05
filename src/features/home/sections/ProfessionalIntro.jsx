@@ -12,7 +12,7 @@ const ProfessionalIntro = () => {
           <p className="section-subtitle text-muted">{t("professionalPage.services.subtitle")}</p>
           <div className="pro-intro__meta">
             <div>
-              <span className="pro-intro__meta-value">12</span>
+              <span className="pro-intro__meta-value">5</span>
               <span className="pro-intro__meta-label">{t("professionalPage.intro.metaCountries", "Países de operación")}</span>
             </div>
             <div>

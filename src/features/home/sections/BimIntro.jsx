@@ -12,10 +12,6 @@ const BimIntro = () => {
           <p className="section-subtitle text-muted">{t("bimPage.intro.text")}</p>
           <div className="bim-intro__meta">
             <div>
-              <span className="bim-intro__meta-value">300+</span>
-              <span className="bim-intro__meta-label">{t("bimPage.intro.metaModels", "Modelos entregados")}</span>
-            </div>
-            <div>
               <span className="bim-intro__meta-value">LOD 300-400</span>
               <span className="bim-intro__meta-label">{t("bimPage.intro.metaDetail", "Nivel de detalle")}</span>
             </div>

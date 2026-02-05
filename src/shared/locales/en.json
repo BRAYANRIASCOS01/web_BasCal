@@ -49,11 +49,11 @@
       "title": "BasCal | Engineering and construction with precision",
       "description": "We design and execute engineering projects with transparent communication and measurable results."
     },
-    "eyebrow": "BasCal Engineering & Construction",
-    "heroTitle": "Technical solutions with precision, trust, and professionalism.",
-    "heroSubtitle": "We design engineering and construction projects with clear standards, transparent communication, and measurable results.",
+    "eyebrow": "Need more help?",
+    "heroTitle": "Feel free to contact us for more information.",
+    "heroSubtitle": "We're here to help! Whether you have a question or need support, feel free to reach out to us. Our team is ready to assist you with any inquiries or project needs.",
     "primaryCta": "Request consultation",
-    "secondaryCta": "Explore services",
+    "secondaryCta": "Learn more",
     "servicesKicker": "BIM Services",
     "servicesTitle": "BIM Services",
     "servicesSubtitle": "We implement BIM to coordinate architectural, structural, and MEP disciplines through modeling, cross-team coordination, and technical information management.",
@@ -130,11 +130,11 @@
       "mapTitle": "Our clients across the Americas",
       "cardText": "We contribute to institutional, residential, and healthcare projects with technical coordination and international standards.",
       "countries": [
+        "United States",
         "Colombia",
-        "Ecuador",
-        "Venezuela",
-        "Mexico",
-        "United States"
+        "Chile",
+        "Argentina",
+        "Spain"
       ]
     },
     "footer": {
@@ -277,13 +277,16 @@
       "services": "Service scope",
       "software": "Software used"
     },
+    "tooltips": {
+      "spci": "Fire Protection System (SPCI) design"
+    },
     "projects": [
       {
         "id": "cdi-barrio-nuevo",
         "category": "Education",
         "title": "CDI Barrio Nuevo, Bello",
         "type": "Institutional project / Early Childhood Development Center",
-        "location": "Bello, Colombia",
+        "location": "Colombia",
         "description": "An early childhood education project that integrates crawling and baby gym areas, breastfeeding spaces, dining areas, and learning classrooms for children ages 24 to 60 months, plus kitchen zones and administrative areas with auditoriums and offices for teachers and directors.",
         "scale": "Total built area: Over 2,500 m²",
         "services": [
