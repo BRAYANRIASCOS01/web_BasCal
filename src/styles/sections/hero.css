@@ -358,31 +358,53 @@
   animation-delay: 2s;
 }
 
-.hero__photo--arch {
-  inset: 26% auto auto 58%;
-  width: 200px;
-  height: 150px;
-  background-image: url("/arquitectura.png");
+.hero__photo--union {
+  inset: -5% auto auto 80%;
+  width: 300px;
+  height: 300px;
+  background-image: url("/union-2.png");
   animation-duration: 18s;
+   animation-delay: 1.2s;
 }
 
-.hero__photo--offices {
-  inset: auto 6% 0% auto;
-  width: 360px;
-  height: 400px;
-  background-image: url("/bloque-de-oficinas.png");
+.hero__photo--grua {
+  inset: auto 5% -30% auto;
+  width: 800px;
+  height: 800px;
+  background-image: url("/grua-7.png");
   animation-duration: 15s;
   animation-delay: 1.2s;
 }
 
-.hero__photo--mesh {
-  inset: 20% auto auto 72%;
-  width: 300px;
-  height: 80px;
-  background-image: url("/haz.png");
+.hero__photo--viga {
+  inset: -25% auto auto 15%;
+  width: 400px;
+  height: 500px;
+  background-image: url("/viga.png");
   opacity: 0.06;
   animation-duration: 20s;
-  animation-delay: 0.6s;
+  animation-delay: 1.6s;
+  
+}
+.hero__photo--union-2 {
+  inset: 25% auto auto 20%;
+  width: 500px;
+  height: 500px;
+  background-image: url("/union-2.png");
+  opacity: 0.06;
+  animation-duration: 25s;
+  animation-delay: 3.6s;
+  
+}
+.hero__photo--building {
+  inset: -25% auto auto 30%;
+  width: 600px;
+  height: 600px;
+  background-image: url("/edificio.png");
+  opacity: 0.06;
+  animation-duration: 25s;
+  animation-delay: 3.6s;
+  
 }
 
 @keyframes hero-drift {
@@ -390,13 +412,13 @@
     transform: translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
   }
   25% {
-    transform: translate3d(-6px, -4px, 0) rotate3d(0, 1, 0, 3deg);
+    transform: translate3d(-16px, -12px, 0) rotate3d(0, 1, 0, 6deg);
   }
   50% {
-    transform: translate3d(0, -2px, 0) rotate3d(0, 1, 0, -2deg);
+    transform: translate3d(0, -10px, 0) rotate3d(0, 1, 0, -5deg);
   }
   75% {
-    transform: translate3d(6px, 4px, 0) rotate3d(0, 1, 0, 3deg);
+    transform: translate3d(18px, 14px, 0) rotate3d(0, 1, 0, 6deg);
   }
   100% {
     transform: translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);

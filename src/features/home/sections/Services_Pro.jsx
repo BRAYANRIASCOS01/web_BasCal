@@ -6,6 +6,9 @@ import { useTranslation } from "react-i18next";
 import archDesignImage from "../../../assets/BIM-MED.jpeg";
 import mechanicalImage from "../../../assets/bim2.png";
 import plumbingImage from "../../../assets/bim3.png";
+import sdaPlantaImage from "../../../assets/SDA_Planta.png";
+import espacioPublicoImage from "../../../assets/Screenshot 2026-01-27 154818.png";
+import mechanicalRvtImage from "../../../assets/RVT_Imagen_03.png";
 
 const ServicesPro = () => {
   const { t } = useTranslation();
@@ -18,6 +21,11 @@ const ServicesPro = () => {
   const contactEmail = contactItems?.[2]?.value || "contact@bascal.com";
 
   const serviceImages = [archDesignImage, mechanicalImage, plumbingImage];
+  const serviceImageOverrides = {
+    "arch-design": espacioPublicoImage,
+    mechanical: mechanicalRvtImage,
+    "plumbing-gas": sdaPlantaImage,
+  };
 
   useEffect(() => {
     const sectionEl = sectionRef.current;
@@ -78,7 +86,7 @@ const ServicesPro = () => {
 
         <ol className="services-stack" aria-label={t("home.professionalServices.title")}>
           {professionalServices.map((service, index) => {
-            const image = serviceImages[index % serviceImages.length];
+            const image = serviceImageOverrides[service.id] || serviceImages[index % serviceImages.length];
             const delay = 0.12 + index * 0.08;
 
             return (

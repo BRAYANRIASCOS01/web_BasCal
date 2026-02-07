@@ -50,9 +50,12 @@ const Hero = ({
   return (
     <header className={wrapperClass} ref={sectionRef} id={id}>
       <div className="hero__bg" aria-hidden="true">
-        <span className="hero__photo hero__photo--arch" />
-        <span className="hero__photo hero__photo--offices" />
-        <span className="hero__photo hero__photo--mesh" />
+        <span className="hero__photo hero__photo--union-2" />
+        <span className="hero__photo hero__photo--grua" />
+        <span className="hero__photo hero__photo--viga" />
+         <span className="hero__photo hero__photo--tube" />
+         <span className="hero__photo hero__photo--union" />
+         <span className="hero__photo hero__photo--building" />
         <div className="hero__grid">
           <span className="hero__tile" />
           <span className="hero__tile" />

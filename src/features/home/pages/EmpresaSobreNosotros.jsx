@@ -26,13 +26,14 @@ const EmpresaSobreNosotros = () => {
     const pageEl = pageRef.current;
     if (!pageEl) return undefined;
     const animated = pageEl.querySelectorAll("section [data-animate]");
+    if (!animated.length) return undefined;
     const observer = new IntersectionObserver(
       (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("is-visible")),
       { threshold: 0.25 }
     );
     animated.forEach((n) => observer.observe(n));
     return () => observer.disconnect();
-  }, []);
+  }, [i18n.language, lang]);
 
   return (
     <main className="app" id="top" ref={pageRef}>

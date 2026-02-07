@@ -129,9 +129,14 @@ const Navbar = ({ logoSrc = "/Log_BasCal.PNG", logoAlt }) => {
             </div>
           </div>
 
-          <span className="navbar__link navbar__link--disabled" aria-disabled="true" data-label={disabledLabel}>
+          <NavLink
+            to={to("/portafolio")}
+            className={({ isActive }) =>
+              `navbar__link ${isActive ? "active" : ""}`
+            }
+          >
             {t("navbar.portfolio")}
-          </span>
+          </NavLink>
 
           {/* Empresa dropdown (desktop hover) */}
           <div className="navbar__dropdown">

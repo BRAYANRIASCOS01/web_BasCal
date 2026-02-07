@@ -49,11 +49,11 @@
       "title": "BasCal | Engineering and construction with precision",
       "description": "We design and execute engineering projects with transparent communication and measurable results."
     },
-    "eyebrow": "BasCal Engineering & Construction",
-    "heroTitle": "Technical solutions with precision, trust, and professionalism.",
-    "heroSubtitle": "We design engineering and construction projects with clear standards, transparent communication, and measurable results.",
+    "eyebrow": "Need more help?",
+    "heroTitle": "Feel free to contact us for more information.",
+    "heroSubtitle": "We're here to help! Whether you have a question or need support, feel free to reach out to us. Our team is ready to assist you with any inquiries or project needs.",
     "primaryCta": "Request consultation",
-    "secondaryCta": "Explore services",
+    "secondaryCta": "Learn more",
     "servicesKicker": "BIM Services",
     "servicesTitle": "BIM Services",
     "servicesSubtitle": "We implement BIM to coordinate architectural, structural, and MEP disciplines through modeling, cross-team coordination, and technical information management.",
@@ -90,6 +90,7 @@
       "subtitle": "We design safe, efficient, code-compliant technical solutions across every phase, from concept through construction documents. We focus on design, calculation, and technical specifications so each system works correctly and meets local and international standards. Softwares: Autodesk Revit, AutoCAD, ArchiCAD.",
       "items": [
         {
+          "id": "arch-design",
           "title": "Architectural Design | Interior Design",
           "points": [
             "Conceptual, basic, and detailed design.",
@@ -100,6 +101,7 @@
           ]
         },
         {
+          "id": "mechanical",
           "title": "Mechanical",
           "points": [
             "Thermal load calculations.",
@@ -109,6 +111,7 @@
           ]
         },
         {
+          "id": "plumbing-gas",
           "title": "Plumbing and Natural Gas Design",
           "points": [
             "Hydraulic calculation of supply networks (hot and cold water).",
@@ -127,11 +130,11 @@
       "mapTitle": "Our clients across the Americas",
       "cardText": "We contribute to institutional, residential, and healthcare projects with technical coordination and international standards.",
       "countries": [
+        "United States",
         "Colombia",
-        "Ecuador",
-        "Venezuela",
-        "Mexico",
-        "United States"
+        "Chile",
+        "Argentina",
+        "Spain"
       ]
     },
     "footer": {
@@ -170,6 +173,7 @@
       "subtitle": "Disciplines and deliverables we cover for architectural and engineering design.",
       "items": [
         {
+          "id": "arch-design",
           "title": "Architectural Design | Interior Design",
           "points": [
             "Concept, schematic, and detailed design",
@@ -180,6 +184,7 @@
           ]
         },
         {
+          "id": "mechanical",
           "title": "Mechanical",
           "points": [
             "Thermal load calculations",
@@ -189,6 +194,7 @@
           ]
         },
         {
+          "id": "plumbing-gas",
           "title": "Plumbing and Natural Gas Design",
           "points": [
             "Hydraulic calculation of supply networks (hot and cold water)",
@@ -208,6 +214,7 @@
           ]
         },
         {
+          "id": "fire-protection",
           "title": "Fire Alarm and Fire Protection Design",
           "points": [
             "Design of automatic sprinkler systems (wet and dry)",
@@ -239,6 +246,156 @@
         }
       ]
     }
+  },
+  "portfolioPage": {
+    "seo": {
+      "title": "Portfolio | BasCal BIM & Engineering Projects",
+      "description": "Explore institutional, education, and infrastructure projects delivered with BIM precision and specialized engineering services."
+    },
+    "hero": {
+      "eyebrow": "Portfolio",
+      "title": "Projects that back our expertise.",
+      "subtitle": "Real cases with clear scope, technical coordination, and construction-ready deliverables.",
+      "cta": "View projects"
+    },
+    "section": {
+      "kicker": "Projects",
+      "title": "Project portfolio",
+      "subtitle": "A sample of the work we build alongside our clients."
+    },
+    "filters": {
+      "label": "Categories",
+      "all": "All",
+      "searchLabel": "Search projects",
+      "searchPlaceholder": "Search by name, location, or type",
+      "categories": ["Education", "Hospitality", "Infrastructure", "Mixed-use", "Recreation", "Residential", "Healthcare", "Technology - Mission Critical"]
+    },
+    "meta": {
+      "type": "Type",
+      "location": "Location",
+      "scale": "Project scale",
+      "services": "Service scope",
+      "software": "Software used"
+    },
+    "tooltips": {
+      "spci": "Fire Protection System (SPCI) design"
+    },
+    "projects": [
+      {
+        "id": "cdi-barrio-nuevo",
+        "category": "Education",
+        "title": "CDI Barrio Nuevo, Bello",
+        "type": "Institutional project / Early Childhood Development Center",
+        "location": "Colombia",
+        "description": "An early childhood education project that integrates crawling and baby gym areas, breastfeeding spaces, dining areas, and learning classrooms for children ages 24 to 60 months, plus kitchen zones and administrative areas with auditoriums and offices for teachers and directors.",
+        "scale": "Total built area: Over 2,500 m²",
+        "services": [
+          "Fire Protection System (SPCI) design",
+          "Fire Detection and Alarm System (SDA) design",
+          "Natural gas network design",
+          "Life safety inspection and evaluation"
+        ]
+      },
+      {
+        "id": "cdi-navarra",
+        "category": "Education",
+        "title": "CDI Navarra, Bello",
+        "type": "Institutional project / Early Childhood Development Center",
+        "location": "Colombia",
+        "description": "An early childhood education project that integrates crawling and baby gym areas, breastfeeding spaces, dining areas, and learning classrooms for children ages 24 to 36 months, plus kitchen zones and administrative areas with auditoriums and offices for teachers and directors.",
+        "scale": "Site: over 3,760 m² · Total built area: 2,400 m²",
+        "services": [
+          "Fire Protection System (SPCI) design",
+          "Fire Detection and Alarm System (SDA) design",
+          "Natural gas network design",
+          "Life safety inspection and evaluation"
+        ]
+      },
+      {
+        "id": "megacolegio-bello",
+        "category": "Education",
+        "title": "Megacolegio, Bello",
+        "type": "Institutional project / School",
+        "location": "Colombia",
+        "description": "An institutional educational complex that integrates administrative spaces, teacher rooms, classrooms, recreation and sports areas, computer labs, auditorium, library, food zones, and parking areas, designed to support academic development and school life.",
+        "scale": "Total built area: approximately 16,400 m² across six levels.",
+        "services": [
+          "Fire Protection System (SPCI) design",
+          "Fire Detection and Alarm System (SDA) design",
+          "Natural gas network design",
+          "Life safety inspection and evaluation"
+        ]
+      },
+      {
+        "id": "scan-to-bim-airport",
+        "category": "Infrastructure",
+        "title": "Scan to BIM | Airport Infrastructure",
+        "type": "Airport infrastructure project / Scan to BIM (As-Built Modeling)",
+        "location": "Spain",
+        "description": "A staff augmentation project supporting the winning firm with digital information capture from point clouds (Scan to BIM) for water supply and storm/sanitary drainage systems.",
+        "scale": "Scope based on point clouds and As-Built modeling",
+        "services": [
+          "3D BIM modeling of water supply systems (hot and cold), storm system, and sanitary drainage",
+          "Creation of mechanical families for pumping systems",
+          "Generation of digital drawings"
+        ],
+        "software": ["Revit", "AutoCAD", "ReCap", "Autodesk Construction Cloud (ACC)"]
+      },
+      {
+        "id": "pao-bello",
+        "category": "Mixed-use",
+        "title": "PAO, Bello",
+        "type": "Institutional and cultural / Government project",
+        "location": "Colombia",
+        "description": "A large-scale institutional and cultural complex integrating administrative, cultural, and educational spaces, including offices, theaters, auditoriums, exhibition halls, training classrooms, meeting areas, food zones, and leisure spaces—conceived as a community hub and service center.",
+        "scale": "Site: over 70,000 m² · Total built area: over 18,000 m² (around 10 buildings, up to three levels)",
+        "services": [
+          "Fire Protection System (SPCI) design and calculations",
+          "Fire Detection and Alarm System (SDA) design and calculations",
+          "Natural gas network design and calculations",
+          "Life safety inspection and evaluation"
+        ]
+      },
+      {
+        "id": "scan-to-bim-hospital-chile",
+        "category": "Healthcare",
+        "title": "Scan to BIM | Hospital Building",
+        "type": "Healthcare project / Scan to BIM (As-Built Modeling)",
+        "location": "Chile",
+        "description": "A staff augmentation project supporting the winning firm with digital information capture from point clouds (Scan to BIM) for water supply and storm/sanitary drainage systems.",
+        "scale": "Scope based on point clouds and As-Built modeling",
+        "services": [
+          "3D BIM modeling of water supply systems (hot and cold), storm system, and sanitary drainage",
+          "Creation of mechanical families for pumping systems",
+          "Generation of digital drawings"
+        ],
+        "software": ["Revit", "AutoCAD", "ReCap", "Autodesk Construction Cloud (ACC)"]
+      },
+      {
+        "id": "shop-drawings-hvac-us",
+        "category": "Healthcare",
+        "title": "BIM Shop Drawings | HVAC Systems",
+        "type": "Healthcare project / Hospital building",
+        "location": "USA",
+        "description": "A staff augmentation project supporting the contractor with BIM shop drawings for the hospital HVAC system, based on design plans, submittals, and technical documentation from the design firm. The work focused on fabrication-ready modeling, coordination, and installation, meeting US construction and coordination standards.",
+        "scale": "BIM shop drawings for hospital HVAC",
+        "services": [
+          "3D BIM modeling of supply, return, and exhaust lines",
+          "Creation of mechanical families for HVAC equipment",
+          "Shop drawings production: plans, sections, and 3D construction details",
+          "Material takeoffs (BOQ/MTO)",
+          "Access doors and concrete pads layout definition",
+          "Interdisciplinary coordination with other systems (clash detection)"
+        ],
+        "software": ["Revit", "Navisworks", "Autodesk Construction Cloud (ACC)", "Ductulator"]
+      }
+    ],
+    "card": {
+      "cta": "See more",
+      "detailClose": "Close",
+      "detailTitle": "Project description"
+    },
+    "whatsappMessage": "Hi, I want more information about the portfolio."
   },
   "language": {
     "label": "Language",
@@ -341,6 +498,7 @@
           }
         },
         {
+          "id": "scan-to-bim",
           "title": "Laser Scanning | Scan to BIM | As-Built",
           "text": "3D laser scanning, point clouds, and reliable BIM models for rehabilitation and site control.",
           "detail": {
