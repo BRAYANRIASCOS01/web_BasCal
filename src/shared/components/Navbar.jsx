@@ -222,9 +222,14 @@ const Navbar = ({ logoSrc = "/Log_BasCal.PNG", logoAlt }) => {
             </div>
 
             {/* Portafolio */}
-            <span className="navbar__mLink is-disabled" aria-disabled="true">
-              {t("navbar.portfolio")} <em>({disabledLabel})</em>
-            </span>
+          
+            <NavLink
+              to={to("/portafolio")}
+              className={({ isActive }) => `navbar__mLink ${isActive ? "active" : ""}`}
+            >
+              {t("navbar.portfolio")}
+            </NavLink>
+
 
             {/* Empresa (móvil click) */}
             <button
