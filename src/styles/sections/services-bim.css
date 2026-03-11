@@ -1,0 +1,358 @@
+.bim-services {
+  position: relative;
+  background: var(--color-surface);
+  padding: 1.5rem 0 3rem;
+}
+
+.bim-services::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  left: 0;
+  right: 0;
+  height: 120px;
+  background: linear-gradient(180deg, var(--color-surface) 0%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bim-services .container {
+  position: relative;
+  z-index: 1;
+}
+
+.bim-services__grid {
+  display: grid;
+  gap: 1.75rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.bim-card {
+  --bim-card-pad: 1.9rem;
+  position: relative;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.95), #ffffff 55%),
+    linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(14, 116, 144, 0.1)),
+    repeating-linear-gradient(135deg, rgba(148, 163, 184, 0.14) 0 1px, transparent 1px 6px);
+  background-clip: padding-box, border-box;
+  border: 1px solid transparent;
+  border-radius: 1.5rem;
+  padding: var(--bim-card-pad);
+  box-shadow:
+    0 22px 50px rgba(15, 22, 43, 0.12),
+    0 1px 0 rgba(255, 255, 255, 0.92) inset;
+  display: grid;
+  gap: 0.95rem;
+  grid-template-rows: auto auto 1fr auto;
+  transform: translateY(0);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease,
+    filter 180ms ease,
+    background 220ms ease;
+  isolation: isolate;
+}
+
+.bim-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.05), rgba(37, 99, 235, 0.12));
+  opacity: 0;
+  transition: opacity 180ms ease;
+  z-index: -1;
+}
+
+.bim-card::after {
+  content: "";
+  position: absolute;
+  top: 0.9rem;
+  right: 1rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 16px;
+  background:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(14, 116, 144, 0.2)),
+    radial-gradient(circle, rgba(255, 255, 255, 0.5), transparent 70%);
+  filter: blur(0.5px);
+  opacity: 0.35;
+  z-index: -1;
+}
+
+.bim-card:hover,
+.bim-card:focus-within {
+  transform: translateY(-8px);
+  border-color: rgba(37, 99, 235, 0.5);
+  box-shadow:
+    0 28px 65px rgba(15, 22, 43, 0.18),
+    0 1px 0 rgba(255, 255, 255, 0.98) inset,
+    0 0 0 1px rgba(37, 99, 235, 0.12);
+  filter: saturate(1.08);
+}
+
+.bim-card.is-expanded {
+  border-color: rgba(37, 99, 235, 0.6);
+  box-shadow:
+    0 30px 70px rgba(15, 22, 43, 0.2),
+    0 1px 0 rgba(255, 255, 255, 0.98) inset,
+    0 0 0 1px rgba(37, 99, 235, 0.16);
+  grid-column: 1 / -1;
+  animation: expandPop 0.26s ease;
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+.bim-card:hover::before,
+.bim-card:focus-within::before {
+  opacity: 1;
+  background: linear-gradient(135deg, rgba(0, 11, 102, 0.04), rgba(0, 152, 255, 0.05));
+}
+
+.bim-card__icon {
+  width: 68px;
+  height: 68px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0)),
+    linear-gradient(145deg, rgba(37, 99, 235, 0.18), rgba(56, 189, 248, 0.18));
+  color: var(--color-primary);
+  box-shadow:
+    0 18px 32px rgba(29, 78, 216, 0.18),
+    0 0 0 1px rgba(29, 78, 216, 0.2);
+  animation: iconFloat 4.5s ease-in-out infinite;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.bim-card__icon svg {
+  width: 34px;
+  height: 34px;
+}
+
+.bim-card__media {
+  position: relative;
+  margin: calc(var(--bim-card-pad) * -1) calc(var(--bim-card-pad) * -1) 0.9rem;
+  border-radius: 1.2rem 1.2rem 0 0;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #e7edf7;
+  box-shadow:
+    0 18px 36px rgba(15, 23, 42, 0.14),
+    0 0 0 1px rgba(255, 255, 255, 0.65) inset;
+}
+
+.bim-card__icon--overlay {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 2;
+  backdrop-filter: blur(3px);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.65));
+}
+
+.bim-card__icon--inline {
+  animation: none;
+  width: 56px;
+  height: 56px;
+  box-shadow:
+    0 14px 28px rgba(29, 78, 216, 0.16),
+    0 0 0 1px rgba(29, 78, 216, 0.18);
+}
+
+.bim-card__hero {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 0.5s ease;
+}
+
+.bim-card__head {
+  display: flex;
+  align-items: center;
+}
+
+.bim-card:hover .bim-card__hero,
+.bim-card:focus-within .bim-card__hero {
+  transform: scale(1.04);
+}
+
+.bim-card__title {
+  margin: 0;
+  font-size: 1.16rem;
+  color: var(--color-primary-dark);
+  line-height: 1.35;
+  letter-spacing: 0.015em;
+}
+
+.bim-card__text {
+  margin: 0;
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.65;
+}
+
+.bim-card__cta {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 20%, var(--color-border) 80%);
+  background: color-mix(in srgb, var(--color-primary) 6%, var(--color-surface) 94%);
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition: color 160ms ease, transform 160ms ease, opacity 160ms ease, background 160ms ease, border-color 160ms ease;
+  cursor: pointer;
+}
+
+.bim-card__cta:hover,
+.bim-card__cta:focus-visible {
+  color: var(--color-primary);
+  background: color-mix(in srgb, var(--color-primary) 12%, var(--color-surface) 88%);
+  border-color: color-mix(in srgb, var(--color-primary) 32%, var(--color-border) 68%);
+  transform: translateY(-1px);
+}
+
+.bim-card__detail {
+  margin-top: 0.5rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(0, 11, 102, 0.14);
+  display: grid;
+  gap: 0.6rem;
+  animation: detailReveal 0.28s ease;
+}
+
+.bim-card__detail-eyebrow {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+
+.bim-card__detail-title {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--color-primary-dark);
+}
+
+.bim-card__detail-body {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.bim-card__detail-copy {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.bim-card__detail-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem;
+  align-items: start;
+}
+
+.bim-card__detail-body p {
+  margin: 0;
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
+.bim-card__detail-block {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.bim-card__detail-block-title {
+  margin: 0;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  font-size: 0.98rem;
+}
+
+.bim-card__detail-media {
+  width: 100%;
+  min-height: 170px;
+  border-radius: 1rem;
+  background:
+    linear-gradient(145deg, rgba(15, 23, 42, 0.08), rgba(15, 23, 42, 0)),
+    url("/bloque-de-oficinas.svg") center/cover no-repeat,
+    repeating-linear-gradient(45deg, rgba(148, 163, 184, 0.2) 0 1px, transparent 1px 6px),
+    linear-gradient(135deg, #dbeafe, #f8fafc);
+  box-shadow:
+    0 18px 36px rgba(15, 23, 42, 0.18),
+    0 1px 0 rgba(255, 255, 255, 0.9) inset;
+  overflow: hidden;
+  position: relative;
+}
+
+.bim-card__detail-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.bim-card__detail-bullet {
+  color: #4b5563;
+  width: 16px;
+  height: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+.bim-card__detail-soft {
+  margin-top: 0.75rem;
+}
+
+.bim-card__detail-soft ul {
+  margin: 0.35rem 0 0;
+  padding-left: 1.1rem;
+  color: #4b5563;
+  display: grid;
+  gap: 0.35rem;
+  list-style: disc;
+}
+
+@media (max-width: 600px) {
+  .bim-card {
+    --bim-card-pad: 1.35rem;
+  }
+
+  .bim-services__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bim-card__detail-body {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1100px) {
+  .bim-services__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.bim-card__cta:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

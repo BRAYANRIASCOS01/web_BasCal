@@ -15,3 +15,8 @@ Solo estructura, sin código implementado todavía.
 ├─ index.html       # punto de entrada HTML y metadatos base
 └─ package.json     # scripts de Vite y dependencias
 ```
+
+## Lineamientos
+
+- Mantener enfoque de clean code en toda implementación.
+- Priorizar siempre SEO profesional (metadatos, accesibilidad, semántica, performance).

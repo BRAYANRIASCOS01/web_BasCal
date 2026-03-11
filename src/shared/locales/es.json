@@ -1,0 +1,579 @@
+{
+  "navbar": {
+    "logoAlt": "Logo de BasCal",
+    "home": "Inicio",
+    "services": "Servicios",
+    "servicesItems": {
+      "bim": "BIM",
+      "professionals": "Profesionales",
+      "construction": "Construcción",
+      "staffAugmentation": "Staff Augmentation"
+    },
+    "portfolio": "Portafolio",
+    "company": "Empresa",
+    "companyItems": {
+      "faq": "FAQ",
+      "about": "Sobre nosotros",
+      "blog": "Blog"
+    },
+    "contact": "Contacto"
+  },
+  "aboutPage": {
+    "seo": {
+      "title": "Sobre nosotros | BasCal Ingeniería & Construcción",
+      "description": "Firma especializada en diseño arquitectónico, ingeniería MEP y servicios BIM/VDC avanzados, con modelos precisos para proyectos complejos."
+    },
+    "hero": {
+      "eyebrow": "Nuestra empresa",
+      "title": "Diseñamos, coordinamos y entregamos con precisión BIM.",
+      "subtitle": "Integrando arquitectura, redes técnicas e información digital para construcción eficiente, reducimos costos, riesgos y reprocesos de preconstrucción a operación.",
+      "cta": "Agendar cita"
+    },
+    "blocks": [
+      {
+        "title": "Quiénes somos",
+        "text": "BasCal Ingeniería y Construcción es una firma especializada en diseño arquitectónico, ingeniería MEP y servicios BIM/VDC avanzados. Desarrollamos y coordinamos modelos de alta precisión para proyectos complejos, integrando arquitectura, redes técnicas e información digital para la construcción. Con experiencia nacional e internacional, acompañamos desde la fase preconstructiva hasta la ocupación, entregando soluciones eficientes que reducen costos, riesgos y reprocesos."
+      },
+      {
+        "title": "Misión",
+        "text": "Entregar soluciones de diseño e ingeniería detalladas, precisas y eficientes, desarrolladas con las últimas herramientas y tecnologías BIM. Producimos modelos y documentación de alta calidad que optimizan la coordinación, reducen riesgos y facilitan procesos constructivos confiables."
+      },
+      {
+        "title": "Visión",
+        "text": "Para 2030 ser una empresa líder en diseño, ingeniería y construcción a nivel regional e internacional, reconocida por la excelencia en metodologías BIM y cumplimiento de estándares globales. Aspiramos a integrar prácticas sostenibles y soluciones constructivas con certificaciones ambientales y eficiencia energética."
+      }
+    ]
+  },
+  "home": {
+    "seo": {
+      "title": "BasCal | Ingeniería y construcción con precisión",
+      "description": "Diseñamos y ejecutamos proyectos de ingeniería con comunicación transparente y resultados medibles."
+    },
+    "eyebrow": "¿Necesitas más ayuda?",
+    "heroTitle": "No dudes en contactarnos para más información.",
+    "heroSubtitle": "¡Estamos aquí para ayudarte! Si tienes una pregunta o necesitas apoyo, contáctanos con confianza. Nuestro equipo está listo para asistirte con cualquier consulta o necesidad de tu proyecto.",
+    "primaryCta": "Solicitar asesoría",
+    "secondaryCta": "Conocer más",
+    "servicesKicker": "Servicios BIM",
+    "servicesTitle": "Servicios BIM",
+    "servicesSubtitle": "Implementamos BIM para coordinar disciplinas arquitectónicas, estructurales y MEP mediante modelado, coordinación interdisciplinaria y gestión técnica de la información.",
+    "servicesCta": "Ver más",
+    "services": {
+      "items": [
+        {
+          "title": "Modelado BIM MEP & Fabricación Digital",
+          "text": "Modelado BIM MEP para sistemas mecánicos, eléctricos, hidrosanitarios y contra incendios. Desarrollamos modelos LOD 300-400 orientados a coordinación, prefabricación y ejecución en obra."
+        },
+        {
+          "title": "Modelado BIM Arquitectónico y Estructural",
+          "text": "Modelado BIM arquitectónico y estructural en entornos colaborativos. Modelos precisos y consistentes para soporte a coordinación, documentación y constructibilidad."
+        },
+        {
+          "title": "Coordinación BIM",
+          "text": "Coordinación interdisciplinaria mediante detección de interferencias y revisión de constructibilidad. Gestión de modelos, reportes de clashes y soporte técnico durante diseño y construcción."
+        }
+      ]
+    },
+    "whyBascal": {
+      "kicker": "Nuestra firma",
+      "title": "¿Por qué elegir a BasCal?",
+      "paragraphs": [
+        "Somos una firma especializada en diseño arquitectónico, ingeniería MEP y servicios BIM/VDC avanzados. Desarrollamos modelos de alta precisión para proyectos complejos, integrando arquitectura y redes técnicas en un solo ecosistema digital.",
+        "Gracias a nuestra trayectoria nacional e internacional, acompañamos a nuestros clientes desde la fase preconstructiva hasta la ocupación. Nuestra metodología entrega soluciones eficientes que reducen costos, riesgos y reprocesos en cada etapa del proyecto."
+      ],
+      "videoTitle": "Así entrega BasCal con precisión BIM",
+      "videoDescription": "Conoce cómo coordinamos arquitectura e ingeniería MEP para lograr construcciones confiables basadas en datos."
+    },
+    "professionalServices": {
+      "kicker": "Servicios profesionales",
+      "title": "Professional Services",
+      "subtitle": "Diseñamos soluciones técnicas seguras, eficientes y normativamente viables para proyectos en todas sus etapas, desde el concepto hasta la documentación de construcción. Nos enfocamos en diseño, cálculo y especificación técnica para que cada sistema funcione correctamente y cumpla estándares locales e internacionales. Softwares: Autodesk Revit, AutoCAD, ArchiCAD.",
+      "items": [
+        {
+          "id": "arch-design",
+          "title": "Architectural Design | Interior Design",
+          "points": [
+            "Diseño conceptual, básico y de detalle.",
+            "Planos IFC y planos constructivos.",
+            "Documentación técnica para licenciamiento y construcción.",
+            "Diseño interior para oficinas, residencial y espacios comerciales.",
+            "Análisis de seguridad humana para edificaciones."
+          ]
+        },
+        {
+          "id": "mechanical",
+          "title": "Mecánica",
+          "points": [
+            "Cálculo de cargas térmicas.",
+            "Distribución, cálculo y dimensionamiento de ductos y tuberías.",
+            "Selección y especificación de equipos HVAC.",
+            "Ventilación y extracción mecánica."
+          ]
+        },
+        {
+          "id": "plumbing-gas",
+          "title": "Plumbing and Gas Natural Design",
+          "points": [
+            "Cálculo hidráulico de redes de abasto (agua fría y caliente).",
+            "Diseño de sistemas sanitarios y pluviales.",
+            "Selección de equipos de bombeo y accesorios.",
+            "Diseño de redes de gas natural.",
+            "Selección de equipos, medidores y reguladores."
+          ]
+        }
+      ]
+    },
+    "portfolio": {
+      "kicker": "Cobertura",
+      "title": "Proyectos en los que participamos",
+      "subtitle": "Cobertura regional y presencia activa en proyectos BIM.",
+      "mapTitle": "Nuestros clientes",
+      "cardText": "Participamos en proyectos institucionales, residenciales y hospitalarios con coordinación técnica y estándares internacionales.",
+      "countries": [
+        "Estados Unidos",
+        "Colombia",
+        "Chile",
+        "Argentina",
+        "España"
+      ]
+    },
+    "footer": {
+      "brand": {
+        "title": "BasCal",
+        "text": "Firma especializada en diseño arquitectónico, ingeniería MEP y servicios BIM/VDC avanzados."
+      },
+      "contact": {
+        "title": "Contacto",
+        "items": [
+          { "label": "Ubicación", "value": "Medellín, Colombia" },
+          { "label": "Teléfono", "value": "+57 000 000 0000" },
+          { "label": "Correo", "value": "contacto@bascal.com" }
+        ]
+      },
+      "services": {
+        "title": "Servicios",
+        "items": ["Diseño arquitectónico", "Modelado MEP", "Coordinación BIM"]
+      },
+      "bottom": "© BasCal. Todos los derechos reservados."
+    }
+  },
+  "professionalPage": {
+    "seo": {
+      "title": "Professional Services | Ingeniería y diseño arquitectónico",
+      "description": "Diseñamos y calculamos sistemas arquitectónicos e ingenieriles seguros, eficientes y listos para construcción, cumpliendo normativas y buenas prácticas técnicas."
+    },
+    "hero": {
+      "eyebrow": "Professional Services",
+      "title": "Engineering & Architectural Design Services",
+      "subtitle": "Diseñamos soluciones técnicas seguras, eficientes y normativamente viables para proyectos en todas sus etapas, desde el concepto hasta la documentación de construcción. Nos enfocamos en el diseño, cálculo y especificación técnica, asegurando que cada sistema funcione correctamente y cumpla con los estándares locales e internacionales.",
+      "cta": "Agendar cita"
+    },
+    "services": {
+      "title": "Alcance de servicios de diseño",
+      "subtitle": "Lista de disciplinas y entregables que cubrimos en diseño arquitectónico e ingeniería.",
+      "items": [
+        {
+          "id": "arch-design",
+          "title": "Architectural Design | Interior Design",
+          "points": [
+            "Diseño conceptual, básico y de detalle",
+            "Planos IFC y planos constructivos",
+            "Documentación técnica para licenciamiento y construcción",
+            "Diseño interior para oficinas, residencial y espacios comerciales",
+            "Análisis de seguridad humana para edificaciones"
+          ]
+        },
+        {
+          "id": "mechanical",
+          "title": "Mecánica",
+          "points": [
+            "Cálculo de cargas térmicas",
+            "Distribución, cálculo y dimensionamiento de ductos y tuberías",
+            "Selección y especificación de equipos HVAC",
+            "Ventilación y extracción mecánica"
+          ]
+        },
+        {
+          "id": "plumbing-gas",
+          "title": "Plumbing and Gas Natural Design",
+          "points": [
+            "Cálculo hidráulico de redes de abasto (agua fría y caliente)",
+            "Diseño de sistemas sanitarios y pluviales",
+            "Selección de equipos de bombeo y accesorios",
+            "Diseño de redes de gas natural",
+            "Selección de equipos, medidores y reguladores"
+          ]
+        },
+        {
+          "title": "Electrical Design",
+          "points": [
+            "Cálculo de cargas eléctricas",
+            "Diagramas unifilares y trifilares",
+            "Diseño y selección de tableros eléctricos",
+            "Sistemas de puesta a tierra y protección eléctrica"
+          ]
+        },
+        {
+          "id": "fire-protection",
+          "title": "Fire Alarm and Fire Protection Design",
+          "points": [
+            "Diseño de sistemas de rociadores automáticos (sistemas húmedos y secos)",
+            "Sistemas de conexiones de manguera (gabinetes)",
+            "Selección de equipos de bombeo y accesorios",
+            "Diseño de sistemas de detección y alarma contra incendio",
+            "Distribución y selección de extintores portátiles"
+          ]
+        },
+        {
+          "title": "TI Design",
+          "points": [
+            "Diseño de sistemas de datos y telecomunicaciones",
+            "Canalizaciones y rutas técnicas",
+            "Sistemas de CCTV y control de accesos",
+            "Infraestructura para edificios inteligentes",
+            "Integración con otros sistemas técnicos"
+          ]
+        },
+        {
+          "title": "Certificación EDGE",
+          "points": [
+            "Asesoría técnica para certificación EDGE y LEED",
+            "Estrategias de eficiencia energética",
+            "Optimización de consumo de agua",
+            "Análisis de materiales y costos",
+            "Acompañamiento durante diseño y certificación"
+          ]
+        }
+      ]
+    }
+  },
+  "portfolioPage": {
+    "seo": {
+      "title": "Portafolio | Proyectos BasCal BIM e ingeniería",
+      "description": "Conoce proyectos institucionales, educativos y de infraestructura ejecutados con precisión BIM y servicios de ingeniería especializados."
+    },
+    "hero": {
+      "eyebrow": "Portafolio",
+      "title": "Proyectos que respaldan nuestra experiencia.",
+      "subtitle": "Casos reales con alcance claro, coordinación técnica y entregables listos para obra.",
+      "cta": "Ver proyectos"
+    },
+    "section": {
+      "kicker": "Proyectos",
+      "title": "Portafolio de proyectos",
+      "subtitle": "Una muestra del trabajo que desarrollamos junto a nuestros clientes."
+    },
+    "filters": {
+      "label": "Categorías",
+      "all": "Todos",
+      "searchLabel": "Buscar proyectos",
+      "searchPlaceholder": "Busca por nombre, ubicación o tipo",
+      "categories": ["Educación", "Hotelería", "Infraestructura", "Mixto", "Recreación", "Residencial", "Salud", "Tecnología - Mission Critical"]
+    },
+    "meta": {
+      "type": "Tipo",
+      "location": "Ubicación",
+      "scale": "Escala del proyecto",
+      "services": "Alcance de los servicios",
+      "software": "Software implementados"
+    },
+    "tooltips": {
+      "spci": "Diseño del Sistema de Protección Contra Incendios (SPCI)"
+    },
+    "projects": [
+      {
+        "id": "cdi-barrio-nuevo",
+        "category": "Educación",
+        "title": "CDI Barrio Nuevo, Bello",
+        "type": "Proyecto institucional / Centro de Desarrollo Infantil",
+        "location": "Colombia",
+        "description": "Proyecto educativo orientado a la primera infancia, que integra zonas de gateo y gimnasio para bebés, espacios de lactancia, áreas de alimentación y aulas de aprendizaje para niños entre 24 y 60 meses, así como zonas de cocina y áreas administrativas que incluyen auditorios y oficinas para docentes y directivos.",
+        "scale": "Área construida total: Más de 2.500 m²",
+        "services": [
+          "Diseño del Sistema de Protección Contra Incendios (SPCI)",
+          "Diseño del Sistema de Detección y Alarma (SDA)",
+          "Diseño de la red de gas natural",
+          "Inspección y evaluación de seguridad humana"
+        ]
+      },
+      {
+        "id": "cdi-navarra",
+        "category": "Educación",
+        "title": "CDI Navarra, Bello",
+        "type": "Proyecto institucional / Centro de Desarrollo Infantil",
+        "location": "Colombia",
+        "description": "Proyecto educativo orientado a la primera infancia, que integra zonas de gateo y gimnasio para bebés, espacios de lactancia, áreas de alimentación y aulas de aprendizaje para niños entre 24 a 36 meses, así como zonas de cocina y áreas administrativas que incluyen auditorios y oficinas para docentes y directivos.",
+        "scale": "Terreno: más de 3.760 m² · Área construida total: 2.400 m²",
+        "services": [
+          "Diseño del Sistema de Protección Contra Incendios (SPCI)",
+          "Diseño del Sistema de Detección y Alarma (SDA)",
+          "Diseño de la red de gas natural",
+          "Inspección y evaluación de seguridad humana"
+        ]
+      },
+      {
+        "id": "megacolegio-bello",
+        "category": "Educación",
+        "title": "Megacolegio, Bello",
+        "type": "Proyecto institucional / Colegio",
+        "location": "Colombia",
+        "description": "Complejo institucional educativo que integra espacios administrativos, salas de profesores, aulas de formación, áreas de recreación y deporte, salas de cómputo, auditorio, biblioteca, zonas de comida y áreas de parqueo, concebido para apoyar el desarrollo académico y la vida escolar.",
+        "scale": "Área construida total: aproximadamente 16.400 m², distribuidos en seis niveles.",
+        "services": [
+          "Diseño del Sistema de Protección Contra Incendios (SPCI)",
+          "Diseño del Sistema de Detección y Alarma (SDA)",
+          "Diseño de la red de gas natural",
+          "Inspección y evaluación de seguridad humana"
+        ]
+      },
+      {
+        "id": "scan-to-bim-airport",
+        "category": "Infraestructura",
+        "title": "Scan to BIM | Infraestructura aeroportuaria",
+        "type": "Proyecto de infraestructura aeroportuaria / Scan to BIM (As-Built Modeling)",
+        "location": "España",
+        "description": "Proyecto desarrollado bajo el modelo de staff augmentation, en el cual se colaboró con la firma ganadora del proyecto en el levantamiento de información digital a partir de nubes de puntos (Point Clouds – Scan to BIM), correspondientes a los sistemas de abasto y desagües pluviales y sanitarios.",
+        "scale": "Alcance basado en nubes de puntos y modelado As-Built",
+        "services": [
+          "Modelado 3D de los sistemas de abasto (agua caliente y fría), sistema pluvial y desagües sanitarios",
+          "Creación de familias mecánicas del sistema de bombeo",
+          "Generación de planos digitales"
+        ],
+        "software": ["Revit", "AutoCAD", "ReCap", "Autodesk Construction Cloud (ACC)"]
+      },
+      {
+        "id": "pao-bello",
+        "category": "Mixto",
+        "title": "PAO, Bello",
+        "type": "Proyecto institucional y cultural / gubernamental",
+        "location": "Colombia",
+        "description": "Complejo institucional y cultural de gran escala que integra espacios administrativos, culturales y educativos, incluyendo oficinas, teatros, auditorios, salas de exposición, aulas de formación, áreas de reunión, zonas de comida y espacios de esparcimiento, concebido como un lugar de encuentro y servicio a la comunidad.",
+        "scale": "Terreno: más de 70.000 m² · Área construida total: Más de 18.000 m² (10 edificaciones, hasta tres niveles)",
+        "services": [
+          "Diseño y cálculos del Sistema de Protección Contra Incendios (SPCI)",
+          "Diseño y cálculos del Sistema de Detección y Alarma (SDA)",
+          "Diseño y cálculos de la red de gas natural",
+          "Inspección y evaluación de seguridad humana"
+        ]
+      },
+      {
+        "id": "scan-to-bim-hospital-chile",
+        "category": "Salud",
+        "title": "Scan to BIM | Edificación hospitalaria",
+        "type": "Proyecto de salud / Scan to BIM (As-Built Modeling)",
+        "location": "Chile",
+        "description": "Proyecto desarrollado bajo el modelo de staff augmentation, en el cual se colaboró con la firma ganadora del proyecto en el levantamiento de información digital a partir de nubes de puntos (Point Clouds – Scan to BIM), correspondientes a los sistemas de abasto y desagües pluviales y sanitarios.",
+        "scale": "Alcance basado en nubes de puntos y modelado As-Built",
+        "services": [
+          "Modelado 3D de los sistemas de abasto (agua caliente y fría), sistema pluvial y desagües sanitarios",
+          "Creación de familias mecánicas del sistema de bombeo",
+          "Generación de planos digitales"
+        ],
+        "software": ["Revit", "AutoCAD", "ReCap", "Autodesk Construction Cloud (ACC)"]
+      },
+      {
+        "id": "shop-drawings-hvac-us",
+        "category": "Salud",
+        "title": "Shop Drawings BIM | Sistemas HVAC",
+        "type": "Proyecto de salud / Edificación hospitalaria",
+        "location": "EEUU",
+        "description": "Proyecto desarrollado bajo la modalidad de staff augmentation, en el cual se colaboró con la firma contratista del proyecto en el desarrollo de Shop Drawings BIM para el sistema de aire acondicionado de la edificación hospitalaria, a partir de planos de diseño, submittals y documentación técnica suministrada por la firma diseñadora. El trabajo se enfocó en la modelación detallada para fabricación, coordinación e instalación, cumpliendo con los estándares constructivos y de coordinación propios del mercado estadounidense.",
+        "scale": "Shop Drawings BIM para HVAC hospitalario",
+        "services": [
+          "Modelado BIM 3D de las líneas de: Supply, Return y Exhaust",
+          "Creación de familias mecánicas de equipos HVAC",
+          "Generación de Shop Drawings: planimetría, secciones y detalles constructivos en 3D",
+          "Elaboración de listados de materiales (BOQ/MTO)",
+          "Definición de access doors y concrete pads layout",
+          "Coordinación interdisciplinaria con otros sistemas (clash detection)"
+        ],
+        "software": ["Revit", "Navisworks", "Autodesk Construction Cloud (ACC)", "Ductulator"]
+      }
+    ],
+    "card": {
+      "cta": "Ver más",
+      "detailClose": "Cerrar",
+      "detailTitle": "Descripción del proyecto"
+    },
+    "whatsappMessage": "Hola, quiero más información sobre el portafolio."
+  },
+  "language": {
+    "label": "Idioma",
+    "spanish": "ES",
+    "english": "EN"
+  },
+  "bimPage": {
+    "seo": {
+      "title": "Servicios BIM/VDC | BasCal coordinación y modelado",
+      "description": "Coordinamos BIM MEP, arquitectura y estructura con modelos LOD 300-400, detección de interferencias, 4D/5D y documentación ejecutiva."
+    },
+    "hero": {
+      "eyebrow": "Servicios BIM & VDC",
+      "title": "BIM para obras precisas y decisiones en datos.",
+      "accent": "BIM/VDC",
+      "subtitle": "Modelamos, coordinamos y gestionamos información constructiva para que tus proyectos se ejecuten sin reprocesos ni sorpresas.",
+      "cta": "Agendar cita"
+    },
+    "pillars": {
+      "kicker": "Entrega BIM",
+      "title": "Qué incluye nuestro servicio BIM",
+      "items": [
+        {
+          "title": "Modelado integral LOD 300-400",
+          "text": "Arquitectura, estructura y MEP listos para coordinación, prefabricación y documentación."
+        },
+        {
+          "title": "Coordinación y clash detection",
+          "text": "Model checking, gestión de incidencias y reportes priorizados con rutas de solución."
+        },
+        {
+          "title": "Planeación 4D + 5D",
+          "text": "Vinculamos programa y cantidades para visualizar riesgos y optimizar costos."
+        },
+        {
+          "title": "Documentación ejecutiva",
+          "text": "Planos IFC, hojas de datos, planos de taller y sets para obra."
+        },
+        {
+          "title": "Implementación BIM para equipos",
+          "text": "Estandarización BEP, plantillas, librerías y capacitación práctica."
+        }
+      ]
+    },
+    "ctaBanner": {
+      "title": "¿Listo para un kickoff BIM claro?",
+      "text": "Coordinamos a tu equipo, definimos entregables y métricas, y comenzamos con un piloto en menos de dos semanas.",
+      "primary": "Hablar con un BIM Lead",
+      "secondary": "Ver portafolio"
+    },
+    "intro": {
+      "title": "Servicios BIM",
+      "text": "Implementamos BIM para coordinar disciplinas arquitectónicas, estructurales y MEP, entregando modelos listos para construcción, reduciendo interferencias y optimizando tiempos y costos del proyecto."
+    },
+    "services": {
+      "cta": "Ver más",
+      "cards": [
+        {
+          "id": "mep",
+          "title": "MEP BIM modeling & Digital Fabrication",
+          "text": "Modelado BIM de sistemas mecánicos, eléctricos, hidrosanitarios y contra incendios con LOD 300–400 orientados a coordinación y prefabricación.",
+          "detail": {
+            "eyebrow": "DETALLE BIM MEP",
+            "title": "Equipo BIM MEP coordinando instalaciones en obra",
+            "body": "Nuestros servicios BIM MEP están orientados a la construcción real en campo. Modelamos sistemas mecánicos, HVAC, plomería, eléctricos y redes contra incendio con un enfoque práctico, basado en experiencia de obra y criterios reales de instalación. Desarrollamos modelos LOD 300–400, completamente constructibles, considerando rutas reales, claros de mantenimiento, secuencias de montaje y coordinación entre disciplinas. Los modelos pueden incluir soportería, hanger layouts, spooling y tuberías prefabricadas, listos para fabricación e instalación.",
+            "body2": "Además, actuamos como extensión del equipo del contratista, participando activamente en la coordinación BIM para identificar interferencias, optimizar soluciones y reducir reprocesos. Entregamos modelos precisos, coordinados y listos para obra, que mejoran la eficiencia en campo, reducen tiempos y permiten un mayor control de costos."
+          }
+        },
+        {
+          "title": "Architectural & Structural BIM Modeling",
+          "text": "Modelado arquitectónico y estructural preciso para coordinación, documentación y constructibilidad en obra.",
+          "detail": {
+            "eyebrow": "DETALLE ARQ + ESTRUCTURA",
+            "title": "Modelado arquitectónico y estructural listo para coordinación",
+            "body": "En proyectos BIM es común que los modelos arquitectónicos o estructurales no estén disponibles o no tengan el desarrollo necesario para una correcta coordinación espacial. Esto limita al equipo MEP y afecta la detección de interferencias y la constructibilidad.",
+            "body2": "Modelamos arquitectura y estructuras con foco en coordinación, planificación y ejecución en obra. Entregamos modelos constructibles y detallados (concreto hasta LOD 400, estructura metálica, muros CMU, encofrados, geopilotes y vibropilotes) para alinear disciplinas, reducir reprocesos y facilitar la colaboración desde etapas tempranas."
+          }
+        },
+        {
+          "title": "BIM Coordination",
+          "text": "Coordinación interdisciplinaria, gestión de clashes y soporte técnico mediante estándares BIM y BEP.",
+          "detail": {
+            "eyebrow": "DETALLE COORDINACIÓN BIM",
+            "title": "Coordinación BIM integral en campo",
+            "body": "Uno de los objetivos más complejos es coordinar sistemas entre disciplinas en obra. Lideramos la coordinación BIM integrando arquitectura, estructura y MEP para eliminar interferencias, reducir reprocesos y asegurar ejecución eficiente.",
+            "body2": "Definimos y aplicamos los estándares BIM vía BEP, coordinando a todos los actores para entregar modelos coordinados y listos para construcción, con foco en constructibilidad, tiempos y control de costos.",
+            "softwares": ["Autodesk Revit", "Autodesk Navisworks o Revizto", "Autodesk Construction Cloud (ACC)"]
+          }
+        },
+        {
+          "id": "scan-to-bim",
+          "title": "Laser Scanning | Scan to BIM | As-Built",
+          "text": "Escaneo láser 3D, nubes de puntos y generación de modelos BIM confiables para rehabilitación y control de obra.",
+          "detail": {
+            "eyebrow": "DETALLE SCAN TO BIM",
+            "title": "Captura, modelado y entrega As-Built",
+            "blocks": [
+              {
+                "title": "3D Laser Scanning",
+                "text": "Realizamos escaneo láser 3D de alta precisión para capturar edificaciones e instalaciones existentes, generando nubes de puntos confiables como base para modelado y análisis. Nuestro enfoque combina tecnología de escaneo con criterio ingenieril y experiencia en campo, entregando información clara y alineada con las necesidades reales del proyecto."
+              },
+              {
+                "title": "Scan to BIM | As-Built Modeling",
+                "text": "Convertimos nubes de puntos en modelos BIM en Revit según alcance, LOD y objetivos del proyecto. Modelos fieles a lo construido para: rediseño arquitectónico o ingenieril, coordinación con nuevas disciplinas, documentación as-built y gestión/operación de activos. Flujos optimizados y QA/QC para precisión y consistencia."
+              },
+              {
+                "title": "As-Built Documentation & Digital Twin",
+                "text": "Generamos modelos y planos as-built a partir de escaneo láser, planos redline y registros de obra, consolidando la información real del proyecto. Cuando se requiere, preparamos los modelos para gestión de activos y Facility Management, integrando datos técnicos para operación y mantenimiento futuro."
+              }
+            ]
+          }
+        },
+        {
+          "title": "4D Construction Sequencing & 5D Cost Planning",
+          "text": "Integración del modelo BIM con planificación de obra y costos. Soporte para simulación constructiva, control de cronograma y análisis de costos.",
+          "detail": {
+            "eyebrow": "DETALLE 4D/5D",
+            "title": "Planificación 4D y estimación 5D",
+            "body": "Integración del modelo BIM con planificación de obra y costos. Soporte para simulación constructiva, control de cronograma y análisis de costos."
+          }
+        },
+        {
+          "title": "6D/7D BIM for Facilities Management | Digital Twinning",
+          "text": "Modelos BIM orientados a operación y mantenimiento. Información técnica estructurada para gestión de activos y toma de decisiones post-construcción.",
+          "detail": {
+            "eyebrow": "DETALLE 6D/7D",
+            "title": "Digital Twin y FM listos para operar",
+            "body": "Modelos BIM orientados a operación y mantenimiento. Información técnica estructurada para gestión de activos y toma de decisiones post-construcción.",
+            "body2": "Gemelos digitales basados en modelos BIM para monitoreo y análisis del activo. Soporte a operación, mantenimiento y optimización del ciclo de vida del proyecto."
+          }
+        }
+      ],
+      "detailClose": "Cerrar"
+    }
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Resolvemos dudas comunes sobre nuestros servicios, procesos y entregables.",
+    "items": [
+      {
+        "q": "¿Qué es BIM y cómo ayuda a mi proyecto?",
+        "a": "BIM es una metodología de trabajo colaborativa basada en modelos digitales. Ayuda a coordinar disciplinas, detectar interferencias y reducir reprocesos y costos."
+      },
+      {
+        "q": "¿Qué entregables recibo con un servicio BIM?",
+        "a": "Dependiendo del alcance: modelos LOD 300–400, reportes de interferencias (clashes), planos, cuantificaciones y documentación técnica."
+      },
+      {
+        "q": "¿En qué etapas del proyecto pueden acompañarnos?",
+        "a": "Desde preconstrucción y diseño, hasta coordinación durante obra y soporte técnico en la etapa de entrega/ocupación."
+      },
+      {
+        "q": "¿Trabajan con equipos internos del cliente?",
+        "a": "Sí. Nos integramos con tu equipo y tus estándares. Podemos operar como soporte especializado (Staff Augmentation) o como equipo externo completo."
+      }
+    ],
+    "cta": {
+      "text": "¿Tienes otra pregunta?",
+      "button": "Contáctanos"
+    }
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "Cuéntanos sobre tu proyecto y te responderemos pronto.",
+    "name": "Nombre",
+    "email": "Correo",
+    "phone": "Teléfono (opcional)",
+    "service": "Servicio",
+    "message": "Mensaje",
+    "submit": "Enviar",
+    "sending": "Enviando...",
+    "success": "¡Gracias! Te responderemos pronto.",
+    "error": "No pudimos enviar el formulario. Intenta de nuevo.",
+    "services": {
+      "bim": "BIM",
+      "pro": "Profesionales",
+      "construction": "Construcción",
+      "staff": "Staff Augmentation"
+    }
+  }
+}
