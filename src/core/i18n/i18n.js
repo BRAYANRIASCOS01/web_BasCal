@@ -8,13 +8,34 @@ const resources = {
   es: { translation: es },
 };
 
+const SUPPORTED_LANGUAGES = ["es", "en"];
+const DEFAULT_LANG = "es";
+
+function resolveInitialLanguage() {
+  if (typeof window === "undefined") return DEFAULT_LANG;
+
+  const fromPath = window.location.pathname.split("/").filter(Boolean)[0];
+  if (SUPPORTED_LANGUAGES.includes(fromPath)) return fromPath;
+
+  const fromStorage = window.localStorage.getItem("lang");
+  if (SUPPORTED_LANGUAGES.includes(fromStorage)) return fromStorage;
+
+  return DEFAULT_LANG;
+}
+
+const initialLanguage = resolveInitialLanguage();
+
 i18n.use(initReactI18next).init({
   resources,
-  lng: "es",
-  fallbackLng: "es",
+  lng: initialLanguage,
+  fallbackLng: DEFAULT_LANG,
   interpolation: {
     escapeValue: false,
   },
 });
+
+if (typeof document !== "undefined") {
+  document.documentElement.lang = initialLanguage;
+}
 
 export default i18n;

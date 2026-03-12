@@ -1,0 +1,13 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BasCal Engineering and Construction">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#000B66" />
+      <stop offset="1" stop-color="#124EC9" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <rect x="72" y="72" width="1056" height="486" rx="24" fill="white" fill-opacity="0.06" />
+  <text x="112" y="252" fill="white" font-size="92" font-family="Arial, Helvetica, sans-serif" font-weight="700">BasCal</text>
+  <text x="112" y="334" fill="#DCE6FF" font-size="40" font-family="Arial, Helvetica, sans-serif" font-weight="500">Engineering and Construction</text>
+  <text x="112" y="396" fill="#DCE6FF" font-size="32" font-family="Arial, Helvetica, sans-serif">BIM | MEP | Professional Services</text>
+</svg>
