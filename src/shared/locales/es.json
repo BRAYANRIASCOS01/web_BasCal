@@ -49,9 +49,10 @@
       "title": "BasCal | Ingeniería y construcción con precisión",
       "description": "Diseñamos y ejecutamos proyectos de ingeniería con comunicación transparente y resultados medibles."
     },
-    "eyebrow": "¿Necesitas más ayuda?",
-    "heroTitle": "No dudes en contactarnos para más información.",
-    "heroSubtitle": "¡Estamos aquí para ayudarte! Si tienes una pregunta o necesitas apoyo, contáctanos con confianza. Nuestro equipo está listo para asistirte con cualquier consulta o necesidad de tu proyecto.",
+    "eyebrow": "Ingeniería y construcción",
+    "heroTitle": "Servicios BIM, ingeniería y construcción.",
+    "heroTitleCta": "Contáctanos",
+    "heroSubtitle": "En BasCal integramos diseño arquitectónico, ingeniería MEP, modelado BIM y coordinación técnica para desarrollar proyectos constructivos más precisos. Acompañamos cada etapa, desde la preconstrucción hasta la ejecución en obra, optimizando tiempos, costos y calidad.",
     "primaryCta": "Solicitar asesoría",
     "secondaryCta": "Conocer más",
     "servicesKicker": "Servicios BIM",
@@ -164,7 +165,7 @@
     },
     "hero": {
       "eyebrow": "Professional Services",
-      "title": "Engineering & Architectural Design Services",
+      "title": "Servicios de Ingeniería y Diseño Arquitectónico",
       "subtitle": "Diseñamos soluciones técnicas seguras, eficientes y normativamente viables para proyectos en todas sus etapas, desde el concepto hasta la documentación de construcción. Nos enfocamos en el diseño, cálculo y especificación técnica, asegurando que cada sistema funcione correctamente y cumpla con los estándares locales e internacionales.",
       "cta": "Agendar cita"
     },
@@ -269,6 +270,12 @@
       "searchLabel": "Buscar proyectos",
       "searchPlaceholder": "Busca por nombre, ubicación o tipo",
       "categories": ["Educación", "Hotelería", "Infraestructura", "Mixto", "Recreación", "Residencial", "Salud", "Tecnología - Mission Critical"]
+    },
+    "emptyState": {
+      "title": "Portafolio en construcción",
+      "textAll": "Estamos actualizando esta sección y pronto publicaremos nuevos proyectos.",
+      "textCategory": "No hay proyectos publicados en {{category}} por ahora. Estamos preparando nuevos casos.",
+      "ctaAll": "Ver todos"
     },
     "meta": {
       "type": "Tipo",
@@ -408,7 +415,7 @@
       "description": "Coordinamos BIM MEP, arquitectura y estructura con modelos LOD 300-400, detección de interferencias, 4D/5D y documentación ejecutiva."
     },
     "hero": {
-      "eyebrow": "Servicios BIM & VDC",
+      "eyebrow": "Servicios BIM",
       "title": "BIM para obras precisas y decisiones en datos.",
       "accent": "BIM/VDC",
       "subtitle": "Modelamos, coordinamos y gestionamos información constructiva para que tus proyectos se ejecuten sin reprocesos ni sorpresas.",
@@ -483,6 +490,23 @@
             "body": "Uno de los objetivos más complejos es coordinar sistemas entre disciplinas en obra. Lideramos la coordinación BIM integrando arquitectura, estructura y MEP para eliminar interferencias, reducir reprocesos y asegurar ejecución eficiente.",
             "body2": "Definimos y aplicamos los estándares BIM vía BEP, coordinando a todos los actores para entregar modelos coordinados y listos para construcción, con foco en constructibilidad, tiempos y control de costos.",
             "softwares": ["Autodesk Revit", "Autodesk Navisworks o Revizto", "Autodesk Construction Cloud (ACC)"]
+          }
+        },
+        {
+          "id": "bim-site-project-management",
+          "title": "BIM en obra - Gestión de proyecto",
+          "text": "A través de un trabajo colaborativo con su equipo de obra, presupuesto y cronograma, vinculamos el modelo con la data necesaria para interoperar con sus procesos.",
+          "detail": {
+            "eyebrow": "DETALLE BIM EN OBRA",
+            "title": "Interventoría BIM y gestión colaborativa del proyecto",
+            "body": "Brindamos servicios de interventoría BIM, trabajando de la mano con su equipo en un entorno colaborativo. Acompañamos y auditamos la información del proyecto a lo largo de todo su ciclo de vida, involucrándonos activamente para satisfacer las necesidades de nuestros clientes.",
+            "points": [
+              "Revisión y validación oportuna de insumos BIM",
+              "Auditoría interdisciplinaria en cada fase del proyecto",
+              "Control de calidad de entregables BIM",
+              "Identificación y evaluación temprana de riesgos",
+              "Acompañamiento técnico al equipo de obra"
+            ]
           }
         },
         {

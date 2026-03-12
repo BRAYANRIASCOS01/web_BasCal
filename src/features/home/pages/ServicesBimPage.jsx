@@ -111,6 +111,7 @@ const ServicesBimPage = () => {
       />
 
       <Hero
+        eyebrow={t("bimPage.hero.eyebrow")}
         title={t("bimPage.hero.title")}
         accent={null}
         subtitle={t("bimPage.hero.subtitle")}

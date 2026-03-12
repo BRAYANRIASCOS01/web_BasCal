@@ -113,9 +113,31 @@
   max-width: 18ch;
 }
 
+.hero__title-main {
+  display: inline;
+}
+
+.hero__title-cta {
+  display: inline;
+  margin-left: 0.28em;
+  padding: 0;
+  background: none;
+  color: rgba(255, 255, 255, 0.92);
+  border: 0;
+  box-shadow: none;
+  font-size: 0.62em;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.7);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.12em;
+}
+
 .hero__accent {
   display: inline-block;
-  margin-left: 0.4rem;
+  margin-left: 0;
   padding-left: 0.4rem;
   border-left: 3px solid rgba(255, 255, 255, 0.35);
   color: rgba(255, 255, 255, 0.8);
@@ -439,6 +461,14 @@
 
   .hero__content {
     max-width: none;
+  }
+
+  .hero__title {
+    max-width: 100%;
+  }
+
+  .hero__title-cta {
+    font-size: 0.58em;
   }
 }
 

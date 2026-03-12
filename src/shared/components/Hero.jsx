@@ -17,6 +17,7 @@ const Hero = ({
 
   const resolvedEyebrow = eyebrow ?? t("home.eyebrow");
   const resolvedTitle = title ?? t("home.heroTitle");
+  const resolvedTitleCta = title == null ? t("home.heroTitleCta", "") : "";
   const resolvedSubtitle = subtitle ?? t("home.heroSubtitle");
   const resolvedCtaLabel = ctaLabel ?? t("home.secondaryCta");
   const resolvedCtaAria = ctaAriaLabel ?? resolvedCtaLabel;
@@ -90,7 +91,8 @@ const Hero = ({
           {resolvedEyebrow}
         </p>
         <h1 className="hero__title" data-animate style={{ transitionDelay: "0.1s" }}>
-          {resolvedTitle}
+          <span className="hero__title-main">{resolvedTitle}</span>
+          {resolvedTitleCta && <span className="hero__title-cta">{resolvedTitleCta}</span>}
           {accent && <span className="hero__accent">{accent}</span>}
         </h1>
         <p className="hero__subtitle text-muted" data-animate style={{ transitionDelay: "0.15s" }}>
