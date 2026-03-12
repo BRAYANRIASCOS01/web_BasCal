@@ -234,5 +234,5 @@
   box-shadow:
     0 22px 48px color-mix(in srgb, var(--color-primary) 22%, transparent),
     0 0 0 10px color-mix(in srgb, var(--color-primary) 4%, transparent);
-  animation: videoGlow 6s ease-in-out infinite;
+  animation: videoGlow 6s ease-in-out 2;
 }

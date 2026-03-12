@@ -6,6 +6,7 @@ import {
   getOrganizationSchema,
   getRobotsContent,
   getSiteUrl,
+  getWebSiteSchema,
   normalizeLang,
   normalizePagePath,
 } from "../seo/seo-utils.js";
@@ -17,7 +18,8 @@ const SeoHead = ({
   path = "/",
   noindex = false,
   type = "website",
-  imagePath = "/og-image.svg",
+  imagePath = "/og-image-1200x630.jpg",
+  keywords,
   structuredData,
 }) => {
   const safeLang = normalizeLang(lang);
@@ -62,6 +64,7 @@ const SeoHead = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="robots" content={robotsContent} />
+      {keywords ? <meta name="keywords" content={keywords} /> : null}
 
       <link rel="canonical" href={canonicalUrl} />
       <link rel="alternate" hrefLang={safeLang} href={canonicalUrl} />
@@ -84,7 +87,11 @@ const SeoHead = ({
       <meta name="twitter:image" content={ogImage} />
       <meta name="twitter:image:alt" content={title} />
 
-      <script type="application/ld+json">{JSON.stringify(getOrganizationSchema())}</script>
+      <meta name="author" content="BasCal" />
+      <meta name="application-name" content="BasCal" />
+
+      <script type="application/ld+json">{JSON.stringify(getOrganizationSchema(safeLang))}</script>
+      <script type="application/ld+json">{JSON.stringify(getWebSiteSchema(safeLang))}</script>
       <script type="application/ld+json">{JSON.stringify(pageSchema)}</script>
       {extraStructuredData.map((schema, index) => (
         <script key={`schema-${index}`} type="application/ld+json">
@@ -96,4 +103,3 @@ const SeoHead = ({
 };
 
 export default SeoHead;
-

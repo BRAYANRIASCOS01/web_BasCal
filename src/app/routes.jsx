@@ -1,22 +1,26 @@
-import { useEffect } from "react";
+import { Suspense, lazy, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { Navigate, Outlet, Route, Routes, useLocation, useParams } from "react-router-dom";
 
-import Navbar from "../shared/components/Navbar.jsx"; // crea este archivo en el paso 2
-import Footer from "../shared/components/Footer.jsx"; // opcional
+import Navbar from "../shared/components/Navbar.jsx";
+import Footer from "../shared/components/Footer.jsx";
 
-import HomePage from "../features/home/pages/HomePage.jsx";
-import ServicesBimPage from "../features/home/pages/ServicesBimPage.jsx";
-import ServicesProfessionalPage from "../features/home/pages/ServicesProfessionalPage.jsx";
-import ServicesConstruccionPage from "../features/home/pages/ServicesConstructionPage.jsx";
-import ServicesStaffAugmentationPage from "../features/home/pages/ServicesStaffAugmentationPage.jsx";
-import PortafolioPage from "../features/home/pages/PortfolioPage.jsx";
-import EmpresaFAQPage from "../features/home/pages/EmpresaFAQPage.jsx";
-import ContactPage from "../features/home/pages/ContactPage.jsx";
-import EmpresaSobreNosotros from "../features/home/pages/EmpresaSobreNosotros.jsx";
+const HomePage = lazy(() => import("../features/home/pages/HomePage.jsx"));
+const ServicesBimPage = lazy(() => import("../features/home/pages/ServicesBimPage.jsx"));
+const ServicesProfessionalPage = lazy(() => import("../features/home/pages/ServicesProfessionalPage.jsx"));
+const ServicesConstruccionPage = lazy(() => import("../features/home/pages/ServicesConstructionPage.jsx"));
+const ServicesStaffAugmentationPage = lazy(() => import("../features/home/pages/ServicesStaffAugmentationPage.jsx"));
+const PortafolioPage = lazy(() => import("../features/home/pages/PortfolioPage.jsx"));
+const EmpresaFAQPage = lazy(() => import("../features/home/pages/EmpresaFAQPage.jsx"));
+const ContactPage = lazy(() => import("../features/home/pages/ContactPage.jsx"));
+const EmpresaSobreNosotros = lazy(() => import("../features/home/pages/EmpresaSobreNosotros.jsx"));
+const EmpresaBlogPage = lazy(() => import("../features/home/pages/EmpresaBlogPage.jsx"));
+const NotFoundPage = lazy(() => import("../features/home/pages/NotFoundPage.jsx"));
 
 const SUPPORTED_LANGUAGES = ["es", "en"];
 const DEFAULT_LANG = "es";
+
+const RouteFallback = () => <main className="app" aria-busy="true" style={{ minHeight: "40vh" }} />;
 
 const LanguageLayout = () => {
   const { lang } = useParams();
@@ -47,13 +51,15 @@ const LanguageLayout = () => {
   }, [location.pathname, location.search, location.hash]);
 
   if (!lang || !SUPPORTED_LANGUAGES.includes(lang)) {
-    return <Navigate to={`/${DEFAULT_LANG}`} replace />;
+    return <Navigate to={`/${DEFAULT_LANG}/404`} replace />;
   }
 
   return (
     <>
       <Navbar />
-      <Outlet />
+      <Suspense fallback={<RouteFallback />}>
+        <Outlet />
+      </Suspense>
       <Footer />
     </>
   );
@@ -71,21 +77,23 @@ const AppRoutes = () => (
       <Route path="servicios/bim" element={<ServicesBimPage />} />
       <Route path="servicios/profesionales" element={<ServicesProfessionalPage />} />
       <Route path="servicios/construccion" element={<ServicesConstruccionPage />} />
-      <Route path="servicios/staff-augmentation" element={<ServicesStaffAugmentationPage/>} />
+      <Route path="servicios/staff-augmentation" element={<ServicesStaffAugmentationPage />} />
 
       {/* Portafolio */}
-      <Route path="portafolio" element={<PortafolioPage/>} />
+      <Route path="portafolio" element={<PortafolioPage />} />
 
       {/* Empresa */}
-      <Route path="empresa/faq" element={<EmpresaFAQPage/>} />
-      <Route path="empresa/sobre-nosotros" element={<EmpresaSobreNosotros/>} />
-      <Route path="empresa/blog" element={<div style={{ padding: 24 }}>Blog</div>} />
+      <Route path="empresa/faq" element={<EmpresaFAQPage />} />
+      <Route path="empresa/sobre-nosotros" element={<EmpresaSobreNosotros />} />
+      <Route path="empresa/blog" element={<EmpresaBlogPage />} />
 
       {/* Contacto */}
       <Route path="contacto" element={<ContactPage />} />
+      <Route path="404" element={<NotFoundPage />} />
+      <Route path="*" element={<NotFoundPage />} />
     </Route>
 
-    <Route path="*" element={<Navigate to={`/${DEFAULT_LANG}`} replace />} />
+    <Route path="*" element={<Navigate to={`/${DEFAULT_LANG}/404`} replace />} />
   </Routes>
 );
 

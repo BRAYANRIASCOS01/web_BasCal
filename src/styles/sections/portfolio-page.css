@@ -46,6 +46,67 @@
   perspective: 1200px;
 }
 
+.portfolio-page__empty {
+  grid-column: 1 / -1;
+  border-radius: 1.1rem;
+  border: 1px solid var(--color-border);
+  background:
+    radial-gradient(circle at 12% 15%, color-mix(in srgb, var(--color-secondary) 20%, transparent 80%), transparent 45%),
+    linear-gradient(
+      145deg,
+      color-mix(in srgb, var(--color-primary) 5%, var(--color-surface) 95%),
+      color-mix(in srgb, var(--color-secondary) 8%, var(--color-surface) 92%)
+    );
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+  padding: clamp(1.4rem, 2.8vw, 2.2rem);
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  gap: 0.55rem;
+}
+
+.portfolio-page__empty-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-primary) 10%, var(--color-surface) 90%);
+  color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.12);
+}
+
+.portfolio-page__empty-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.portfolio-page__empty-title {
+  margin: 0.2rem 0 0;
+  color: var(--color-primary-dark);
+  font-size: clamp(1.16rem, 2vw, 1.36rem);
+}
+
+.portfolio-page__empty-text {
+  margin: 0;
+  max-width: 58ch;
+  color: var(--color-muted);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.portfolio-page__empty-category {
+  margin: 0.1rem 0 0;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.portfolio-page__empty-action {
+  margin-top: 0.35rem;
+}
+
 .portfolio-card {
   position: relative;
   border-radius: 1.1rem;

@@ -125,8 +125,13 @@
   box-shadow:
     0 18px 32px rgba(29, 78, 216, 0.18),
     0 0 0 1px rgba(29, 78, 216, 0.2);
-  animation: iconFloat 4.5s ease-in-out infinite;
+  animation: iconFloat 5.2s ease-in-out 2;
   transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.bim-card:hover .bim-card__icon--overlay,
+.bim-card:focus-within .bim-card__icon--overlay {
+  animation: iconFloat 4.5s ease-in-out infinite;
 }
 
 .bim-card__icon svg {

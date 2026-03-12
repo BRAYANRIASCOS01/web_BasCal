@@ -81,32 +81,177 @@
 
 .projects__marker {
   position: absolute;
-  width: 5px;
-  height: 5px;
+  width: 0;
+  height: 0;
   transform: translate(-50%, -50%);
+  z-index: 2;
 }
 
-.projects__marker span {
+.projects__markerButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.projects__markerButton:focus-visible {
+  outline: none;
+}
+
+.projects__markerButton:focus-visible span {
+  box-shadow:
+    0 0 0 2px #ffffff,
+    0 0 0 5px rgba(0, 11, 102, 0.35),
+    0 8px 16px rgba(0, 11, 102, 0.22);
+}
+
+.projects__markerButton span {
   position: relative;
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: linear-gradient(145deg, var(--color-primary), color-mix(in srgb, var(--color-primary-dark) 70%, var(--color-primary) 30%));
   box-shadow:
     0 0 0 4px rgba(0, 11, 102, 0.1),
     0 8px 16px rgba(0, 11, 102, 0.22);
-  animation: marker-pulse 2s ease-in-out infinite;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+  animation: marker-pulse 2.4s ease-in-out 2;
 }
 
-.projects__marker span::after {
+.projects__markerButton span::after {
   content: "";
   position: absolute;
   inset: -6px;
   border-radius: 50%;
   border: 2px solid rgba(0, 11, 102, 0.18);
-  opacity: 0.7;
-  animation: marker-ring 2s ease-out infinite;
+  opacity: 0.45;
+  animation: marker-ring 2.4s ease-out 2;
+}
+
+.projects__marker:nth-child(2n) .projects__markerButton span,
+.projects__marker:nth-child(2n) .projects__markerButton span::after {
+  animation-delay: 0.2s;
+}
+
+.projects__marker:nth-child(3n) .projects__markerButton span,
+.projects__marker:nth-child(3n) .projects__markerButton span::after {
+  animation-delay: 0.4s;
+}
+
+.projects__marker.is-active .projects__markerButton span,
+.projects__marker:hover .projects__markerButton span,
+.projects__marker:focus-within .projects__markerButton span {
+  animation: marker-pulse 1.9s ease-in-out infinite;
+  transform: scale(1.06);
+}
+
+.projects__marker.is-active .projects__markerButton span::after,
+.projects__marker:hover .projects__markerButton span::after,
+.projects__marker:focus-within .projects__markerButton span::after {
+  animation: marker-ring 1.9s ease-out infinite;
+  opacity: 0.65;
+}
+
+.projects:not(.projects--inview) .projects__markerButton span,
+.projects:not(.projects--inview) .projects__markerButton span::after {
+  animation-play-state: paused !important;
+}
+
+.projects__markerTooltip {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 14px);
+  transform: translate(-50%, 8px);
+  min-width: 190px;
+  padding: 0.65rem 0.75rem;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.92);
+  color: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 16px 28px rgba(15, 23, 42, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 160ms ease, transform 180ms ease;
+}
+
+.projects__markerTooltip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 8px solid rgba(15, 23, 42, 0.92);
+}
+
+.projects__markerTooltip--start {
+  left: 0;
+  transform: translate(0, 8px);
+}
+
+.projects__markerTooltip--start::after {
+  left: 14px;
+  transform: none;
+}
+
+.projects__markerTooltip--end {
+  left: auto;
+  right: 0;
+  transform: translate(0, 8px);
+}
+
+.projects__markerTooltip--end::after {
+  left: auto;
+  right: 14px;
+  transform: none;
+}
+
+.projects__marker.is-active .projects__markerTooltip,
+.projects__marker:hover .projects__markerTooltip,
+.projects__marker:focus-within .projects__markerTooltip {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.projects__marker.is-active .projects__markerTooltip--start,
+.projects__marker:hover .projects__markerTooltip--start,
+.projects__marker:focus-within .projects__markerTooltip--start,
+.projects__marker.is-active .projects__markerTooltip--end,
+.projects__marker:hover .projects__markerTooltip--end,
+.projects__marker:focus-within .projects__markerTooltip--end {
+  transform: translate(0, 0);
+}
+
+.projects__markerCountry {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.projects__markerCount {
+  margin: 0.2rem 0 0 0;
+  font-size: 0.76rem;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.projects__markerTag {
+  margin: 0.28rem 0 0 0;
+  display: inline-flex;
+  font-size: 0.69rem;
+  line-height: 1.1;
+  padding: 0.18rem 0.4rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .projects__info {
@@ -165,19 +310,19 @@
     transition: none;
   }
 
-  .projects__marker span,
-  .projects__marker span::after {
+  .projects__markerButton span,
+  .projects__markerButton span::after {
     animation: none;
   }
 }
 
 @keyframes marker-ring {
   0% {
-    transform: scale(0.6);
-    opacity: 0.4;
+    transform: scale(0.8);
+    opacity: 0.35;
   }
-  80% {
-    transform: scale(1.4);
+  75% {
+    transform: scale(1.25);
     opacity: 0;
   }
   100% {
@@ -191,6 +336,6 @@
     transform: scale(1);
   }
   50% {
-    transform: scale(1.08);
+    transform: scale(1.05);
   }
 }

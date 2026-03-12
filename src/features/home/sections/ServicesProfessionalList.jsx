@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 import bimMedImage from "../../../assets/BIM-MED.jpeg";
-import gasPlantaImage from "../../../assets/GAS_planta.png";
-import rciImage from "../../../assets/RCI, Edf 6.1.png";
-import mechanicalShopImage from "../../../assets/RCI_CUARTO BOMBAS_2.png";
-import archRenderImage from "../../../assets/SDA_PLAN.png";
+import gasPlantaImage from "../../../assets/GAS_planta.webp";
+import rciImage from "../../../assets/RCI, Edf 6.1.webp";
+import mechanicalShopImage from "../../../assets/RCI_CUARTO BOMBAS_2.webp";
+import archRenderImage from "../../../assets/SDA_PLAN.webp";
 
 const ServicesProfessionalList = () => {
   const { t } = useTranslation();

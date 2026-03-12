@@ -1,11 +1,11 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import gasPlantaImage from "../../../assets/GAS_planta.png";
-import gasPlantaNavarraImage from "../../../assets/GAS_Planta-2.png";
-import rciCuartoBombasImage from "../../../assets/RCI_CUARTO BOMBAS.png";
-import scanToBimAirportImage from "../../../assets/image (11).png";
-import rciRedPerimetralImage from "../../../assets/RCI, Red Perimetral.png";
-import scanToBimHospitalChileImage from "../../../assets/RVT_Image_01.png";
+import gasPlantaImage from "../../../assets/GAS_planta.webp";
+import gasPlantaNavarraImage from "../../../assets/GAS_Planta-2.webp";
+import rciCuartoBombasImage from "../../../assets/RCI_CUARTO BOMBAS.webp";
+import scanToBimAirportImage from "../../../assets/image (11).webp";
+import rciRedPerimetralImage from "../../../assets/RCI, Red Perimetral.webp";
+import scanToBimHospitalChileImage from "../../../assets/RVT_Image_01.webp";
 import shopDrawingsHvacUsImage from "../../../assets/Image_01.webp";
 
 const normalizeText = (text) =>
@@ -64,6 +64,8 @@ const PortfolioGrid = () => {
       return true;
     });
   }, [projects, activeCategory]);
+
+  const activeCategoryLabel = activeCategory === "all" ? t("portfolioPage.filters.all") : activeCategory;
 
   useEffect(() => {
     const el = sectionRef.current;
@@ -403,7 +405,44 @@ const PortfolioGrid = () => {
         </div>
 
         <div className="portfolio-page__grid">
-          {filteredProjects.map((project, index) => {
+          {filteredProjects.length === 0 ? (
+            <article className="portfolio-page__empty" data-animate aria-live="polite">
+              <span className="portfolio-page__empty-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path
+                    d="M12 3.25c4.83 0 8.75 3.92 8.75 8.75S16.83 20.75 12 20.75 3.25 16.83 3.25 12 7.17 3.25 12 3.25Zm0 4.25a.75.75 0 0 0-.75.75v4.14c0 .2.08.39.22.53l2.6 2.6a.75.75 0 1 0 1.06-1.06l-2.38-2.38V8.25A.75.75 0 0 0 12 7.5Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </span>
+              <h3 className="portfolio-page__empty-title">
+                {t("portfolioPage.empty.title", "Estamos trabajando en ello")}
+              </h3>
+              <p className="portfolio-page__empty-text">
+                {t(
+                  "portfolioPage.empty.description",
+                  "Aun no tenemos proyectos publicados para este filtro. Muy pronto agregaremos nuevos casos."
+                )}
+              </p>
+              {activeCategory !== "all" && (
+                <p className="portfolio-page__empty-category">
+                  {t("portfolioPage.empty.category", "Categoria seleccionada: {{category}}", {
+                    category: activeCategoryLabel,
+                  })}
+                </p>
+              )}
+              {activeCategory !== "all" && (
+                <button
+                  type="button"
+                  className="portfolio-page__chip portfolio-page__empty-action"
+                  onClick={() => setActiveCategory("all")}
+                >
+                  {t("portfolioPage.empty.cta", "Ver todos los proyectos")}
+                </button>
+              )}
+            </article>
+          ) : (
+            filteredProjects.map((project, index) => {
             const image = projectImages[project.id] || gasPlantaImage;
             const highlights = Array.isArray(project.services)
               ? project.services.slice(0, 4).map((service) => ({
@@ -418,139 +457,139 @@ const PortfolioGrid = () => {
               ? normalizeText(project.category).replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")
               : "";
 
-            return (
-              <article
-                key={project.id || project.title}
-                className={`portfolio-card ${isVisible ? "is-visible" : ""} ${isExpanded ? "is-expanded" : ""}`}
-                data-animate
-                data-card-id={project.id}
-                style={{ transitionDelay: `${0.08 + index * 0.08}s` }}
-                ref={(el) => {
-                  if (el) cardRefs.current[project.id] = el;
-                }}
-              >
-                <div className="portfolio-card__media">
-                  <img src={image} alt={project.title} loading="lazy" decoding="async" />
-                  <span className="portfolio-card__icon-pill" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" focusable="false">
-                      <path
-                        d="M6 19V8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v11M5 19h14M9 8V5h6v3"
-                        stroke="currentColor"
-                        strokeWidth="1.4"
-                        fill="none"
-                        strokeLinecap="round"
-                      />
-                      <path d="M9 12h6M9 15h6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-                    </svg>
-                  </span>
-                  {project.category && (
-                    <span className="portfolio-card__badge" data-category={categoryKey}>
-                      {project.category}
+              return (
+                <article
+                  key={project.id || project.title}
+                  className={`portfolio-card ${isVisible ? "is-visible" : ""} ${isExpanded ? "is-expanded" : ""}`}
+                  data-animate
+                  data-card-id={project.id}
+                  style={{ transitionDelay: `${0.08 + index * 0.08}s` }}
+                  ref={(el) => {
+                    if (el) cardRefs.current[project.id] = el;
+                  }}
+                >
+                  <div className="portfolio-card__media">
+                    <img src={image} alt={project.title} loading="lazy" decoding="async" />
+                    <span className="portfolio-card__icon-pill" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" focusable="false">
+                        <path
+                          d="M6 19V8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v11M5 19h14M9 8V5h6v3"
+                          stroke="currentColor"
+                          strokeWidth="1.4"
+                          fill="none"
+                          strokeLinecap="round"
+                        />
+                        <path d="M9 12h6M9 15h6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+                      </svg>
                     </span>
-                  )}
-                </div>
-                <div className="portfolio-card__body">
-                  <h3 className="portfolio-card__title">{project.title}</h3>
-                  {project.location && (
-                    <p className="portfolio-card__subtitle portfolio-card__location">
-                      <span className="portfolio-card__location-icon" aria-hidden="true">
-                        {iconMap.location}
+                    {project.category && (
+                      <span className="portfolio-card__badge" data-category={categoryKey}>
+                        {project.category}
                       </span>
-                      <span>{project.location}</span>
-                    </p>
-                  )}
-                  {project.type && <p className="portfolio-card__meta-line">{project.type}</p>}
-                  {project.scale && <p className="portfolio-card__meta-line">{project.scale}</p>}
+                    )}
+                  </div>
+                  <div className="portfolio-card__body">
+                    <h3 className="portfolio-card__title">{project.title}</h3>
+                    {project.location && (
+                      <p className="portfolio-card__subtitle portfolio-card__location">
+                        <span className="portfolio-card__location-icon" aria-hidden="true">
+                          {iconMap.location}
+                        </span>
+                        <span>{project.location}</span>
+                      </p>
+                    )}
+                    {project.type && <p className="portfolio-card__meta-line">{project.type}</p>}
+                    {project.scale && <p className="portfolio-card__meta-line">{project.scale}</p>}
 
-                  {highlights.length > 0 && (
-                    <div className="portfolio-card__highlights" aria-label={metaLabel.services}>
-                      {highlights.map((item, index) => {
-                        const tooltipText = item.tooltip;
-                        const showTooltip = Boolean(tooltipText);
-                        return (
-                          <div
-                            className={`portfolio-card__highlight ${showTooltip ? "has-tooltip" : ""}`}
-                            key={`${item.label}-${index}`}
-                            data-tooltip={showTooltip ? tooltipText : undefined}
-                            tabIndex={showTooltip ? 0 : undefined}
-                            aria-label={showTooltip ? tooltipText : undefined}
-                          >
-                            <span className="portfolio-card__highlight-icon" aria-hidden="true">
-                              {item.icon}
-                            </span>
-                            <span>{item.label}</span>
+                    {highlights.length > 0 && (
+                      <div className="portfolio-card__highlights" aria-label={metaLabel.services}>
+                        {highlights.map((item, index) => {
+                          const tooltipText = item.tooltip;
+                          const showTooltip = Boolean(tooltipText);
+                          return (
+                            <div
+                              className={`portfolio-card__highlight ${showTooltip ? "has-tooltip" : ""}`}
+                              key={`${item.label}-${index}`}
+                              data-tooltip={showTooltip ? tooltipText : undefined}
+                              tabIndex={showTooltip ? 0 : undefined}
+                              aria-label={showTooltip ? tooltipText : undefined}
+                            >
+                              <span className="portfolio-card__highlight-icon" aria-hidden="true">
+                                {item.icon}
+                              </span>
+                              <span>{item.label}</span>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    )}
+
+                    {isExpanded && (
+                      <div className="portfolio-card__detail">
+                        {project.description && (
+                          <>
+                            <p className="portfolio-card__detail-title">{t("portfolioPage.card.detailTitle")}</p>
+                            <p className="portfolio-card__detail-text">{project.description}</p>
+                          </>
+                        )}
+                        {Array.isArray(project.services) && project.services.length > 0 && (
+                          <div className="portfolio-card__detail-block">
+                            <p className="portfolio-card__detail-label">{metaLabel.services}</p>
+                            <ul>
+                              {project.services.map((service) => (
+                                <li key={service}>{service}</li>
+                              ))}
+                            </ul>
                           </div>
-                        );
-                      })}
-                    </div>
-                  )}
+                        )}
+                        {Array.isArray(project.software) && project.software.length > 0 && (
+                          <div className="portfolio-card__detail-block">
+                            <p className="portfolio-card__detail-label">{metaLabel.software}</p>
+                            <ul>
+                              {project.software.map((tool) => (
+                                <li key={tool}>{tool}</li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
+                    )}
 
-                  {isExpanded && (
-                    <div className="portfolio-card__detail">
-                      {project.description && (
-                        <>
-                          <p className="portfolio-card__detail-title">{t("portfolioPage.card.detailTitle")}</p>
-                          <p className="portfolio-card__detail-text">{project.description}</p>
-                        </>
-                      )}
-                      {Array.isArray(project.services) && project.services.length > 0 && (
-                        <div className="portfolio-card__detail-block">
-                          <p className="portfolio-card__detail-label">{metaLabel.services}</p>
-                          <ul>
-                            {project.services.map((service) => (
-                              <li key={service}>{service}</li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                      {Array.isArray(project.software) && project.software.length > 0 && (
-                        <div className="portfolio-card__detail-block">
-                          <p className="portfolio-card__detail-label">{metaLabel.software}</p>
-                          <ul>
-                            {project.software.map((tool) => (
-                              <li key={tool}>{tool}</li>
-                            ))}
-                          </ul>
-                        </div>
-                      )}
-                    </div>
-                  )}
-
-                  <button
-                    type="button"
-                    className={`portfolio-card__cta ${isExpanded ? "is-expanded" : ""}`}
-                    aria-expanded={isExpanded}
-                    onClick={() => {
-                      setExpandedId((prev) => {
-                        const next = prev === project.id ? null : project.id;
-                        if (next === null) {
-                          const restoreTo = lastScrollRef.current;
-                          if (typeof window !== "undefined" && typeof restoreTo === "number") {
+                    <button
+                      type="button"
+                      className={`portfolio-card__cta ${isExpanded ? "is-expanded" : ""}`}
+                      aria-expanded={isExpanded}
+                      onClick={() => {
+                        setExpandedId((prev) => {
+                          const next = prev === project.id ? null : project.id;
+                          if (next === null) {
+                            const restoreTo = lastScrollRef.current;
+                            if (typeof window !== "undefined" && typeof restoreTo === "number") {
+                              requestAnimationFrame(() => {
+                                window.scrollTo({ top: restoreTo, behavior: "smooth" });
+                              });
+                            }
+                            return null;
+                          }
+                          if (typeof window !== "undefined") {
+                            lastScrollRef.current = window.scrollY;
+                          }
+                          if (cardRefs.current[project.id]) {
                             requestAnimationFrame(() => {
-                              window.scrollTo({ top: restoreTo, behavior: "smooth" });
+                              cardRefs.current[project.id]?.scrollIntoView({ behavior: "smooth", block: "center" });
                             });
                           }
-                          return null;
-                        }
-                        if (typeof window !== "undefined") {
-                          lastScrollRef.current = window.scrollY;
-                        }
-                        if (cardRefs.current[project.id]) {
-                          requestAnimationFrame(() => {
-                            cardRefs.current[project.id]?.scrollIntoView({ behavior: "smooth", block: "center" });
-                          });
-                        }
-                        return next;
-                      });
-                    }}
-                  >
-                    {isExpanded ? t("portfolioPage.card.detailClose") : t("portfolioPage.card.cta", "Ver más")}
-                  </button>
-
-                </div>
-              </article>
-            );
-          })}
+                          return next;
+                        });
+                      }}
+                    >
+                      {isExpanded ? t("portfolioPage.card.detailClose") : t("portfolioPage.card.cta", "Ver más")}
+                    </button>
+                  </div>
+                </article>
+              );
+            })
+          )}
         </div>
       </div>
     </section>

@@ -46,12 +46,12 @@
   },
   "home": {
     "seo": {
-      "title": "BasCal | Engineering and construction with precision",
-      "description": "We design and execute engineering projects with transparent communication and measurable results."
+      "title": "BasCal | BIM Services, MEP Engineering and Construction",
+      "description": "Engineering and construction firm specialized in BIM services, architectural design, and MEP engineering for complex projects."
     },
-    "eyebrow": "Need more help?",
-    "heroTitle": "Feel free to contact us for more information.",
-    "heroSubtitle": "We're here to help! Whether you have a question or need support, feel free to reach out to us. Our team is ready to assist you with any inquiries or project needs.",
+    "eyebrow": "BIM services, MEP engineering and architectural design",
+    "heroTitle": "We deliver construction projects with BIM, MEP engineering, and technical coordination.",
+    "heroSubtitle": "At BasCal, we design, model, and coordinate architecture, structure, and MEP systems to reduce clashes, costs, and rework from preconstruction to site execution.",
     "primaryCta": "Request consultation",
     "secondaryCta": "Learn more",
     "servicesKicker": "BIM Services",
@@ -395,6 +395,12 @@
       "detailClose": "Close",
       "detailTitle": "Project description"
     },
+    "empty": {
+      "title": "We are working on it",
+      "description": "There are no published projects for this filter yet. New case studies will be added soon.",
+      "category": "Selected category: {{category}}",
+      "cta": "View all projects"
+    },
     "whatsappMessage": "Hi, I want more information about the portfolio."
   },
   "language": {
@@ -517,6 +523,23 @@
                 "title": "As-Built Documentation & Digital Twin",
                 "text": "We produce as-built models and drawings from laser scans, redlines, and site records, consolidating the project’s real conditions. When needed, we prep models for asset management/FM, integrating technical data for future operations and maintenance."
               }
+            ]
+          }
+        },
+        {
+          "id": "bim-obra-gestion",
+          "title": "BIM On-Site - Project Management",
+          "text": "Through collaborative work with your site, budgeting, and scheduling teams, we connect the model with the data needed to interoperate with your processes.",
+          "detail": {
+            "eyebrow": "ON-SITE BIM DETAIL",
+            "title": "BIM supervision and on-site project management",
+            "body": "We provide BIM supervision services, working hand in hand with your team in a collaborative environment. We support and audit project information throughout its entire lifecycle, actively engaging to meet our clients' needs.",
+            "points": [
+              "Timely review and validation of BIM inputs",
+              "Interdisciplinary auditing at each project phase",
+              "Quality control of BIM deliverables",
+              "Early identification and assessment of risks",
+              "Technical support for the construction team"
             ]
           }
         },

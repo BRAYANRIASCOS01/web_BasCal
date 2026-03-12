@@ -1,4 +1,4 @@
-const DEFAULT_SITE_URL = "https://web-bas-cal.vercel.app";
+const DEFAULT_SITE_URL = "https://bascal.com";
 const SUPPORTED_LANGUAGES = ["es", "en"];
 
 function sanitizeUrl(url) {
@@ -15,12 +15,17 @@ export function normalizeLang(value = "es") {
 }
 
 export function getSiteUrl() {
-  const fromEnv = sanitizeUrl(import.meta.env.VITE_SITE_URL);
-  if (fromEnv) return fromEnv;
   if (typeof window !== "undefined" && window.location?.origin) {
     return sanitizeUrl(window.location.origin);
   }
+  const fromEnv = sanitizeUrl(import.meta.env.VITE_SITE_URL);
+  if (fromEnv) return fromEnv;
   return DEFAULT_SITE_URL;
+}
+
+export function getAbsoluteUrl(path = "/") {
+  const safePath = normalizePagePath(path);
+  return `${getSiteUrl()}${safePath}`;
 }
 
 export function normalizePagePath(path = "/") {
@@ -37,7 +42,7 @@ export function getLocalizedPath(lang, pagePath = "/") {
 }
 
 export function getLocalizedUrl(lang, pagePath = "/") {
-  return `${getSiteUrl()}${getLocalizedPath(lang, pagePath)}`;
+  return getAbsoluteUrl(getLocalizedPath(lang, pagePath));
 }
 
 export function getAlternateLang(lang) {
@@ -72,8 +77,17 @@ export function getRobotsContent({ noindex = false } = {}) {
   return shouldIndexSite() ? "index, follow, max-image-preview:large" : "noindex, nofollow";
 }
 
-export function getOrganizationSchema() {
+function getOrganizationDescription(lang) {
+  return normalizeLang(lang) === "en"
+    ? "Specialized firm in architectural design, MEP engineering, and advanced BIM/VDC services."
+    : "Firma especializada en diseño arquitectónico, ingeniería MEP y servicios BIM/VDC avanzados.";
+}
+
+export function getOrganizationSchema(lang = "es") {
   const siteUrl = getSiteUrl();
+  const safeLang = normalizeLang(lang);
+  const phone = import.meta.env.VITE_CONTACT_PHONE || "+57 300 111 2233";
+  const email = import.meta.env.VITE_CONTACT_EMAIL || "contacto@bascal.com";
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -81,18 +95,27 @@ export function getOrganizationSchema() {
     url: `${siteUrl}/`,
     logo: `${siteUrl}/Log_BasCal.PNG`,
     image: `${siteUrl}/Log_BasCal.PNG`,
-    description:
-      "Firma especializada en diseño arquitectónico, ingeniería MEP y servicios BIM/VDC avanzados.",
+    description: getOrganizationDescription(safeLang),
     areaServed: ["CO", "EC", "VE", "MX", "US"],
     contactPoint: [
       {
         "@type": "ContactPoint",
         contactType: "customer support",
-        telephone: "+57 000 000 0000",
-        email: "contacto@bascal.com",
+        telephone: phone,
+        email,
         availableLanguage: ["es", "en"],
       },
     ],
   };
 }
 
+export function getWebSiteSchema(lang = "es") {
+  const safeLang = normalizeLang(lang);
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "BasCal",
+    url: getLocalizedUrl(safeLang, "/"),
+    inLanguage: safeLang,
+  };
+}

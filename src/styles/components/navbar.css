@@ -62,13 +62,13 @@
 }
 
 .navbar__dropdown:hover .navbar__caret,
-.navbar__dropdown:focus-within .navbar__caret {
+.navbar__dropdown.is-open .navbar__caret {
   transform: translateY(1px);
   opacity: 0.95;
 }
 
 .navbar__dropdown:hover > .navbar__dropdownBtn,
-.navbar__dropdown:focus-within > .navbar__dropdownBtn {
+.navbar__dropdown.is-open > .navbar__dropdownBtn {
   background: color-mix(in srgb, var(--color-primary) 12%, var(--color-surface) 88%);
   color: var(--color-primary-dark);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
@@ -99,9 +99,9 @@
   transform 280ms cubic-bezier(0.22, 1, 0.36, 1),
   visibility 280ms ease;
 }
-/* Abrir al hover/focus */
-.navbar__dropdown:hover .navbar__menu,
-.navbar__dropdown:focus-within .navbar__menu {
+/* Abrir solo por estado (click) */
+.navbar__dropdown.is-open .navbar__menu,
+.navbar__menu.is-open {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -180,15 +180,6 @@
   background: rgba(0,0,0,0.06);
 }
 
-/* Mostrar dropdown con hover (desktop) */
-.navbar__dropdown:hover .navbar__menu {
- 
-}
-
-/* Mostrar dropdown con focus (accesibilidad básica) */
-.navbar__dropdown:focus-within .navbar__menu {
-  
-}
 .navbar__link{
   color: var(--color-primary-dark);
   background: var(--color-surface);
@@ -337,6 +328,12 @@
   border-radius: 50%;
   background: color-mix(in srgb, var(--color-primary) 18%, var(--color-surface) 82%);
   color: var(--color-primary-dark);
+}
+
+.language-switcher__triggerIcon svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
 }
 
 .language-switcher__triggerLabel {

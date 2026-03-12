@@ -4,11 +4,11 @@ import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 
 import archDesignImage from "../../../assets/BIM-MED.jpeg";
-import mechanicalImage from "../../../assets/bim2.png";
-import plumbingImage from "../../../assets/bim3.png";
-import sdaPlantaImage from "../../../assets/SDA_Planta.png";
+import mechanicalImage from "../../../assets/bim2.webp";
+import plumbingImage from "../../../assets/bim3.webp";
+import sdaPlantaImage from "../../../assets/SDA_Planta.webp";
 import espacioPublicoImage from "../../../assets/Screenshot 2026-01-27 154818.png";
-import mechanicalRvtImage from "../../../assets/RVT_Imagen_03.png";
+import mechanicalRvtImage from "../../../assets/RVT_Imagen_03.webp";
 
 const ServicesPro = () => {
   const { t } = useTranslation();

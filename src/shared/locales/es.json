@@ -46,12 +46,12 @@
   },
   "home": {
     "seo": {
-      "title": "BasCal | Ingeniería y construcción con precisión",
-      "description": "Diseñamos y ejecutamos proyectos de ingeniería con comunicación transparente y resultados medibles."
+      "title": "BasCal | Servicios BIM, Ingeniería MEP y Construcción",
+      "description": "Firma de ingeniería y construcción especializada en servicios BIM, diseño arquitectónico e ingeniería MEP para proyectos de alta complejidad."
     },
-    "eyebrow": "¿Necesitas más ayuda?",
-    "heroTitle": "No dudes en contactarnos para más información.",
-    "heroSubtitle": "¡Estamos aquí para ayudarte! Si tienes una pregunta o necesitas apoyo, contáctanos con confianza. Nuestro equipo está listo para asistirte con cualquier consulta o necesidad de tu proyecto.",
+    "eyebrow": "Servicios BIM, ingeniería MEP y diseño arquitectónico",
+    "heroTitle": "Impulsamos proyectos de construcción con BIM, ingeniería MEP y coordinación técnica.",
+    "heroSubtitle": "En BasCal diseñamos, modelamos y coordinamos arquitectura, estructura y sistemas MEP para reducir interferencias, costos y reprocesos desde la preconstrucción hasta la obra.",
     "primaryCta": "Solicitar asesoría",
     "secondaryCta": "Conocer más",
     "servicesKicker": "Servicios BIM",
@@ -86,7 +86,7 @@
     },
     "professionalServices": {
       "kicker": "Servicios profesionales",
-      "title": "Professional Services",
+      "title": "Servicios Profesionales",
       "subtitle": "Diseñamos soluciones técnicas seguras, eficientes y normativamente viables para proyectos en todas sus etapas, desde el concepto hasta la documentación de construcción. Nos enfocamos en diseño, cálculo y especificación técnica para que cada sistema funcione correctamente y cumpla estándares locales e internacionales. Softwares: Autodesk Revit, AutoCAD, ArchiCAD.",
       "items": [
         {
@@ -159,12 +159,12 @@
   },
   "professionalPage": {
     "seo": {
-      "title": "Professional Services | Ingeniería y diseño arquitectónico",
+      "title": "Servicios Profesionales | Ingeniería y diseño arquitectónico",
       "description": "Diseñamos y calculamos sistemas arquitectónicos e ingenieriles seguros, eficientes y listos para construcción, cumpliendo normativas y buenas prácticas técnicas."
     },
     "hero": {
-      "eyebrow": "Professional Services",
-      "title": "Engineering & Architectural Design Services",
+      "eyebrow": "Servicios Profesionales",
+      "title": "Servicios de diseño arquitectónico e ingeniería",
       "subtitle": "Diseñamos soluciones técnicas seguras, eficientes y normativamente viables para proyectos en todas sus etapas, desde el concepto hasta la documentación de construcción. Nos enfocamos en el diseño, cálculo y especificación técnica, asegurando que cada sistema funcione correctamente y cumpla con los estándares locales e internacionales.",
       "cta": "Agendar cita"
     },
@@ -395,6 +395,12 @@
       "detailClose": "Cerrar",
       "detailTitle": "Descripción del proyecto"
     },
+    "empty": {
+      "title": "Estamos trabajando en ello",
+      "description": "Aún no tenemos proyectos publicados para este filtro. Muy pronto agregaremos nuevos casos.",
+      "category": "Categoría seleccionada: {{category}}",
+      "cta": "Ver todos los proyectos"
+    },
     "whatsappMessage": "Hola, quiero más información sobre el portafolio."
   },
   "language": {
@@ -518,6 +524,23 @@
                 "title": "As-Built Documentation & Digital Twin",
                 "text": "Generamos modelos y planos as-built a partir de escaneo láser, planos redline y registros de obra, consolidando la información real del proyecto. Cuando se requiere, preparamos los modelos para gestión de activos y Facility Management, integrando datos técnicos para operación y mantenimiento futuro."
               }
+            ]
+          }
+        },
+        {
+          "id": "bim-obra-gestion",
+          "title": "BIM en obra - Gestión de proyecto",
+          "text": "A través de un trabajo colaborativo con su equipo de obra, presupuesto y cronograma, vinculamos el modelo con la data necesaria para interoperar con sus procesos.",
+          "detail": {
+            "eyebrow": "DETALLE BIM EN OBRA",
+            "title": "Interventoría BIM y gestión de proyecto en obra",
+            "body": "Brindamos servicios de interventoría BIM, trabajando de la mano con su equipo en un entorno colaborativo. Acompañamos y auditamos la información del proyecto a lo largo de todo su ciclo de vida, involucrándonos activamente para satisfacer las necesidades de nuestros clientes.",
+            "points": [
+              "Revisión y validación oportuna de insumos BIM",
+              "Auditoría interdisciplinaria en cada fase del proyecto",
+              "Control de calidad de entregables BIM",
+              "Identificación y evaluación temprana de riesgos",
+              "Acompañamiento técnico al equipo de obra"
             ]
           }
         },

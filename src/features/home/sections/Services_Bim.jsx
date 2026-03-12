@@ -1,8 +1,10 @@
 import { useTranslation } from "react-i18next";
 import { useMemo, useRef, useState } from "react";
-import bimAccentImage from "../../../assets/bim2.png";
-import scanToBimImage from "../../../assets/Laser_Scanning.png";
-import mepProjectImage from "../../../assets/VISTA REDES_page-0001.jpg";
+import bimAccentImage from "../../../assets/bim2.webp";
+import scanToBimImage from "../../../assets/Laser_Scanning.webp";
+import mepProjectImage1280 from "../../../assets/VISTA REDES_page-0001-1280.webp";
+import mepProjectImage1600 from "../../../assets/VISTA REDES_page-0001-1600.webp";
+import mepProjectImage768 from "../../../assets/VISTA REDES_page-0001-768.webp";
 
 const ServicesBim = () => {
   const { t } = useTranslation();
@@ -12,8 +14,11 @@ const ServicesBim = () => {
   const cardRefs = useRef({});
   const lastScrollRef = useRef(null);
   const cardImages = {
-    mep: mepProjectImage,
+    mep: mepProjectImage1600,
     "scan-to-bim": scanToBimImage,
+  };
+  const cardImageResponsiveSources = {
+    mep: `${mepProjectImage768} 768w, ${mepProjectImage1280} 1280w, ${mepProjectImage1600} 1600w`,
   };
 
   const icons = [
@@ -1232,6 +1237,7 @@ l-193 115 0 1019 0 1018 58 25 c109 48 247 111 506 230 l261 121 3 -1450 c1
             const id = card.id || card.title;
             const isExpanded = expandedId === id;
             const image = cardImages[id] || bimAccentImage;
+            const imageSrcSet = cardImageResponsiveSources[id];
             return (
             <article
               key={card.title}
@@ -1246,7 +1252,15 @@ l-193 115 0 1019 0 1018 58 25 c109 48 247 111 506 230 l261 121 3 -1450 c1
             >
               {!isExpanded && (
                 <div className="bim-card__media" aria-hidden="true">
-                  <img src={image} alt="" className="bim-card__hero" loading="lazy" decoding="async" />
+                  <img
+                    src={image}
+                    srcSet={imageSrcSet}
+                    sizes={imageSrcSet ? "(max-width: 640px) 92vw, (max-width: 1024px) 72vw, 34vw" : undefined}
+                    alt=""
+                    className="bim-card__hero"
+                    loading="lazy"
+                    decoding="async"
+                  />
                   <span className="bim-card__icon bim-card__icon--overlay">{icons[index % icons.length]}</span>
                 </div>
               )}
@@ -1385,7 +1399,15 @@ l-193 115 0 1019 0 1018 58 25 c109 48 247 111 506 230 l261 121 3 -1450 c1
                           )}
                     </div>
                     <div className="bim-card__detail-media" aria-hidden="true">
-                      <img src={image} alt="" className="bim-card__detail-image" loading="lazy" decoding="async" />
+                      <img
+                        src={image}
+                        srcSet={imageSrcSet}
+                        sizes={imageSrcSet ? "(max-width: 900px) 92vw, 42vw" : undefined}
+                        alt=""
+                        className="bim-card__detail-image"
+                        loading="lazy"
+                        decoding="async"
+                      />
                     </div>
                   </div>
                   {card.detail.softwares && (

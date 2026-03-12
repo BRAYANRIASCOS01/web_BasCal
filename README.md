@@ -20,3 +20,9 @@ Solo estructura, sin código implementado todavía.
 
 - Mantener enfoque de clean code en toda implementación.
 - Priorizar siempre SEO profesional (metadatos, accesibilidad, semántica, performance).
+
+## SEO (produccion)
+
+- Definir `VITE_SITE_URL` con el dominio canonico real (ejemplo: `https://bascal.com`).
+- Definir `VITE_ALLOW_INDEXING=true` para publicar `robots.txt` indexable.
+- Ejecutar `npm run build` (incluye `npm run seo:generate` para regenerar `public/robots.txt` y `public/sitemap.xml`).

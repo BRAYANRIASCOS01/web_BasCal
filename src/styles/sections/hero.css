@@ -135,11 +135,10 @@
   background-size: contain;
   background-position: center;
   opacity: 0.08;
-  filter: grayscale(20%) saturate(80%) contrast(95%);
+  filter: none;
   mix-blend-mode: screen;
   transition: opacity 0.3s ease;
-  animation: hero-drift 16s ease-in-out infinite;
-  will-change: transform;
+  animation: hero-drift 24s ease-in-out 2;
 }
 
 .hero__lines {
@@ -153,7 +152,6 @@
   position: absolute;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04));
   opacity: 0.45;
-  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.15));
 }
 
 .hero__line--h {
@@ -208,7 +206,7 @@
   height: clamp(120px, 18vw, 200px);
   opacity: 0.22;
   mix-blend-mode: screen;
-  backdrop-filter: blur(2px);
+  background: rgba(255, 255, 255, 0.03);
 }
 
 .hero__box--a {
@@ -255,7 +253,7 @@
   opacity: 0.2;
   mix-blend-mode: screen;
   transform: rotate(-6deg);
-  filter: drop-shadow(0 14px 32px rgba(0, 0, 0, 0.22));
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
   pointer-events: none;
 }
 
@@ -266,8 +264,7 @@
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.18),
     0 12px 36px rgba(0, 11, 102, 0.24);
-  backdrop-filter: blur(6px);
-  animation: hero-tile-pulse 12s ease-in-out infinite;
+  animation: hero-tile-pulse 16s ease-in-out 2;
 }
 
 .hero__tile:nth-child(2) {
@@ -362,7 +359,7 @@
   inset: -5% auto auto 80%;
   width: 300px;
   height: 300px;
-  background-image: url("/union-2.png");
+  background-image: url("/union-2.webp");
   animation-duration: 18s;
    animation-delay: 1.2s;
 }
@@ -371,7 +368,7 @@
   inset: auto 5% -30% auto;
   width: 800px;
   height: 800px;
-  background-image: url("/grua-7.png");
+  background-image: url("/grua-7.webp");
   animation-duration: 15s;
   animation-delay: 1.2s;
 }
@@ -380,7 +377,7 @@
   inset: -25% auto auto 15%;
   width: 400px;
   height: 500px;
-  background-image: url("/viga.png");
+  background-image: url("/viga.webp");
   opacity: 0.06;
   animation-duration: 20s;
   animation-delay: 1.6s;
@@ -390,7 +387,7 @@
   inset: 25% auto auto 20%;
   width: 500px;
   height: 500px;
-  background-image: url("/union-2.png");
+  background-image: url("/union-2.webp");
   opacity: 0.06;
   animation-duration: 25s;
   animation-delay: 3.6s;
@@ -400,7 +397,7 @@
   inset: -25% auto auto 30%;
   width: 600px;
   height: 600px;
-  background-image: url("/edificio.png");
+  background-image: url("/edificio.webp");
   opacity: 0.06;
   animation-duration: 25s;
   animation-delay: 3.6s;
@@ -409,40 +406,34 @@
 
 @keyframes hero-drift {
   0% {
-    transform: translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+    transform: translate3d(0, 0, 0);
   }
   25% {
-    transform: translate3d(-16px, -12px, 0) rotate3d(0, 1, 0, 6deg);
+    transform: translate3d(-12px, -9px, 0);
   }
   50% {
-    transform: translate3d(0, -10px, 0) rotate3d(0, 1, 0, -5deg);
+    transform: translate3d(0, -8px, 0);
   }
   75% {
-    transform: translate3d(18px, 14px, 0) rotate3d(0, 1, 0, 6deg);
+    transform: translate3d(13px, 9px, 0);
   }
   100% {
-    transform: translate3d(0, 0, 0) rotate3d(0, 1, 0, 0deg);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes hero-tile-pulse {
   0% {
     transform: translate3d(0, 0, 0);
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.18),
-      0 12px 36px rgba(0, 11, 102, 0.24);
+    opacity: 0.92;
   }
   50% {
-    transform: translate3d(0, -6px, 0);
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.24),
-      0 16px 40px rgba(0, 11, 102, 0.32);
+    transform: translate3d(0, -4px, 0);
+    opacity: 1;
   }
   100% {
     transform: translate3d(0, 0, 0);
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.18),
-      0 12px 36px rgba(0, 11, 102, 0.24);
+    opacity: 0.92;
   }
 }
 

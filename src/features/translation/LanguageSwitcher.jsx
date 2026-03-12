@@ -66,7 +66,13 @@ const LanguageSwitcher = () => {
       >
         <span className="language-switcher__triggerIcon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+            <g
+              transform="translate(2 2)"
+              stroke="currentColor"
+              strokeWidth="1.7"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <circle cx="10" cy="10" r="5.5" />
               <path d="M4.8 10h10.4" />
               <path d="M10 4.8c1.5 1.5 2.4 3.2 2.4 5.2 0 2-0.9 3.7-2.4 5.2" />

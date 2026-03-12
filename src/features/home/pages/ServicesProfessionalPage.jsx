@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import { Helmet } from "react-helmet-async";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import Hero from "../../../shared/components/Hero.jsx";
@@ -9,23 +8,22 @@ import FaqAccordion from "../../../shared/components/FaqAccordion.jsx";
 import ContactForm from "../../../shared/components/Form.jsx";
 import ScrollTop from "../../../shared/components/ScrollTop.jsx";
 import WhatsAppButton from "../../../shared/components/WhatsAppButton.jsx";
+import SeoHead from "../../../shared/components/SeoHead.jsx";
+import { getLocalizedUrl, getSiteUrl, normalizeLang } from "../../../shared/seo/seo-utils.js";
 import "../../../styles/sections/services-pro.css";
 import "../../../styles/sections/services-pro-list.css";
 import "../../../styles/sections/pro-intro.css";
 
 const ServicesProfessionalPage = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const { lang = "es" } = useParams();
+  const safeLang = normalizeLang(lang);
   const pageRef = useRef(null);
 
-  const canonicalFallback = `https://bascal.com/${lang}/servicios/profesionales`;
-  const canonicalRaw = typeof window !== "undefined" ? window.location.href : canonicalFallback;
-  const canonical = canonicalRaw.split("#")[0].split("?")[0].replace(/\/$/, "");
-  const ogImage = `${canonical}/og-image.svg`;
-  const ogLocale = i18n.language === "en" ? "en_US" : "es_ES";
-  const alternateLocale = ogLocale === "es_ES" ? "en_US" : "es_ES";
-  const altLang = i18n.language === "en" ? "es" : "en";
-  const alternateUrl = canonical.replace(`/${lang}/`, `/${altLang}/`);
+  const canonical = getLocalizedUrl(safeLang, "/servicios/profesionales");
+  const homeUrl = getLocalizedUrl(safeLang, "/");
+  const logoImage = `${getSiteUrl()}/Log_BasCal.PNG`;
+  const professionalItems = t("professionalPage.services.items", { returnObjects: true });
 
   useEffect(() => {
     const pageEl = pageRef.current;
@@ -47,26 +45,67 @@ const ServicesProfessionalPage = () => {
     return () => observer.disconnect();
   }, []);
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: t("professionalPage.seo.title"),
+    description: t("professionalPage.seo.description"),
+    provider: {
+      "@type": "Organization",
+      name: "BasCal",
+      url: homeUrl,
+      logo: logoImage,
+      image: logoImage,
+    },
+    areaServed: ["CO", "EC", "VE", "MX", "US"],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: t("professionalPage.services.title"),
+      itemListElement: (Array.isArray(professionalItems) ? professionalItems : []).map((item) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: item.title,
+          description: Array.isArray(item.points) ? item.points.join(" ") : "",
+        },
+      })),
+    },
+  };
+
+  const breadcrumbList = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: homeUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: t("navbar.servicesItems.professionals"),
+        item: canonical,
+      },
+    ],
+  };
+
+  const keywords =
+    safeLang === "en"
+      ? "MEP engineering design, architectural design services, HVAC design, fire protection design, BIM consulting"
+      : "diseno ingenieria MEP, diseno arquitectonico, diseno HVAC, diseno contra incendios, consultoria BIM";
+
   return (
     <main className="app" id="top" ref={pageRef}>
-      <Helmet>
-        <title>{t("professionalPage.seo.title")}</title>
-        <meta name="description" content={t("professionalPage.seo.description")} />
-        <link rel="canonical" href={canonical} />
-        <link rel="alternate" hrefLang={altLang} href={alternateUrl} />
-        <meta property="og:locale" content={ogLocale} />
-        <meta property="og:locale:alternate" content={alternateLocale} />
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="BasCal" />
-        <meta property="og:title" content={t("professionalPage.seo.title")} />
-        <meta property="og:description" content={t("professionalPage.seo.description")} />
-        <meta property="og:url" content={canonical} />
-        <meta property="og:image" content={ogImage} />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content={t("professionalPage.seo.title")} />
-        <meta name="twitter:description" content={t("professionalPage.seo.description")} />
-        <meta name="twitter:image" content={ogImage} />
-      </Helmet>
+      <SeoHead
+        lang={safeLang}
+        path="/servicios/profesionales"
+        title={t("professionalPage.seo.title")}
+        description={t("professionalPage.seo.description")}
+        keywords={keywords}
+        structuredData={[serviceSchema, breadcrumbList]}
+      />
 
       <Hero
         eyebrow={t("professionalPage.hero.eyebrow")}

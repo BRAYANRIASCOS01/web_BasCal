@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from "react";
-import { NavLink, useLocation, useParams } from "react-router-dom";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { NavLink, useLocation, useNavigate, useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "../../features/translation/LanguageSwitcher.jsx";
 
@@ -36,9 +36,39 @@ const Navbar = ({ logoSrc = "/Log_BasCal.PNG", logoAlt }) => {
   const { t } = useTranslation();
   const { lang = "es" } = useParams();
   const location = useLocation();
+  const navigate = useNavigate();
+  const servicesDropdownRef = useRef(null);
+  const companyDropdownRef = useRef(null);
 
   const disabledLabel = t("navbar.inProgress", "En desarrollo");
   const to = (path) => `/${lang}${path === "/" ? "" : path}`;
+  const homePath = to("/");
+
+  const scrollToTop = () => {
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: prefersReducedMotion ? "auto" : "smooth",
+    });
+  };
+
+  const handleGoHomeClick = (event) => {
+    event.preventDefault();
+    setMobileOpen(false);
+    setMobileServicesOpen(false);
+    setMobileCompanyOpen(false);
+    closeDesktopDropdowns();
+
+    const needsNavigation = location.pathname !== homePath || Boolean(location.search) || Boolean(location.hash);
+    if (needsNavigation) {
+      navigate(homePath);
+      window.setTimeout(scrollToTop, 40);
+      return;
+    }
+
+    scrollToTop();
+  };
 
   const isPathActive = (path) => location.pathname.startsWith(to(path).replace(/\/$/, ""));
   const isServicesSection = useMemo(
@@ -61,9 +91,19 @@ const Navbar = ({ logoSrc = "/Log_BasCal.PNG", logoAlt }) => {
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [mobileCompanyOpen, setMobileCompanyOpen] = useState(false);
 
+  // Desktop dropdowns por click
+  const [desktopServicesOpen, setDesktopServicesOpen] = useState(false);
+  const [desktopCompanyOpen, setDesktopCompanyOpen] = useState(false);
+
+  const closeDesktopDropdowns = () => {
+    setDesktopServicesOpen(false);
+    setDesktopCompanyOpen(false);
+  };
+
   // Cerrar menú al navegar
   useEffect(() => {
     setMobileOpen(false);
+    closeDesktopDropdowns();
   }, [location.pathname]);
 
   // Bloquear scroll cuando el panel móvil está abierto
@@ -76,37 +116,70 @@ const Navbar = ({ logoSrc = "/Log_BasCal.PNG", logoAlt }) => {
     };
   }, [mobileOpen]);
 
+  // Cerrar dropdown desktop al hacer click fuera o presionar Escape
+  useEffect(() => {
+    const handlePointerDown = (event) => {
+      const target = event.target;
+      const isInsideServices = servicesDropdownRef.current?.contains(target);
+      const isInsideCompany = companyDropdownRef.current?.contains(target);
+      if (isInsideServices || isInsideCompany) return;
+      closeDesktopDropdowns();
+    };
+
+    const handleEscape = (event) => {
+      if (event.key === "Escape") closeDesktopDropdowns();
+    };
+
+    document.addEventListener("mousedown", handlePointerDown);
+    document.addEventListener("keydown", handleEscape);
+    return () => {
+      document.removeEventListener("mousedown", handlePointerDown);
+      document.removeEventListener("keydown", handleEscape);
+    };
+  }, []);
+
   return (
     <header className="navbar">
       <div className="navbar__inner">
         {/* Logo */}
         <div className="navbar__logo">
-          <NavLink to={to("/")} className="navbar__brand" aria-label={t("navbar.home")}>
+          <NavLink to={homePath} className="navbar__brand" aria-label={t("navbar.home")} onClick={handleGoHomeClick}>
             <img src={logoSrc} alt={logoAlt || t("navbar.logoAlt")} />
           </NavLink>
         </div>
 
         {/* Desktop nav */}
         <nav className="navbar__center navbar__center--desktop" aria-label="Navegación principal">
-          <NavLink to={to("/")} end className={({ isActive }) => `navbar__link ${isActive ? "active" : ""}`}>
+          <NavLink
+            to={homePath}
+            end
+            className={({ isActive }) => `navbar__link ${isActive ? "active" : ""}`}
+            onClick={handleGoHomeClick}
+          >
             {t("navbar.home")}
           </NavLink>
 
           {/* Servicios dropdown (desktop hover) */}
-          <div className="navbar__dropdown">
+          <div className={`navbar__dropdown ${desktopServicesOpen ? "is-open" : ""}`} ref={servicesDropdownRef}>
             <button
               className={`navbar__link navbar__dropdownBtn ${isServicesSection ? "active" : ""}`}
               type="button"
               aria-haspopup="menu"
+              aria-expanded={desktopServicesOpen}
+              onClick={() => {
+                setDesktopServicesOpen((prev) => !prev);
+                setDesktopCompanyOpen(false);
+              }}
             >
-              {t("navbar.services")} <CaretIcon />
+              {t("navbar.services")} <CaretIcon open={desktopServicesOpen} />
             </button>
 
-            <div className="navbar__menu" role="menu">
+            <div className={`navbar__menu ${desktopServicesOpen ? "is-open" : ""}`} role="menu">
               <NavLink
                 to={to("/servicios/bim")}
                 className={({ isActive }) => `navbar__menuItem ${isActive ? "active" : ""}`}
                 role="menuitem"
+                onClick={closeDesktopDropdowns}
               >
                 {t("navbar.servicesItems.bim")}
               </NavLink>
@@ -115,6 +188,7 @@ const Navbar = ({ logoSrc = "/Log_BasCal.PNG", logoAlt }) => {
                 to={to("/servicios/profesionales")}
                 className={({ isActive }) => `navbar__menuItem ${isActive ? "active" : ""}`}
                 role="menuitem"
+                onClick={closeDesktopDropdowns}
               >
                 {t("navbar.servicesItems.professionals")}
               </NavLink>
@@ -134,21 +208,31 @@ const Navbar = ({ logoSrc = "/Log_BasCal.PNG", logoAlt }) => {
             className={({ isActive }) =>
               `navbar__link ${isActive ? "active" : ""}`
             }
+            onClick={closeDesktopDropdowns}
           >
             {t("navbar.portfolio")}
           </NavLink>
 
           {/* Empresa dropdown (desktop hover) */}
-          <div className="navbar__dropdown">
-            <button className={`navbar__link navbar__dropdownBtn ${isCompanySection ? "active" : ""}`} type="button" aria-haspopup="menu">
-              {t("navbar.company")} <CaretIcon />
+          <div className={`navbar__dropdown ${desktopCompanyOpen ? "is-open" : ""}`} ref={companyDropdownRef}>
+            <button
+              className={`navbar__link navbar__dropdownBtn ${isCompanySection ? "active" : ""}`}
+              type="button"
+              aria-haspopup="menu"
+              aria-expanded={desktopCompanyOpen}
+              onClick={() => {
+                setDesktopCompanyOpen((prev) => !prev);
+                setDesktopServicesOpen(false);
+              }}
+            >
+              {t("navbar.company")} <CaretIcon open={desktopCompanyOpen} />
             </button>
-            <div className="navbar__menu" role="menu">
+            <div className={`navbar__menu ${desktopCompanyOpen ? "is-open" : ""}`} role="menu">
               <span className="navbar__menuItem navbar__menuItem--disabled" aria-disabled="true" data-label={disabledLabel}>
                 {t("navbar.companyItems.faq")}
               </span>
 
-              <NavLink to={to("/empresa/sobre-nosotros")} className="navbar__menuItem" role="menuitem">
+              <NavLink to={to("/empresa/sobre-nosotros")} className="navbar__menuItem" role="menuitem" onClick={closeDesktopDropdowns}>
                 {t("navbar.companyItems.about")}
               </NavLink>
 
@@ -162,7 +246,7 @@ const Navbar = ({ logoSrc = "/Log_BasCal.PNG", logoAlt }) => {
         {/* Desktop acciones */}
         <div className="navbar__actions navbar__actions--desktop">
           <LanguageSwitcher />
-          <NavLink to={to("/contacto")} className="navbar__contact">
+          <NavLink to={to("/contacto")} className="navbar__contact" onClick={closeDesktopDropdowns}>
             {t("navbar.contact")}
           </NavLink>
         </div>
@@ -190,7 +274,12 @@ const Navbar = ({ logoSrc = "/Log_BasCal.PNG", logoAlt }) => {
           </div>
 
           <div className="navbar__panelBody">
-            <NavLink to={to("/")} end className={({ isActive }) => `navbar__mLink ${isActive ? "active" : ""}`}>
+            <NavLink
+              to={homePath}
+              end
+              className={({ isActive }) => `navbar__mLink ${isActive ? "active" : ""}`}
+              onClick={handleGoHomeClick}
+            >
               {t("navbar.home")}
             </NavLink>
 
