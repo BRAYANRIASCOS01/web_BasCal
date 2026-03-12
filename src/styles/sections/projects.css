@@ -156,7 +156,7 @@
 
   .projects__map {
     aspect-ratio: 4 / 3;
-    min-height: 280px;
+    min-height: 240px;
   }
 }
 

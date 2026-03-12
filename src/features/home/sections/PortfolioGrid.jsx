@@ -64,7 +64,6 @@ const PortfolioGrid = () => {
       return true;
     });
   }, [projects, activeCategory]);
-  const hasFilteredProjects = filteredProjects.length > 0;
 
   useEffect(() => {
     const el = sectionRef.current;
@@ -404,176 +403,154 @@ const PortfolioGrid = () => {
         </div>
 
         <div className="portfolio-page__grid">
-          {hasFilteredProjects ? (
-            filteredProjects.map((project, index) => {
-              const image = projectImages[project.id] || gasPlantaImage;
-              const highlights = Array.isArray(project.services)
-                ? project.services.slice(0, 4).map((service) => ({
-                    label: resolveServiceLabel(service),
-                    icon: resolveServiceIcon(service),
-                    tooltip: service,
-                  }))
-                : [];
-              const isExpanded = expandedId === project.id;
-              const isVisible = visibleIds.includes(project.id);
-              const categoryKey = project.category
-                ? normalizeText(project.category).replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")
-                : "";
+          {filteredProjects.map((project, index) => {
+            const image = projectImages[project.id] || gasPlantaImage;
+            const highlights = Array.isArray(project.services)
+              ? project.services.slice(0, 4).map((service) => ({
+                  label: resolveServiceLabel(service),
+                  icon: resolveServiceIcon(service),
+                  tooltip: service,
+                }))
+              : [];
+            const isExpanded = expandedId === project.id;
+            const isVisible = visibleIds.includes(project.id);
+            const categoryKey = project.category
+              ? normalizeText(project.category).replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")
+              : "";
 
-              return (
-                <article
-                  key={project.id || project.title}
-                  className={`portfolio-card ${isVisible ? "is-visible" : ""} ${isExpanded ? "is-expanded" : ""}`}
-                  data-animate
-                  data-card-id={project.id}
-                  style={{ transitionDelay: `${0.08 + index * 0.08}s` }}
-                  ref={(el) => {
-                    if (el) cardRefs.current[project.id] = el;
-                  }}
-                >
-                  <div className="portfolio-card__media">
-                    <img src={image} alt={project.title} loading="lazy" decoding="async" />
-                    <span className="portfolio-card__icon-pill" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" focusable="false">
-                        <path
-                          d="M6 19V8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v11M5 19h14M9 8V5h6v3"
-                          stroke="currentColor"
-                          strokeWidth="1.4"
-                          fill="none"
-                          strokeLinecap="round"
-                        />
-                        <path d="M9 12h6M9 15h6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
-                      </svg>
+            return (
+              <article
+                key={project.id || project.title}
+                className={`portfolio-card ${isVisible ? "is-visible" : ""} ${isExpanded ? "is-expanded" : ""}`}
+                data-animate
+                data-card-id={project.id}
+                style={{ transitionDelay: `${0.08 + index * 0.08}s` }}
+                ref={(el) => {
+                  if (el) cardRefs.current[project.id] = el;
+                }}
+              >
+                <div className="portfolio-card__media">
+                  <img src={image} alt={project.title} loading="lazy" decoding="async" />
+                  <span className="portfolio-card__icon-pill" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" focusable="false">
+                      <path
+                        d="M6 19V8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v11M5 19h14M9 8V5h6v3"
+                        stroke="currentColor"
+                        strokeWidth="1.4"
+                        fill="none"
+                        strokeLinecap="round"
+                      />
+                      <path d="M9 12h6M9 15h6" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+                    </svg>
+                  </span>
+                  {project.category && (
+                    <span className="portfolio-card__badge" data-category={categoryKey}>
+                      {project.category}
                     </span>
-                    {project.category && (
-                      <span className="portfolio-card__badge" data-category={categoryKey}>
-                        {project.category}
+                  )}
+                </div>
+                <div className="portfolio-card__body">
+                  <h3 className="portfolio-card__title">{project.title}</h3>
+                  {project.location && (
+                    <p className="portfolio-card__subtitle portfolio-card__location">
+                      <span className="portfolio-card__location-icon" aria-hidden="true">
+                        {iconMap.location}
                       </span>
-                    )}
-                  </div>
-                  <div className="portfolio-card__body">
-                    <h3 className="portfolio-card__title">{project.title}</h3>
-                    {project.location && (
-                      <p className="portfolio-card__subtitle portfolio-card__location">
-                        <span className="portfolio-card__location-icon" aria-hidden="true">
-                          {iconMap.location}
-                        </span>
-                        <span>{project.location}</span>
-                      </p>
-                    )}
-                    {project.type && <p className="portfolio-card__meta-line">{project.type}</p>}
-                    {project.scale && <p className="portfolio-card__meta-line">{project.scale}</p>}
+                      <span>{project.location}</span>
+                    </p>
+                  )}
+                  {project.type && <p className="portfolio-card__meta-line">{project.type}</p>}
+                  {project.scale && <p className="portfolio-card__meta-line">{project.scale}</p>}
 
-                    {highlights.length > 0 && (
-                      <div className="portfolio-card__highlights" aria-label={metaLabel.services}>
-                        {highlights.map((item, index) => {
-                          const tooltipText = item.tooltip;
-                          const showTooltip = Boolean(tooltipText);
-                          return (
-                            <div
-                              className={`portfolio-card__highlight ${showTooltip ? "has-tooltip" : ""}`}
-                              key={`${item.label}-${index}`}
-                              data-tooltip={showTooltip ? tooltipText : undefined}
-                              tabIndex={showTooltip ? 0 : undefined}
-                              aria-label={showTooltip ? tooltipText : undefined}
-                            >
-                              <span className="portfolio-card__highlight-icon" aria-hidden="true">
-                                {item.icon}
-                              </span>
-                              <span>{item.label}</span>
-                            </div>
-                          );
-                        })}
-                      </div>
-                    )}
-
-                    {isExpanded && (
-                      <div className="portfolio-card__detail">
-                        {project.description && (
-                          <>
-                            <p className="portfolio-card__detail-title">{t("portfolioPage.card.detailTitle")}</p>
-                            <p className="portfolio-card__detail-text">{project.description}</p>
-                          </>
-                        )}
-                        {Array.isArray(project.services) && project.services.length > 0 && (
-                          <div className="portfolio-card__detail-block">
-                            <p className="portfolio-card__detail-label">{metaLabel.services}</p>
-                            <ul>
-                              {project.services.map((service) => (
-                                <li key={service}>{service}</li>
-                              ))}
-                            </ul>
+                  {highlights.length > 0 && (
+                    <div className="portfolio-card__highlights" aria-label={metaLabel.services}>
+                      {highlights.map((item, index) => {
+                        const tooltipText = item.tooltip;
+                        const showTooltip = Boolean(tooltipText);
+                        return (
+                          <div
+                            className={`portfolio-card__highlight ${showTooltip ? "has-tooltip" : ""}`}
+                            key={`${item.label}-${index}`}
+                            data-tooltip={showTooltip ? tooltipText : undefined}
+                            tabIndex={showTooltip ? 0 : undefined}
+                            aria-label={showTooltip ? tooltipText : undefined}
+                          >
+                            <span className="portfolio-card__highlight-icon" aria-hidden="true">
+                              {item.icon}
+                            </span>
+                            <span>{item.label}</span>
                           </div>
-                        )}
-                        {Array.isArray(project.software) && project.software.length > 0 && (
-                          <div className="portfolio-card__detail-block">
-                            <p className="portfolio-card__detail-label">{metaLabel.software}</p>
-                            <ul>
-                              {project.software.map((tool) => (
-                                <li key={tool}>{tool}</li>
-                              ))}
-                            </ul>
-                          </div>
-                        )}
-                      </div>
-                    )}
+                        );
+                      })}
+                    </div>
+                  )}
 
-                    <button
-                      type="button"
-                      className={`portfolio-card__cta ${isExpanded ? "is-expanded" : ""}`}
-                      aria-expanded={isExpanded}
-                      onClick={() => {
-                        setExpandedId((prev) => {
-                          const next = prev === project.id ? null : project.id;
-                          if (next === null) {
-                            const restoreTo = lastScrollRef.current;
-                            if (typeof window !== "undefined" && typeof restoreTo === "number") {
-                              requestAnimationFrame(() => {
-                                window.scrollTo({ top: restoreTo, behavior: "smooth" });
-                              });
-                            }
-                            return null;
-                          }
-                          if (typeof window !== "undefined") {
-                            lastScrollRef.current = window.scrollY;
-                          }
-                          if (cardRefs.current[project.id]) {
+                  {isExpanded && (
+                    <div className="portfolio-card__detail">
+                      {project.description && (
+                        <>
+                          <p className="portfolio-card__detail-title">{t("portfolioPage.card.detailTitle")}</p>
+                          <p className="portfolio-card__detail-text">{project.description}</p>
+                        </>
+                      )}
+                      {Array.isArray(project.services) && project.services.length > 0 && (
+                        <div className="portfolio-card__detail-block">
+                          <p className="portfolio-card__detail-label">{metaLabel.services}</p>
+                          <ul>
+                            {project.services.map((service) => (
+                              <li key={service}>{service}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                      {Array.isArray(project.software) && project.software.length > 0 && (
+                        <div className="portfolio-card__detail-block">
+                          <p className="portfolio-card__detail-label">{metaLabel.software}</p>
+                          <ul>
+                            {project.software.map((tool) => (
+                              <li key={tool}>{tool}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
+                  )}
+
+                  <button
+                    type="button"
+                    className={`portfolio-card__cta ${isExpanded ? "is-expanded" : ""}`}
+                    aria-expanded={isExpanded}
+                    onClick={() => {
+                      setExpandedId((prev) => {
+                        const next = prev === project.id ? null : project.id;
+                        if (next === null) {
+                          const restoreTo = lastScrollRef.current;
+                          if (typeof window !== "undefined" && typeof restoreTo === "number") {
                             requestAnimationFrame(() => {
-                              cardRefs.current[project.id]?.scrollIntoView({ behavior: "smooth", block: "center" });
+                              window.scrollTo({ top: restoreTo, behavior: "smooth" });
                             });
                           }
-                          return next;
-                        });
-                      }}
-                    >
-                      {isExpanded ? t("portfolioPage.card.detailClose") : t("portfolioPage.card.cta", "Ver más")}
-                    </button>
-                  </div>
-                </article>
-              );
-            })
-          ) : (
-            <article className="portfolio-empty" role="status" aria-live="polite">
-              <h3 className="portfolio-empty__title">{t("portfolioPage.emptyState.title", "Portafolio en construcción")}</h3>
-              <p className="portfolio-empty__text">
-                {activeCategory === "all"
-                  ? t(
-                      "portfolioPage.emptyState.textAll",
-                      "Estamos actualizando esta sección y pronto publicaremos nuevos proyectos."
-                    )
-                  : t(
-                      "portfolioPage.emptyState.textCategory",
-                      "No hay proyectos publicados en {{category}} por ahora. Estamos preparando nuevos casos.",
-                      { category: activeCategory }
-                    )}
-              </p>
-              {activeCategory !== "all" && (
-                <button type="button" className="portfolio-empty__cta" onClick={() => setActiveCategory("all")}>
-                  {t("portfolioPage.emptyState.ctaAll", "Ver todos")}
-                </button>
-              )}
-            </article>
-          )}
+                          return null;
+                        }
+                        if (typeof window !== "undefined") {
+                          lastScrollRef.current = window.scrollY;
+                        }
+                        if (cardRefs.current[project.id]) {
+                          requestAnimationFrame(() => {
+                            cardRefs.current[project.id]?.scrollIntoView({ behavior: "smooth", block: "center" });
+                          });
+                        }
+                        return next;
+                      });
+                    }}
+                  >
+                    {isExpanded ? t("portfolioPage.card.detailClose") : t("portfolioPage.card.cta", "Ver más")}
+                  </button>
+
+                </div>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>

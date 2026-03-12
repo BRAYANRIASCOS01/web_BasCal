@@ -270,12 +270,6 @@
       "searchPlaceholder": "Search by name, location, or type",
       "categories": ["Education", "Hospitality", "Infrastructure", "Mixed-use", "Recreation", "Residential", "Healthcare", "Technology - Mission Critical"]
     },
-    "emptyState": {
-      "title": "Portfolio under construction",
-      "textAll": "We are updating this section and will publish new projects soon.",
-      "textCategory": "There are no published projects in {{category}} yet. We are preparing new case studies.",
-      "ctaAll": "View all"
-    },
     "meta": {
       "type": "Type",
       "location": "Location",
@@ -408,6 +402,18 @@
     "spanish": "ES",
     "english": "EN"
   },
+
+
+  "contacthero": {
+  "hero": {
+    "eyebrow": "BasCal Engineering & Construction",
+    "title": "Let’s talk about your project",
+    "subtitle": "Tell us what you need and we’ll get back to you as soon as possible.",
+   
+    "cta": "View services"
+  }
+},
+
   "bimPage": {
     "seo": {
       "title": "BIM/VDC Services | BasCal coordination and modeling",
@@ -489,23 +495,6 @@
             "body": "One of the toughest goals is coordinating systems across disciplines on site. We lead BIM coordination, integrating architectural, structural, and MEP models to eliminate clashes, cut rework, and ensure efficient execution.",
             "body2": "We define and enforce BIM standards through the BEP, aligning all project stakeholders to deliver coordinated, construction-ready models with a focus on constructability, schedule, and cost control.",
             "softwares": ["Autodesk Revit", "Autodesk Navisworks or Revizto", "Autodesk Construction Cloud (ACC)"]
-          }
-        },
-        {
-          "id": "bim-site-project-management",
-          "title": "BIM On Site - Project Management",
-          "text": "Through collaborative work with your site, cost, and schedule teams, we connect the model with the data needed to interoperate with your processes.",
-          "detail": {
-            "eyebrow": "BIM ON SITE DETAIL",
-            "title": "BIM oversight and collaborative project management",
-            "body": "We provide BIM oversight services, working hand in hand with your team in a collaborative environment. We support and audit project information throughout its full lifecycle, actively getting involved to meet our clients' needs.",
-            "points": [
-              "Timely review and validation of BIM inputs",
-              "Interdisciplinary audits in each project phase",
-              "Quality control of BIM deliverables",
-              "Early identification and assessment of risks",
-              "Technical support for the site team"
-            ]
           }
         },
         {
@@ -598,5 +587,20 @@
       "construction": "Construction",
       "staff": "Staff Augmentation"
     }
-  }
+  },
+  "contactInfo": {
+  "pageTitle": "Contact",
+  "pageSubtitle": "Tell us about your project and we’ll get back to you as soon as possible.",
+  "sectionTitle": "Let’s talk",
+  "sectionSubtitle": "Fill out the form and we’ll contact you within 24–48 business hours.",
+  "infoTitle": "Contact information",
+  "infoSubtitle": "You can also reach us directly.",
+  "emailLabel": "Email",
+  "locationLabel": "Location",
+  "responseLabel": "Response time",
+  "responseValue": "24–48 business hours",
+  "coverageTitle": "Project coverage",
+   "btnwhats": "Would you prefer to contact us directly?"
+}
+
 }

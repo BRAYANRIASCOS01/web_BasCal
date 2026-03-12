@@ -1,43 +1,20 @@
-import { useTranslation } from "react-i18next";
-import { useParams } from "react-router-dom";
+import React from "react";
 import ScrollTop from "../../../shared/components/ScrollTop.jsx";
 import WhatsAppButton from "../../../shared/components/WhatsAppButton.jsx";
-import SeoHead from "../../../shared/components/SeoHead.jsx";
-import { normalizeLang } from "../../../shared/seo/seo-utils.js";
 
 const ServicesConstructionPage = () => {
-  const { t } = useTranslation();
-  const { lang = "es" } = useParams();
-  const safeLang = normalizeLang(lang);
-
-  const title =
-    safeLang === "en"
-      ? "Construction Services | BasCal (In development)"
-      : "Servicios de Construcción | BasCal (En desarrollo)";
-  const description =
-    safeLang === "en"
-      ? "This page is currently under development."
-      : "Esta página se encuentra en desarrollo.";
-
-  return (
-    <main className="app" id="top">
-      <SeoHead
-        lang={safeLang}
-        path="/servicios/construccion"
-        title={title}
-        description={description}
-        noindex
-      />
-      <h1>{safeLang === "en" ? "Construction Services" : "Servicios de Construcción"}</h1>
-      <p>{safeLang === "en" ? "Page under development." : "Página en desarrollo."}</p>
-      <ScrollTop threshold={260} label={t("home.scrollTop", "Subir")} />
-      <WhatsAppButton
-        phone="573001112233"
-        message={t("home.whatsappMessage", "Hola, quiero más información sobre servicios BIM.")}
-        label={t("home.chatLabel", "Chat")}
-      />
-    </main>
-  );
+    return (
+        <main className="app" id="top">
+            <h1>Servicios de Construcción</h1>
+            <p>Bienvenido a la página de servicios de construcción.</p>
+            <ScrollTop threshold={260} label="Subir" />
+            <WhatsAppButton
+              phone="573001112233"
+              message="Hola, quiero más información sobre servicios de construcción."
+              label="Chat"
+            />
+        </main>
+    );
 };
 
 export default ServicesConstructionPage;

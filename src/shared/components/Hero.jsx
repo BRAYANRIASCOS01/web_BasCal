@@ -17,7 +17,6 @@ const Hero = ({
 
   const resolvedEyebrow = eyebrow ?? t("home.eyebrow");
   const resolvedTitle = title ?? t("home.heroTitle");
-  const resolvedTitleCta = title == null ? t("home.heroTitleCta", "") : "";
   const resolvedSubtitle = subtitle ?? t("home.heroSubtitle");
   const resolvedCtaLabel = ctaLabel ?? t("home.secondaryCta");
   const resolvedCtaAria = ctaAriaLabel ?? resolvedCtaLabel;
@@ -51,9 +50,12 @@ const Hero = ({
   return (
     <header className={wrapperClass} ref={sectionRef} id={id}>
       <div className="hero__bg" aria-hidden="true">
-        <span className="hero__photo hero__photo--arch" />
-        <span className="hero__photo hero__photo--offices" />
-        <span className="hero__photo hero__photo--mesh" />
+        <span className="hero__photo hero__photo--union-2" />
+        <span className="hero__photo hero__photo--grua" />
+        <span className="hero__photo hero__photo--viga" />
+         <span className="hero__photo hero__photo--tube" />
+         <span className="hero__photo hero__photo--union" />
+         <span className="hero__photo hero__photo--building" />
         <div className="hero__grid">
           <span className="hero__tile" />
           <span className="hero__tile" />
@@ -91,8 +93,7 @@ const Hero = ({
           {resolvedEyebrow}
         </p>
         <h1 className="hero__title" data-animate style={{ transitionDelay: "0.1s" }}>
-          <span className="hero__title-main">{resolvedTitle}</span>
-          {resolvedTitleCta && <span className="hero__title-cta">{resolvedTitleCta}</span>}
+          {resolvedTitle}
           {accent && <span className="hero__accent">{accent}</span>}
         </h1>
         <p className="hero__subtitle text-muted" data-animate style={{ transitionDelay: "0.15s" }}>

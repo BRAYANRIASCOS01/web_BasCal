@@ -14,7 +14,6 @@ import PortafolioPage from "../features/home/pages/PortfolioPage.jsx";
 import EmpresaFAQPage from "../features/home/pages/EmpresaFAQPage.jsx";
 import ContactPage from "../features/home/pages/ContactPage.jsx";
 import EmpresaSobreNosotros from "../features/home/pages/EmpresaSobreNosotros.jsx";
-import EmpresaBlogPage from "../features/home/pages/EmpresaBlogPage.jsx";
 
 const SUPPORTED_LANGUAGES = ["es", "en"];
 const DEFAULT_LANG = "es";
@@ -80,7 +79,7 @@ const AppRoutes = () => (
       {/* Empresa */}
       <Route path="empresa/faq" element={<EmpresaFAQPage/>} />
       <Route path="empresa/sobre-nosotros" element={<EmpresaSobreNosotros/>} />
-      <Route path="empresa/blog" element={<EmpresaBlogPage />} />
+      <Route path="empresa/blog" element={<div style={{ padding: 24 }}>Blog</div>} />
 
       {/* Contacto */}
       <Route path="contacto" element={<ContactPage />} />

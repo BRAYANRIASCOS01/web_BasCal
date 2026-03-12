@@ -1,0 +1,170 @@
+    /* HERO (versión pequeña para contacto) */
+.hero--contact {
+  min-height: 22vh;
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-3xl) 0;
+}
+
+/* Ajuste de tamaño del título para no competir con el form */
+.hero--contact .hero__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+/* Header centrado estilo “Servicios BIM” */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.section-header__title {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  margin: 0;
+  color: #1f2f5c;
+}
+
+.section-header__subtitle {
+  max-width: 900px;
+  margin: 14px auto 0;
+  color: var(--color-muted);
+  line-height: 1.7;
+}
+
+.section-header__divider {
+  width: 220px;
+  height: 6px;
+  margin: 16px auto 0;
+  border-radius: 999px;
+  background: linear-gradient(to right, #0b1c4a 0%, #0b1c4a 30%, #1f2f5c 30%, #1f2f5c 70%, #0b1c4a 70%, #0b1c4a 100%);
+}
+
+/* Layout 2 columnas (card + card) */
+.contact-layout {
+ display: grid;
+  gap: var(--spacing-xl);
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .contact-layout {
+    grid-template-columns: 1.4fr 1fr;
+   
+  }
+  .contact-info-card {
+    margin: 5rem 0;
+  }
+}
+
+/* Cards con look como tu ejemplo */
+.contact-card{
+ padding: var(--spacing-3xl);
+
+}
+
+.contact-info-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-3xl);
+}
+@media (max-width: 1023px) {
+  .contact-info-card {
+    margin: 0;
+  }
+}
+
+/* Card info */
+.contact-info-card__head {
+  margin-bottom: 18px;
+}
+
+.contact-info-card__title {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  color: #111827;
+}
+
+.contact-info-card__muted {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.contact-info-card__item {
+  padding: 14px 0;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.contact-info-card__item:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.contact-info-card__label {
+  margin: 0 0 6px 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(0,0,0,0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.contact-info-card__value {
+  margin: 0;
+  color: #111827;
+  text-decoration: none;
+}
+
+.contact-info-card__value:hover {
+  text-decoration: underline;
+}
+
+.contact-info-card__trust {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  color: var(--color-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+@media (max-width: 640px) {
+  .section-header__divider {
+    width: 160px;
+    height: 5px;
+  }
+
+  .contact-card,
+  .contact-info-card {
+    padding: var(--spacing-xl);
+    border-radius: 18px;
+  }
+}
+.contact-whatsapp {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.contact-whatsapp__text {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: var(--color-muted);
+}
+
+.contact-whatsapp__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #25d366;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 10px 22px rgba(37, 211, 102, 0.28);
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+
+.contact-whatsapp__button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(37, 211, 102, 0.36);
+}
