@@ -393,7 +393,13 @@
     "card": {
       "cta": "Ver más",
       "detailClose": "Cerrar",
-      "detailTitle": "Descripción del proyecto"
+      "detailTitle": "Descripción del proyecto",
+      "carouselLabel": "Galería del proyecto {{project}}",
+      "imageAlt": "Vista {{index}} del proyecto {{project}}",
+      "prevImage": "Ver imagen anterior de {{project}}",
+      "nextImage": "Ver imagen siguiente de {{project}}",
+      "goToImage": "Ir a la imagen {{index}} del proyecto {{project}}",
+      "slideCounter": "{{current}} / {{total}}"
     },
     "empty": {
       "title": "Estamos trabajando en ello",

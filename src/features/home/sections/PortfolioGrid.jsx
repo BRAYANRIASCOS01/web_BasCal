@@ -1,12 +1,20 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import bimMedImage from "../../../assets/BIM-MED.jpeg";
 import gasPlantaImage from "../../../assets/GAS_planta.webp";
 import gasPlantaNavarraImage from "../../../assets/GAS_Planta-2.webp";
 import rciCuartoBombasImage from "../../../assets/RCI_CUARTO BOMBAS.webp";
+import rciCuartoBombasAltImage from "../../../assets/RCI_CUARTO BOMBAS_2.webp";
 import scanToBimAirportImage from "../../../assets/image (11).webp";
 import rciRedPerimetralImage from "../../../assets/RCI, Red Perimetral.webp";
+import rciEdificioImage from "../../../assets/RCI, Edf 6.1.webp";
 import scanToBimHospitalChileImage from "../../../assets/RVT_Image_01.webp";
+import scanToBimHospitalChileAltImage from "../../../assets/RVT_Imagen_03.webp";
 import shopDrawingsHvacUsImage from "../../../assets/Image_01.webp";
+import sdaPlantaImage from "../../../assets/SDA_Planta.webp";
+import sdaPlanImage from "../../../assets/SDA_PLAN.webp";
+import laserScanningImage from "../../../assets/Laser_Scanning.webp";
+import scanToBimCaptureImage from "../../../assets/Screenshot 2026-01-27 154818.png";
 
 const normalizeText = (text) =>
   text
@@ -14,6 +22,23 @@ const normalizeText = (text) =>
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase()
     .trim();
+
+const wrapIndex = (index, total) => {
+  if (!Number.isFinite(total) || total <= 0) return 0;
+  return ((index % total) + total) % total;
+};
+
+const fallbackGallery = [gasPlantaImage];
+
+const projectGalleries = {
+  "cdi-barrio-nuevo": [gasPlantaImage, sdaPlantaImage, rciEdificioImage],
+  "cdi-navarra": [gasPlantaNavarraImage, sdaPlanImage, rciCuartoBombasAltImage],
+  "megacolegio-bello": [rciCuartoBombasImage, rciCuartoBombasAltImage, rciEdificioImage],
+  "scan-to-bim-airport": [scanToBimAirportImage, laserScanningImage, scanToBimCaptureImage],
+  "pao-bello": [rciRedPerimetralImage, rciEdificioImage, sdaPlanImage],
+  "scan-to-bim-hospital-chile": [scanToBimHospitalChileImage, scanToBimHospitalChileAltImage, laserScanningImage],
+  "shop-drawings-hvac-us": [shopDrawingsHvacUsImage, bimMedImage, scanToBimCaptureImage],
+};
 
 const PortfolioGrid = () => {
   const { t, i18n } = useTranslation();
@@ -25,19 +50,6 @@ const PortfolioGrid = () => {
     const raw = t("portfolioPage.projects", { returnObjects: true });
     return Array.isArray(raw) ? raw : [];
   }, [t, i18n.language]);
-
-  const projectImages = useMemo(
-    () => ({
-      "cdi-barrio-nuevo": gasPlantaImage,
-      "cdi-navarra": gasPlantaNavarraImage,
-      "megacolegio-bello": rciCuartoBombasImage,
-      "scan-to-bim-airport": scanToBimAirportImage,
-      "pao-bello": rciRedPerimetralImage,
-      "scan-to-bim-hospital-chile": scanToBimHospitalChileImage,
-      "shop-drawings-hvac-us": shopDrawingsHvacUsImage,
-    }),
-    []
-  );
 
   const categories = useMemo(() => {
     const fromLocale = t("portfolioPage.filters.categories", { returnObjects: true });
@@ -51,11 +63,13 @@ const PortfolioGrid = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [expandedId, setExpandedId] = useState(null);
   const [visibleIds, setVisibleIds] = useState([]);
+  const [activeSlides, setActiveSlides] = useState({});
 
   useEffect(() => {
     setActiveCategory("all");
     setExpandedId(null);
     setVisibleIds([]);
+    setActiveSlides({});
   }, [i18n.language]);
 
   const filteredProjects = useMemo(() => {
@@ -96,6 +110,15 @@ const PortfolioGrid = () => {
     scale: t("portfolioPage.meta.scale"),
     services: t("portfolioPage.meta.services"),
     software: t("portfolioPage.meta.software"),
+  };
+
+  const changeProjectSlide = (projectId, totalSlides, nextIndex) => {
+    if (totalSlides <= 1) return;
+
+    setActiveSlides((prev) => ({
+      ...prev,
+      [projectId]: wrapIndex(nextIndex, totalSlides),
+    }));
   };
 
   const iconMap = {
@@ -443,7 +466,7 @@ const PortfolioGrid = () => {
             </article>
           ) : (
             filteredProjects.map((project, index) => {
-            const image = projectImages[project.id] || gasPlantaImage;
+            const slides = projectGalleries[project.id] || fallbackGallery;
             const highlights = Array.isArray(project.services)
               ? project.services.slice(0, 4).map((service) => ({
                   label: resolveServiceLabel(service),
@@ -453,6 +476,8 @@ const PortfolioGrid = () => {
               : [];
             const isExpanded = expandedId === project.id;
             const isVisible = visibleIds.includes(project.id);
+            const totalSlides = slides.length;
+            const activeSlide = wrapIndex(activeSlides[project.id] ?? 0, totalSlides);
             const categoryKey = project.category
               ? normalizeText(project.category).replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")
               : "";
@@ -469,7 +494,103 @@ const PortfolioGrid = () => {
                   }}
                 >
                   <div className="portfolio-card__media">
-                    <img src={image} alt={project.title} loading="lazy" decoding="async" />
+                    <div
+                      className={`portfolio-card__carousel ${totalSlides > 1 ? "has-controls" : ""}`}
+                      aria-roledescription="carousel"
+                      aria-label={t("portfolioPage.card.carouselLabel", { project: project.title })}
+                    >
+                      <div
+                        className="portfolio-card__carousel-track"
+                        style={{ transform: `translateX(-${activeSlide * 100}%)` }}
+                      >
+                        {slides.map((image, slideIndex) => (
+                          <div
+                            className="portfolio-card__slide"
+                            key={`${project.id}-${slideIndex}`}
+                            aria-hidden={activeSlide !== slideIndex}
+                          >
+                            <img
+                              src={image}
+                              alt={t("portfolioPage.card.imageAlt", {
+                                project: project.title,
+                                index: slideIndex + 1,
+                              })}
+                              loading="lazy"
+                              decoding="async"
+                              draggable="false"
+                            />
+                          </div>
+                        ))}
+                      </div>
+
+                      {totalSlides > 1 && (
+                        <>
+                          <span className="portfolio-card__media-count" aria-live="polite">
+                            {t("portfolioPage.card.slideCounter", {
+                              current: activeSlide + 1,
+                              total: totalSlides,
+                            })}
+                          </span>
+
+                          <button
+                            type="button"
+                            className="portfolio-card__carousel-control portfolio-card__carousel-control--prev"
+                            onClick={() => changeProjectSlide(project.id, totalSlides, activeSlide - 1)}
+                            aria-label={t("portfolioPage.card.prevImage", { project: project.title })}
+                          >
+                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                              <path
+                                d="M14.5 6.5 9 12l5.5 5.5"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="1.8"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              />
+                            </svg>
+                          </button>
+
+                          <button
+                            type="button"
+                            className="portfolio-card__carousel-control portfolio-card__carousel-control--next"
+                            onClick={() => changeProjectSlide(project.id, totalSlides, activeSlide + 1)}
+                            aria-label={t("portfolioPage.card.nextImage", { project: project.title })}
+                          >
+                            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                              <path
+                                d="M9.5 6.5 15 12l-5.5 5.5"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="1.8"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                              />
+                            </svg>
+                          </button>
+
+                          <div className="portfolio-card__carousel-dots" aria-label={t("portfolioPage.card.carouselLabel", { project: project.title })}>
+                            {slides.map((_, slideIndex) => {
+                              const isActive = activeSlide === slideIndex;
+
+                              return (
+                                <button
+                                  type="button"
+                                  key={`${project.id}-dot-${slideIndex}`}
+                                  className={`portfolio-card__carousel-dot ${isActive ? "is-active" : ""}`}
+                                  onClick={() => changeProjectSlide(project.id, totalSlides, slideIndex)}
+                                  aria-label={t("portfolioPage.card.goToImage", {
+                                    project: project.title,
+                                    index: slideIndex + 1,
+                                  })}
+                                  aria-pressed={isActive}
+                                />
+                              );
+                            })}
+                          </div>
+                        </>
+                      )}
+                    </div>
+
                     <span className="portfolio-card__icon-pill" aria-hidden="true">
                       <svg viewBox="0 0 24 24" focusable="false">
                         <path
