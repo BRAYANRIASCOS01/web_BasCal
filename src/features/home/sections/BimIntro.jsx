@@ -7,7 +7,7 @@ const BimIntro = () => {
     <section className="section bim-intro">
       <div className="container bim-intro__inner" data-animate>
         <div className="bim-intro__content">
-          <p className="bim-intro__eyebrow">{t("bimPage.services.eyebrow", "Servicios BIM & VDC")}</p>
+          <p className="bim-intro__eyebrow">{t("bimPage.services.eyebrow", "Servicios BIM y VDC")}</p>
           <h2 className="section-title">{t("bimPage.intro.title")}</h2>
           <p className="section-subtitle text-muted">{t("bimPage.intro.text")}</p>
           <div className="bim-intro__meta">
@@ -27,7 +27,7 @@ const BimIntro = () => {
           <div className="bim-intro__media-frame">
             <iframe
               src="https://www.youtube.com/embed/VRXwJnaZ22U?si=lvCTLCH4HRKK3nEF&start=1"
-              title="YouTube video player"
+              title={t("bimPage.intro.videoTitle", "Video introductorio de servicios BIM")}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"

@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { useMemo, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import bimAccentImage from "../../../assets/bim2.webp";
 import scanToBimImage from "../../../assets/Laser_Scanning.webp";
 import mepProjectImage1280 from "../../../assets/VISTA REDES_page-0001-1280.webp";
@@ -8,7 +8,8 @@ import mepProjectImage768 from "../../../assets/VISTA REDES_page-0001-768.webp";
 
 const ServicesBim = () => {
   const { t } = useTranslation();
-  const cards = useMemo(() => t("bimPage.services.cards", { returnObjects: true }), [t]);
+  const cardsRaw = t("bimPage.services.cards", { returnObjects: true });
+  const cards = Array.isArray(cardsRaw) ? cardsRaw : [];
   const [expandedId, setExpandedId] = useState(null);
   const hasExpanded = Boolean(expandedId);
   const cardRefs = useRef({});
@@ -1412,7 +1413,7 @@ l-193 115 0 1019 0 1018 58 25 c109 48 247 111 506 230 l261 121 3 -1450 c1
                   </div>
                   {card.detail.softwares && (
                     <div className="bim-card__detail-soft">
-                      <p className="bim-card__detail-eyebrow">{t("bimPage.services.softwaresLabel", "Softwares")}</p>
+                      <p className="bim-card__detail-eyebrow">{t("bimPage.services.softwaresLabel", "Software utilizado")}</p>
                       <ul>
                         {card.detail.softwares.map((tool) => (
                           <li key={tool}>{tool}</li>

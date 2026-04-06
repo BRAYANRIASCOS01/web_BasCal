@@ -466,10 +466,13 @@
     },
     "intro": {
       "title": "BIM Services",
-      "text": "We implement BIM to coordinate architectural, structural, and MEP disciplines, delivering construction-ready models that cut clashes and optimize project time and cost."
+      "text": "We implement BIM to coordinate architectural, structural, and MEP disciplines, delivering construction-ready models that cut clashes and optimize project time and cost.",
+      "videoTitle": "BIM services introduction video"
     },
     "services": {
+      "eyebrow": "BIM and VDC Services",
       "cta": "See more",
+      "softwaresLabel": "Software used",
       "cards": [
         {
           "id": "mep",

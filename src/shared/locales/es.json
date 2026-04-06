@@ -467,24 +467,27 @@
     },
     "intro": {
       "title": "Servicios BIM",
-      "text": "Implementamos BIM para coordinar disciplinas arquitectónicas, estructurales y MEP, entregando modelos listos para construcción, reduciendo interferencias y optimizando tiempos y costos del proyecto."
+      "text": "Implementamos BIM para coordinar disciplinas arquitectónicas, estructurales y MEP, entregando modelos listos para construcción, reduciendo interferencias y optimizando tiempos y costos del proyecto.",
+      "videoTitle": "Video introductorio de servicios BIM"
     },
     "services": {
+      "eyebrow": "Servicios BIM y VDC",
       "cta": "Ver más",
+      "softwaresLabel": "Software utilizado",
       "cards": [
         {
           "id": "mep",
-          "title": "MEP BIM modeling & Digital Fabrication",
+          "title": "Modelado BIM MEP y fabricación digital",
           "text": "Modelado BIM de sistemas mecánicos, eléctricos, hidrosanitarios y contra incendios con LOD 300–400 orientados a coordinación y prefabricación.",
           "detail": {
             "eyebrow": "DETALLE BIM MEP",
             "title": "Equipo BIM MEP coordinando instalaciones en obra",
-            "body": "Nuestros servicios BIM MEP están orientados a la construcción real en campo. Modelamos sistemas mecánicos, HVAC, plomería, eléctricos y redes contra incendio con un enfoque práctico, basado en experiencia de obra y criterios reales de instalación. Desarrollamos modelos LOD 300–400, completamente constructibles, considerando rutas reales, claros de mantenimiento, secuencias de montaje y coordinación entre disciplinas. Los modelos pueden incluir soportería, hanger layouts, spooling y tuberías prefabricadas, listos para fabricación e instalación.",
+            "body": "Nuestros servicios BIM MEP están orientados a la construcción real en campo. Modelamos sistemas mecánicos, HVAC, plomería, eléctricos y redes contra incendio con un enfoque práctico, basado en experiencia de obra y criterios reales de instalación. Desarrollamos modelos LOD 300–400, completamente constructibles, considerando rutas reales, claros de mantenimiento, secuencias de montaje y coordinación entre disciplinas. Los modelos pueden incluir soportería, esquemas de colgantes, despieces y tuberías prefabricadas, listos para fabricación e instalación.",
             "body2": "Además, actuamos como extensión del equipo del contratista, participando activamente en la coordinación BIM para identificar interferencias, optimizar soluciones y reducir reprocesos. Entregamos modelos precisos, coordinados y listos para obra, que mejoran la eficiencia en campo, reducen tiempos y permiten un mayor control de costos."
           }
         },
         {
-          "title": "Architectural & Structural BIM Modeling",
+          "title": "Modelado BIM arquitectónico y estructural",
           "text": "Modelado arquitectónico y estructural preciso para coordinación, documentación y constructibilidad en obra.",
           "detail": {
             "eyebrow": "DETALLE ARQ + ESTRUCTURA",
@@ -494,8 +497,8 @@
           }
         },
         {
-          "title": "BIM Coordination",
-          "text": "Coordinación interdisciplinaria, gestión de clashes y soporte técnico mediante estándares BIM y BEP.",
+          "title": "Coordinación BIM",
+          "text": "Coordinación interdisciplinaria, gestión de interferencias y soporte técnico mediante estándares BIM y BEP.",
           "detail": {
             "eyebrow": "DETALLE COORDINACIÓN BIM",
             "title": "Coordinación BIM integral en campo",
@@ -506,23 +509,23 @@
         },
         {
           "id": "scan-to-bim",
-          "title": "Laser Scanning | Scan to BIM | As-Built",
+          "title": "Escaneo láser | Conversión a BIM | Levantamiento conforme a obra",
           "text": "Escaneo láser 3D, nubes de puntos y generación de modelos BIM confiables para rehabilitación y control de obra.",
           "detail": {
             "eyebrow": "DETALLE SCAN TO BIM",
-            "title": "Captura, modelado y entrega As-Built",
+            "title": "Captura, modelado y entrega conforme a obra",
             "blocks": [
               {
-                "title": "3D Laser Scanning",
+                "title": "Escaneo láser 3D",
                 "text": "Realizamos escaneo láser 3D de alta precisión para capturar edificaciones e instalaciones existentes, generando nubes de puntos confiables como base para modelado y análisis. Nuestro enfoque combina tecnología de escaneo con criterio ingenieril y experiencia en campo, entregando información clara y alineada con las necesidades reales del proyecto."
               },
               {
-                "title": "Scan to BIM | As-Built Modeling",
-                "text": "Convertimos nubes de puntos en modelos BIM en Revit según alcance, LOD y objetivos del proyecto. Modelos fieles a lo construido para: rediseño arquitectónico o ingenieril, coordinación con nuevas disciplinas, documentación as-built y gestión/operación de activos. Flujos optimizados y QA/QC para precisión y consistencia."
+                "title": "Conversión a BIM | Modelado conforme a obra",
+                "text": "Convertimos nubes de puntos en modelos BIM en Revit según alcance, LOD y objetivos del proyecto. Modelos fieles a lo construido para rediseño arquitectónico o ingenieril, coordinación con nuevas disciplinas, documentación conforme a obra y gestión u operación de activos. Aplicamos flujos optimizados de aseguramiento y control de calidad para mantener precisión y consistencia."
               },
               {
-                "title": "As-Built Documentation & Digital Twin",
-                "text": "Generamos modelos y planos as-built a partir de escaneo láser, planos redline y registros de obra, consolidando la información real del proyecto. Cuando se requiere, preparamos los modelos para gestión de activos y Facility Management, integrando datos técnicos para operación y mantenimiento futuro."
+                "title": "Documentación conforme a obra y gemelo digital",
+                "text": "Generamos modelos y planos conforme a obra a partir de escaneo láser, planos con marcas de revisión y registros de obra, consolidando la información real del proyecto. Cuando se requiere, preparamos los modelos para gestión de activos y operación de instalaciones, integrando datos técnicos para operación y mantenimiento futuro."
               }
             ]
           }
@@ -545,7 +548,7 @@
           }
         },
         {
-          "title": "4D Construction Sequencing & 5D Cost Planning",
+          "title": "Secuenciación constructiva 4D y planificación de costos 5D",
           "text": "Integración del modelo BIM con planificación de obra y costos. Soporte para simulación constructiva, control de cronograma y análisis de costos.",
           "detail": {
             "eyebrow": "DETALLE 4D/5D",
@@ -554,11 +557,11 @@
           }
         },
         {
-          "title": "6D/7D BIM for Facilities Management | Digital Twinning",
+          "title": "BIM 6D/7D para gestión de instalaciones y gemelo digital",
           "text": "Modelos BIM orientados a operación y mantenimiento. Información técnica estructurada para gestión de activos y toma de decisiones post-construcción.",
           "detail": {
             "eyebrow": "DETALLE 6D/7D",
-            "title": "Digital Twin y FM listos para operar",
+            "title": "Gemelo digital y gestión de instalaciones listos para operar",
             "body": "Modelos BIM orientados a operación y mantenimiento. Información técnica estructurada para gestión de activos y toma de decisiones post-construcción.",
             "body2": "Gemelos digitales basados en modelos BIM para monitoreo y análisis del activo. Soporte a operación, mantenimiento y optimización del ciclo de vida del proyecto."
           }

@@ -86,7 +86,7 @@ const ServicesBimPage = () => {
       {
         "@type": "ListItem",
         position: 1,
-        name: "Home",
+        name: t("navbar.home", safeLang === "en" ? "Home" : "Inicio"),
         item: homeUrl,
       },
       {
@@ -101,7 +101,7 @@ const ServicesBimPage = () => {
   const keywords =
     safeLang === "en"
       ? "BIM modeling services, BIM coordination, clash detection, scan to BIM, MEP BIM"
-      : "servicios modelado BIM, coordinacion BIM, deteccion de interferencias, scan to BIM, BIM MEP";
+      : "servicios de modelado BIM, coordinacion BIM, deteccion de interferencias, conversion a BIM, BIM MEP";
 
   return (
     <main className="app" id="top" ref={pageRef}>
