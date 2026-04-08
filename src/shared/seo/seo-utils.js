@@ -1,3 +1,5 @@
+import { BASCAL_CONTACT_EMAIL, BASCAL_CONTACT_PHONE } from "../contact.js";
+
 const DEFAULT_SITE_URL = "https://bascal.com";
 const SUPPORTED_LANGUAGES = ["es", "en"];
 
@@ -86,8 +88,8 @@ function getOrganizationDescription(lang) {
 export function getOrganizationSchema(lang = "es") {
   const siteUrl = getSiteUrl();
   const safeLang = normalizeLang(lang);
-  const phone = import.meta.env.VITE_CONTACT_PHONE || "+57 300 111 2233";
-  const email = import.meta.env.VITE_CONTACT_EMAIL || "contacto@bascal.com";
+  const phone = import.meta.env.VITE_CONTACT_PHONE || BASCAL_CONTACT_PHONE;
+  const email = import.meta.env.VITE_CONTACT_EMAIL || BASCAL_CONTACT_EMAIL;
   return {
     "@context": "https://schema.org",
     "@type": "Organization",

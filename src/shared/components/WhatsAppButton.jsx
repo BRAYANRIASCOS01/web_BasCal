@@ -1,8 +1,21 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { BASCAL_CONTACT_EMAIL } from "../contact.js";
 
 const buildWhatsAppUrl = (phone, message) => {
   const encodedMessage = message ? encodeURIComponent(message) : "";
   return `https://wa.me/${phone}${encodedMessage ? `?text=${encodedMessage}` : ""}`;
+};
+
+const normalizeWhatsAppPhone = (phone) => String(phone || "").replace(/\D+/g, "");
+
+const normalizeCallNumber = (phone) => {
+  const rawValue = String(phone || "").trim();
+  if (!rawValue) return "";
+
+  const digits = rawValue.replace(/\D+/g, "");
+  if (!digits) return "";
+
+  return rawValue.startsWith("+") ? `+${digits}` : digits;
 };
 
 const canShowCallOptionOnDevice = () => {
@@ -17,24 +30,30 @@ const WhatsAppButton = ({
   phone,
   message = "Hola, me gustaría saber más.",
   label = "Chat",
-  email = "info@bascal.com",
+  email = BASCAL_CONTACT_EMAIL,
   callNumber = phone,
 }) => {
-  if (!phone) return null;
+  const normalizedWhatsappPhone = normalizeWhatsAppPhone(phone);
+  if (!normalizedWhatsappPhone) return null;
 
   const [open, setOpen] = useState(false);
   const [showCallOption, setShowCallOption] = useState(canShowCallOptionOnDevice);
   const wrapperRef = useRef(null);
 
-  const href = buildWhatsAppUrl(phone, message);
+  const href = buildWhatsAppUrl(normalizedWhatsappPhone, message);
+  const normalizedCallNumber = normalizeCallNumber(callNumber);
   const options = useMemo(
     () =>
       [
         { label: "WhatsApp", href, type: "external" },
         { label: "Correo", href: `mailto:${email}?subject=Consulta%20BasCal`, type: "email" },
-        { label: "Llamar", href: showCallOption && callNumber ? `tel:${callNumber}` : undefined, type: "call" },
+        {
+          label: "Llamar",
+          href: showCallOption && normalizedCallNumber ? `tel:${normalizedCallNumber}` : undefined,
+          type: "call",
+        },
       ].filter((opt) => opt.href),
-    [href, email, callNumber, showCallOption]
+    [href, email, normalizedCallNumber, showCallOption]
   );
 
   useEffect(() => {

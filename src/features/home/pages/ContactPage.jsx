@@ -5,6 +5,7 @@ import Form from "../../../shared/components/Form.jsx";
 import ScrollTop from "../../../shared/components/ScrollTop.jsx";
 import WhatsAppButton from "../../../shared/components/WhatsAppButton.jsx";
 import SeoHead from "../../../shared/components/SeoHead.jsx";
+import { BASCAL_CONTACT_EMAIL, BASCAL_CONTACT_PHONE } from "../../../shared/contact.js";
 import { getLocalizedUrl, normalizeLang } from "../../../shared/seo/seo-utils.js";
 
 const ContactPage = () => {
@@ -22,11 +23,11 @@ const ContactPage = () => {
       ? "Tell us about your project and we will get back to you as soon as possible."
       : "Cuentanos sobre tu proyecto y te responderemos en el menor tiempo posible."
   );
-  const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || "contacto@bascal.com";
-  const contactPhone = import.meta.env.VITE_CONTACT_PHONE || "+57 300 111 2233";
+  const contactEmail = import.meta.env.VITE_CONTACT_EMAIL || BASCAL_CONTACT_EMAIL;
+  const contactPhone = import.meta.env.VITE_CONTACT_PHONE || BASCAL_CONTACT_PHONE;
   const whatsappPhone = String(contactPhone).replace(/\D+/g, "");
   const whatsappMessage = encodeURIComponent(
-    t("home.whatsappMessage", "Hola, quiero más información sobre servicios BIM.")
+    t("home.whatsappMessage", "Hola, quiero recibir información sobre los servicios y proyectos de BasCal. Me interesa conocer cómo pueden apoyarme en BIM, diseño arquitectónico, ingeniería MEP o coordinación técnica. ¿Podrían orientarme?")
   );
 
   const contactSchema = {
@@ -159,8 +160,8 @@ const ContactPage = () => {
 
       <ScrollTop threshold={260} label={t("home.scrollTop", "Subir")} />
       <WhatsAppButton
-        phone="573001112233"
-        message={t("home.whatsappMessage", "Hola, quiero más información sobre servicios BIM.")}
+        phone={BASCAL_CONTACT_PHONE}
+        message={t("home.whatsappMessage", "Hola, quiero recibir información sobre los servicios y proyectos de BasCal. Me interesa conocer cómo pueden apoyarme en BIM, diseño arquitectónico, ingeniería MEP o coordinación técnica. ¿Podrían orientarme?")}
         label={t("home.chatLabel", "Chat")}
       />
     </main>

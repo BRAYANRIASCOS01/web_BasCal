@@ -54,6 +54,7 @@
     "heroSubtitle": "At BasCal, we design, model, and coordinate architecture, structure, and MEP systems to reduce clashes, costs, and rework from preconstruction to site execution.",
     "primaryCta": "Request consultation",
     "secondaryCta": "Learn more",
+    "whatsappMessage": "Hi, I would like information about BasCal's services and projects. I am interested in understanding how you can support me with BIM, architectural design, MEP engineering, or technical coordination. Could you guide me?",
     "servicesKicker": "BIM Services",
     "servicesTitle": "BIM Services",
     "servicesSubtitle": "We implement BIM to coordinate architectural, structural, and MEP disciplines through modeling, cross-team coordination, and technical information management.",
@@ -407,7 +408,7 @@
       "category": "Selected category: {{category}}",
       "cta": "View all projects"
     },
-    "whatsappMessage": "Hi, I want more information about the portfolio."
+    "whatsappMessage": "Hi, I would like information about BasCal's services and projects. I am interested in understanding how you can support me with BIM, architectural design, MEP engineering, or technical coordination. Could you guide me?"
   },
   "language": {
     "label": "Language",
