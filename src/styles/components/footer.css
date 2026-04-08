@@ -54,6 +54,18 @@
   color: inherit;
 }
 
+.footer__link {
+  color: inherit;
+}
+
+.footer__link--disabled {
+  display: inline-flex;
+  align-items: center;
+  opacity: 0.58;
+  cursor: not-allowed;
+  user-select: none;
+}
+
 .footer a:hover {
   color: var(--color-text);
 }
