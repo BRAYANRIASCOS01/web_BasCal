@@ -62,13 +62,11 @@ const PortfolioGrid = () => {
 
   const [activeCategory, setActiveCategory] = useState("all");
   const [expandedId, setExpandedId] = useState(null);
-  const [visibleIds, setVisibleIds] = useState([]);
   const [activeSlides, setActiveSlides] = useState({});
 
   useEffect(() => {
     setActiveCategory("all");
     setExpandedId(null);
-    setVisibleIds([]);
     setActiveSlides({});
   }, [i18n.language]);
 
@@ -90,19 +88,14 @@ const PortfolioGrid = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
-          const id = entry.target.getAttribute("data-card-id");
-          if (!id) {
-            entry.target.classList.add("is-visible");
-            return;
-          }
-          setVisibleIds((prev) => (prev.includes(id) ? prev : [...prev, id]));
+          entry.target.classList.add("is-visible");
         });
       },
       { threshold: 0.2 }
     );
     animated.forEach((node) => observer.observe(node));
     return () => observer.disconnect();
-  }, [i18n.language, activeCategory, projects.length]);
+  }, [i18n.language, activeCategory]);
 
   const metaLabel = {
     type: t("portfolioPage.meta.type"),
@@ -465,7 +458,7 @@ const PortfolioGrid = () => {
               )}
             </article>
           ) : (
-            filteredProjects.map((project, index) => {
+            filteredProjects.map((project) => {
             const slides = projectGalleries[project.id] || fallbackGallery;
             const highlights = Array.isArray(project.services)
               ? project.services.slice(0, 4).map((service) => ({
@@ -475,7 +468,6 @@ const PortfolioGrid = () => {
                 }))
               : [];
             const isExpanded = expandedId === project.id;
-            const isVisible = visibleIds.includes(project.id);
             const totalSlides = slides.length;
             const activeSlide = wrapIndex(activeSlides[project.id] ?? 0, totalSlides);
             const categoryKey = project.category
@@ -485,10 +477,7 @@ const PortfolioGrid = () => {
               return (
                 <article
                   key={project.id || project.title}
-                  className={`portfolio-card ${isVisible ? "is-visible" : ""} ${isExpanded ? "is-expanded" : ""}`}
-                  data-animate
-                  data-card-id={project.id}
-                  style={{ transitionDelay: `${0.08 + index * 0.08}s` }}
+                  className={`portfolio-card ${isExpanded ? "is-expanded" : ""}`}
                   ref={(el) => {
                     if (el) cardRefs.current[project.id] = el;
                   }}

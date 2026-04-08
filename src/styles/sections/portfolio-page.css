@@ -43,7 +43,6 @@
   display: grid;
   gap: 1.5rem;
   align-items: start;
-  perspective: 1200px;
 }
 
 .portfolio-page__empty {
@@ -116,14 +115,13 @@
   box-shadow: 0 12px 26px rgba(15, 23, 42, 0.08);
   display: grid;
   grid-template-rows: auto auto;
-  opacity: 0;
-  transform: translateY(14px);
+  transform: translateY(0);
   transition:
-    opacity 0.28s ease,
-    transform 0.35s ease,
-    box-shadow 0.35s ease,
-    border-color 0.35s ease,
-    filter 0.35s ease;
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease,
+    filter 180ms ease,
+    background 220ms ease;
   isolation: isolate;
 }
 
@@ -158,19 +156,15 @@
   z-index: 0;
 }
 
-.portfolio-card.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.portfolio-card:hover {
-  transform: translateY(-10px) rotateX(2deg) rotateY(-1.5deg);
+.portfolio-card:hover,
+.portfolio-card:focus-within {
+  transform: translateY(-8px);
   box-shadow:
-    0 28px 60px rgba(15, 23, 42, 0.18),
-    0 1px 0 rgba(255, 255, 255, 0.9) inset,
-    0 0 0 1px color-mix(in srgb, var(--color-primary) 16%, transparent 84%);
-  border-color: color-mix(in srgb, var(--color-primary) 35%, var(--color-border) 65%);
-  filter: saturate(1.05);
+    0 28px 65px rgba(15, 22, 43, 0.18),
+    0 1px 0 rgba(255, 255, 255, 0.98) inset,
+    0 0 0 1px rgba(37, 99, 235, 0.12);
+  border-color: rgba(37, 99, 235, 0.5);
+  filter: saturate(1.08);
 }
 
 .portfolio-card:hover::before,
@@ -178,10 +172,6 @@
 .portfolio-card:hover::after,
 .portfolio-card:focus-within::after {
   opacity: 1;
-}
-
-.portfolio-card:focus-within {
-  transform: translateY(-10px) rotateX(2deg) rotateY(-1.5deg);
 }
 
 .portfolio-card__media {
