@@ -7,10 +7,14 @@ import "./styles/home.css";
 import { BrowserRouter } from "react-router-dom";
 
 const root = createRoot(document.getElementById("root"));
+const ROUTER_FUTURE_FLAGS = {
+  v7_startTransition: true,
+  v7_relativeSplatPath: true,
+};
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter future={ROUTER_FUTURE_FLAGS}>
       <App />
     </BrowserRouter>
   </React.StrictMode>

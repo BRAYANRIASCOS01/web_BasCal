@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import YouTubeEmbed from "../../../shared/components/YouTubeEmbed.jsx";
 
 const WhyBascal = () => {
   const { t } = useTranslation();
@@ -77,15 +78,7 @@ const WhyBascal = () => {
             title={videoDescription}
           >
             <div className="why-bascal__video-frame">
-              <iframe
-                src="https://www.youtube.com/embed/9y2X2PpcQoc?si=QuFB-V8JMp1oNLmS"
-                title={videoTitle}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                loading="lazy"
-              ></iframe>
+              <YouTubeEmbed videoId="9y2X2PpcQoc" title={videoTitle} />
             </div>
           </div>
         </div>

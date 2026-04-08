@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import YouTubeEmbed from "../../../shared/components/YouTubeEmbed.jsx";
 
 const BimIntro = () => {
   const { t } = useTranslation();
@@ -25,14 +26,10 @@ const BimIntro = () => {
         <div className="bim-intro__media">
           <div className="bim-intro__media-glow" />
           <div className="bim-intro__media-frame">
-            <iframe
-              src="https://www.youtube.com/embed/VRXwJnaZ22U?si=lvCTLCH4HRKK3nEF&start=1"
+            <YouTubeEmbed
+              videoId="VRXwJnaZ22U"
               title={t("bimPage.intro.videoTitle", "Video introductorio de servicios BIM")}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-              loading="lazy"
+              params={{ start: 1 }}
             />
           </div>
         </div>

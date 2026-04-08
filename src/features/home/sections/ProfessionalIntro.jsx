@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import YouTubeEmbed from "../../../shared/components/YouTubeEmbed.jsx";
 
 const ProfessionalIntro = () => {
   const { t } = useTranslation();
@@ -25,14 +26,9 @@ const ProfessionalIntro = () => {
         <div className="pro-intro__media">
           <div className="pro-intro__media-glow" />
           <div className="pro-intro__media-frame">
-            <iframe
-              src="https://www.youtube.com/embed/1pD-AglN0bs?si=SUPDPQrPpLEqDOwb"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-              loading="lazy"
+            <YouTubeEmbed
+              videoId="1pD-AglN0bs"
+              title={t("professionalPage.intro.videoTitle", "Video introductorio de servicios profesionales")}
             />
           </div>
         </div>
