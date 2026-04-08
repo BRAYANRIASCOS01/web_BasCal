@@ -5,6 +5,14 @@ const buildWhatsAppUrl = (phone, message) => {
   return `https://wa.me/${phone}${encodedMessage ? `?text=${encodedMessage}` : ""}`;
 };
 
+const canShowCallOptionOnDevice = () => {
+  if (typeof window === "undefined" || typeof window.matchMedia !== "function") {
+    return false;
+  }
+
+  return window.matchMedia("(max-width: 767px), (hover: none) and (pointer: coarse)").matches;
+};
+
 const WhatsAppButton = ({
   phone,
   message = "Hola, me gustaría saber más.",
@@ -15,6 +23,7 @@ const WhatsAppButton = ({
   if (!phone) return null;
 
   const [open, setOpen] = useState(false);
+  const [showCallOption, setShowCallOption] = useState(canShowCallOptionOnDevice);
   const wrapperRef = useRef(null);
 
   const href = buildWhatsAppUrl(phone, message);
@@ -23,9 +32,9 @@ const WhatsAppButton = ({
       [
         { label: "WhatsApp", href, type: "external" },
         { label: "Correo", href: `mailto:${email}?subject=Consulta%20BasCal`, type: "email" },
-        { label: "Llamar", href: callNumber ? `tel:${callNumber}` : undefined, type: "call" },
+        { label: "Llamar", href: showCallOption && callNumber ? `tel:${callNumber}` : undefined, type: "call" },
       ].filter((opt) => opt.href),
-    [href, email, callNumber]
+    [href, email, callNumber, showCallOption]
   );
 
   useEffect(() => {
@@ -41,6 +50,25 @@ const WhatsAppButton = ({
       document.removeEventListener("mousedown", handleClickOutside);
       document.removeEventListener("keydown", handleEsc);
     };
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === "undefined" || typeof window.matchMedia !== "function") {
+      return undefined;
+    }
+
+    const mediaQuery = window.matchMedia("(max-width: 767px), (hover: none) and (pointer: coarse)");
+    const syncCallOption = () => setShowCallOption(mediaQuery.matches);
+
+    syncCallOption();
+
+    if (typeof mediaQuery.addEventListener === "function") {
+      mediaQuery.addEventListener("change", syncCallOption);
+      return () => mediaQuery.removeEventListener("change", syncCallOption);
+    }
+
+    mediaQuery.addListener(syncCallOption);
+    return () => mediaQuery.removeListener(syncCallOption);
   }, []);
 
   const toggleOpen = () => setOpen((v) => !v);
