@@ -84,8 +84,8 @@
 }
 
 .service-card__icon {
-  width: 54px;
-  height: 54px;
+  width: 70px;
+  height: 70px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -98,8 +98,7 @@
 }
 
 .service-card__icon svg {
-  width: 28px;
-  height: 28px;
+ 
 }
 
 .service-card__title {

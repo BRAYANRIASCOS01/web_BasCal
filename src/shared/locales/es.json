@@ -86,12 +86,12 @@
     },
     "professionalServices": {
       "kicker": "Servicios profesionales",
-      "title": "Professional Services",
+      "title": "Servicios profesionales",
       "subtitle": "Diseñamos soluciones técnicas seguras, eficientes y normativamente viables para proyectos en todas sus etapas, desde el concepto hasta la documentación de construcción. Nos enfocamos en diseño, cálculo y especificación técnica para que cada sistema funcione correctamente y cumpla estándares locales e internacionales. Softwares: Autodesk Revit, AutoCAD, ArchiCAD.",
       "items": [
         {
           "id": "arch-design",
-          "title": "Architectural Design | Interior Design",
+          "title": "Diseño Arquitectónico | Diseño de Interiores",
           "points": [
             "Diseño conceptual, básico y de detalle.",
             "Planos IFC y planos constructivos.",
@@ -112,7 +112,7 @@
         },
         {
           "id": "plumbing-gas",
-          "title": "Plumbing and Gas Natural Design",
+          "title": "Diseño de Sistemas de Plomería y Gas Natural",
           "points": [
             "Cálculo hidráulico de redes de abasto (agua fría y caliente).",
             "Diseño de sistemas sanitarios y pluviales.",
@@ -146,12 +146,16 @@
         "title": "Contacto",
         "items": [
           { "label": "Ubicación", "value": "Medellín, Colombia" },
-          { "label": "Teléfono", "value": "+57 000 000 0000" },
-          { "label": "Correo", "value": "contacto@bascal.com" }
+          { "label": "Teléfono", "value": "+57 310 3557355" },
+          { "label": "Correo", "value": "info@bascal-bim.com" }
         ]
       },
       "services": {
         "title": "Servicios",
+         "BIM":"BIM",
+        "Professionals":"Profesionales",
+        "StaffAugmentation":"Staff Augmentation",
+        "construction":"Construcción",
         "items": ["Diseño arquitectónico", "Modelado MEP", "Coordinación BIM"]
       },
       "bottom": "© BasCal. Todos los derechos reservados."
@@ -163,8 +167,8 @@
       "description": "Diseñamos y calculamos sistemas arquitectónicos e ingenieriles seguros, eficientes y listos para construcción, cumpliendo normativas y buenas prácticas técnicas."
     },
     "hero": {
-      "eyebrow": "Professional Services",
-      "title": "Engineering & Architectural Design Services",
+      "eyebrow": "Servicios Profesionales",
+      "title": "Servicios de Ingeniería y Diseño Arquitectónico",
       "subtitle": "Diseñamos soluciones técnicas seguras, eficientes y normativamente viables para proyectos en todas sus etapas, desde el concepto hasta la documentación de construcción. Nos enfocamos en el diseño, cálculo y especificación técnica, asegurando que cada sistema funcione correctamente y cumpla con los estándares locales e internacionales.",
       "cta": "Agendar cita"
     },
@@ -174,7 +178,7 @@
       "items": [
         {
           "id": "arch-design",
-          "title": "Architectural Design | Interior Design",
+          "title": "Diseño Arquitectónico | Diseño de Interiores",
           "points": [
             "Diseño conceptual, básico y de detalle",
             "Planos IFC y planos constructivos",
@@ -195,9 +199,9 @@
         },
         {
           "id": "plumbing-gas",
-          "title": "Plumbing and Gas Natural Design",
+          "title": "Sistemas de Red contra incendios, Sanitarios y de Gas Natural",
           "points": [
-            "Cálculo hidráulico de redes de abasto (agua fría y caliente)",
+            "⁠Cálculos hidráulicos para sistemas de extinción de incendios y abastecimiento del sistema sanitario (agua fria y caliente)",
             "Diseño de sistemas sanitarios y pluviales",
             "Selección de equipos de bombeo y accesorios",
             "Diseño de redes de gas natural",
@@ -205,7 +209,7 @@
           ]
         },
         {
-          "title": "Electrical Design",
+          "title": "Diseño Eléctrico",
           "points": [
             "Cálculo de cargas eléctricas",
             "Diagramas unifilares y trifilares",
@@ -215,7 +219,7 @@
         },
         {
           "id": "fire-protection",
-          "title": "Fire Alarm and Fire Protection Design",
+          "title": "Diseño de Alarmas contra Incendios y Protección contra Incendios",
           "points": [
             "Diseño de sistemas de rociadores automáticos (sistemas húmedos y secos)",
             "Sistemas de conexiones de manguera (gabinetes)",
@@ -225,7 +229,7 @@
           ]
         },
         {
-          "title": "TI Design",
+          "title": "Diseño de Sistemas de Telecomunicaciones y Tecnologías de la Información",
           "points": [
             "Diseño de sistemas de datos y telecomunicaciones",
             "Canalizaciones y rutas técnicas",
@@ -236,6 +240,17 @@
         },
         {
           "title": "Certificación EDGE",
+          "points": [
+            "Asesoría técnica para certificación EDGE y LEED",
+            "Estrategias de eficiencia energética",
+            "Optimización de consumo de agua",
+            "Análisis de materiales y costos",
+            "Acompañamiento durante diseño y certificación"
+          ]
+        }
+        ,
+        {
+          "title": "Diseño del sistema de extinción y detección de incendios",
           "points": [
             "Asesoría técnica para certificación EDGE y LEED",
             "Estrategias de eficiencia energética",
@@ -574,6 +589,9 @@
     "title": "Contáctanos",
     "subtitle": "Cuéntanos sobre tu proyecto y te responderemos pronto.",
     "name": "Nombre",
+    "yourname": "Tu nombre",
+    "youmail": "Tu correo",
+      "tellus": "Cuéntanos sobre tu proyecto",
     "email": "Correo",
     "phone": "Teléfono (opcional)",
     "service": "Servicio",
@@ -601,7 +619,10 @@
   "responseLabel": "Tiempo de respuesta",
   "responseValue": "24–48 horas hábiles",
   "coverageTitle": "Cobertura de proyectos",
-   "btnwhats": "¿Prefieres escribirnos directamente?"
+   "btnwhats": "¿Prefieres escribirnos directamente?",
+    "email": "info@bascal-bim.com",
+    "location": "Medellín, Colombia",
+    "responsetime": "24–48 horas hábiles"
 }
 
 }

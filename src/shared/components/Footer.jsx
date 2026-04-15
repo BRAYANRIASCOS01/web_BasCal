@@ -21,16 +21,16 @@ const Footer = () => {
           <h4 className="footer__heading">{t("home.footer.services.title")}</h4>
           <ul>
             <li>
-              <NavLink to={to("/servicios/bim")}>BIM</NavLink>
+              <NavLink to={to("/servicios/bim")}>{t("home.footer.services.BIM")}</NavLink>
             </li>
             <li>
-              <NavLink to={to("/servicios/profesionales")}>Profesionales</NavLink>
+              <NavLink to={to("/servicios/profesionales")}>{t("home.footer.services.Professionals")}</NavLink>
             </li>
             <li>
-              <NavLink to={to("/servicios/construccion")}>Construcción</NavLink>
+              <NavLink to={to("/servicios/construccion")}>{t("home.footer.services.construction")}</NavLink>
             </li>
             <li>
-              <NavLink to={to("/servicios/staff-augmentation")}>Staff Augmentation</NavLink>
+              <NavLink to={to("/servicios/staff-augmentation")}>{t("home.footer.services.StaffAugmentation")}</NavLink>
             </li>
           </ul>
         </div>

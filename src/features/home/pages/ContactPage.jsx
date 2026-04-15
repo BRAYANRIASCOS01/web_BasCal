@@ -48,7 +48,7 @@ const ContactPage = () => {
                   </p>
 
                   <a
-                    href="https://wa.me/573000000000?text=Hola%20BasCal,%20quiero%20más%20información%20sobre%20sus%20servicios."
+                    href="https://wa.me/573147456473?text=Hola%20BasCal,%20quiero%20más%20información%20sobre%20sus%20servicios."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="contact-whatsapp__button"
@@ -73,21 +73,24 @@ const ContactPage = () => {
 
               <div className="contact-info-card__item">
                 <p className="contact-info-card__label">{t("contactInfo.emailLabel", "Correo")}</p>
-                <a className="contact-info-card__value" href="mailto:contacto@bascal.com">
-                  contacto@bascal.com
+                <a className="contact-info-card__value">
+                {t("contactInfo.email", "info@bascal-bim.com")}
+                </a>
+              </div>
+              
+
+              <div className="contact-info-card__item">
+                <p className="contact-info-card__label">{t("contactInfo.locationLabel", "Ubicación")}</p>
+                 <a className="contact-info-card__value">
+                {t("contactInfo.location", "Medellín, Colombia")}
                 </a>
               </div>
 
               <div className="contact-info-card__item">
-                <p className="contact-info-card__label">{t("contactInfo.locationLabel", "Ubicación")}</p>
-                <p className="contact-info-card__value">Medellín, Colombia</p>
-              </div>
-
-              <div className="contact-info-card__item">
                 <p className="contact-info-card__label">{t("contactInfo.responseLabel", "Tiempo de respuesta")}</p>
-                <p className="contact-info-card__value">
-                  {t("contactInfo.responseValue", "24–48 horas hábiles")}
-                </p>
+                 <a className="contact-info-card__value">
+                {t("contactInfo.responsetime", "24–48 horas hábiles")}
+                </a>
               </div>
 
               <div className="contact-info-card__trust">

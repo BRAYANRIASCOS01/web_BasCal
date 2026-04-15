@@ -22,20 +22,7 @@ const ProfessionalIntro = () => {
           </div>
         </div>
 
-        <div className="pro-intro__media">
-          <div className="pro-intro__media-glow" />
-          <div className="pro-intro__media-frame">
-            <iframe
-              src="https://www.youtube.com/embed/1pD-AglN0bs?si=SUPDPQrPpLEqDOwb"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-              loading="lazy"
-            />
-          </div>
-        </div>
+        
       </div>
     </section>
   );

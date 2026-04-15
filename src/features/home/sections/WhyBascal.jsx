@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-
+import Edificios from "../../../../public/Edificios_logo.png";
 const WhyBascal = () => {
   const { t } = useTranslation();
   const paragraphs = t("home.whyBascal.paragraphs", { returnObjects: true });
@@ -77,15 +77,7 @@ const WhyBascal = () => {
             title={videoDescription}
           >
             <div className="why-bascal__video-frame">
-              <iframe
-                src="https://www.youtube.com/embed/9y2X2PpcQoc?si=QuFB-V8JMp1oNLmS"
-                title={videoTitle}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                loading="lazy"
-              ></iframe>
+             <img src={Edificios}  />
             </div>
           </div>
         </div>
