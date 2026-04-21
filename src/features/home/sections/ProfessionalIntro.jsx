@@ -1,5 +1,4 @@
 import { useTranslation } from "react-i18next";
-import YouTubeEmbed from "../../../shared/components/YouTubeEmbed.jsx";
 
 const ProfessionalIntro = () => {
   const { t } = useTranslation();
@@ -20,16 +19,6 @@ const ProfessionalIntro = () => {
               <span className="pro-intro__meta-value">24/7</span>
               <span className="pro-intro__meta-label">{t("professionalPage.intro.metaSupport", "Soporte de proyectos")}</span>
             </div>
-          </div>
-        </div>
-
-        <div className="pro-intro__media">
-          <div className="pro-intro__media-glow" />
-          <div className="pro-intro__media-frame">
-            <YouTubeEmbed
-              videoId="1pD-AglN0bs"
-              title={t("professionalPage.intro.videoTitle", "Video introductorio de servicios profesionales")}
-            />
           </div>
         </div>
       </div>

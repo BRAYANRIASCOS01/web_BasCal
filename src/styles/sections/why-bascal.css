@@ -229,6 +229,17 @@
   border-radius: inherit;
 }
 
+.why-bascal__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: inherit;
+}
+
 .why-bascal__video:hover .why-bascal__video-frame {
   transform: translateY(-4px) scale(1.01);
   box-shadow:

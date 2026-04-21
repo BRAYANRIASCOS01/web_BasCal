@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import YouTubeEmbed from "../../../shared/components/YouTubeEmbed.jsx";
 
 const WhyBascal = () => {
   const { t } = useTranslation();
@@ -78,7 +77,13 @@ const WhyBascal = () => {
             title={videoDescription}
           >
             <div className="why-bascal__video-frame">
-              <YouTubeEmbed videoId="9y2X2PpcQoc" title={videoTitle} />
+              <img
+                src="/Edificios_logo.png"
+                alt={videoTitle}
+                className="why-bascal__image"
+                loading="lazy"
+                decoding="async"
+              />
             </div>
           </div>
         </div>
