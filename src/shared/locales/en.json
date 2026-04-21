@@ -143,17 +143,25 @@
         "title": "BasCal",
         "text": "Specialized firm in architectural design, MEP engineering, and advanced BIM/VDC services."
       },
-    "contact": {
-        "title": "Contact",
+      "contact": {
+        "title": "Contacto",
         "items": [
           { "label": "Location", "value": "Medellín, Colombia" },
-          { "label": "Phone", "value": "+57 000 000 0000" },
-          { "label": "Email", "value": "contact@bascal.com" }
+          { "label": "Phone", "value": "+57 310 3557355" },
+          { "label": "Email", "value": "info@bascal-bim.com" }
         ]
       },
       "services": {
         "title": "Services",
-        "items": ["Architectural design", "MEP modeling", "BIM coordination"]
+        "BIM":"BIM",
+        "Professionals":"Professional Services",
+        "StaffAugmentation":"Staff Augmentation",
+        "construction":"Construction",
+        "items": [
+          "Architectural design",
+          "MEP modeling",
+          "BIM coordination"
+        ]
       },
       "bottom": "© BasCal. All rights reserved."
     }
@@ -199,7 +207,7 @@
         },
         {
           "id": "plumbing-gas",
-          "title": "Plumbing and Natural Gas Design",
+          "title": "Fire protection, Plumbing and Gas Natural Systems",
           "points": [
             "Hydraulic calculation of supply networks (hot and cold water)",
             "Design of sanitary and storm systems",
@@ -272,7 +280,16 @@
       "all": "All",
       "searchLabel": "Search projects",
       "searchPlaceholder": "Search by name, location, or type",
-      "categories": ["Education", "Hospitality", "Infrastructure", "Mixed-use", "Recreation", "Residential", "Healthcare", "Technology - Mission Critical"]
+      "categories": [
+        "Education",
+        "Hospitality",
+        "Infrastructure",
+        "Mixed-use",
+        "Recreation",
+        "Residential",
+        "Healthcare",
+        "Technology - Mission Critical"
+      ]
     },
     "meta": {
       "type": "Type",
@@ -343,7 +360,12 @@
           "Creation of mechanical families for pumping systems",
           "Generation of digital drawings"
         ],
-        "software": ["Revit", "AutoCAD", "ReCap", "Autodesk Construction Cloud (ACC)"]
+        "software": [
+          "Revit",
+          "AutoCAD",
+          "ReCap",
+          "Autodesk Construction Cloud (ACC)"
+        ]
       },
       {
         "id": "pao-bello",
@@ -373,7 +395,12 @@
           "Creation of mechanical families for pumping systems",
           "Generation of digital drawings"
         ],
-        "software": ["Revit", "AutoCAD", "ReCap", "Autodesk Construction Cloud (ACC)"]
+        "software": [
+          "Revit",
+          "AutoCAD",
+          "ReCap",
+          "Autodesk Construction Cloud (ACC)"
+        ]
       },
       {
         "id": "shop-drawings-hvac-us",
@@ -391,7 +418,12 @@
           "Access doors and concrete pads layout definition",
           "Interdisciplinary coordination with other systems (clash detection)"
         ],
-        "software": ["Revit", "Navisworks", "Autodesk Construction Cloud (ACC)", "Ductulator"]
+        "software": [
+          "Revit",
+          "Navisworks",
+          "Autodesk Construction Cloud (ACC)",
+          "Ductulator"
+        ]
       }
     ],
     "card": {
@@ -418,18 +450,14 @@
     "spanish": "ES",
     "english": "EN"
   },
-
-
   "contacthero": {
-  "hero": {
-    "eyebrow": "BasCal Engineering & Construction",
-    "title": "Let’s talk about your project",
-    "subtitle": "Tell us what you need and we’ll get back to you as soon as possible.",
-   
-    "cta": "View services"
-  }
-},
-
+    "hero": {
+      "eyebrow": "BasCal Engineering & Construction",
+      "title": "Let’s talk about your project",
+      "subtitle": "Tell us what you need and we’ll get back to you as soon as possible.",
+      "cta": "View services"
+    }
+  },
   "bimPage": {
     "seo": {
       "title": "BIM/VDC Services | BasCal coordination and modeling",
@@ -513,7 +541,11 @@
             "title": "Integrated BIM coordination on site",
             "body": "One of the toughest goals is coordinating systems across disciplines on site. We lead BIM coordination, integrating architectural, structural, and MEP models to eliminate clashes, cut rework, and ensure efficient execution.",
             "body2": "We define and enforce BIM standards through the BEP, aligning all project stakeholders to deliver coordinated, construction-ready models with a focus on constructability, schedule, and cost control.",
-            "softwares": ["Autodesk Revit", "Autodesk Navisworks or Revizto", "Autodesk Construction Cloud (ACC)"]
+            "softwares": [
+              "Autodesk Revit",
+              "Autodesk Navisworks or Revizto",
+              "Autodesk Construction Cloud (ACC)"
+            ]
           }
         },
         {
@@ -609,6 +641,9 @@
     "title": "Let’s talk",
     "subtitle": "Tell us about your project and we’ll get back to you shortly.",
     "name": "Name",
+    "yourname": "Your name",
+    "youmail": "“You@mail.com",
+    "tellus": "Your message",
     "email": "Email",
     "phone": "Phone (optional)",
     "service": "Service",
@@ -625,18 +660,20 @@
     }
   },
   "contactInfo": {
-  "pageTitle": "Contact",
-  "pageSubtitle": "Tell us about your project and we’ll get back to you as soon as possible.",
-  "sectionTitle": "Let’s talk",
-  "sectionSubtitle": "Fill out the form and we’ll contact you within 24–48 business hours.",
-  "infoTitle": "Contact information",
-  "infoSubtitle": "You can also reach us directly.",
-  "emailLabel": "Email",
-  "locationLabel": "Location",
-  "responseLabel": "Response time",
-  "responseValue": "24–48 business hours",
-  "coverageTitle": "Project coverage",
-   "btnwhats": "Would you prefer to contact us directly?"
-}
-
+    "pageTitle": "Contact",
+    "pageSubtitle": "Tell us about your project and we’ll get back to you as soon as possible.",
+    "sectionTitle": "Let’s talk",
+    "sectionSubtitle": "Fill out the form and we’ll contact you within 24–48 business hours.",
+    "infoTitle": "Contact information",
+    "infoSubtitle": "You can also reach us directly.",
+    "emailLabel": "Email",
+    "locationLabel": "Location",
+    "responseLabel": "Response time",
+    "responseValue": "24–48 business hours",
+    "coverageTitle": "Project coverage",
+    "btnwhats": "Would you prefer to contact us directly?",
+    "email": "info@bascal-bim.com",
+    "location": "Medellín, Colombia",
+    "responsetime": "24–48 business hours"
+  }
 }

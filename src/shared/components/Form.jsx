@@ -68,7 +68,7 @@ export default function ContactForm({ formName = "contacto-general" }) {
                 className="formInput"
                 name="name"
                 autoComplete="name"
-                placeholder={t("contact.namePlaceholder", "Tu nombre")}
+                placeholder={t("contact.yourname", "Tu nombre")}
                 required
               />
             </label>
@@ -80,7 +80,7 @@ export default function ContactForm({ formName = "contacto-general" }) {
                 name="email"
                 type="email"
                 autoComplete="email"
-                placeholder={t("contact.emailPlaceholder", "tu@correo.com")}
+                placeholder={t("contact.youmail", "tu@correo.com")}
                 required
               />
             </label>
@@ -114,7 +114,7 @@ export default function ContactForm({ formName = "contacto-general" }) {
               className="formTextarea"
               name="message"
               rows={5}
-              placeholder={t("contact.messagePlaceholder", "Cuéntanos qué necesitas...")}
+              placeholder={t("contact.tellus", "Cuéntanos qué necesitas...")}
               required
             />
           </label>

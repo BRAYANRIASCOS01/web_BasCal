@@ -213,8 +213,8 @@
   height: 0;
   overflow: hidden;
   border-radius: 1.1rem;
-  background: color-mix(in srgb, var(--color-primary-dark) 85%, var(--color-surface) 15%);
-  border: 1px solid color-mix(in srgb, var(--color-primary) 12%, transparent);
+
+  
   box-shadow: 0 18px 40px color-mix(in srgb, var(--color-primary) 18%, transparent);
   will-change: transform, box-shadow;
   transition: box-shadow 0.35s ease, transform 0.35s ease;

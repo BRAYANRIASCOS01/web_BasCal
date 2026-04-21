@@ -134,15 +134,10 @@ const ContactPage = () => {
               </div>
 
               <div className="contact-info-card__item">
-                <p className="contact-info-card__label">{t("contactInfo.locationLabel", "Ubicación")}</p>
-                <p className="contact-info-card__value">Medellín, Colombia</p>
-              </div>
-
-              <div className="contact-info-card__item">
                 <p className="contact-info-card__label">{t("contactInfo.responseLabel", "Tiempo de respuesta")}</p>
-                <p className="contact-info-card__value">
-                  {t("contactInfo.responseValue", "24–48 horas hábiles")}
-                </p>
+                 <a className="contact-info-card__value">
+                {t("contactInfo.responsetime", "24–48 horas hábiles")}
+                </a>
               </div>
 
               <div className="contact-info-card__trust">
