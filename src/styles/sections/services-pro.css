@@ -95,12 +95,23 @@
   border-color: color-mix(in srgb, var(--color-primary) 18%, var(--color-border) 82%);
 }
 
+.pro-service__card:hover .pro-service__illustration,
+.pro-service__card:focus-within .pro-service__illustration {
+  transform: translateY(-2px) scale(1.01);
+}
+
+.pro-service__card:hover .service-illustration__accent,
+.pro-service__card:focus-within .service-illustration__accent {
+  stroke: #2f5f9f;
+}
+
 .pro-service__card > * {
   position: relative;
   z-index: 1;
 }
 
 .pro-service__media {
+  position: relative;
   width: 100%;
   max-width: 384px;
   aspect-ratio: 16 / 10;
@@ -111,12 +122,81 @@
   background: var(--color-surface);
 }
 
+.pro-service__media--illustration {
+  display: grid;
+  place-items: center;
+  padding: clamp(0.8rem, 2vw, 1.2rem);
+  box-sizing: border-box;
+  background:
+    radial-gradient(circle at top right, rgba(0, 11, 102, 0.08), transparent 34%),
+    linear-gradient(180deg, #ffffff 0%, #f4f7fb 100%);
+}
+
+.pro-service__media--illustration::before {
+  content: "";
+  position: absolute;
+  inset: 0.75rem;
+  border-radius: calc(var(--radius-lg) - 0.15rem);
+  border: 1px solid rgba(22, 58, 112, 0.08);
+  pointer-events: none;
+}
+
 .pro-service__image {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+.pro-service__illustration {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.24s ease;
+}
+
+.service-illustration {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.service-illustration__paper {
+  fill: rgba(255, 255, 255, 0.86);
+  stroke: rgba(22, 58, 112, 0.08);
+}
+
+.service-illustration__grid {
+  stroke: rgba(22, 58, 112, 0.08);
+  stroke-width: 1;
+  stroke-linecap: round;
+}
+
+.service-illustration__ground {
+  stroke: rgba(22, 58, 112, 0.16);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+}
+
+.service-illustration__outline {
+  stroke: #163a70;
+  stroke-width: 3.1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.service-illustration__detail {
+  stroke: #274d85;
+  stroke-width: 2.25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.service-illustration__accent {
+  stroke: #4b79b8;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .pro-service__content {
@@ -255,7 +335,8 @@
 
 @media (prefers-reduced-motion: reduce) {
   .pro-service__card,
-  .pro-service__action {
+  .pro-service__action,
+  .pro-service__illustration {
     transition: none;
   }
 }

@@ -96,6 +96,17 @@
     0 0 0 1px rgba(255, 255, 255, 0.65) inset;
 }
 
+.pro-services-grid .pro-service__media--illustration {
+  padding: clamp(0.7rem, 1.8vw, 1rem);
+  background:
+    radial-gradient(circle at top right, rgba(0, 11, 102, 0.08), transparent 34%),
+    linear-gradient(180deg, #ffffff 0%, #f4f7fb 100%);
+}
+
+.pro-services-grid .pro-service__media--illustration::before {
+  inset: 0.7rem;
+}
+
 .pro-services-grid .pro-service__image {
  display: block;
   width: 100%;

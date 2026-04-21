@@ -1,22 +1,12 @@
 import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
-import bimMedImage from "../../../assets/BIM-MED.jpeg";
-import gasPlantaImage from "../../../assets/GAS_planta.png";
-import rciImage from "../../../assets/RCI, Edf 6.1.png";
-import mechanicalShopImage from "../../../assets/RCI_CUARTO BOMBAS_2.png";
-import archRenderImage from "../../../assets/SDA_PLAN.png";
+import ProfessionalServiceIllustration from "../../../shared/components/icons/ProfessionalServiceIllustration.jsx";
 
 const ServicesProfessionalList = () => {
   const { t } = useTranslation();
   const sectionRef = useRef(null);
   const services = t("professionalPage.services.items", { returnObjects: true }) || [];
   const serviceItems = Array.isArray(services) ? services : [];
-  const serviceImages = {
-    "fire-protection": gasPlantaImage,
-    "plumbing-gas": rciImage,
-    mechanical: mechanicalShopImage,
-    "arch-design": archRenderImage,
-  };
 
   useEffect(() => {
     const sectionEl = sectionRef.current;
@@ -43,22 +33,18 @@ const ServicesProfessionalList = () => {
                 data-animate
                 style={{ transitionDelay: `${0.06 + idx * 0.05}s` }}
               >
-                <div className="pro-service__media">
-                  <img
-                    src={serviceImages[svc.id] || bimMedImage}
-                    alt={`${svc.title} | BasCal`}
-                    className="pro-service__image"
-                    loading="lazy"
-                    decoding="async"
-                  />
+                <div className="pro-service__media pro-service__media--illustration" aria-hidden="true">
+                  <div className="pro-service__illustration">
+                    <ProfessionalServiceIllustration service={svc} />
+                  </div>
                   <span className="pro-services-grid__badge pro-services-grid__badge--overlay" aria-hidden="true">
                     {String(idx + 1).padStart(2, "0")}
                   </span>
                 </div>
                 <div className="pro-service__content">
-                <div className="pro-services-grid__card-head">
-                  <h3 className="pro-service__title">{svc.title}</h3>
-                </div>
+                  <div className="pro-services-grid__card-head">
+                    <h3 className="pro-service__title">{svc.title}</h3>
+                  </div>
                   <ul className="pro-service__list text-muted">
                     {svc.points?.map((pt) => (
                       <li key={pt} className="pro-service__point">

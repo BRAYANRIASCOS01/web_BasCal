@@ -3,12 +3,7 @@ import { NavLink, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 
-import archDesignImage from "../../../assets/BIM-MED.jpeg";
-import mechanicalImage from "../../../assets/bim2.webp";
-import plumbingImage from "../../../assets/bim3.webp";
-import sdaPlantaImage from "../../../assets/sistemas.png";
-import espacioPublicoImage from "../../../assets/arq.png";
-import mechanicalRvtImage from "../../../assets/mecanica.png";
+import ProfessionalServiceIllustration from "../../../shared/components/icons/ProfessionalServiceIllustration.jsx";
 
 const ServicesPro = () => {
   const { t } = useTranslation();
@@ -17,15 +12,6 @@ const ServicesPro = () => {
 
   const services = t("home.professionalServices.items", { returnObjects: true }) || [];
   const professionalServices = Array.isArray(services) ? services : [];
-  const contactItems = t("home.footer.contact.items", { returnObjects: true }) || [];
-  const contactEmail = contactItems?.[2]?.value || "contact@bascal.com";
-
-  const serviceImages = [archDesignImage, mechanicalImage, plumbingImage];
-  const serviceImageOverrides = {
-    "arch-design": espacioPublicoImage,
-    mechanical: mechanicalRvtImage,
-    "plumbing-gas": sdaPlantaImage,
-  };
 
   useEffect(() => {
     const sectionEl = sectionRef.current;
@@ -86,7 +72,6 @@ const ServicesPro = () => {
 
         <ol className="services-stack" aria-label={t("home.professionalServices.title")}>
           {professionalServices.map((service, index) => {
-            const image = serviceImageOverrides[service.id] || serviceImages[index % serviceImages.length];
             const delay = 0.12 + index * 0.08;
 
             return (
@@ -98,14 +83,10 @@ const ServicesPro = () => {
                   itemScope
                   itemType="https://schema.org/Service"
                 >
-                  <div className="pro-service__media">
-                    <img
-                      src={image}
-                      alt={`${service.title} - BasCal`}
-                      className="pro-service__image"
-                      loading="lazy"
-                      decoding="async"
-                    />
+                  <div className="pro-service__media pro-service__media--illustration" aria-hidden="true">
+                    <div className="pro-service__illustration">
+                      <ProfessionalServiceIllustration service={service} />
+                    </div>
                   </div>
                   <div className="pro-service__content">
                     <h3 className="pro-service__title" itemProp="name">
