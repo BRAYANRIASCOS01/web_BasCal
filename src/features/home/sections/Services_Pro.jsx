@@ -3,7 +3,9 @@ import { NavLink, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 
-import ProfessionalServiceIllustration from "../../../shared/components/icons/ProfessionalServiceIllustration.jsx";
+import ProfessionalServiceIllustration, {
+  hasProfessionalServiceIllustration,
+} from "../../../shared/components/icons/ProfessionalServiceIllustration.jsx";
 
 const ServicesPro = () => {
   const { t } = useTranslation();
@@ -73,21 +75,24 @@ const ServicesPro = () => {
         <ol className="services-stack" aria-label={t("home.professionalServices.title")}>
           {professionalServices.map((service, index) => {
             const delay = 0.12 + index * 0.08;
+            const hasIllustration = hasProfessionalServiceIllustration(service);
 
             return (
               <li className="pro-service" key={service.title}>
                 <article
-                  className="pro-service__card"
+                  className={`pro-service__card${hasIllustration ? "" : " pro-service__card--text-only"}`}
                   data-animate
                   style={{ transitionDelay: `${delay}s` }}
                   itemScope
                   itemType="https://schema.org/Service"
                 >
-                  <div className="pro-service__media pro-service__media--illustration" aria-hidden="true">
-                    <div className="pro-service__illustration">
-                      <ProfessionalServiceIllustration service={service} />
+                  {hasIllustration && (
+                    <div className="pro-service__media pro-service__media--illustration" aria-hidden="true">
+                      <div className="pro-service__illustration">
+                        <ProfessionalServiceIllustration service={service} />
+                      </div>
                     </div>
-                  </div>
+                  )}
                   <div className="pro-service__content">
                     <h3 className="pro-service__title" itemProp="name">
                       {service.title}
