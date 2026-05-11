@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true" focusable="false">
+        <defs>
+          <g id="tooth">
+            <rect x="236" y="10" width="40" height="60" rx="6" ry="6" />
+          </g>
+          <g id="fanBlade">
+            <path
+              d="M256 206
+               C288 206 304 234 292 258
+               C284 274 266 282 256 278
+               C246 282 228 274 220 258
+               C208 234 224 206 256 206Z"
+            />
+          </g>
+        </defs>
+
+        <g fill="currentColor">
+          <g>
+            <use href="#tooth" transform="rotate(0 256 256)" />
+            <use href="#tooth" transform="rotate(30 256 256)" />
+            <use href="#tooth" transform="rotate(60 256 256)" />
+            <use href="#tooth" transform="rotate(90 256 256)" />
+            <use href="#tooth" transform="rotate(120 256 256)" />
+            <use href="#tooth" transform="rotate(150 256 256)" />
+            <use href="#tooth" transform="rotate(180 256 256)" />
+            <use href="#tooth" transform="rotate(210 256 256)" />
+            <use href="#tooth" transform="rotate(240 256 256)" />
+            <use href="#tooth" transform="rotate(270 256 256)" />
+            <use href="#tooth" transform="rotate(300 256 256)" />
+            <use href="#tooth" transform="rotate(330 256 256)" />
+          </g>
+          <circle cx="256" cy="256" r="240" />
+        </g>
+
+        <circle cx="256" cy="256" r="190" fill="var(--color-surface)" />
+
+        <g fill="currentColor">
+          <circle cx="256" cy="256" r="78" />
+          <circle cx="256" cy="256" r="60" fill="var(--color-surface)" />
+          <use href="#fanBlade" transform="rotate(0 256 256)" />
+          <use href="#fanBlade" transform="rotate(90 256 256)" />
+          <use href="#fanBlade" transform="rotate(180 256 256)" />
+          <use href="#fanBlade" transform="rotate(270 256 256)" />
+          <circle cx="256" cy="256" r="14" />
+          <circle cx="256" cy="256" r="7" fill="var(--color-surface)" />
+
+          <path
+            d="M325 140
+             h70
+             a12 12 0 0 1 12 12
+             v42
+             a12 12 0 0 1 -12 12
+             h-28
+             v54
+             a12 12 0 0 1 -12 12
+             h-42
+             a12 12 0 0 1 -12 -12
+             v-70
+             a12 12 0 0 1 12 -12
+             h24
+             v-26
+             a12 12 0 0 1 12 -12Z"
+          />
+
+          <circle cx="170" cy="320" r="12" />
+          <circle cx="200" cy="350" r="12" />
+          <circle cx="140" cy="350" r="12" />
+          <rect x="164" y="328" width="44" height="6" rx="3" />
+          <rect x="144" y="338" width="6" height="18" rx="3" />
+          <rect x="194" y="338" width="6" height="18" rx="3" />
+        </g>
+      </svg>

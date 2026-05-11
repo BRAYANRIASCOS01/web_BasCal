@@ -1,0 +1,302 @@
+{
+  "version": 1,
+  "generatedAt": "2026-05-11T20:30:20.706Z",
+  "icons": [
+    {
+      "id": "home-continents2high",
+      "name": "continents2High",
+      "fileName": "continents2High.svg",
+      "group": "home",
+      "ext": "svg",
+      "path": "../icon/home/continents2High.svg"
+    },
+    {
+      "id": "home-ductos2",
+      "name": "ductos2",
+      "fileName": "ductos2.png",
+      "group": "home",
+      "ext": "png",
+      "path": "../icon/home/ductos2.png"
+    },
+    {
+      "id": "home-ductos3",
+      "name": "ductos3",
+      "fileName": "ductos3.png",
+      "group": "home",
+      "ext": "png",
+      "path": "../icon/home/ductos3.png"
+    },
+    {
+      "id": "home-edificio",
+      "name": "edificio",
+      "fileName": "edificio.webp",
+      "group": "home",
+      "ext": "webp",
+      "path": "../icon/home/edificio.webp"
+    },
+    {
+      "id": "home-edificios-logo-copy",
+      "name": "Edificios_logo copy",
+      "fileName": "Edificios_logo copy.png",
+      "group": "home",
+      "ext": "png",
+      "path": "../icon/home/Edificios_logo copy.png"
+    },
+    {
+      "id": "home-edificios-logo",
+      "name": "Edificios_logo",
+      "fileName": "Edificios_logo.png",
+      "group": "home",
+      "ext": "png",
+      "path": "../icon/home/Edificios_logo.png"
+    },
+    {
+      "id": "home-grua-7",
+      "name": "grua-7",
+      "fileName": "grua-7.webp",
+      "group": "home",
+      "ext": "webp",
+      "path": "../icon/home/grua-7.webp"
+    },
+    {
+      "id": "home-log-bascal",
+      "name": "Log_BasCal",
+      "fileName": "Log_BasCal.PNG",
+      "group": "home",
+      "ext": "png",
+      "path": "../icon/home/Log_BasCal.PNG"
+    },
+    {
+      "id": "home-messages",
+      "name": "messages",
+      "fileName": "messages.svg",
+      "group": "home",
+      "ext": "svg",
+      "path": "../icon/home/messages.svg"
+    },
+    {
+      "id": "home-tranlate",
+      "name": "tranlate",
+      "fileName": "tranlate.svg",
+      "group": "home",
+      "ext": "svg",
+      "path": "../icon/home/tranlate.svg"
+    },
+    {
+      "id": "home-union-2",
+      "name": "union-2",
+      "fileName": "union-2.webp",
+      "group": "home",
+      "ext": "webp",
+      "path": "../icon/home/union-2.webp"
+    },
+    {
+      "id": "home-viga",
+      "name": "viga",
+      "fileName": "viga.webp",
+      "group": "home",
+      "ext": "webp",
+      "path": "../icon/home/viga.webp"
+    },
+    {
+      "id": "proyects-alarm",
+      "name": "alarm",
+      "fileName": "alarm.svg",
+      "group": "proyects",
+      "ext": "svg",
+      "path": "../icon/proyects/alarm.svg"
+    },
+    {
+      "id": "proyects-bim3d",
+      "name": "bim3d",
+      "fileName": "bim3d.svg",
+      "group": "proyects",
+      "ext": "svg",
+      "path": "../icon/proyects/bim3d.svg"
+    },
+    {
+      "id": "proyects-boqmto",
+      "name": "boqMto",
+      "fileName": "boqMto.svg",
+      "group": "proyects",
+      "ext": "svg",
+      "path": "../icon/proyects/boqMto.svg"
+    },
+    {
+      "id": "proyects-digitalplans",
+      "name": "digitalPlans",
+      "fileName": "digitalPlans.svg",
+      "group": "proyects",
+      "ext": "svg",
+      "path": "../icon/proyects/digitalPlans.svg"
+    },
+    {
+      "id": "proyects-fuego",
+      "name": "fuego",
+      "fileName": "fuego.svg",
+      "group": "proyects",
+      "ext": "svg",
+      "path": "../icon/proyects/fuego.svg"
+    },
+    {
+      "id": "proyects-gas",
+      "name": "gas",
+      "fileName": "gas.svg",
+      "group": "proyects",
+      "ext": "svg",
+      "path": "../icon/proyects/gas.svg"
+    },
+    {
+      "id": "proyects-generic",
+      "name": "generic",
+      "fileName": "generic.svg",
+      "group": "proyects",
+      "ext": "svg",
+      "path": "../icon/proyects/generic.svg"
+    },
+    {
+      "id": "proyects-hvacfamilies",
+      "name": "hvacFamilies",
+      "fileName": "hvacFamilies.svg",
+      "group": "proyects",
+      "ext": "svg",
+      "path": "../icon/proyects/hvacFamilies.svg"
+    },
+    {
+      "id": "proyects-location",
+      "name": "location",
+      "fileName": "location.svg",
+      "group": "proyects",
+      "ext": "svg",
+      "path": "../icon/proyects/location.svg"
+    },
+    {
+      "id": "proyects-pumpingfamilies",
+      "name": "pumpingFamilies",
+      "fileName": "pumpingFamilies.svg",
+      "group": "proyects",
+      "ext": "svg",
+      "path": "../icon/proyects/pumpingFamilies.svg"
+    },
+    {
+      "id": "proyects-safety",
+      "name": "safety",
+      "fileName": "safety.svg",
+      "group": "proyects",
+      "ext": "svg",
+      "path": "../icon/proyects/safety.svg"
+    },
+    {
+      "id": "proyects-shopdrawings",
+      "name": "shopDrawings",
+      "fileName": "shopDrawings.svg",
+      "group": "proyects",
+      "ext": "svg",
+      "path": "../icon/proyects/shopDrawings.svg"
+    },
+    {
+      "id": "services-bim-4d",
+      "name": "4D",
+      "fileName": "4D.svg",
+      "group": "services/BIM",
+      "ext": "svg",
+      "path": "../icon/services/BIM/4D.svg"
+    },
+    {
+      "id": "services-bim-bim-obra",
+      "name": "bim_obra",
+      "fileName": "bim_obra.svg",
+      "group": "services/BIM",
+      "ext": "svg",
+      "path": "../icon/services/BIM/bim_obra.svg"
+    },
+    {
+      "id": "services-bim-coordinacion",
+      "name": "coordinacion",
+      "fileName": "coordinacion.svg",
+      "group": "services/BIM",
+      "ext": "svg",
+      "path": "../icon/services/BIM/coordinacion.svg"
+    },
+    {
+      "id": "services-bim-escaneo-laser",
+      "name": "escaneo_laser",
+      "fileName": "escaneo_laser.svg",
+      "group": "services/BIM",
+      "ext": "svg",
+      "path": "../icon/services/BIM/escaneo_laser.svg"
+    },
+    {
+      "id": "services-bim-modelado-arquitectonico",
+      "name": "Modelado_arquitectonico",
+      "fileName": "Modelado_arquitectonico.svg",
+      "group": "services/BIM",
+      "ext": "svg",
+      "path": "../icon/services/BIM/Modelado_arquitectonico.svg"
+    },
+    {
+      "id": "services-bim-modelado-mep",
+      "name": "Modelado_MEP",
+      "fileName": "Modelado_MEP.svg",
+      "group": "services/BIM",
+      "ext": "svg",
+      "path": "../icon/services/BIM/Modelado_MEP.svg"
+    },
+    {
+      "id": "services-profesionales-diseno",
+      "name": "diseno",
+      "fileName": "diseno.svg",
+      "group": "services/Profesionales",
+      "ext": "svg",
+      "path": "../icon/services/Profesionales/diseno.svg"
+    },
+    {
+      "id": "services-profesionales-electrica",
+      "name": "electrica",
+      "fileName": "electrica.svg",
+      "group": "services/Profesionales",
+      "ext": "svg",
+      "path": "../icon/services/Profesionales/electrica.svg"
+    },
+    {
+      "id": "services-profesionales-mecanica",
+      "name": "mecanica",
+      "fileName": "mecanica.svg",
+      "group": "services/Profesionales",
+      "ext": "svg",
+      "path": "../icon/services/Profesionales/mecanica.svg"
+    },
+    {
+      "id": "services-profesionales-plomeria",
+      "name": "plomeria",
+      "fileName": "plomeria.svg",
+      "group": "services/Profesionales",
+      "ext": "svg",
+      "path": "../icon/services/Profesionales/plomeria.svg"
+    },
+    {
+      "id": "services-profesionales-seguridad",
+      "name": "seguridad",
+      "fileName": "seguridad.svg",
+      "group": "services/Profesionales",
+      "ext": "svg",
+      "path": "../icon/services/Profesionales/seguridad.svg"
+    },
+    {
+      "id": "services-profesionales-sostenible",
+      "name": "sostenible",
+      "fileName": "sostenible.svg",
+      "group": "services/Profesionales",
+      "ext": "svg",
+      "path": "../icon/services/Profesionales/sostenible.svg"
+    },
+    {
+      "id": "services-profesionales-tecnologia",
+      "name": "tecnologia",
+      "fileName": "tecnologia.svg",
+      "group": "services/Profesionales",
+      "ext": "svg",
+      "path": "../icon/services/Profesionales/tecnologia.svg"
+    }
+  ]
+}

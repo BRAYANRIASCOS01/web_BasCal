@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#000b66" />
+    <title>BasCal · Documentación de íconos</title>
+    <link rel="icon" type="image/png" href="../icon/home/Log_BasCal.PNG" sizes="96x96" />
+    <link rel="apple-touch-icon" href="../icon/home/Log_BasCal.PNG" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Saltar al contenido</a>
+
+    <header class="topbar">
+      <div class="topbar__inner">
+        <div class="topbar__brand" aria-hidden="true">
+          <img class="topbar__logo" src="../icon/home/Log_BasCal.PNG" alt="" loading="eager" decoding="async" />
+        </div>
+        <div class="topbar__title">
+          <h1>Documentación de íconos</h1>
+          <p class="muted">
+            Explora, filtra y descarga íconos.
+          </p>
+        </div>
+        <div class="topbar__meta">
+          <span class="badge" id="manifestStatus" aria-live="polite">Cargando…</span>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="container">
+      <section class="panel" aria-label="Filtros">
+        <div class="filters">
+          <label class="field">
+            <span class="field__label">Buscar</span>
+            <input id="searchInput" type="search" placeholder="Nombre, ruta o etiqueta…" autocomplete="off" />
+          </label>
+
+          <label class="field">
+            <span class="field__label">Ubicación</span>
+            <select id="groupSelect">
+              <option value="all">Todas</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span class="field__label">Formato (origen)</span>
+            <select id="formatSelect">
+              <option value="all">Todos</option>
+              <option value="svg">SVG</option>
+              <option value="png">PNG</option>
+              <option value="webp">WEBP</option>
+            
+            </select>
+          </label>
+
+          <label class="field">
+            <span class="field__label">PNG (tamaño)</span>
+            <select id="pngSizeSelect">
+              <option value="128">128 px</option>
+              <option value="256" selected>256 px</option>
+              <option value="512">512 px</option>
+              <option value="1024">1024 px</option>
+            </select>
+          </label>
+
+          <div class="field field--actions">
+            <span class="field__label">Acciones</span>
+            <div class="actions">
+              <button id="resetBtn" type="button" class="btn btn--ghost">Restablecer</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="summary">
+          <div class="summary__left">
+            <strong id="resultsCount">0</strong> íconos
+          </div>
+          <div class="summary__right muted" id="resultsHint"></div>
+        </div>
+      </section>
+
+      <section class="grid" aria-label="Listado de íconos">
+        <div id="grid" class="grid__inner"></div>
+      </section>
+    </main>
+
+    <template id="iconCardTemplate">
+      <article class="card">
+        <div class="card__preview" aria-hidden="true">
+          <img class="card__img" alt="" loading="lazy" decoding="async" />
+        </div>
+        <div class="card__body">
+          <div class="card__head">
+            <h2 class="card__name"></h2>
+            <span class="pill card__format"></span>
+          </div>
+          <p class="card__path muted"></p>
+          <div class="card__actions">
+            <button type="button" class="btn btn--small btn--ghost js-download-svg">SVG</button>
+            <button type="button" class="btn btn--small js-download-png">PNG</button>
+          </div>
+          <p class="card__note muted js-note" role="status" aria-live="polite"></p>
+        </div>
+      </article>
+    </template>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
